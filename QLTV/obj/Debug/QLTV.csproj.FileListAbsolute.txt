@@ -1,0 +1,10 @@
+E:\đồ án\NMCNPM\QLTV\QLTV\bin\Debug\QLTV.exe.config
+E:\đồ án\NMCNPM\QLTV\QLTV\bin\Debug\QLTV.exe
+E:\đồ án\NMCNPM\QLTV\QLTV\bin\Debug\QLTV.pdb
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.csprojAssemblyReference.cache
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.FrmMain.resources
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.exe
+E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.pdb
