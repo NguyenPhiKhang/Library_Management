@@ -8,3 +8,15 @@ E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
 E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
 E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.exe
 E:\đồ án\NMCNPM\QLTV\QLTV\obj\Debug\QLTV.pdb
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\bin\Debug\QLTV.exe.config
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\bin\Debug\QLTV.exe
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\bin\Debug\QLTV.pdb
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.csprojAssemblyReference.cache
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.FrmMain.resources
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.csproj.CopyComplete
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.exe
+C:\Users\KHANG\Documents\GitHub\QuanLiThuVien\QLTV\obj\Debug\QLTV.pdb
