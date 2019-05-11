@@ -17,6 +17,5 @@ namespace QLTV_GUI
         {
             InitializeComponent();
         }
-        
     }
 }

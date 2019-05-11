@@ -109,8 +109,8 @@ namespace QLTV_GUI
 
         private void btnChiTietPM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmChiTietPM chitiet = new frmChiTietPM();
-            chitiet.ShowDialog();
+            frmChiTietPM ctpm = new frmChiTietPM();
+            ctpm.ShowDialog();
         }
     }
 }
