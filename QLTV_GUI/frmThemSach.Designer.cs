@@ -33,7 +33,6 @@
             this.btn_Huy = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Nhap = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txbTriGia = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.cbbTinhTrang = new DevExpress.XtraEditors.ComboBoxEdit();
             this.dateNamXuatBan = new Bunifu.Framework.UI.BunifuDatepicker();
             this.lkue_TacGia = new DevExpress.XtraEditors.LookUpEdit();
             this.cbbTheLoai = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -50,19 +49,20 @@
             this.txbTenSach = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txbMaSach = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lkue_TinhTrang = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTinhTrang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTheLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lkue_TinhTrang);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txbTriGia);
-            this.panel1.Controls.Add(this.cbbTinhTrang);
             this.panel1.Controls.Add(this.dateNamXuatBan);
             this.panel1.Controls.Add(this.lkue_TacGia);
             this.panel1.Controls.Add(this.cbbTheLoai);
@@ -185,20 +185,6 @@
             this.txbTriGia.TabIndex = 48;
             this.txbTriGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txbTriGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTriGia_KeyPress);
-            // 
-            // cbbTinhTrang
-            // 
-            this.cbbTinhTrang.Location = new System.Drawing.Point(472, 51);
-            this.cbbTinhTrang.Name = "cbbTinhTrang";
-            this.cbbTinhTrang.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.cbbTinhTrang.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbbTinhTrang.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbTinhTrang.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbTinhTrang.Properties.AutoHeight = false;
-            this.cbbTinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbTinhTrang.Size = new System.Drawing.Size(220, 30);
-            this.cbbTinhTrang.TabIndex = 47;
             // 
             // dateNamXuatBan
             // 
@@ -415,6 +401,19 @@
             this.bunifuCustomLabel2.TabIndex = 24;
             this.bunifuCustomLabel2.Text = "Mã Sách:";
             // 
+            // lkue_TinhTrang
+            // 
+            this.lkue_TinhTrang.EditValue = "Chọn Tác Giả";
+            this.lkue_TinhTrang.Location = new System.Drawing.Point(472, 51);
+            this.lkue_TinhTrang.Name = "lkue_TinhTrang";
+            this.lkue_TinhTrang.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.lkue_TinhTrang.Properties.Appearance.Options.UseBackColor = true;
+            this.lkue_TinhTrang.Properties.AutoHeight = false;
+            this.lkue_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkue_TinhTrang.Size = new System.Drawing.Size(220, 30);
+            this.lkue_TinhTrang.TabIndex = 50;
+            // 
             // frmThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,9 +428,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTinhTrang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTheLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,10 +454,10 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbTheLoai;
         private DevExpress.XtraEditors.LookUpEdit lkue_TacGia;
         private Bunifu.Framework.UI.BunifuDatepicker dateNamXuatBan;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbTinhTrang;
         private Bunifu.Framework.UI.BunifuMetroTextbox txbTriGia;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Huy;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Nhap;
+        private DevExpress.XtraEditors.LookUpEdit lkue_TinhTrang;
     }
 }

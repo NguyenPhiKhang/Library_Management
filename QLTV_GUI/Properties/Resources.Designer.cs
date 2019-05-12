@@ -423,6 +423,26 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Reports_icon {
+            get {
+                object obj = ResourceManager.GetObject("Reports-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reports_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Reports-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_icon {
             get {
                 object obj = ResourceManager.GetObject("Save-icon", resourceCulture);
@@ -466,6 +486,26 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap Shearwater_login_background_1150x719 {
             get {
                 object obj = ResourceManager.GetObject("Shearwater-login-background-1150x719", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shuffle {
+            get {
+                object obj = ResourceManager.GetObject("shuffle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stack_colorful_books_education_background_back_school_cg1p92126448c_th {
+            get {
+                object obj = ResourceManager.GetObject("stack-colorful-books-education-background-back-school_cg1p92126448c_th", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

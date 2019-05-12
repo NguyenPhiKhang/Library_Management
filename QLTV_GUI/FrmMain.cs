@@ -112,5 +112,80 @@ namespace QLTV_GUI
             frmChiTietPM ctpm = new frmChiTietPM();
             ctpm.ShowDialog();
         }
+
+        private void btnMuonSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmTTMuonSach));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTTMuonSach f = new frmTTMuonSach
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
+        private void btnTraSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmTTTraSach));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTTTraSach f = new frmTTTraSach
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
+        private void btnBCSachTra_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmBCTKTraTre));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmBCTKTraTre f = new frmBCTKTraTre
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
+        private void btnBCSachMuon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmBCTKSachMuonTL));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmBCTKSachMuonTL f = new frmBCTKSachMuonTL
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
+
+        private void btnTDQuyDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmThayDoiQuiDinh));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmThayDoiQuiDinh f = new frmThayDoiQuiDinh
+                {
+                    MdiParent = this
+                };
+                f.Show();
+            }
+        }
     }
 }

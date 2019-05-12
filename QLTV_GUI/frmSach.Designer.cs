@@ -70,7 +70,6 @@
             this.txbNhaSX = new DevExpress.XtraEditors.TextEdit();
             this.txbTenSach = new DevExpress.XtraEditors.TextEdit();
             this.txbTriGia = new DevExpress.XtraEditors.TextEdit();
-            this.cbbTinhTrang = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lkue_TacGia = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -84,6 +83,7 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lkue_TinhTrang = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -96,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbNhaSX.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTriGia.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTinhTrang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -110,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // bar2
@@ -410,8 +410,8 @@
             this.layoutControl1.Controls.Add(this.txbNhaSX);
             this.layoutControl1.Controls.Add(this.txbTenSach);
             this.layoutControl1.Controls.Add(this.txbTriGia);
-            this.layoutControl1.Controls.Add(this.cbbTinhTrang);
             this.layoutControl1.Controls.Add(this.lkue_TacGia);
+            this.layoutControl1.Controls.Add(this.lkue_TinhTrang);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(0, 40);
             this.layoutControl1.Name = "layoutControl1";
@@ -492,16 +492,6 @@
             this.txbTriGia.StyleController = this.layoutControl1;
             this.txbTriGia.TabIndex = 4;
             // 
-            // cbbTinhTrang
-            // 
-            this.cbbTinhTrang.Location = new System.Drawing.Point(765, 12);
-            this.cbbTinhTrang.Name = "cbbTinhTrang";
-            this.cbbTinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbTinhTrang.Size = new System.Drawing.Size(262, 20);
-            this.cbbTinhTrang.StyleController = this.layoutControl1;
-            this.cbbTinhTrang.TabIndex = 4;
-            // 
             // lkue_TacGia
             // 
             this.lkue_TacGia.Location = new System.Drawing.Point(426, 12);
@@ -542,7 +532,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.cbbTinhTrang;
+            this.layoutControlItem3.Control = this.lkue_TinhTrang;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem3.Location = new System.Drawing.Point(679, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -635,6 +625,19 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // lkue_TinhTrang
+            // 
+            this.lkue_TinhTrang.Location = new System.Drawing.Point(765, 12);
+            this.lkue_TinhTrang.Name = "lkue_TinhTrang";
+            this.lkue_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkue_TinhTrang.Properties.NullText = "";
+            this.lkue_TinhTrang.Properties.PopupSizeable = false;
+            this.lkue_TinhTrang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lkue_TinhTrang.Size = new System.Drawing.Size(262, 20);
+            this.lkue_TinhTrang.StyleController = this.layoutControl1;
+            this.lkue_TinhTrang.TabIndex = 4;
+            // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,7 +663,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbNhaSX.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbTriGia.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTinhTrang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -674,6 +676,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -723,7 +726,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbTinhTrang;
         private DevExpress.XtraBars.BarCheckItem ck_TatCa;
         private DevExpress.XtraBars.BarCheckItem ck_MaSach;
         private DevExpress.XtraBars.BarCheckItem ck_TenSach;
@@ -735,5 +737,6 @@
         private DevExpress.XtraBars.BarCheckItem barCheckItem9;
         private DevExpress.XtraBars.BarCheckItem barCheckItem10;
         private DevExpress.XtraEditors.LookUpEdit lkue_TacGia;
+        private DevExpress.XtraEditors.LookUpEdit lkue_TinhTrang;
     }
 }
