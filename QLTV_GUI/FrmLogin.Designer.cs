@@ -158,8 +158,8 @@
             this.btnLogin.IdleBorderThickness = 2;
             this.btnLogin.IdleCornerRadius = 20;
             this.btnLogin.IdleFillColor = System.Drawing.Color.White;
-            this.btnLogin.IdleForecolor = System.Drawing.Color.Green;
-            this.btnLogin.IdleLineColor = System.Drawing.Color.Green;
+            this.btnLogin.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Location = new System.Drawing.Point(27, 212);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnLogin.Name = "btnLogin";
