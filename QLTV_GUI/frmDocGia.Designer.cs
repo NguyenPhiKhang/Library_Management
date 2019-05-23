@@ -93,9 +93,18 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaDocGia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUsername = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLoaiDocGia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgayLapThe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgayHetHan = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -125,7 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,6 +218,7 @@
             this.btnSua.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.App_edit_icon;
             this.btnSua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.LargeImage")));
             this.btnSua.Name = "btnSua";
+            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
             // 
             // btnXoa
             // 
@@ -530,6 +540,7 @@
             this.txbMaDocGia.Location = new System.Drawing.Point(86, 12);
             this.txbMaDocGia.MenuManager = this.barManager1;
             this.txbMaDocGia.Name = "txbMaDocGia";
+            this.txbMaDocGia.Properties.ReadOnly = true;
             this.txbMaDocGia.Size = new System.Drawing.Size(281, 20);
             this.txbMaDocGia.StyleController = this.layoutControl1;
             this.txbMaDocGia.TabIndex = 4;
@@ -544,12 +555,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txbNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txbNgaySinh.Properties.DisplayFormat.FormatString = "";
+            this.txbNgaySinh.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.txbNgaySinh.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txbNgaySinh.Properties.EditFormat.FormatString = "";
+            this.txbNgaySinh.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.txbNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txbNgaySinh.Properties.Mask.EditMask = "";
             this.txbNgaySinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txbNgaySinh.Properties.NullText = "ngày/tháng/năm";
             this.txbNgaySinh.Size = new System.Drawing.Size(281, 20);
             this.txbNgaySinh.StyleController = this.layoutControl1;
             this.txbNgaySinh.TabIndex = 11;
@@ -715,39 +727,131 @@
             this.layoutControlItem10.Text = "Địa Chỉ:";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(71, 13);
             // 
-            // gridControl1
+            // gridControl
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 159);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1096, 349);
-            this.gridControl1.TabIndex = 5;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 159);
+            this.gridControl.MainView = this.gridView1;
+            this.gridControl.MenuManager = this.barManager1;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(1096, 349);
+            this.gridControl.TabIndex = 5;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1});
-            this.gridView1.GridControl = this.gridControl1;
+            this.colMaDocGia,
+            this.colHoTen,
+            this.colNgaySinh,
+            this.colDiaChi,
+            this.colEmail,
+            this.colUsername,
+            this.colPassword,
+            this.colLoaiDocGia,
+            this.colNgayLapThe,
+            this.colNgayHetHan});
+            this.gridView1.GridControl = this.gridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // colMaDocGia
             // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colMaDocGia.Caption = "Mã Độc Giả";
+            this.colMaDocGia.FieldName = "MaDocGia";
+            this.colMaDocGia.Name = "colMaDocGia";
+            this.colMaDocGia.OptionsColumn.ReadOnly = true;
+            this.colMaDocGia.Visible = true;
+            this.colMaDocGia.VisibleIndex = 0;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.Caption = "Họ Tên";
+            this.colHoTen.FieldName = "HoTen";
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.OptionsColumn.ReadOnly = true;
+            this.colHoTen.Visible = true;
+            this.colHoTen.VisibleIndex = 1;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.Caption = "Ngày Sinh";
+            this.colNgaySinh.FieldName = "NgaySinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.OptionsColumn.ReadOnly = true;
+            this.colNgaySinh.Visible = true;
+            this.colNgaySinh.VisibleIndex = 2;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.Caption = "Địa Chỉ";
+            this.colDiaChi.FieldName = "DiaChi";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.OptionsColumn.ReadOnly = true;
+            this.colDiaChi.Visible = true;
+            this.colDiaChi.VisibleIndex = 3;
+            // 
+            // colEmail
+            // 
+            this.colEmail.Caption = "Email";
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.OptionsColumn.ReadOnly = true;
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 4;
+            // 
+            // colUsername
+            // 
+            this.colUsername.Caption = "Username";
+            this.colUsername.FieldName = "IDUser";
+            this.colUsername.Name = "colUsername";
+            this.colUsername.OptionsColumn.ReadOnly = true;
+            this.colUsername.Visible = true;
+            this.colUsername.VisibleIndex = 5;
+            // 
+            // colPassword
+            // 
+            this.colPassword.Caption = "Password";
+            this.colPassword.FieldName = "PasswordUser";
+            this.colPassword.Name = "colPassword";
+            this.colPassword.OptionsColumn.ReadOnly = true;
+            this.colPassword.Visible = true;
+            this.colPassword.VisibleIndex = 6;
+            // 
+            // colLoaiDocGia
+            // 
+            this.colLoaiDocGia.Caption = "Loại Độc Giả";
+            this.colLoaiDocGia.FieldName = "MaLoaiDocGia";
+            this.colLoaiDocGia.Name = "colLoaiDocGia";
+            this.colLoaiDocGia.OptionsColumn.ReadOnly = true;
+            this.colLoaiDocGia.Visible = true;
+            this.colLoaiDocGia.VisibleIndex = 7;
+            // 
+            // colNgayLapThe
+            // 
+            this.colNgayLapThe.Caption = "Ngày Lập Thẻ";
+            this.colNgayLapThe.FieldName = "NgayLapThe";
+            this.colNgayLapThe.Name = "colNgayLapThe";
+            this.colNgayLapThe.OptionsColumn.ReadOnly = true;
+            this.colNgayLapThe.Visible = true;
+            this.colNgayLapThe.VisibleIndex = 8;
+            // 
+            // colNgayHetHan
+            // 
+            this.colNgayHetHan.Caption = "Ngày Hết Hạn";
+            this.colNgayHetHan.FieldName = "NgayHetHan";
+            this.colNgayHetHan.Name = "colNgayHetHan";
+            this.colNgayHetHan.OptionsColumn.ReadOnly = true;
+            this.colNgayHetHan.Visible = true;
+            this.colNgayHetHan.VisibleIndex = 9;
             // 
             // frmDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 508);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControl);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -755,6 +859,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmDocGia";
             this.Text = "Thông tin độc giả";
+            this.Load += new System.EventHandler(this.frmDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
@@ -784,7 +889,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -830,7 +935,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.DateEdit txbNgaySinh;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.ComboBoxEdit txbLoaiDocGia;
         private DevExpress.XtraEditors.DateEdit txbNgayLapThe;
@@ -857,6 +962,15 @@
         private DevExpress.XtraBars.BarCheckItem ck_LoaiDocGia;
         private DevExpress.XtraBars.BarCheckItem ck_NgayLapThe;
         private DevExpress.XtraBars.BarCheckItem ck_NgayHetHan;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaDocGia;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoTen;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colUsername;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colLoaiDocGia;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayLapThe;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayHetHan;
     }
 }

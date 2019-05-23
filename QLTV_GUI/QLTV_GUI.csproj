@@ -58,6 +58,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
@@ -425,6 +426,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.csproj">
+      <Project>{ea53870c-ffc8-41ea-b788-88f20988a532}</Project>
+      <Name>QLTV_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">
+      <Project>{ae412ac8-5138-4d76-9d30-1a708e0d78c1}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

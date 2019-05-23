@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLTV_DTO;
+using QLTV_BUS;
 
 namespace QLTV_GUI
 {
@@ -119,6 +121,21 @@ namespace QLTV_GUI
         {
             frmThemDocGia themdocgia = new frmThemDocGia();
             themdocgia.ShowDialog();
+        }
+
+        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            txbMaDocGia.ReadOnly = false;
+        }
+        void LoadDocGiaInfo()
+        {
+            List<TTDOCGIADTO> list = QLTV_BUS.TTDOCGIABUS.Instance.GetListDocGiaInfo();
+            
+            gridControl.DataSource = list.ToList();
+        }
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+            LoadDocGiaInfo();
         }
         
     }
