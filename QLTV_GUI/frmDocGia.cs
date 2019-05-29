@@ -10,23 +10,70 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLTV_DTO;
 using QLTV_BUS;
+using System.Threading;
 
 namespace QLTV_GUI
 {
     public partial class frmDocGia : DevExpress.XtraEditors.XtraForm
     {
+        BindingSource ListBDDocGia = new BindingSource(); //tạo bindingsource để load dữ liệu gridcontrol lên textbox không bị đơ khi thay đổi gridcontrol
+        int _index = 0;
         public frmDocGia()
         {
             InitializeComponent();
+            gridControl.Focus();
         }
-
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+            LoadDocGiaInfo();
+            Binding_DocGia();
+            //bandGridview_RowCellClick(sender, e as DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs);
+            LoadDataSourceLDG();
+        }
+        #region Methods
         //Hiện thanh tìm kiếm trên grid
         private void VisibleFindGrid()
         {
-            if (!gridView1.IsFindPanelVisible)
-                gridView1.ShowFindPanel();
+            if (!bandedGridView.IsFindPanelVisible)
+                bandedGridView.ShowFindPanel();
         }
-        
+        void LoadDocGiaInfo()
+        {
+            List<TTDOCGIADTO> list = QLTV_BUS.TTDOCGIABUS.Instance.GetListDocGiaInfo();
+            //gridControl.DataSource = list.ToList();
+            //bindingSource1.DataSource = list.ToList();
+            ListBDDocGia.DataSource = list.ToList();
+            gridControl.DataSource = ListBDDocGia;
+        }
+        void Binding_DocGia()
+        {
+            try
+            {
+                txbMaDocGia.DataBindings.Add("Text", ListBDDocGia, "MaDocGia");
+                txbHoTen.DataBindings.Add("Text", ListBDDocGia, "HoTen");
+                dateNgaySinh.DataBindings.Add("EditValue", ListBDDocGia, "NgaySinh", true, DataSourceUpdateMode.OnPropertyChanged);
+                txbDiaChi.DataBindings.Add("Text", ListBDDocGia, "DiaChi");
+                txbEmail.DataBindings.Add("Text", ListBDDocGia, "Email");
+                txbUserName.DataBindings.Add("Text", ListBDDocGia, "IDUser");
+                txbPassword.DataBindings.Add("Text", ListBDDocGia, "PasswordUser");
+                gluedLoaiDocGia.DataBindings.Add("Text", ListBDDocGia, "MaLoaiDocGia", true, DataSourceUpdateMode.Never);
+                dateNgayLapThe.DataBindings.Add("EditValue", ListBDDocGia, "NgayLapThe", true, DataSourceUpdateMode.OnValidation);
+                dateNgayHetHan.DataBindings.Add("EditValue", ListBDDocGia, "NgayHetHan", true, DataSourceUpdateMode.OnPropertyChanged);
+            }
+            catch
+            {
+
+            }
+        }
+        void LoadDataSourceLDG()
+        {
+            gluedLoaiDocGia.Properties.DataSource = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(gluedLoaiDocGia.EditValue.ToString()/*mldg.ToString()*/);
+            gluedLoaiDocGia.Properties.DisplayMember = "MaLoaiDocGia";
+            gluedLoaiDocGia.Properties.ValueMember = "MaLoaiDocGia";
+            //gluedLoaiDocGia.Text = gluedLoaiDocGia.EditValue.ToString();
+        }
+        #endregion
+        #region Event_CheckFind
         private void ck_TatCa_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if(ck_TatCa.Checked==true)
@@ -116,27 +163,48 @@ namespace QLTV_GUI
                 VisibleFindGrid();
             }
         }
-
+        #endregion
+        #region Event_Click
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmThemDocGia themdocgia = new frmThemDocGia();
             themdocgia.ShowDialog();
         }
-
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            txbMaDocGia.ReadOnly = false;
-        }
-        void LoadDocGiaInfo()
-        {
-            List<TTDOCGIADTO> list = QLTV_BUS.TTDOCGIABUS.Instance.GetListDocGiaInfo();
             
-            gridControl.DataSource = list.ToList();
         }
-        private void frmDocGia_Load(object sender, EventArgs e)
+        private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            gridControl.DataSource = null;
             LoadDocGiaInfo();
+            LoadDataSourceLDG();
+            _index = 0;
         }
         
+        private void bandGridview_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            int a = bandedGridView.GetFocusedDataSourceRowIndex();
+            if (a != _index)
+            {
+                LoadDataSourceLDG();
+                _index = a;
+            }
+            else
+            {
+                gluedLoaiDocGia.Text = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString();
+            }
+        }
+        #endregion
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

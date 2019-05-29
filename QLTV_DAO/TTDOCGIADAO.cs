@@ -18,15 +18,15 @@ namespace QLTV_DAO
             set => instance = value;
         }
         private TTDOCGIADAO() { }
-        QuanLyThuVienEntities db = new QuanLyThuVienEntities();
+        //QuanLyThuVienEntities db = new QuanLyThuVienEntities();
         public List<TTDOCGIADTO> GetListDocGiaInfo()
         {
             List<TTDOCGIADTO> listDocGiaInfo = new List<TTDOCGIADTO>();
-            //using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
                 var data = ((from u in db.DOCGIAs
                            join n in db.USERs on u.IDUser equals n.IDUser
-                           select new {MaDocGia = u.MaDocGia, HoTen=u.HoTen, NgaySinh=u.NgaySinh, DiaChi=u.DiaChi, Email=u.Email, NgayLapThe=u.NgayLapThe, NgayHetHan=u.NgayHetHan, MaLoaiDocGia=u.MaLoaiDocGia, IDUser=u.IDUser, PasswordUser=n.PasswordUser})).ToList();
+                           select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDUser, n.PasswordUser})).ToList();
                 foreach (var item in data)
                 {
                     TTDOCGIADTO ttdg = new TTDOCGIADTO();
