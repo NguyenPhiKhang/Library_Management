@@ -29,8 +29,6 @@ namespace QLTV_GUI
             Binding_DocGia();
             //bandGridview_RowCellClick(sender, e as DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs);
             LoadDataSourceLDG();
-            lo_btnLuu.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
         }
         #region Methods
         //Hiện thanh tìm kiếm trên grid
@@ -73,20 +71,6 @@ namespace QLTV_GUI
             gluedLoaiDocGia.Properties.DisplayMember = "MaLoaiDocGia";
             gluedLoaiDocGia.Properties.ValueMember = "MaLoaiDocGia";
             //gluedLoaiDocGia.Text = gluedLoaiDocGia.EditValue.ToString();
-        }
-        void ReadOnly_SuaThongTin()
-        {
-            txbHoTen.ReadOnly = true;
-            dateNgaySinh.ReadOnly = true;
-            txbDiaChi.ReadOnly = true;
-            gluedLoaiDocGia.Properties.AllowFocused = false;
-        }
-        void UnReadOnly_SuaThongTin()
-        {
-            txbHoTen.ReadOnly = false;
-            dateNgaySinh.ReadOnly = false;
-            txbDiaChi.ReadOnly = false;
-            gluedLoaiDocGia.Properties.AllowFocused = true;
         }
         #endregion
         #region Event_CheckFind
@@ -188,10 +172,7 @@ namespace QLTV_GUI
         }
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            lo_btnLuu.ContentVisible = true;
-            lo_btnHuy.ContentVisible = true;
-            UnReadOnly_SuaThongTin();
-            btnSua.ItemAppearance.Normal.BackColor = Color.Aqua;
+            
         }
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -214,18 +195,16 @@ namespace QLTV_GUI
                 gluedLoaiDocGia.Text = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString();
             }
         }
-        private void btnLuuLai_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            lo_btnLuu.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
-            ReadOnly_SuaThongTin();
-            btnSua.ItemAppearance.Normal.Reset();
-        }
         #endregion
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
