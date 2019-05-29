@@ -48,20 +48,25 @@
             this.txbTenTacGia = new DevExpress.XtraEditors.TextEdit();
             this.txbMaTacGia = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridview = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colMaTacGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colTenTacGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenTacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbMaTacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -166,59 +171,66 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(586, 40);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1269, 50);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 365);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 597);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(586, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1269, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 50);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 325);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 547);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(586, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(1269, 50);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 325);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 547);
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.txbTenTacGia);
             this.layoutControl1.Controls.Add(this.txbMaTacGia);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 40);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 50);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(586, 45);
+            this.layoutControl1.Size = new System.Drawing.Size(1269, 93);
             this.layoutControl1.TabIndex = 4;
-            this.layoutControl1.Text = "layoutControl1";
+            this.layoutControl1.Text = "Chi tiết Tác Giả";
             // 
             // txbTenTacGia
             // 
-            this.txbTenTacGia.Location = new System.Drawing.Point(358, 12);
+            this.txbTenTacGia.Location = new System.Drawing.Point(704, 49);
+            this.txbTenTacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbTenTacGia.MenuManager = this.barManager1;
             this.txbTenTacGia.Name = "txbTenTacGia";
-            this.txbTenTacGia.Size = new System.Drawing.Size(216, 20);
+            this.txbTenTacGia.Size = new System.Drawing.Size(520, 22);
             this.txbTenTacGia.StyleController = this.layoutControl1;
             this.txbTenTacGia.TabIndex = 5;
             // 
             // txbMaTacGia
             // 
-            this.txbMaTacGia.Location = new System.Drawing.Point(75, 12);
+            this.txbMaTacGia.Location = new System.Drawing.Point(103, 49);
+            this.txbMaTacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMaTacGia.MenuManager = this.barManager1;
             this.txbMaTacGia.Name = "txbMaTacGia";
-            this.txbMaTacGia.Size = new System.Drawing.Size(216, 20);
+            this.txbMaTacGia.Size = new System.Drawing.Size(518, 22);
             this.txbMaTacGia.StyleController = this.layoutControl1;
             this.txbMaTacGia.TabIndex = 4;
             // 
@@ -227,71 +239,131 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1248, 95);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutControlGroup1.AppearanceGroup.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.layoutControlGroup1.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(586, 45);
-            this.Root.TextVisible = false;
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1228, 75);
+            this.layoutControlGroup1.Text = "Chi tiết Tác giả";
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txbMaTacGia;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(283, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(601, 26);
             this.layoutControlItem1.Text = "Mã Tác Giả:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(76, 17);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txbTenTacGia;
-            this.layoutControlItem2.Location = new System.Drawing.Point(283, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(601, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(283, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(603, 26);
             this.layoutControlItem2.Text = "Tên Tác Giả:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(76, 17);
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 85);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseTextOptions = true;
+            this.gridControl1.EmbeddedNavigator.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.None;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(0, 143);
+            this.gridControl1.MainView = this.bandedGridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(586, 280);
+            this.gridControl1.Size = new System.Drawing.Size(1269, 454);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.bandedGridView1});
             // 
-            // gridView1
+            // bandedGridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridview});
+            this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.colMaTacGia,
+            this.colTenTacGia});
+            this.bandedGridView1.DetailHeight = 431;
+            this.bandedGridView1.GridControl = this.gridControl1;
+            this.bandedGridView1.Name = "bandedGridView1";
+            this.bandedGridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridview
+            // 
+            this.gridview.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridview.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridview.AppearanceHeader.Options.UseFont = true;
+            this.gridview.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridview.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridview.Caption = "Danh Sách Tác Giả";
+            this.gridview.Columns.Add(this.colMaTacGia);
+            this.gridview.Columns.Add(this.colTenTacGia);
+            this.gridview.Name = "gridview";
+            this.gridview.RowCount = 2;
+            this.gridview.VisibleIndex = 0;
+            this.gridview.Width = 218;
+            // 
+            // colMaTacGia
+            // 
+            this.colMaTacGia.Caption = "Mã Tác Giả";
+            this.colMaTacGia.FieldName = "MaTacGia";
+            this.colMaTacGia.MinWidth = 25;
+            this.colMaTacGia.Name = "colMaTacGia";
+            this.colMaTacGia.Visible = true;
+            this.colMaTacGia.Width = 109;
+            // 
+            // colTenTacGia
+            // 
+            this.colTenTacGia.Caption = "Tên Tác Giả";
+            this.colTenTacGia.FieldName = "TenTacGia";
+            this.colTenTacGia.MinWidth = 25;
+            this.colTenTacGia.Name = "colTenTacGia";
+            this.colTenTacGia.Visible = true;
+            this.colTenTacGia.Width = 109;
             // 
             // frmTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 365);
+            this.ClientSize = new System.Drawing.Size(1269, 597);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTacGia";
             this.Text = "Thông Tin Tác Giả";
+            this.Load += new System.EventHandler(this.frmTacGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txbTenTacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbMaTacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +383,6 @@
         private DevExpress.XtraBars.BarButtonItem btnLamMoi;
         private DevExpress.XtraBars.BarSubItem TimKiem;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit txbTenTacGia;
         private DevExpress.XtraEditors.TextEdit txbMaTacGia;
@@ -321,5 +392,10 @@
         private DevExpress.XtraBars.BarCheckItem ck_TatCa;
         private DevExpress.XtraBars.BarCheckItem ck_MaTacGia;
         private DevExpress.XtraBars.BarCheckItem ck_TenTacGia;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colMaTacGia;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTenTacGia;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridview;
     }
 }

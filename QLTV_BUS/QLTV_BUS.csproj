@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TACGIABUS.cs" />
+    <Compile Include="THELOAIBUS.cs" />
     <Compile Include="TTDOCGIABUS.cs" />
   </ItemGroup>
   <ItemGroup>
