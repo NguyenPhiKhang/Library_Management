@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTV_DAO
 {
-    class USERDAO
+    class TACGIADAO
     {
     }
 }
