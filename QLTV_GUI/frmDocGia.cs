@@ -27,8 +27,9 @@ namespace QLTV_GUI
         {
             LoadDocGiaInfo();
             Binding_DocGia();
-            //bandGridview_RowCellClick(sender, e as DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs);
-            LoadDataSourceLDG();
+            LoadDataSourceLDG(gluedLoaiDocGia.EditValue.ToString());
+            lo_btnLuu.ContentVisible = false;
+            lo_btnHuy.ContentVisible = false;
         }
         #region Methods
         //Hiện thanh tìm kiếm trên grid
@@ -40,8 +41,6 @@ namespace QLTV_GUI
         void LoadDocGiaInfo()
         {
             List<TTDOCGIADTO> list = QLTV_BUS.TTDOCGIABUS.Instance.GetListDocGiaInfo();
-            //gridControl.DataSource = list.ToList();
-            //bindingSource1.DataSource = list.ToList();
             ListBDDocGia.DataSource = list.ToList();
             gridControl.DataSource = ListBDDocGia;
         }
@@ -65,12 +64,31 @@ namespace QLTV_GUI
 
             }
         }
-        void LoadDataSourceLDG()
+        void LoadDataSourceLDG(string IdMaLDG = "")
         {
-            gluedLoaiDocGia.Properties.DataSource = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(gluedLoaiDocGia.EditValue.ToString()/*mldg.ToString()*/);
+            gluedLoaiDocGia.Properties.DataSource = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(IdMaLDG);
             gluedLoaiDocGia.Properties.DisplayMember = "MaLoaiDocGia";
             gluedLoaiDocGia.Properties.ValueMember = "MaLoaiDocGia";
-            //gluedLoaiDocGia.Text = gluedLoaiDocGia.EditValue.ToString();
+        }
+        void ReadOnly_SuaThongTin()
+        {
+            lo_btnLuu.ContentVisible = false;
+            lo_btnHuy.ContentVisible = false;
+            txbHoTen.ReadOnly = true;
+            dateNgaySinh.ReadOnly = true;
+            txbDiaChi.ReadOnly = true;
+            gluedLoaiDocGia.Properties.AllowFocused = false;
+            btnSua.ItemAppearance.Normal.Reset();
+        }
+        void UnReadOnly_SuaThongTin()
+        {
+            lo_btnLuu.ContentVisible = true;
+            lo_btnHuy.ContentVisible = true;
+            txbHoTen.ReadOnly = false;
+            dateNgaySinh.ReadOnly = false;
+            txbDiaChi.ReadOnly = false;
+            gluedLoaiDocGia.Properties.AllowFocused = true;
+            btnSua.ItemAppearance.Normal.BackColor = Color.Silver;
         }
         #endregion
         #region Event_CheckFind
@@ -172,11 +190,12 @@ namespace QLTV_GUI
         }
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            UnReadOnly_SuaThongTin();
+            gluedLoaiDocGia.Properties.DataSource = null;
+            LoadDataSourceLDG();
         }
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gridControl.DataSource = null;
             LoadDocGiaInfo();
             LoadDataSourceLDG();
             _index = 0;
@@ -187,7 +206,14 @@ namespace QLTV_GUI
             int a = bandedGridView.GetFocusedDataSourceRowIndex();
             if (a != _index)
             {
+                //if (lo_btnHuy.ContentVisible == true)
+                //{
                 LoadDataSourceLDG();
+                //}
+                //else
+                //{
+
+                //}
                 _index = a;
             }
             else
@@ -195,16 +221,22 @@ namespace QLTV_GUI
                 gluedLoaiDocGia.Text = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString();
             }
         }
+        private void btnLuuLai_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Bạn có muốn lưu lại dữ liệu đã sửa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                string IdDG = bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString();
+                QLTV_BUS.DOCGIABUS.Instance.UpdateInfoDocGia(IdDG, txbHoTen.Text, txbDiaChi.Text, (DateTime)dateNgaySinh.EditValue, gluedLoaiDocGia.Text);
+                ReadOnly_SuaThongTin();
+                gridControl.Focus();
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            ReadOnly_SuaThongTin();
+            gridControl.Focus();
+        }
         #endregion
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
