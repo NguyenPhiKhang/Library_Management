@@ -16,6 +16,9 @@ namespace QLTV_GUI
 {
     public partial class frmTacGia : DevExpress.XtraEditors.XtraForm
     {
+        BindingSource listbdTacGia = new BindingSource();
+        int index = 0;
+
         public frmTacGia()
         {
             InitializeComponent();
@@ -27,9 +30,15 @@ namespace QLTV_GUI
             addTacGia.ShowDialog();
         }
 
+        void Binding_tacgia()
+        {
+            txbMaTacGia.DataBindings.Add("Text", listbdTacGia, "MaTacGia");
+            txbTenTacGia.DataBindings.Add("Text", listbdTacGia,"TenTacGia")
+        }
+
         private void frmTacGia_Load(object sender, EventArgs e)
         {
-
+            gridControl1.DataSource = QLTV_BUS.
         }
     }
 }
