@@ -268,7 +268,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1312, 78);
-            this.layoutControlGroup1.Text = "Chi tiết";
+            this.layoutControlGroup1.Text = "Chi tiết Thể loại";
             // 
             // layoutControlItem1
             // 
