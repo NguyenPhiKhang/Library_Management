@@ -197,12 +197,24 @@
             // 
             // txbMaTheLoai
             // 
+//<<<<<<< pull_test
             this.txbMaTheLoai.Location = new System.Drawing.Point(81, 12);
             this.txbMaTheLoai.MenuManager = this.barManager1;
             this.txbMaTheLoai.Name = "txbMaTheLoai";
             this.txbMaTheLoai.Size = new System.Drawing.Size(251, 20);
             this.txbMaTheLoai.StyleController = this.layoutControl1;
             this.txbMaTheLoai.TabIndex = 4;
+//=======
+            //this.layoutControlGroup1.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            //this.layoutControlGroup1.AppearanceGroup.Options.UseFont = true;
+            //this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            //this.layoutControlItem1,
+            //this.layoutControlItem2});
+            //this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            //this.layoutControlGroup1.Name = "layoutControlGroup1";
+            //this.layoutControlGroup1.Size = new System.Drawing.Size(1312, 78);
+            //this.layoutControlGroup1.Text = "Chi tiết Thể loại";
+//>>>>>>> master
             // 
             // layoutControlItem1
             // 
