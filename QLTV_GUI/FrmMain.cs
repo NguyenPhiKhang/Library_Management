@@ -187,10 +187,5 @@ namespace QLTV_GUI
                 f.Show();
             }
         }
-
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -18,7 +18,7 @@ namespace QLTV_BUS
             set => instance = value;
         }
         private LOAIDOCGIABUS() { }
-        public List<LOAIDOCGIA> GetLoaiDocGia(string MaLDG)
+        public List<LOAIDOCGIA> GetLoaiDocGia(string MaLDG = "")
         {
             return QLTV_DAO.LOAIDOCGIADAO.Instance.GetLoaiDocGia(MaLDG);
         }

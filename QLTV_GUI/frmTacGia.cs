@@ -8,9 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using QLTV_DTO;
-using QLTV_BUS;
-using System.Threading;
 
 namespace QLTV_GUI
 {
@@ -25,11 +22,6 @@ namespace QLTV_GUI
         {
             frmThemTacGia addTacGia = new frmThemTacGia();
             addTacGia.ShowDialog();
-        }
-
-        private void frmTacGia_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -29,17 +29,19 @@ namespace QLTV_DAO
                            select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDUser, n.PasswordUser})).ToList();
                 foreach (var item in data)
                 {
-                    TTDOCGIADTO ttdg = new TTDOCGIADTO();
-                    ttdg.MaDocGia = item.MaDocGia;
-                    ttdg.HoTen = item.HoTen;
-                    ttdg.NgaySinh = item.NgaySinh;
-                    ttdg.DiaChi = item.DiaChi;
-                    ttdg.Email = item.Email;
-                    ttdg.NgayLapThe = item.NgayLapThe;
-                    ttdg.NgayHetHan = item.NgayHetHan;
-                    ttdg.MaLoaiDocGia = item.MaLoaiDocGia;
-                    ttdg.IDUser = item.IDUser;
-                    ttdg.PasswordUser = item.PasswordUser;
+                    TTDOCGIADTO ttdg = new TTDOCGIADTO
+                    {
+                        MaDocGia = item.MaDocGia,
+                        HoTen = item.HoTen,
+                        NgaySinh = item.NgaySinh,
+                        DiaChi = item.DiaChi,
+                        Email = item.Email,
+                        NgayLapThe = item.NgayLapThe,
+                        NgayHetHan = item.NgayHetHan,
+                        MaLoaiDocGia = item.MaLoaiDocGia,
+                        IDUser = item.IDUser,
+                        PasswordUser = item.PasswordUser
+                    };
                     listDocGiaInfo.Add(ttdg);
                 }
             }
