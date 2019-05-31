@@ -12,15 +12,12 @@ namespace QLTV_DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class THAMSO
+    public partial class sysdiagram
     {
-        public int TuoiToiDa { get; set; }
-        public int TuoiToiThieu { get; set; }
-        public int ThoiHanThe { get; set; }
-        public int SoLuongTheLoai { get; set; }
-        public int KhoangCachXB { get; set; }
-        public int SoNgayMuonMax { get; set; }
-        public int SoSachMuonMax { get; set; }
-        public decimal TPTraTreMotNgay { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
