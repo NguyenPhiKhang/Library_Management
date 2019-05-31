@@ -53,6 +53,7 @@
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TTDOCGIABUS.cs" />
+    <Compile Include="USERBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_DAO\QLTV_DAO.csproj">

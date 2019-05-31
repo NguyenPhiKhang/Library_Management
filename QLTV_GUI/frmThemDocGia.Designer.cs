@@ -28,472 +28,510 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbbLoaiDocGia = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dateNgayHetHan = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.dateNgayLapThe = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txbPassword = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbUsername = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbDiaChi = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbEmail = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbHoTen = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbMaDocGia = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Huy = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Nhap = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dateNgaySinh = new Bunifu.Framework.UI.BunifuDatepicker();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiDocGia.Properties)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemDocGia));
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnNhap = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.txbPassword = new DevExpress.XtraEditors.TextEdit();
+            this.txbUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txbEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txbDiaChi = new DevExpress.XtraEditors.TextEdit();
+            this.txbHoTen = new DevExpress.XtraEditors.TextEdit();
+            this.txbMaDocGia = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dateNgayLapThe = new DevExpress.XtraEditors.DateEdit();
+            this.dateNgayHetHan = new DevExpress.XtraEditors.DateEdit();
+            this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.luedLoaiDocGia = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbHoTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaDocGia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayLapThe.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayLapThe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luedLoaiDocGia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbbLoaiDocGia
+            // layoutControl1
             // 
-            this.cbbLoaiDocGia.Location = new System.Drawing.Point(472, 89);
-            this.cbbLoaiDocGia.Name = "cbbLoaiDocGia";
-            this.cbbLoaiDocGia.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.cbbLoaiDocGia.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbbLoaiDocGia.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbLoaiDocGia.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbLoaiDocGia.Properties.AutoHeight = false;
-            this.cbbLoaiDocGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLoaiDocGia.Size = new System.Drawing.Size(220, 30);
-            this.cbbLoaiDocGia.TabIndex = 43;
+            this.layoutControl1.Controls.Add(this.luedLoaiDocGia);
+            this.layoutControl1.Controls.Add(this.dateNgaySinh);
+            this.layoutControl1.Controls.Add(this.btnNhap);
+            this.layoutControl1.Controls.Add(this.btnHuy);
+            this.layoutControl1.Controls.Add(this.txbPassword);
+            this.layoutControl1.Controls.Add(this.txbUsername);
+            this.layoutControl1.Controls.Add(this.txbEmail);
+            this.layoutControl1.Controls.Add(this.txbDiaChi);
+            this.layoutControl1.Controls.Add(this.txbHoTen);
+            this.layoutControl1.Controls.Add(this.txbMaDocGia);
+            this.layoutControl1.Controls.Add(this.dateNgayLapThe);
+            this.layoutControl1.Controls.Add(this.dateNgayHetHan);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(-8, -8, 1382, 784);
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(950, 161);
+            this.layoutControl1.TabIndex = 50;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateNgayHetHan
+            // btnNhap
             // 
-            this.dateNgayHetHan.BackColor = System.Drawing.Color.Silver;
-            this.dateNgayHetHan.BorderRadius = 0;
-            this.dateNgayHetHan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateNgayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgayHetHan.FormatCustom = null;
-            this.dateNgayHetHan.Location = new System.Drawing.Point(472, 165);
-            this.dateNgayHetHan.Name = "dateNgayHetHan";
-            this.dateNgayHetHan.Size = new System.Drawing.Size(220, 30);
-            this.dateNgayHetHan.TabIndex = 42;
-            this.dateNgayHetHan.Value = new System.DateTime(2019, 5, 11, 16, 15, 55, 945);
+            this.btnNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhap.Appearance.Options.UseFont = true;
+            this.btnNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnNhap.Location = new System.Drawing.Point(706, 109);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(97, 38);
+            this.btnNhap.StyleController = this.layoutControl1;
+            this.btnNhap.TabIndex = 24;
+            this.btnNhap.Text = "NHẬP";
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
-            // dateNgayLapThe
+            // btnHuy
             // 
-            this.dateNgayLapThe.BackColor = System.Drawing.Color.Silver;
-            this.dateNgayLapThe.BorderRadius = 0;
-            this.dateNgayLapThe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgayLapThe.FormatCustom = null;
-            this.dateNgayLapThe.Location = new System.Drawing.Point(472, 127);
-            this.dateNgayLapThe.Name = "dateNgayLapThe";
-            this.dateNgayLapThe.Size = new System.Drawing.Size(220, 30);
-            this.dateNgayLapThe.TabIndex = 41;
-            this.dateNgayLapThe.Value = new System.DateTime(2019, 5, 11, 16, 15, 55, 945);
-            // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(367, 170);
-            this.bunifuCustomLabel11.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(98, 17);
-            this.bunifuCustomLabel11.TabIndex = 39;
-            this.bunifuCustomLabel11.Text = "Ngày Hết Hạn:";
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(367, 132);
-            this.bunifuCustomLabel10.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(97, 17);
-            this.bunifuCustomLabel10.TabIndex = 38;
-            this.bunifuCustomLabel10.Text = "Ngày Lập Thẻ:";
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(367, 94);
-            this.bunifuCustomLabel9.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(92, 17);
-            this.bunifuCustomLabel9.TabIndex = 37;
-            this.bunifuCustomLabel9.Text = "Loại Độc Giả:";
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(367, 56);
-            this.bunifuCustomLabel8.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(69, 17);
-            this.bunifuCustomLabel8.TabIndex = 36;
-            this.bunifuCustomLabel8.Text = "Password:";
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(367, 18);
-            this.bunifuCustomLabel7.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(75, 17);
-            this.bunifuCustomLabel7.TabIndex = 35;
-            this.bunifuCustomLabel7.Text = "Username:";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(5, 170);
-            this.bunifuCustomLabel6.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(60, 17);
-            this.bunifuCustomLabel6.TabIndex = 34;
-            this.bunifuCustomLabel6.Text = "Địa Chỉ:";
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(5, 132);
-            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(48, 17);
-            this.bunifuCustomLabel5.TabIndex = 33;
-            this.bunifuCustomLabel5.Text = "Email:";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(5, 94);
-            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(75, 17);
-            this.bunifuCustomLabel4.TabIndex = 32;
-            this.bunifuCustomLabel4.Text = "Ngày Sinh:";
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(5, 56);
-            this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(56, 17);
-            this.bunifuCustomLabel3.TabIndex = 31;
-            this.bunifuCustomLabel3.Text = "Họ Tên:";
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(818, 109);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(94, 38);
+            this.btnHuy.StyleController = this.layoutControl1;
+            this.btnHuy.TabIndex = 23;
+            this.btnHuy.Text = "HỦY";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // txbPassword
             // 
-            this.txbPassword.BackColor = System.Drawing.Color.Silver;
-            this.txbPassword.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbPassword.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbPassword.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbPassword.BorderThickness = 3;
-            this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbPassword.isPassword = false;
-            this.txbPassword.Location = new System.Drawing.Point(472, 51);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txbPassword.Location = new System.Drawing.Point(753, 69);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(220, 30);
-            this.txbPassword.TabIndex = 30;
-            this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbPassword.Size = new System.Drawing.Size(173, 20);
+            this.txbPassword.StyleController = this.layoutControl1;
+            this.txbPassword.TabIndex = 22;
             // 
             // txbUsername
             // 
-            this.txbUsername.BackColor = System.Drawing.Color.Silver;
-            this.txbUsername.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbUsername.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbUsername.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbUsername.BorderThickness = 3;
-            this.txbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbUsername.isPassword = false;
-            this.txbUsername.Location = new System.Drawing.Point(472, 13);
-            this.txbUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txbUsername.Location = new System.Drawing.Point(753, 45);
             this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(220, 30);
-            this.txbUsername.TabIndex = 29;
-            this.txbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txbDiaChi
-            // 
-            this.txbDiaChi.BackColor = System.Drawing.Color.Silver;
-            this.txbDiaChi.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbDiaChi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbDiaChi.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbDiaChi.BorderThickness = 3;
-            this.txbDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbDiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbDiaChi.isPassword = false;
-            this.txbDiaChi.Location = new System.Drawing.Point(105, 165);
-            this.txbDiaChi.Margin = new System.Windows.Forms.Padding(4);
-            this.txbDiaChi.Name = "txbDiaChi";
-            this.txbDiaChi.Size = new System.Drawing.Size(220, 30);
-            this.txbDiaChi.TabIndex = 28;
-            this.txbDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbUsername.Properties.ReadOnly = true;
+            this.txbUsername.Size = new System.Drawing.Size(173, 20);
+            this.txbUsername.StyleController = this.layoutControl1;
+            this.txbUsername.TabIndex = 21;
             // 
             // txbEmail
             // 
-            this.txbEmail.BackColor = System.Drawing.Color.Silver;
-            this.txbEmail.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbEmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbEmail.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbEmail.BorderThickness = 3;
-            this.txbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbEmail.isPassword = false;
-            this.txbEmail.Location = new System.Drawing.Point(105, 127);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txbEmail.Location = new System.Drawing.Point(97, 117);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(220, 30);
-            this.txbEmail.TabIndex = 27;
-            this.txbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbEmail.Size = new System.Drawing.Size(224, 20);
+            this.txbEmail.StyleController = this.layoutControl1;
+            this.txbEmail.TabIndex = 18;
+            // 
+            // txbDiaChi
+            // 
+            this.txbDiaChi.Location = new System.Drawing.Point(398, 45);
+            this.txbDiaChi.Name = "txbDiaChi";
+            this.txbDiaChi.Size = new System.Drawing.Size(254, 20);
+            this.txbDiaChi.StyleController = this.layoutControl1;
+            this.txbDiaChi.TabIndex = 14;
             // 
             // txbHoTen
             // 
-            this.txbHoTen.BackColor = System.Drawing.Color.Silver;
-            this.txbHoTen.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbHoTen.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbHoTen.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbHoTen.BorderThickness = 3;
-            this.txbHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbHoTen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbHoTen.isPassword = false;
-            this.txbHoTen.Location = new System.Drawing.Point(105, 51);
-            this.txbHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txbHoTen.Location = new System.Drawing.Point(97, 69);
             this.txbHoTen.Name = "txbHoTen";
-            this.txbHoTen.Size = new System.Drawing.Size(220, 30);
-            this.txbHoTen.TabIndex = 26;
-            this.txbHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbHoTen.Size = new System.Drawing.Size(224, 20);
+            this.txbHoTen.StyleController = this.layoutControl1;
+            this.txbHoTen.TabIndex = 12;
             // 
             // txbMaDocGia
             // 
-            this.txbMaDocGia.BackColor = System.Drawing.Color.Silver;
-            this.txbMaDocGia.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbMaDocGia.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbMaDocGia.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txbMaDocGia.BorderThickness = 3;
-            this.txbMaDocGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbMaDocGia.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbMaDocGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbMaDocGia.isPassword = false;
-            this.txbMaDocGia.Location = new System.Drawing.Point(105, 13);
-            this.txbMaDocGia.Margin = new System.Windows.Forms.Padding(0);
+            this.txbMaDocGia.Location = new System.Drawing.Point(97, 45);
             this.txbMaDocGia.Name = "txbMaDocGia";
-            this.txbMaDocGia.Size = new System.Drawing.Size(220, 30);
-            this.txbMaDocGia.TabIndex = 25;
-            this.txbMaDocGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbMaDocGia.Size = new System.Drawing.Size(224, 20);
+            this.txbMaDocGia.StyleController = this.layoutControl1;
+            this.txbMaDocGia.TabIndex = 4;
             // 
-            // bunifuCustomLabel2
+            // Root
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(5, 18);
-            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(84, 17);
-            this.bunifuCustomLabel2.TabIndex = 24;
-            this.bunifuCustomLabel2.Text = "Mã Độc Giả:";
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup3,
+            this.layoutControlGroup2,
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(950, 161);
+            this.Root.TextVisible = false;
             // 
-            // panel1
+            // layoutControlGroup3
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbbLoaiDocGia);
-            this.panel1.Controls.Add(this.dateNgayHetHan);
-            this.panel1.Controls.Add(this.dateNgayLapThe);
-            this.panel1.Controls.Add(this.dateNgaySinh);
-            this.panel1.Controls.Add(this.bunifuCustomLabel11);
-            this.panel1.Controls.Add(this.bunifuCustomLabel10);
-            this.panel1.Controls.Add(this.bunifuCustomLabel9);
-            this.panel1.Controls.Add(this.bunifuCustomLabel8);
-            this.panel1.Controls.Add(this.bunifuCustomLabel7);
-            this.panel1.Controls.Add(this.bunifuCustomLabel6);
-            this.panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.panel1.Controls.Add(this.bunifuCustomLabel4);
-            this.panel1.Controls.Add(this.bunifuCustomLabel3);
-            this.panel1.Controls.Add(this.txbPassword);
-            this.panel1.Controls.Add(this.txbUsername);
-            this.panel1.Controls.Add(this.txbDiaChi);
-            this.panel1.Controls.Add(this.txbEmail);
-            this.panel1.Controls.Add(this.txbHoTen);
-            this.panel1.Controls.Add(this.txbMaDocGia);
-            this.panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.panel1.Location = new System.Drawing.Point(11, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(714, 223);
-            this.panel1.TabIndex = 44;
+            this.layoutControlGroup3.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.layoutControlGroup3.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem9,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem6,
+            this.layoutControlItem5,
+            this.layoutControlItem10});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(656, 141);
+            this.layoutControlGroup3.Text = "Độc Giả";
             // 
-            // panel2
+            // layoutControlItem1
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btn_Huy);
-            this.panel2.Controls.Add(this.btn_Nhap);
-            this.panel2.Location = new System.Drawing.Point(253, 235);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 43);
-            this.panel2.TabIndex = 45;
+            this.layoutControlItem1.Control = this.txbMaDocGia;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(301, 24);
+            this.layoutControlItem1.Text = "Mã Độc Giả:";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // btn_Huy
+            // layoutControlItem2
             // 
-            this.btn_Huy.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Huy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Huy.BorderRadius = 0;
-            this.btn_Huy.ButtonText = "HỦY";
-            this.btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Huy.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Huy.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huy.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Huy.Iconimage = global::QLTV_GUI.Properties.Resources.delete_icon;
-            this.btn_Huy.Iconimage_right = null;
-            this.btn_Huy.Iconimage_right_Selected = null;
-            this.btn_Huy.Iconimage_Selected = null;
-            this.btn_Huy.IconMarginLeft = 0;
-            this.btn_Huy.IconMarginRight = 0;
-            this.btn_Huy.IconRightVisible = true;
-            this.btn_Huy.IconRightZoom = 0D;
-            this.btn_Huy.IconVisible = true;
-            this.btn_Huy.IconZoom = 50D;
-            this.btn_Huy.IsTab = false;
-            this.btn_Huy.Location = new System.Drawing.Point(121, 7);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_Huy.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Huy.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Huy.selected = false;
-            this.btn_Huy.Size = new System.Drawing.Size(99, 31);
-            this.btn_Huy.TabIndex = 47;
-            this.btn_Huy.Text = "HỦY";
-            this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Huy.Textcolor = System.Drawing.Color.White;
-            this.btn_Huy.TextFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            this.layoutControlItem2.Control = this.txbDiaChi;
+            this.layoutControlItem2.Location = new System.Drawing.Point(301, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(331, 24);
+            this.layoutControlItem2.Text = "Địa Chỉ:";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // btn_Nhap
+            // layoutControlItem9
             // 
-            this.btn_Nhap.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Nhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_Nhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Nhap.BorderRadius = 0;
-            this.btn_Nhap.ButtonText = "NHẬP";
-            this.btn_Nhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Nhap.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Nhap.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nhap.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Nhap.Iconimage = global::QLTV_GUI.Properties.Resources.man;
-            this.btn_Nhap.Iconimage_right = null;
-            this.btn_Nhap.Iconimage_right_Selected = null;
-            this.btn_Nhap.Iconimage_Selected = null;
-            this.btn_Nhap.IconMarginLeft = 0;
-            this.btn_Nhap.IconMarginRight = 0;
-            this.btn_Nhap.IconRightVisible = true;
-            this.btn_Nhap.IconRightZoom = 0D;
-            this.btn_Nhap.IconVisible = true;
-            this.btn_Nhap.IconZoom = 50D;
-            this.btn_Nhap.IsTab = false;
-            this.btn_Nhap.Location = new System.Drawing.Point(2, 7);
-            this.btn_Nhap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_Nhap.Name = "btn_Nhap";
-            this.btn_Nhap.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_Nhap.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Nhap.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Nhap.selected = false;
-            this.btn_Nhap.Size = new System.Drawing.Size(99, 31);
-            this.btn_Nhap.TabIndex = 46;
-            this.btn_Nhap.Text = "NHẬP";
-            this.btn_Nhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Nhap.Textcolor = System.Drawing.Color.White;
-            this.btn_Nhap.TextFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem9.Control = this.txbHoTen;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(301, 24);
+            this.layoutControlItem9.Text = "Họ Tên:";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.dateNgayLapThe;
+            this.layoutControlItem7.Location = new System.Drawing.Point(301, 48);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(331, 24);
+            this.layoutControlItem7.Text = "Ngày Lập Thẻ:";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.dateNgayHetHan;
+            this.layoutControlItem8.Location = new System.Drawing.Point(301, 72);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(331, 24);
+            this.layoutControlItem8.Text = "Ngày Hết Hạn";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txbEmail;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(301, 24);
+            this.layoutControlItem6.Text = "Email:";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.layoutControlGroup2.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(656, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(274, 93);
+            this.layoutControlGroup2.Text = "Tài Khoản";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.txbUsername;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(250, 24);
+            this.layoutControlItem3.Text = "Username:";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.txbPassword;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(250, 24);
+            this.layoutControlItem4.Text = "Password:";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btnNhap;
+            this.layoutControlItem11.Location = new System.Drawing.Point(694, 93);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 6, 2);
+            this.layoutControlItem11.Size = new System.Drawing.Size(101, 48);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.btnHuy;
+            this.layoutControlItem12.Location = new System.Drawing.Point(806, 93);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 6, 2);
+            this.layoutControlItem12.Size = new System.Drawing.Size(98, 48);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(656, 93);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(38, 48);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(795, 93);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(11, 48);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(904, 93);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(26, 48);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // dateNgayLapThe
+            // 
+            this.dateNgayLapThe.EditValue = null;
+            this.dateNgayLapThe.Location = new System.Drawing.Point(398, 93);
+            this.dateNgayLapThe.Name = "dateNgayLapThe";
+            this.dateNgayLapThe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayLapThe.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayLapThe.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayLapThe.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayLapThe.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayLapThe.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayLapThe.Properties.Mask.EditMask = "";
+            this.dateNgayLapThe.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateNgayLapThe.Properties.ReadOnly = true;
+            this.dateNgayLapThe.Size = new System.Drawing.Size(254, 20);
+            this.dateNgayLapThe.StyleController = this.layoutControl1;
+            this.dateNgayLapThe.TabIndex = 19;
+            // 
+            // dateNgayHetHan
+            // 
+            this.dateNgayHetHan.EditValue = null;
+            this.dateNgayHetHan.Location = new System.Drawing.Point(398, 117);
+            this.dateNgayHetHan.Name = "dateNgayHetHan";
+            this.dateNgayHetHan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayHetHan.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayHetHan.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayHetHan.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayHetHan.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayHetHan.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayHetHan.Properties.Mask.EditMask = "";
+            this.dateNgayHetHan.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateNgayHetHan.Properties.ReadOnly = true;
+            this.dateNgayHetHan.Size = new System.Drawing.Size(254, 20);
+            this.dateNgayHetHan.StyleController = this.layoutControl1;
+            this.dateNgayHetHan.TabIndex = 20;
             // 
             // dateNgaySinh
             // 
-            this.dateNgaySinh.BackColor = System.Drawing.Color.Silver;
-            this.dateNgaySinh.BorderRadius = 0;
-            this.dateNgaySinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgaySinh.FormatCustom = null;
-            this.dateNgaySinh.Location = new System.Drawing.Point(105, 89);
+            this.dateNgaySinh.EditValue = null;
+            this.dateNgaySinh.Location = new System.Drawing.Point(97, 93);
             this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(220, 30);
-            this.dateNgaySinh.TabIndex = 40;
-            this.dateNgaySinh.Value = new System.DateTime(2019, 5, 11, 16, 15, 55, 945);
+            this.dateNgaySinh.Properties.AllowFocused = false;
+            this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySinh.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgaySinh.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgaySinh.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNgaySinh.Properties.NullText = "Ngày/Tháng/Năm";
+            this.dateNgaySinh.Size = new System.Drawing.Size(224, 20);
+            this.dateNgaySinh.StyleController = this.layoutControl1;
+            this.dateNgaySinh.TabIndex = 25;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.dateNgaySinh;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(301, 24);
+            this.layoutControlItem5.Text = "Ngày Sinh:";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // luedLoaiDocGia
+            // 
+            this.luedLoaiDocGia.Location = new System.Drawing.Point(398, 69);
+            this.luedLoaiDocGia.Name = "luedLoaiDocGia";
+            this.luedLoaiDocGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luedLoaiDocGia.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaLoaiDocGia", "Mã Loại Độc Giả"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenLoaiDocGia", "Tên Loại Độc Giả")});
+            this.luedLoaiDocGia.Properties.DropDownRows = 5;
+            this.luedLoaiDocGia.Properties.NullText = "Chọn Loại độc giả...";
+            this.luedLoaiDocGia.Size = new System.Drawing.Size(254, 20);
+            this.luedLoaiDocGia.StyleController = this.layoutControl1;
+            this.luedLoaiDocGia.TabIndex = 26;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.luedLoaiDocGia;
+            this.layoutControlItem10.Location = new System.Drawing.Point(301, 24);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(331, 24);
+            this.layoutControlItem10.Text = "Loại Độc Giả:";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(70, 13);
             // 
             // frmThemDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 289);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(950, 164);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmThemDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Độc Giả";
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiDocGia.Properties)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmThemDocGia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txbPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbHoTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaDocGia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayLapThe.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayLapThe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luedLoaiDocGia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.ComboBoxEdit cbbLoaiDocGia;
-        private Bunifu.Framework.UI.BunifuDatepicker dateNgayHetHan;
-        private Bunifu.Framework.UI.BunifuDatepicker dateNgayLapThe;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbPassword;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbUsername;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbDiaChi;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbEmail;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbHoTen;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbMaDocGia;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Huy;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Nhap;
-        private Bunifu.Framework.UI.BunifuDatepicker dateNgaySinh;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraEditors.SimpleButton btnNhap;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.TextEdit txbPassword;
+        private DevExpress.XtraEditors.TextEdit txbUsername;
+        private DevExpress.XtraEditors.TextEdit txbEmail;
+        private DevExpress.XtraEditors.TextEdit txbDiaChi;
+        private DevExpress.XtraEditors.TextEdit txbHoTen;
+        private DevExpress.XtraEditors.TextEdit txbMaDocGia;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.DateEdit dateNgayLapThe;
+        private DevExpress.XtraEditors.DateEdit dateNgayHetHan;
+        private DevExpress.XtraEditors.DateEdit dateNgaySinh;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraEditors.LookUpEdit luedLoaiDocGia;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }
