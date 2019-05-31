@@ -9,15 +9,15 @@
           <Key>
             <PropertyRef Name="IDAdmin" />
           </Key>
-          <Property Name="IDAdmin" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="PasswordAd" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="IDAdmin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordAd" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenAdmin" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="BCTKMUONSACH">
           <Key>
             <PropertyRef Name="MaBCTKMuonSach" />
           </Key>
-          <Property Name="MaBCTKMuonSach" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaBCTKMuonSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Thang" Type="date" Nullable="false" />
           <Property Name="TongSoLuotMuon" Type="int" Nullable="false" />
         </EntityType>
@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="MaBCTKTraTre" />
           </Key>
-          <Property Name="MaBCTKTraTre" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaBCTKTraTre" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Ngay" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="CTBCTKMUONSACH">
@@ -33,8 +33,8 @@
             <PropertyRef Name="MaBCTKMuonSach" />
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaBCTKMuonSach" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaTheLoai" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaBCTKMuonSach" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaTheLoai" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="SoLuotMuon" Type="int" Nullable="false" />
           <Property Name="TiLe" Type="float" Nullable="false" />
         </EntityType>
@@ -44,9 +44,9 @@
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaBCTKTraTre" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaPhieuMS" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaSach" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaBCTKTraTre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="SoNgayTraTre" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CTPHIEUMUON">
@@ -54,47 +54,47 @@
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaPhieuMS" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaSach" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="HanTra" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DOCGIA">
           <Key>
             <PropertyRef Name="MaDocGia" />
           </Key>
-          <Property Name="MaDocGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NgaySinh" Type="date" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
           <Property Name="NgayLapThe" Type="date" Nullable="false" />
           <Property Name="NgayHetHan" Type="date" Nullable="false" />
-          <Property Name="MaLoaiDocGia" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="IDUser" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDUser" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
             <PropertyRef Name="MaLoaiDocGia" />
           </Key>
-          <Property Name="MaLoaiDocGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenLoaiDocGia" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="PHIEUMUONSACH">
           <Key>
             <PropertyRef Name="MaPhieuMS" />
           </Key>
-          <Property Name="MaPhieuMS" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaDocGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NgayMuon" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="PHIEUTHUTIENPHAT">
           <Key>
             <PropertyRef Name="MaPhieuThuTP" />
           </Key>
-          <Property Name="MaPhieuThuTP" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaDocGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaPhieuThuTP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TongNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="SoTienThu" Type="nchar" MaxLength="10" />
+          <Property Name="SoTienThu" Type="decimal" Precision="18" Scale="0" />
           <Property Name="ConLai" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="PHIEUTRASACH">
@@ -102,8 +102,8 @@
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaPhieuMS" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="MaSach" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NgayTra" Type="date" Nullable="false" />
           <Property Name="TienPhatKiNay" Type="decimal" Precision="18" Scale="0" />
           <Property Name="SoNgayMuon" Type="int" Nullable="false" />
@@ -113,21 +113,31 @@
           <Key>
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaSach" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenSach" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="MaTheLoai" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTheLoai" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NamXuatBan" Type="int" Nullable="false" />
           <Property Name="NhaXuatBan" Type="nvarchar" MaxLength="100" />
-          <Property Name="MaTacGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTacGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NgayNhap" Type="date" Nullable="false" />
           <Property Name="TriGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaTinhTrang" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTinhTrang" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TACGIA">
           <Key>
             <PropertyRef Name="MaTacGia" />
           </Key>
-          <Property Name="MaTacGia" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTacGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenTacGia" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -146,7 +156,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TuoiToiDa" Type="int" Nullable="false" />
           <Property Name="TuoiToiThieu" Type="int" Nullable="false" />
           <Property Name="ThoiHanThe" Type="int" Nullable="false" />
-          <Property Name="SoLuongTheLoai" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="SoLuongTheLoai" Type="int" Nullable="false" />
           <Property Name="KhoangCachXB" Type="int" Nullable="false" />
           <Property Name="SoNgayMuonMax" Type="int" Nullable="false" />
           <Property Name="SoSachMuonMax" Type="int" Nullable="false" />
@@ -156,22 +166,22 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaTheLoai" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTheLoai" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenTheLoai" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="TINHTRANG">
           <Key>
             <PropertyRef Name="MaTinhTrang" />
           </Key>
-          <Property Name="MaTinhTrang" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="MaTinhTrang" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenTinhTrang" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="USER">
           <Key>
             <PropertyRef Name="IDUser" />
           </Key>
-          <Property Name="IDUser" Type="char" MaxLength="50" Nullable="false" />
-          <Property Name="PasswordUser" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="IDUser" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordUser" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK_CTBCTKMUONSACH_BCTKMUONSACH">
           <End Role="BCTKMUONSACH" Type="Self.BCTKMUONSACH" Multiplicity="1" />
@@ -358,6 +368,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <EntitySet Name="PHIEUTHUTIENPHAT" EntityType="Self.PHIEUTHUTIENPHAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTRASACH" EntityType="Self.PHIEUTRASACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
@@ -440,15 +451,15 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="IDAdmin" />
           </Key>
-          <Property Name="IDAdmin" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="PasswordAd" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PasswordAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenAdmin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="BCTKMUONSACH">
           <Key>
             <PropertyRef Name="MaBCTKMuonSach" />
           </Key>
-          <Property Name="MaBCTKMuonSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaBCTKMuonSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Thang" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TongSoLuotMuon" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CTBCTKMUONSACHes" Relationship="Self.FK_CTBCTKMUONSACH_BCTKMUONSACH" FromRole="BCTKMUONSACH" ToRole="CTBCTKMUONSACH" />
@@ -457,7 +468,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaBCTKTraTre" />
           </Key>
-          <Property Name="MaBCTKTraTre" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaBCTKTraTre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="CTBCTKTRATREs" Relationship="Self.FK_CTBCTKTRATRE_BCTKTRATRE" FromRole="BCTKTRATRE" ToRole="CTBCTKTRATRE" />
         </EntityType>
@@ -466,8 +477,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="MaBCTKMuonSach" />
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaBCTKMuonSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaBCTKMuonSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SoLuotMuon" Type="Int32" Nullable="false" />
           <Property Name="TiLe" Type="Double" Nullable="false" />
           <NavigationProperty Name="BCTKMUONSACH" Relationship="Self.FK_CTBCTKMUONSACH_BCTKMUONSACH" FromRole="CTBCTKMUONSACH" ToRole="BCTKMUONSACH" />
@@ -479,9 +490,9 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaBCTKTraTre" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaBCTKTraTre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SoNgayTraTre" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BCTKTRATRE" Relationship="Self.FK_CTBCTKTRATRE_BCTKTRATRE" FromRole="CTBCTKTRATRE" ToRole="BCTKTRATRE" />
           <NavigationProperty Name="PHIEUTRASACH" Relationship="Self.FK_CTBCTKTRATRE_PHIEUTRASACH" FromRole="CTBCTKTRATRE" ToRole="PHIEUTRASACH" />
@@ -491,8 +502,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="HanTra" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PHIEUMUONSACH" Relationship="Self.FK_CTPHIEUMUON_PHIEUMUONSACH" FromRole="CTPHIEUMUON" ToRole="PHIEUMUONSACH" />
           <NavigationProperty Name="SACH" Relationship="Self.FK_CTPHIEUMUON_SACH" FromRole="CTPHIEUMUON" ToRole="SACH" />
@@ -502,15 +513,15 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaDocGia" />
           </Key>
-          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NgayLapThe" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MaLoaiDocGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaLoaiDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="LOAIDOCGIA" Relationship="Self.FK_DOCGIA_LOAIDOCGIA" FromRole="DOCGIA" ToRole="LOAIDOCGIA" />
           <NavigationProperty Name="USER" Relationship="Self.FK_DOCGIA_USER" FromRole="DOCGIA" ToRole="USER" />
           <NavigationProperty Name="PHIEUMUONSACHes" Relationship="Self.FK_PHIEUMUONSACH_DOCGIA" FromRole="DOCGIA" ToRole="PHIEUMUONSACH" />
@@ -520,7 +531,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaLoaiDocGia" />
           </Key>
-          <Property Name="MaLoaiDocGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaLoaiDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenLoaiDocGia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="DOCGIAs" Relationship="Self.FK_DOCGIA_LOAIDOCGIA" FromRole="LOAIDOCGIA" ToRole="DOCGIA" />
         </EntityType>
@@ -528,8 +539,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaPhieuMS" />
           </Key>
-          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayMuon" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="CTPHIEUMUONs" Relationship="Self.FK_CTPHIEUMUON_PHIEUMUONSACH" FromRole="PHIEUMUONSACH" ToRole="CTPHIEUMUON" />
           <NavigationProperty Name="DOCGIA" Relationship="Self.FK_PHIEUMUONSACH_DOCGIA" FromRole="PHIEUMUONSACH" ToRole="DOCGIA" />
@@ -538,10 +549,10 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaPhieuThuTP" />
           </Key>
-          <Property Name="MaPhieuThuTP" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuThuTP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TongNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="SoTienThu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SoTienThu" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ConLai" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <NavigationProperty Name="DOCGIA" Relationship="Self.FK_PHIEUTHUTIENPHAT_DOCGIA" FromRole="PHIEUTHUTIENPHAT" ToRole="DOCGIA" />
         </EntityType>
@@ -550,8 +561,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="MaPhieuMS" />
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayTra" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TienPhatKiNay" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="SoNgayMuon" Type="Int32" Nullable="false" />
@@ -563,25 +574,35 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NamXuatBan" Type="Int32" Nullable="false" />
           <Property Name="NhaXuatBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MaTacGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TriGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaTinhTrang" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CTPHIEUMUONs" Relationship="Self.FK_CTPHIEUMUON_SACH" FromRole="SACH" ToRole="CTPHIEUMUON" />
           <NavigationProperty Name="TACGIA" Relationship="Self.FK_SACH_TACGIA" FromRole="SACH" ToRole="TACGIA" />
           <NavigationProperty Name="THELOAI" Relationship="Self.FK_SACH_THELOAI" FromRole="SACH" ToRole="THELOAI" />
           <NavigationProperty Name="TINHTRANG" Relationship="Self.FK_SACH_TINHTRANG" FromRole="SACH" ToRole="TINHTRANG" />
         </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TACGIA">
           <Key>
             <PropertyRef Name="MaTacGia" />
           </Key>
-          <Property Name="MaTacGia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenTacGia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="SACHes" Relationship="Self.FK_SACH_TACGIA" FromRole="TACGIA" ToRole="SACH" />
         </EntityType>
@@ -589,7 +610,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenTheLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CTBCTKMUONSACHes" Relationship="Self.FK_CTBCTKMUONSACH_THELOAI" FromRole="THELOAI" ToRole="CTBCTKMUONSACH" />
           <NavigationProperty Name="SACHes" Relationship="Self.FK_SACH_THELOAI" FromRole="THELOAI" ToRole="SACH" />
@@ -598,7 +619,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="MaTinhTrang" />
           </Key>
-          <Property Name="MaTinhTrang" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaTinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenTinhTrang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="SACHes" Relationship="Self.FK_SACH_TINHTRANG" FromRole="TINHTRANG" ToRole="SACH" />
         </EntityType>
@@ -606,8 +627,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Key>
             <PropertyRef Name="IDUser" />
           </Key>
-          <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="PasswordUser" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PasswordUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="DOCGIAs" Relationship="Self.FK_DOCGIA_USER" FromRole="USER" ToRole="DOCGIA" />
         </EntityType>
         <EntityType Name="THAMSO">
@@ -624,7 +645,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TuoiToiDa" Type="Int32" Nullable="false" />
           <Property Name="TuoiToiThieu" Type="Int32" Nullable="false" />
           <Property Name="ThoiHanThe" Type="Int32" Nullable="false" />
-          <Property Name="SoLuongTheLoai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SoLuongTheLoai" Type="Int32" Nullable="false" />
           <Property Name="KhoangCachXB" Type="Int32" Nullable="false" />
           <Property Name="SoNgayMuonMax" Type="Int32" Nullable="false" />
           <Property Name="SoSachMuonMax" Type="Int32" Nullable="false" />
@@ -815,6 +836,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <EntitySet Name="PHIEUTHUTIENPHATs" EntityType="Self.PHIEUTHUTIENPHAT" />
           <EntitySet Name="PHIEUTRASACHes" EntityType="Self.PHIEUTRASACH" />
           <EntitySet Name="SACHes" EntityType="Self.SACH" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TACGIAs" EntityType="Self.TACGIA" />
           <EntitySet Name="THELOAIs" EntityType="Self.THELOAI" />
           <EntitySet Name="TINHTRANGs" EntityType="Self.TINHTRANG" />
@@ -1005,6 +1027,17 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
                 <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
                 <ScalarProperty Name="TriGia" ColumnName="TriGia" />
                 <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -17,7 +17,7 @@ namespace QLTV_DTO
         public int TuoiToiDa { get; set; }
         public int TuoiToiThieu { get; set; }
         public int ThoiHanThe { get; set; }
-        public string SoLuongTheLoai { get; set; }
+        public int SoLuongTheLoai { get; set; }
         public int KhoangCachXB { get; set; }
         public int SoNgayMuonMax { get; set; }
         public int SoSachMuonMax { get; set; }

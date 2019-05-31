@@ -56,7 +56,7 @@ namespace QLTV_GUI
                 txbEmail.DataBindings.Add("Text", ListBDDocGia, "Email");
                 txbUserName.DataBindings.Add("Text", ListBDDocGia, "IDUser");
                 txbPassword.DataBindings.Add("Text", ListBDDocGia, "PasswordUser");
-                gluedLoaiDocGia.DataBindings.Add("Text", ListBDDocGia, "MaLoaiDocGia", true, DataSourceUpdateMode.Never);
+                gluedLoaiDocGia.DataBindings.Add("EditValue", ListBDDocGia, "MaLoaiDocGia", true, DataSourceUpdateMode.Never);
                 dateNgayLapThe.DataBindings.Add("EditValue", ListBDDocGia, "NgayLapThe", true, DataSourceUpdateMode.OnValidation);
                 dateNgayHetHan.DataBindings.Add("EditValue", ListBDDocGia, "NgayHetHan", true, DataSourceUpdateMode.OnPropertyChanged);
             }
@@ -68,8 +68,9 @@ namespace QLTV_GUI
         void LoadDataSourceLDG()
         {
             gluedLoaiDocGia.Properties.DataSource = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(gluedLoaiDocGia.EditValue.ToString()/*mldg.ToString()*/);
-            gluedLoaiDocGia.Properties.DisplayMember = "MaLoaiDocGia";
             gluedLoaiDocGia.Properties.ValueMember = "MaLoaiDocGia";
+            gluedLoaiDocGia.Properties.DisplayMember = "TenLoaiDocGia";
+            
             //gluedLoaiDocGia.Text = gluedLoaiDocGia.EditValue.ToString();
         }
         #endregion
@@ -184,16 +185,8 @@ namespace QLTV_GUI
         
         private void bandGridview_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            int a = bandedGridView.GetFocusedDataSourceRowIndex();
-            if (a != _index)
-            {
-                LoadDataSourceLDG();
-                _index = a;
-            }
-            else
-            {
-                gluedLoaiDocGia.Text = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString();
-            }
+        
+           
         }
         #endregion
 
@@ -205,6 +198,42 @@ namespace QLTV_GUI
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void bandedGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Up)
+
+            {
+                int a = bandedGridView.GetFocusedDataSourceRowIndex();
+                if (a != _index)
+                {
+                    LoadDataSourceLDG();
+                    _index = a;
+                }
+                else
+                {
+                    gluedLoaiDocGia.Text = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString())[0].TenLoaiDocGia.ToString();
+                }
+            }
+        }
+
+        private void bandedGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int a = bandedGridView.GetFocusedDataSourceRowIndex();
+            if (a != _index)
+            {
+                LoadDataSourceLDG();
+                gluedLoaiDocGia.Text = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString())[0].TenLoaiDocGia.ToString();
+                _index = a;
+            }
+            else
+            {
+                gluedLoaiDocGia.Text = QLTV_BUS.LOAIDOCGIABUS.Instance.GetLoaiDocGia(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString())[0].TenLoaiDocGia.ToString();
+            }
         }
     }
 }
