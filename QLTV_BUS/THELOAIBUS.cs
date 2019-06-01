@@ -16,7 +16,7 @@ namespace QLTV_BUS
            
             set => instance = value; }
         private THELOAIBUS() { }
-        public List<THELOAI> GetTheLoai( string MaTL)
+        public List<THELOAI> GetTheLoai( string MaTL="")
         {
             return QLTV_DAO.THELOAIDAO.Instance.GetTheLoai(MaTL);
         }

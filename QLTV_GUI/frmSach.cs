@@ -21,9 +21,18 @@ namespace QLTV_GUI
         public frmSach()
         {
             InitializeComponent();
-            gridControl1.Focus();
+        
             
             //layoutControlGroup2.Visible = false;
+        }
+        private void frmSach_Load(object sender, EventArgs e)
+        {
+            LoadSachInfo();
+            Binding_Sach();
+            LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
+            lo_btnLuuLai.ContentVisible = false;
+            lo_btnHuy.ContentVisible = false;
+            gridControl1.Focus();
         }
         #region Methods
 
@@ -42,20 +51,22 @@ namespace QLTV_GUI
             ListBDSach.DataSource = list.ToList();
             gridControl1.DataSource = ListBDSach;
         }
-        void LoadDataSourceLDG()
-        {   
-            
-            glued_TheLoai.Properties.DataSource = QLTV_BUS.THELOAIBUS.Instance.GetTheLoai(glued_TheLoai.EditValue.ToString());
+        void LoadDataSourceLDG(string theloai="",string tacgia="",string tinhtrang="")
+        {
+            var list =QLTV_BUS.THELOAIBUS.Instance.GetTheLoai(theloai);
+
+            glued_TheLoai.Properties.DataSource = list;
             
             glued_TheLoai.Properties.ValueMember = "MaTheLoai";
             glued_TheLoai.Properties.DisplayMember = "TenTheLoai";
 
-            glued_TacGia.Properties.DataSource = QLTV_BUS.TACGIABUS.Instance.GetTacGia(glued_TacGia.EditValue.ToString());
+            var list2= QLTV_BUS.TACGIABUS.Instance.GetTacGia(tacgia);
+            glued_TacGia.Properties.DataSource = list2;
             
             glued_TacGia.Properties.ValueMember = "MaTacGia";
             glued_TacGia.Properties.DisplayMember = "TenTacGia";
-
-            glued_TinhTrang.Properties.DataSource = QLTV_BUS.TINHTRANGBUS.Instance.GetTinhTrang(glued_TinhTrang.EditValue.ToString());
+            var list3 = QLTV_BUS.TINHTRANGBUS.Instance.GetTinhTrang(tinhtrang);
+            glued_TinhTrang.Properties.DataSource = list3;
             
             glued_TinhTrang.Properties.ValueMember = "MaTinhTrang";
             glued_TinhTrang.Properties.DisplayMember = "TenTinhTrang";
@@ -82,12 +93,7 @@ namespace QLTV_GUI
             }
         }
 
-        private void frmSach_Load(object sender, EventArgs e)
-        {
-            LoadSachInfo();
-            Binding_Sach();
-            LoadDataSourceLDG();
-        }
+       
 
         
 
@@ -96,19 +102,23 @@ namespace QLTV_GUI
             int a = bandedGridView1.GetFocusedDataSourceRowIndex();
             if (a != _index)
             {
-                LoadDataSourceLDG();
                 
-                glued_TheLoai.Text = QLTV_BUS.THELOAIBUS.Instance.GetTheLoai(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString())[0].TenTheLoai.ToString();
-                glued_TinhTrang.Text = QLTV_BUS.TINHTRANGBUS.Instance.GetTinhTrang(bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString())[0].TenTinhTrang.ToString();
-                glued_TacGia.Text = QLTV_BUS.TACGIABUS.Instance.GetTacGia(bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString())[0].TenTacGia.ToString();
+                
+                
                 _index = a;
             }
             else
             {
 
-                glued_TheLoai.Text = QLTV_BUS.THELOAIBUS.Instance.GetTheLoai(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString())[0].TenTheLoai.ToString();
-                glued_TinhTrang.Text =QLTV_BUS.TINHTRANGBUS.Instance.GetTinhTrang(  bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString())[0].TenTinhTrang.ToString();
-                glued_TacGia.Text = QLTV_BUS.TACGIABUS.Instance.GetTacGia( bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString())[0].TenTacGia.ToString();
+                
+            }
+            if(lo_btnLuuLai.ContentVisible==false)
+            {
+                LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
+            }
+            else
+            {
+                LoadDataSourceLDG();
             }
         }
 
@@ -119,6 +129,7 @@ namespace QLTV_GUI
             glued_TacGia.Properties.ReadOnly = false;
             glued_TheLoai.Properties.ReadOnly = false;
             glued_TinhTrang.Properties.ReadOnly = false;
+            LoadDataSourceLDG();
         }
 
         private void btn_LuuLai_Click(object sender, EventArgs e)

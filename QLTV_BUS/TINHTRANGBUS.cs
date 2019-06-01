@@ -14,7 +14,7 @@ namespace QLTV_BUS
         public static TINHTRANGBUS Instance { get { if (instance == null) instance = new TINHTRANGBUS(); return instance; }
             set => instance = value; }
         private TINHTRANGBUS() { }
-        public List<TINHTRANG> GetTinhTrang(string MaTT)
+        public List<TINHTRANG> GetTinhTrang(string MaTT="")
         {
             return QLTV_DAO.TINHTRANGDAO.Instance.GetTinhTrang(MaTT);
         }

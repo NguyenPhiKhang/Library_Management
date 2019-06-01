@@ -14,7 +14,7 @@ namespace QLTV_BUS
         public static TACGIABUS Instance { get { if (instance == null) instance = new TACGIABUS(); return instance; } 
             set => instance = value; }
         private TACGIABUS()  { }
-        public List<TACGIA> GetTacGia(string MaTacGia)
+        public List<TACGIA> GetTacGia(string MaTacGia="")
         {
             return QLTV_DAO.TACGIADAO.Instance.GetTacGia(MaTacGia);
         }

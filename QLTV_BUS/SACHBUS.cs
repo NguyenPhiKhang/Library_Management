@@ -22,5 +22,17 @@ namespace QLTV_BUS
         {
             return QLTV_DAO.SACHDAO.Instance.GetListSachInfo();
         }
+        public void UpdateInfoSach(string MaS, string TenS, string MaTL, int NamXB, string NhaXB, string MaTG, int TriGia, string MaTT)
+        {
+            QLTV_DAO.SACHDAO.Instance.UpdateInfoSach(MaS,TenS,MaTL,NamXB,NhaXB,MaTG,TriGia,MaTT);
+        }
+        public void RemoveInfoSach(string MaS)
+        {
+            SACHDAO.Instance.RemoveInfoSach(MaS);
+        }
+        public void AddInfoSach(string MaS, string TenS, string MaTL, int NamXB, string NhaXB, string MaTG, DateTime NgayNhap, int TriGia, string MaTT)
+        {
+            SACHDAO.Instance.AddInfoSach(MaS,TenS,MaTL,NamXB,NhaXB,MaTG,TriGia,MaTT);
+        }
     }
 }

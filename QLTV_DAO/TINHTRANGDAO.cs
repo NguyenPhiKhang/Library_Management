@@ -14,18 +14,36 @@ namespace QLTV_DAO
         public static TINHTRANGDAO Instance { get { if (instance == null) instance = new TINHTRANGDAO(); return instance; }
             set => instance = value; }
         private TINHTRANGDAO() { }
-        public List<TINHTRANG> GetTinhTrang(string MaTT)
+        public List<TINHTRANG> GetTinhTrang(string MaTT="")
         {
             List<TINHTRANG> Listltt = new List<TINHTRANG>();
-            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            if (MaTT!="")
             {
-                var getltt = (from u in db.TINHTRANGs where u.MaTinhTrang == MaTT select new { u.MaTinhTrang, u.TenTinhTrang }).SingleOrDefault();
-                TINHTRANG ltt = new TINHTRANG();
-                ltt.MaTinhTrang = getltt.MaTinhTrang;
-                ltt.TenTinhTrang = getltt.TenTinhTrang;
-                Listltt.Add(ltt);
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltt = (from u in db.TINHTRANGs where u.MaTinhTrang == MaTT select new { u.MaTinhTrang, u.TenTinhTrang }).SingleOrDefault();
+                    TINHTRANG ltt = new TINHTRANG();
+                    ltt.MaTinhTrang = getltt.MaTinhTrang;
+                    ltt.TenTinhTrang = getltt.TenTinhTrang;
+                    Listltt.Add(ltt);
+                }
+                return Listltt;
             }
-            return Listltt;
+            else
+            {
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltt = (from u in db.TINHTRANGs  select new { u.MaTinhTrang, u.TenTinhTrang });
+                    foreach (var item in getltt)
+                    {
+                        TINHTRANG ltt = new TINHTRANG();
+                        ltt.MaTinhTrang = item.MaTinhTrang;
+                        ltt.TenTinhTrang = item.TenTinhTrang;
+                        Listltt.Add(ltt);
+                    }
+                }
+                return Listltt;
+            }
         }
     }
 }

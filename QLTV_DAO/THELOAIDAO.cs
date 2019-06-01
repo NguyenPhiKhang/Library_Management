@@ -16,18 +16,37 @@ namespace QLTV_DAO
 
             set => instance = value; }
         private THELOAIDAO() { }
-        public List<THELOAI> GetTheLoai(string MaTL)
+        public List<THELOAI> GetTheLoai(string MaTL = "")
         {
             List<THELOAI> Listtl = new List<THELOAI>();
-            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+
+            if (MaTL != "")
             {
-                var getldg = (from u in db.THELOAIs where u.MaTheLoai == MaTL select new { u.MaTheLoai, u.TenTheLoai }).SingleOrDefault();
-                THELOAI ltl = new THELOAI();
-                ltl.MaTheLoai = getldg.MaTheLoai;
-                ltl.TenTheLoai = getldg.TenTheLoai;
-                Listtl.Add(ltl);
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltl = (from u in db.THELOAIs where u.MaTheLoai == MaTL select new { u.MaTheLoai, u.TenTheLoai }).SingleOrDefault();
+                    THELOAI ltl = new THELOAI();
+                    ltl.MaTheLoai = getltl.MaTheLoai;
+                    ltl.TenTheLoai = getltl.TenTheLoai;
+                    Listtl.Add(ltl);
+                }
+                return Listtl;
             }
-            return Listtl;
+            else
+            {
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltl = (from u in db.THELOAIs  select new { u.MaTheLoai, u.TenTheLoai });
+                    foreach (var item in getltl)
+                    {
+                        THELOAI ltl = new THELOAI();
+                        ltl.MaTheLoai = item.MaTheLoai;
+                        ltl.TenTheLoai = item.TenTheLoai;
+                        Listtl.Add(ltl);
+                    }
+                }
+                return Listtl;
+            }
         }
     }
 }

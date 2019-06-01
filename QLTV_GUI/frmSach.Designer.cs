@@ -89,6 +89,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaSach = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colMatheloai = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.coltensach = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -98,7 +99,6 @@
             this.colNgayNhap = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTriGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colMaTinhTrang = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -239,7 +239,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Them, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSua, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuuLai, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLamMoi, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.TimKiem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar9.OptionsBar.MultiLine = true;
@@ -455,6 +454,10 @@
             this.glued_TheLoai.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.glued_TheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glued_TheLoai.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaTheLoai", "colMaTheLoai"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenTheLoai", "colTenTheLoai")});
+            this.glued_TheLoai.Properties.DropDownRows = 5;
             this.glued_TheLoai.Properties.ReadOnly = true;
             this.glued_TheLoai.Size = new System.Drawing.Size(205, 22);
             this.glued_TheLoai.StyleController = this.layoutControl1;
@@ -468,6 +471,9 @@
             this.glued_TacGia.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.glued_TacGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glued_TacGia.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaTacGia", "colMaTacGia"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenTacGia", "colTenTacGia")});
             this.glued_TacGia.Properties.ReadOnly = true;
             this.glued_TacGia.Size = new System.Drawing.Size(203, 22);
             this.glued_TacGia.StyleController = this.layoutControl1;
@@ -481,6 +487,9 @@
             this.glued_TinhTrang.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.glued_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glued_TinhTrang.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaTinhTrang", "colTinhTrang"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenTinhTrang", "colTenTinhTrang")});
             this.glued_TinhTrang.Properties.ReadOnly = true;
             this.glued_TinhTrang.Size = new System.Drawing.Size(370, 22);
             this.glued_TinhTrang.StyleController = this.layoutControl1;
@@ -757,6 +766,25 @@
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             this.bandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView1_RowClick);
             // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Thông Tin Chi Tiết Sách";
+            this.gridBand1.Columns.Add(this.colMaSach);
+            this.gridBand1.Columns.Add(this.colMatheloai);
+            this.gridBand1.Columns.Add(this.coltensach);
+            this.gridBand1.Columns.Add(this.colNamXuatBan);
+            this.gridBand1.Columns.Add(this.colNhaXuatBan);
+            this.gridBand1.Columns.Add(this.colMaTacGia);
+            this.gridBand1.Columns.Add(this.colNgayNhap);
+            this.gridBand1.Columns.Add(this.colTriGia);
+            this.gridBand1.Columns.Add(this.colMaTinhTrang);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.OptionsBand.AllowMove = false;
+            this.gridBand1.OptionsBand.AllowPress = false;
+            this.gridBand1.OptionsBand.AllowSize = false;
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 1192;
+            // 
             // colMaSach
             // 
             this.colMaSach.Caption = "Mã Sách";
@@ -846,25 +874,6 @@
             this.colMaTinhTrang.OptionsColumn.AllowEdit = false;
             this.colMaTinhTrang.Visible = true;
             this.colMaTinhTrang.Width = 236;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Thông Tin Chi Tiết Sách";
-            this.gridBand1.Columns.Add(this.colMaSach);
-            this.gridBand1.Columns.Add(this.colMatheloai);
-            this.gridBand1.Columns.Add(this.coltensach);
-            this.gridBand1.Columns.Add(this.colNamXuatBan);
-            this.gridBand1.Columns.Add(this.colNhaXuatBan);
-            this.gridBand1.Columns.Add(this.colMaTacGia);
-            this.gridBand1.Columns.Add(this.colNgayNhap);
-            this.gridBand1.Columns.Add(this.colTriGia);
-            this.gridBand1.Columns.Add(this.colMaTinhTrang);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.OptionsBand.AllowMove = false;
-            this.gridBand1.OptionsBand.AllowPress = false;
-            this.gridBand1.OptionsBand.AllowSize = false;
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1192;
             // 
             // frmSach
             // 

@@ -14,18 +14,36 @@ namespace QLTV_DAO
         public static TACGIADAO Instance { get { if (instance == null) instance = new TACGIADAO(); return instance; }
             set => instance = value; }
         private TACGIADAO() { }
-        public List<TACGIA> GetTacGia(string MaLDG)
+        public List<TACGIA> GetTacGia(string MaLDG="")
         {
             List<TACGIA> Listltg = new List<TACGIA>();
-            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            if (MaLDG != "")
             {
-                var getldg = (from u in db.TACGIAs where u.MaTacGia == MaLDG select new { u.MaTacGia, u.TenTacGia }).SingleOrDefault();
-                TACGIA ltg = new TACGIA();
-                ltg.MaTacGia = getldg.MaTacGia;
-                ltg.TenTacGia = getldg.TenTacGia;
-                Listltg.Add(ltg);
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltg = (from u in db.TACGIAs where u.MaTacGia == MaLDG select new { u.MaTacGia, u.TenTacGia }).SingleOrDefault();
+                    TACGIA ltg = new TACGIA();
+                    ltg.MaTacGia = getltg.MaTacGia;
+                    ltg.TenTacGia = getltg.TenTacGia;
+                    Listltg.Add(ltg);
+                }
+                return Listltg;
             }
-            return Listltg;
+            else;
+            {
+                using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+                {
+                    var getltg = (from u in db.TACGIAs  select new { u.MaTacGia, u.TenTacGia });
+                    foreach (var item in getltg)
+                    {
+                        TACGIA ltg = new TACGIA();
+                        ltg.MaTacGia = item.MaTacGia;
+                        ltg.TenTacGia = item.TenTacGia;
+                        Listltg.Add(ltg);
+                    }
+                }
+                return Listltg;
+            }
         }
     }
 }
