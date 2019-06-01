@@ -887,7 +887,8 @@
             this.bandedGridView.GridControl = this.gridControl;
             this.bandedGridView.Name = "bandedGridView";
             this.bandedGridView.OptionsView.ShowGroupPanel = false;
-            this.bandedGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView_RowClick);
+            //this.bandedGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView_RowClick);
+            this.bandedGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.bandedGridView_FocusedRowChanged);
             // 
             // gridBand1
             // 
