@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lkue_TinhTrang = new DevExpress.XtraEditors.LookUpEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Huy = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Nhap = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -50,11 +49,12 @@
             this.txbTenSach = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txbMaSach = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lkue_TinhTrang = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTheLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,35 +79,19 @@
             this.panel1.Controls.Add(this.txbTenSach);
             this.panel1.Controls.Add(this.txbMaSach);
             this.panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.panel1.Location = new System.Drawing.Point(14, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 267);
+            this.panel1.Size = new System.Drawing.Size(714, 217);
             this.panel1.TabIndex = 45;
-            // 
-            // lkue_TinhTrang
-            // 
-            this.lkue_TinhTrang.EditValue = "Chọn Tác Giả";
-            this.lkue_TinhTrang.Location = new System.Drawing.Point(551, 63);
-            this.lkue_TinhTrang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lkue_TinhTrang.Name = "lkue_TinhTrang";
-            this.lkue_TinhTrang.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.lkue_TinhTrang.Properties.Appearance.Options.UseBackColor = true;
-            this.lkue_TinhTrang.Properties.AutoHeight = false;
-            this.lkue_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkue_TinhTrang.Size = new System.Drawing.Size(257, 37);
-            this.lkue_TinhTrang.TabIndex = 50;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btn_Huy);
             this.panel2.Controls.Add(this.btn_Nhap);
-            this.panel2.Location = new System.Drawing.Point(546, 201);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(468, 163);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(261, 52);
+            this.panel2.Size = new System.Drawing.Size(224, 43);
             this.panel2.TabIndex = 49;
             // 
             // btn_Huy
@@ -132,14 +116,14 @@
             this.btn_Huy.IconVisible = true;
             this.btn_Huy.IconZoom = 50D;
             this.btn_Huy.IsTab = false;
-            this.btn_Huy.Location = new System.Drawing.Point(141, 9);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btn_Huy.Location = new System.Drawing.Point(121, 7);
+            this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Normalcolor = System.Drawing.Color.Green;
             this.btn_Huy.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_Huy.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Huy.selected = false;
-            this.btn_Huy.Size = new System.Drawing.Size(120, 38);
+            this.btn_Huy.Size = new System.Drawing.Size(99, 31);
             this.btn_Huy.TabIndex = 47;
             this.btn_Huy.Text = "HỦY";
             this.btn_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,14 +153,14 @@
             this.btn_Nhap.IconVisible = true;
             this.btn_Nhap.IconZoom = 50D;
             this.btn_Nhap.IsTab = false;
-            this.btn_Nhap.Location = new System.Drawing.Point(4, 9);
-            this.btn_Nhap.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btn_Nhap.Location = new System.Drawing.Point(2, 7);
+            this.btn_Nhap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Nhap.Name = "btn_Nhap";
             this.btn_Nhap.Normalcolor = System.Drawing.Color.Green;
             this.btn_Nhap.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_Nhap.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Nhap.selected = false;
-            this.btn_Nhap.Size = new System.Drawing.Size(133, 38);
+            this.btn_Nhap.Size = new System.Drawing.Size(99, 31);
             this.btn_Nhap.TabIndex = 46;
             this.btn_Nhap.Text = "NHẬP";
             this.btn_Nhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,10 +178,10 @@
             this.txbTriGia.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbTriGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbTriGia.isPassword = false;
-            this.txbTriGia.Location = new System.Drawing.Point(551, 111);
-            this.txbTriGia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txbTriGia.Location = new System.Drawing.Point(472, 90);
+            this.txbTriGia.Margin = new System.Windows.Forms.Padding(4);
             this.txbTriGia.Name = "txbTriGia";
-            this.txbTriGia.Size = new System.Drawing.Size(257, 37);
+            this.txbTriGia.Size = new System.Drawing.Size(220, 30);
             this.txbTriGia.TabIndex = 48;
             this.txbTriGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txbTriGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTriGia_KeyPress);
@@ -209,31 +193,28 @@
             this.dateNamXuatBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dateNamXuatBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNamXuatBan.FormatCustom = "mm/yyyy";
-            this.dateNamXuatBan.Location = new System.Drawing.Point(551, 16);
-            this.dateNamXuatBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dateNamXuatBan.Location = new System.Drawing.Point(472, 13);
             this.dateNamXuatBan.Name = "dateNamXuatBan";
-            this.dateNamXuatBan.Size = new System.Drawing.Size(257, 37);
+            this.dateNamXuatBan.Size = new System.Drawing.Size(220, 30);
             this.dateNamXuatBan.TabIndex = 46;
             this.dateNamXuatBan.Value = new System.DateTime(2019, 5, 11, 16, 15, 55, 945);
             // 
             // lkue_TacGia
             // 
             this.lkue_TacGia.EditValue = "Chọn Tác Giả";
-            this.lkue_TacGia.Location = new System.Drawing.Point(122, 156);
-            this.lkue_TacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkue_TacGia.Location = new System.Drawing.Point(105, 127);
             this.lkue_TacGia.Name = "lkue_TacGia";
             this.lkue_TacGia.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
             this.lkue_TacGia.Properties.Appearance.Options.UseBackColor = true;
             this.lkue_TacGia.Properties.AutoHeight = false;
             this.lkue_TacGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkue_TacGia.Size = new System.Drawing.Size(257, 37);
+            this.lkue_TacGia.Size = new System.Drawing.Size(220, 30);
             this.lkue_TacGia.TabIndex = 45;
             // 
             // cbbTheLoai
             // 
-            this.cbbTheLoai.Location = new System.Drawing.Point(122, 111);
-            this.cbbTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbTheLoai.Location = new System.Drawing.Point(105, 90);
             this.cbbTheLoai.Name = "cbbTheLoai";
             this.cbbTheLoai.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
             this.cbbTheLoai.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -242,7 +223,7 @@
             this.cbbTheLoai.Properties.AutoHeight = false;
             this.cbbTheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbTheLoai.Size = new System.Drawing.Size(257, 37);
+            this.cbbTheLoai.Size = new System.Drawing.Size(220, 30);
             this.cbbTheLoai.TabIndex = 44;
             // 
             // dateNgayNhap
@@ -252,10 +233,9 @@
             this.dateNgayNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dateNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateNgayNhap.FormatCustom = null;
-            this.dateNgayNhap.Location = new System.Drawing.Point(551, 156);
-            this.dateNgayNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dateNgayNhap.Location = new System.Drawing.Point(472, 127);
             this.dateNgayNhap.Name = "dateNgayNhap";
-            this.dateNgayNhap.Size = new System.Drawing.Size(257, 37);
+            this.dateNgayNhap.Size = new System.Drawing.Size(220, 30);
             this.dateNgayNhap.TabIndex = 41;
             this.dateNgayNhap.Value = new System.DateTime(2019, 5, 11, 16, 15, 55, 945);
             // 
@@ -264,10 +244,10 @@
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(428, 162);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(367, 132);
             this.bunifuCustomLabel10.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(94, 19);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(78, 17);
             this.bunifuCustomLabel10.TabIndex = 38;
             this.bunifuCustomLabel10.Text = "Ngày Nhập:";
             // 
@@ -276,10 +256,10 @@
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(428, 116);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(367, 94);
             this.bunifuCustomLabel9.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(70, 19);
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(55, 17);
             this.bunifuCustomLabel9.TabIndex = 37;
             this.bunifuCustomLabel9.Text = "Trị Giá:";
             // 
@@ -288,10 +268,10 @@
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(428, 69);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(367, 56);
             this.bunifuCustomLabel8.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(96, 19);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(80, 17);
             this.bunifuCustomLabel8.TabIndex = 36;
             this.bunifuCustomLabel8.Text = "Tình Trạng:";
             // 
@@ -300,10 +280,10 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(428, 22);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(367, 18);
             this.bunifuCustomLabel7.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(121, 19);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(103, 17);
             this.bunifuCustomLabel7.TabIndex = 35;
             this.bunifuCustomLabel7.Text = "Năm Xuất Bản:";
             // 
@@ -312,10 +292,10 @@
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(6, 209);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(5, 170);
             this.bunifuCustomLabel6.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(116, 19);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(99, 17);
             this.bunifuCustomLabel6.TabIndex = 34;
             this.bunifuCustomLabel6.Text = "Nhà Xuất Bản:";
             // 
@@ -324,10 +304,10 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(6, 162);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(5, 132);
             this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(73, 19);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(59, 17);
             this.bunifuCustomLabel5.TabIndex = 33;
             this.bunifuCustomLabel5.Text = "Tác Giả:";
             // 
@@ -336,10 +316,10 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(6, 116);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(5, 94);
             this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(74, 19);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(62, 17);
             this.bunifuCustomLabel4.TabIndex = 32;
             this.bunifuCustomLabel4.Text = "Thể Loại";
             // 
@@ -348,10 +328,10 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(6, 69);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(5, 56);
             this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(74, 19);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(63, 17);
             this.bunifuCustomLabel3.TabIndex = 31;
             this.bunifuCustomLabel3.Text = "Tên Sách";
             // 
@@ -366,10 +346,10 @@
             this.txbNhaXuatBan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbNhaXuatBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbNhaXuatBan.isPassword = false;
-            this.txbNhaXuatBan.Location = new System.Drawing.Point(122, 203);
-            this.txbNhaXuatBan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txbNhaXuatBan.Location = new System.Drawing.Point(105, 165);
+            this.txbNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
             this.txbNhaXuatBan.Name = "txbNhaXuatBan";
-            this.txbNhaXuatBan.Size = new System.Drawing.Size(257, 37);
+            this.txbNhaXuatBan.Size = new System.Drawing.Size(220, 30);
             this.txbNhaXuatBan.TabIndex = 28;
             this.txbNhaXuatBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -384,10 +364,10 @@
             this.txbTenSach.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbTenSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbTenSach.isPassword = false;
-            this.txbTenSach.Location = new System.Drawing.Point(122, 63);
-            this.txbTenSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txbTenSach.Location = new System.Drawing.Point(105, 51);
+            this.txbTenSach.Margin = new System.Windows.Forms.Padding(4);
             this.txbTenSach.Name = "txbTenSach";
-            this.txbTenSach.Size = new System.Drawing.Size(257, 37);
+            this.txbTenSach.Size = new System.Drawing.Size(220, 30);
             this.txbTenSach.TabIndex = 26;
             this.txbTenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -402,10 +382,10 @@
             this.txbMaSach.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbMaSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbMaSach.isPassword = false;
-            this.txbMaSach.Location = new System.Drawing.Point(122, 16);
+            this.txbMaSach.Location = new System.Drawing.Point(105, 13);
             this.txbMaSach.Margin = new System.Windows.Forms.Padding(0);
             this.txbMaSach.Name = "txbMaSach";
-            this.txbMaSach.Size = new System.Drawing.Size(257, 37);
+            this.txbMaSach.Size = new System.Drawing.Size(220, 30);
             this.txbMaSach.TabIndex = 25;
             this.txbMaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -414,31 +394,43 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(6, 22);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(5, 18);
             this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(77, 19);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(65, 17);
             this.bunifuCustomLabel2.TabIndex = 24;
             this.bunifuCustomLabel2.Text = "Mã Sách:";
             // 
+            // lkue_TinhTrang
+            // 
+            this.lkue_TinhTrang.EditValue = "Chọn Tác Giả";
+            this.lkue_TinhTrang.Location = new System.Drawing.Point(472, 51);
+            this.lkue_TinhTrang.Name = "lkue_TinhTrang";
+            this.lkue_TinhTrang.Properties.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.lkue_TinhTrang.Properties.Appearance.Options.UseBackColor = true;
+            this.lkue_TinhTrang.Properties.AutoHeight = false;
+            this.lkue_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkue_TinhTrang.Size = new System.Drawing.Size(220, 30);
+            this.lkue_TinhTrang.TabIndex = 50;
+            // 
             // frmThemSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 297);
+            this.ClientSize = new System.Drawing.Size(737, 241);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmThemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Sách";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkue_TacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTheLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkue_TinhTrang.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -103,9 +103,6 @@
     <Compile Include="SACH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="TACGIA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
