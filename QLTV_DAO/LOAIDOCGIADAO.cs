@@ -16,34 +16,16 @@ namespace QLTV_DAO
             set => instance = value;
         }
         private LOAIDOCGIADAO() { }
-        public List<LOAIDOCGIA> GetLoaiDocGia(string MaLDG = "")
+        public List<LOAIDOCGIA> GetLoaiDocGia(string MaLDG)
         {
             List<LOAIDOCGIA> Listldg = new List<LOAIDOCGIA>();
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
-                if (MaLDG != "")
-                {
-                    var getldg = (from u in db.LOAIDOCGIAs where u.MaLoaiDocGia == MaLDG select new { u.MaLoaiDocGia, u.TenLoaiDocGia }).SingleOrDefault();
-                    LOAIDOCGIA ldg = new LOAIDOCGIA
-                    {
-                        MaLoaiDocGia = getldg.MaLoaiDocGia,
-                        TenLoaiDocGia = getldg.TenLoaiDocGia
-                    };
-                    Listldg.Add(ldg);
-                }
-                else
-                {
-                    var getldg = (from u in db.LOAIDOCGIAs select new { u.MaLoaiDocGia, u.TenLoaiDocGia });
-                    foreach (var item in getldg)
-                    {
-                        LOAIDOCGIA ldg = new LOAIDOCGIA
-                        {
-                            MaLoaiDocGia = item.MaLoaiDocGia,
-                            TenLoaiDocGia = item.TenLoaiDocGia
-                        };
-                        Listldg.Add(ldg);
-                    }
-                }
+                var getldg = (from u in db.LOAIDOCGIAs where u.MaLoaiDocGia == MaLDG select new { u.MaLoaiDocGia, u.TenLoaiDocGia }).SingleOrDefault();
+                LOAIDOCGIA ldg = new LOAIDOCGIA();
+                ldg.MaLoaiDocGia = getldg.MaLoaiDocGia;
+                ldg.TenLoaiDocGia = getldg.TenLoaiDocGia;
+                Listldg.Add(ldg);
             }
             return Listldg;
         }
