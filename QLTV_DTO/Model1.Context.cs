@@ -37,6 +37,7 @@ namespace QLTV_DTO
         public virtual DbSet<PHIEUTHUTIENPHAT> PHIEUTHUTIENPHATs { get; set; }
         public virtual DbSet<PHIEUTRASACH> PHIEUTRASACHes { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
         public virtual DbSet<TINHTRANG> TINHTRANGs { get; set; }
