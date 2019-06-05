@@ -432,10 +432,6 @@
       <Project>{ea53870c-ffc8-41ea-b788-88f20988a532}</Project>
       <Name>QLTV_BUS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QLTV_DAO\QLTV_DAO.csproj">
-      <Project>{9E858634-D486-4644-9839-BE8518528F09}</Project>
-      <Name>QLTV_DAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">
       <Project>{ae412ac8-5138-4d76-9d30-1a708e0d78c1}</Project>
       <Name>QLTV_DTO</Name>
