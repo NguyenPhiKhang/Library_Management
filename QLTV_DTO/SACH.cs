@@ -17,7 +17,6 @@ namespace QLTV_DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SACH()
         {
-            NgayNhap = DateTime.Now;
             this.CTPHIEUMUONs = new HashSet<CTPHIEUMUON>();
         }
     
@@ -28,7 +27,6 @@ namespace QLTV_DTO
         public string NhaXuatBan { get; set; }
         public string MaTacGia { get; set; }
         public System.DateTime NgayNhap { get; set; }
-        
         public decimal TriGia { get; set; }
         public string MaTinhTrang { get; set; }
     
@@ -37,6 +35,5 @@ namespace QLTV_DTO
         public virtual TACGIA TACGIA { get; set; }
         public virtual THELOAI THELOAI { get; set; }
         public virtual TINHTRANG TINHTRANG { get; set; }
-        
     }
 }

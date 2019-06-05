@@ -31,8 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -51,17 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DOCGIABUS.cs" />
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-//<<<<<<< Khang-5-6
-    <Compile Include="TACGIABUS.cs" />
-    <Compile Include="THELOAIBUS.cs" />
-    <Compile Include="TINHTRANGBUS.cs" />
-//=======
     <Compile Include="THAMSOBUS.cs" />
-//>>>>>>> master
     <Compile Include="TTDOCGIABUS.cs" />
-    <Compile Include="SACHBUS.cs" />
+    <Compile Include="USERBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_DAO\QLTV_DAO.csproj">
