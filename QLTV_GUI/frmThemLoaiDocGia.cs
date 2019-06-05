@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLTV_BUS;
 
 namespace QLTV_GUI
 {
@@ -16,6 +17,16 @@ namespace QLTV_GUI
         public frmThemLoaiDocGia()
         {
             InitializeComponent();
+        }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            LOAIDOCGIABUS.Instance.AddLoaiDocGia(txbMaLoaiDocGia.Text.ToString(), txbTenLoaiDocGia.Text.ToString());
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

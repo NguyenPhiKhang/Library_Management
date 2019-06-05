@@ -52,6 +52,7 @@
     <Compile Include="DOCGIABUS.cs" />
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="THAMSOBUS.cs" />
     <Compile Include="TTDOCGIABUS.cs" />
     <Compile Include="USERBUS.cs" />
   </ItemGroup>

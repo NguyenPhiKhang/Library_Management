@@ -22,6 +22,17 @@ namespace QLTV_BUS
         {
             return QLTV_DAO.LOAIDOCGIADAO.Instance.GetLoaiDocGia(MaLDG);
         }
-
+        public void UpdateLoaiDocGia(string MaLDG, string TenLDG)
+        {
+            LOAIDOCGIADAO.Instance.UpdateLoaiDocGia(MaLDG, TenLDG);
+        }
+        public void RemoveLoaiDocGia(string MaLDG)
+        {
+            LOAIDOCGIADAO.Instance.RemoveLoaiDocGia(MaLDG);
+        }
+        public void AddLoaiDocGia(string MaLDG, string TenLDG)
+        {
+            LOAIDOCGIADAO.Instance.AddLoaiDocGia(MaLDG, TenLDG);
+        }
     }
 }

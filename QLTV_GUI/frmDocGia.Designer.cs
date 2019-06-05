@@ -52,25 +52,10 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
-            this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
-            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
-            this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
-            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
-            this.btnTimKiem = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
-            this.barCheckItem3 = new DevExpress.XtraBars.BarCheckItem();
-            this.barToggleSwitchItem2 = new DevExpress.XtraBars.BarToggleSwitchItem();
-            this.barToggleSwitchItem3 = new DevExpress.XtraBars.BarToggleSwitchItem();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.gluedLoaiDocGia = new DevExpress.XtraEditors.LookUpEdit();
@@ -120,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
@@ -170,25 +156,9 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnThem,
             this.btnSua,
-            this.barEditItem1,
-            this.barDockingMenuItem1,
-            this.barWorkspaceMenuItem1,
-            this.barToggleSwitchItem1,
-            this.barEditItem2,
             this.btnXoa,
-            this.btnLuu,
             this.btnLamMoi,
-            this.btnTimKiem,
             this.TimKiem,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
-            this.barCheckItem1,
-            this.barButtonItem4,
-            this.barCheckItem2,
-            this.barCheckItem3,
-            this.barToggleSwitchItem2,
-            this.barToggleSwitchItem3,
             this.ck_TatCa,
             this.ck_MaDocGia,
             this.ck_HoTen,
@@ -200,10 +170,11 @@
             this.ck_NgayLapThe,
             this.ck_NgayHetHan});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 31;
+            this.barManager1.MaxItemId = 37;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
-            this.repositoryItemTextEdit2});
+            this.repositoryItemTextEdit2,
+            this.repositoryItemComboBox1});
             // 
             // bar2
             // 
@@ -225,7 +196,7 @@
             // 
             this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 0;
-            this.btnThem.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Actions_list_add_user_icon;
+            this.btnThem.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.adduser16;
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
@@ -234,7 +205,7 @@
             // 
             this.btnSua.Caption = "Sửa";
             this.btnSua.Id = 1;
-            this.btnSua.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.App_edit_icon;
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.LargeImage")));
             this.btnSua.Name = "btnSua";
             this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
@@ -243,7 +214,8 @@
             // 
             this.btnXoa.Caption = "Xóa";
             this.btnXoa.Id = 7;
-            this.btnXoa.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.clear;
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
@@ -251,7 +223,8 @@
             // 
             this.btnLamMoi.Caption = "Làm Mới";
             this.btnLamMoi.Id = 9;
-            this.btnLamMoi.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.refresh;
+            this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
+            this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
@@ -259,7 +232,8 @@
             // 
             this.TimKiem.Caption = "Tìm Kiếm";
             this.TimKiem.Id = 11;
-            this.TimKiem.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Search_icon;
+            this.TimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TimKiem.ImageOptions.Image")));
+            this.TimKiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("TimKiem.ImageOptions.LargeImage")));
             this.TimKiem.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.ck_TatCa),
             new DevExpress.XtraBars.LinkPersistInfo(this.ck_MaDocGia),
@@ -275,7 +249,10 @@
             // 
             // ck_TatCa
             // 
+            this.ck_TatCa.BindableChecked = true;
             this.ck_TatCa.Caption = "Tất Cả";
+            this.ck_TatCa.Checked = true;
+            this.ck_TatCa.Enabled = false;
             this.ck_TatCa.Id = 21;
             this.ck_TatCa.Name = "ck_TatCa";
             this.ck_TatCa.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.ck_TatCa_CheckedChanged);
@@ -349,7 +326,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1096, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1096, 24);
             // 
             // barDockControlBottom
             // 
@@ -363,132 +340,39 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 468);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 484);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1096, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(1096, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 468);
-            // 
-            // barEditItem1
-            // 
-            this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemTextEdit1;
-            this.barEditItem1.Id = 2;
-            this.barEditItem1.Name = "barEditItem1";
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 484);
             // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // barDockingMenuItem1
-            // 
-            this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
-            this.barDockingMenuItem1.Id = 3;
-            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
-            // 
-            // barWorkspaceMenuItem1
-            // 
-            this.barWorkspaceMenuItem1.Caption = "barWorkspaceMenuItem1";
-            this.barWorkspaceMenuItem1.Id = 4;
-            this.barWorkspaceMenuItem1.Name = "barWorkspaceMenuItem1";
-            this.barWorkspaceMenuItem1.WorkspaceManager = this.workspaceManager1;
-            // 
-            // workspaceManager1
-            // 
-            this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition1;
-            // 
-            // barToggleSwitchItem1
-            // 
-            this.barToggleSwitchItem1.Caption = "barToggleSwitchItem1";
-            this.barToggleSwitchItem1.Id = 5;
-            this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
-            // 
-            // barEditItem2
-            // 
-            this.barEditItem2.Edit = this.repositoryItemTextEdit2;
-            this.barEditItem2.Id = 6;
-            this.barEditItem2.Name = "barEditItem2";
-            // 
             // repositoryItemTextEdit2
             // 
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
-            // btnLuu
+            // repositoryItemComboBox1
             // 
-            this.btnLuu.Caption = "Lưu Lại";
-            this.btnLuu.Id = 8;
-            this.btnLuu.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Save_icon;
-            this.btnLuu.Name = "btnLuu";
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
-            // btnTimKiem
+            // workspaceManager1
             // 
-            this.btnTimKiem.Caption = "Tìm Kiếm";
-            this.btnTimKiem.Id = 10;
-            this.btnTimKiem.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Search_icon;
-            this.btnTimKiem.Name = "btnTimKiem";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Tất Cả";
-            this.barButtonItem1.Id = 12;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Mã Độc Giả";
-            this.barButtonItem2.Id = 13;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Họ Tên";
-            this.barButtonItem3.Id = 14;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barCheckItem1
-            // 
-            this.barCheckItem1.Caption = "Địa Chỉ";
-            this.barCheckItem1.Id = 15;
-            this.barCheckItem1.Name = "barCheckItem1";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "Tất Cả";
-            this.barButtonItem4.Id = 16;
-            this.barButtonItem4.Name = "barButtonItem4";
-            // 
-            // barCheckItem2
-            // 
-            this.barCheckItem2.Caption = "gdjgdf";
-            this.barCheckItem2.Id = 17;
-            this.barCheckItem2.Name = "barCheckItem2";
-            // 
-            // barCheckItem3
-            // 
-            this.barCheckItem3.Caption = "gdfgfdg";
-            this.barCheckItem3.Id = 18;
-            this.barCheckItem3.Name = "barCheckItem3";
-            // 
-            // barToggleSwitchItem2
-            // 
-            this.barToggleSwitchItem2.Caption = "gdfgdfg";
-            this.barToggleSwitchItem2.Id = 19;
-            this.barToggleSwitchItem2.Name = "barToggleSwitchItem2";
-            // 
-            // barToggleSwitchItem3
-            // 
-            this.barToggleSwitchItem3.Caption = "gfdgdfgd";
-            this.barToggleSwitchItem3.Id = 20;
-            this.barToggleSwitchItem3.Name = "barToggleSwitchItem3";
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition1;
             // 
             // layoutControl1
             // 
@@ -506,7 +390,7 @@
             this.layoutControl1.Controls.Add(this.dateNgayLapThe);
             this.layoutControl1.Controls.Add(this.dateNgayHetHan);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 40);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(0, 0, 1382, 784);
             this.layoutControl1.Root = this.Root;
@@ -545,9 +429,10 @@
             this.gluedLoaiDocGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gluedLoaiDocGia.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaLoaiDocGia", "Mã Loại Độcc Giả"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaLoaiDocGia", "Mã Loại Độc Giả"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenLoaiDocGia", "Tên Loại Độc Giả")});
             this.gluedLoaiDocGia.Properties.DropDownRows = 5;
+            this.gluedLoaiDocGia.Properties.NullText = "";
             this.gluedLoaiDocGia.Properties.ReadOnly = true;
             this.gluedLoaiDocGia.Size = new System.Drawing.Size(244, 20);
             this.gluedLoaiDocGia.StyleController = this.layoutControl1;
@@ -865,11 +750,10 @@
             // 
             // bandedGridView
             // 
-            this.bandedGridView.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.bandedGridView.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bandedGridView.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.bandedGridView.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bandedGridView.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.bandedGridView.Appearance.SelectedRow.BackColor2 = System.Drawing.Color.Transparent;
-            this.bandedGridView.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
-            this.bandedGridView.Appearance.SelectedRow.Options.UseForeColor = true;
             this.bandedGridView.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1});
             this.bandedGridView.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
@@ -886,9 +770,14 @@
             this.bandedGridView.CustomizationFormBounds = new System.Drawing.Rectangle(882, 448, 266, 208);
             this.bandedGridView.GridControl = this.gridControl;
             this.bandedGridView.Name = "bandedGridView";
+            this.bandedGridView.OptionsFind.AlwaysVisible = true;
+            this.bandedGridView.OptionsFind.FindNullPrompt = "Nhập nội dung tìm kiếm...";
+            this.bandedGridView.OptionsFind.ShowCloseButton = false;
+            this.bandedGridView.OptionsFind.ShowFindButton = false;
             this.bandedGridView.OptionsView.ShowGroupPanel = false;
-            //this.bandedGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView_RowClick);
+            this.bandedGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView_RowClick);
             this.bandedGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.bandedGridView_FocusedRowChanged);
+            this.bandedGridView.ColumnFilterChanged += new System.EventHandler(this.bandedGridView_ColumnFilterChanged);
             // 
             // gridBand1
             // 
@@ -921,10 +810,8 @@
             this.colMaDocGia.AppearanceCell.BackColor = System.Drawing.Color.Transparent;
             this.colMaDocGia.AppearanceCell.BackColor2 = System.Drawing.Color.Transparent;
             this.colMaDocGia.AppearanceCell.BorderColor = System.Drawing.Color.Transparent;
-            this.colMaDocGia.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.colMaDocGia.AppearanceCell.Options.UseBackColor = true;
             this.colMaDocGia.AppearanceCell.Options.UseBorderColor = true;
-            this.colMaDocGia.AppearanceCell.Options.UseForeColor = true;
             this.colMaDocGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colMaDocGia.AppearanceHeader.Options.UseBackColor = true;
             this.colMaDocGia.Caption = "Mã Độc Giả";
@@ -1049,13 +936,13 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 204);
+            this.gridControl.Location = new System.Drawing.Point(0, 188);
             this.gridControl.MainView = this.bandedGridView;
             this.gridControl.MenuManager = this.barManager1;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit3});
-            this.gridControl.Size = new System.Drawing.Size(1096, 304);
+            this.gridControl.Size = new System.Drawing.Size(1096, 320);
             this.gridControl.TabIndex = 4;
             this.gridControl.Tag = "";
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1087,6 +974,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
@@ -1138,30 +1026,14 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnSua;
-        private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
-        private DevExpress.XtraBars.BarWorkspaceMenuItem barWorkspaceMenuItem1;
-        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
-        private DevExpress.XtraBars.BarEditItem barEditItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
-        private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnLamMoi;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.Utils.WorkspaceManager workspaceManager1;
-        private DevExpress.XtraBars.BarButtonItem btnTimKiem;
         private DevExpress.XtraBars.BarSubItem TimKiem;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem2;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem2;
-        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem3;
         private DevExpress.XtraBars.BarCheckItem ck_TatCa;
         private DevExpress.XtraBars.BarCheckItem ck_MaDocGia;
         private DevExpress.XtraBars.BarCheckItem ck_HoTen;
@@ -1217,6 +1089,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         //=======
         //private DevExpress.XtraEditors.SimpleButton simpleHuy;
         // private DevExpress.XtraEditors.SimpleButton simpleLuu;

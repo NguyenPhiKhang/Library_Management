@@ -28,359 +28,776 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txbTuoiTT = new System.Windows.Forms.TextBox();
-            this.txbTuoiTD = new System.Windows.Forms.TextBox();
-            this.txbHanThe = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbSoLuongSachTD = new System.Windows.Forms.TextBox();
-            this.txbKhoangCachXB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbTienPhatTre = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.txbSoNgayMuonTD = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txbSoSachMuonTD = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnThayDoi = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThayDoiQuiDinh));
+            this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnHuy1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.seHanThe = new DevExpress.XtraEditors.SpinEdit();
+            this.seTuoiMax = new DevExpress.XtraEditors.SpinEdit();
+            this.seTuoiMin = new DevExpress.XtraEditors.SpinEdit();
+            this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnHuy2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua2 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelcontrol = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.seTheLoaiMax = new DevExpress.XtraEditors.SpinEdit();
+            this.seKhoangCachXB = new DevExpress.XtraEditors.SpinEdit();
+            this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnHuy3 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelcontrolTP = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSua3 = new DevExpress.XtraEditors.SimpleButton();
+            this.seTienPhat = new DevExpress.XtraEditors.SpinEdit();
+            this.seSachMuonMax = new DevExpress.XtraEditors.SpinEdit();
+            this.seNgayMuonMax = new DevExpress.XtraEditors.SpinEdit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
+            this.colTuoiMin = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.layoutViewField_colTuoiMin = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colTuoiMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colTuoiMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colHanThe = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colHanThe = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colKhoangCachXB = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colKhoangCachXB = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colTheLoaiMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colTheLoaiMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colNgayMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colNgayMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colSachMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colSachMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colTienPhatTre = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colTienPhatTre = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
+            this.navigationPane1.SuspendLayout();
+            this.navigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seHanThe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seTuoiMax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seTuoiMin.Properties)).BeginInit();
+            this.navigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seTheLoaiMax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seKhoangCachXB.Properties)).BeginInit();
+            this.navigationPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seTienPhat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSachMuonMax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seNgayMuonMax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTuoiMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTuoiMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // navigationPane1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnThayDoi);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 269);
-            this.panel1.TabIndex = 0;
+            this.navigationPane1.Controls.Add(this.navigationPage1);
+            this.navigationPane1.Controls.Add(this.navigationPage2);
+            this.navigationPane1.Controls.Add(this.navigationPage3);
+            this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navigationPane1.Location = new System.Drawing.Point(0, 24);
+            this.navigationPane1.Name = "navigationPane1";
+            this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.navigationPage1,
+            this.navigationPage2,
+            this.navigationPage3});
+            this.navigationPane1.RegularSize = new System.Drawing.Size(417, 498);
+            this.navigationPane1.SelectedPage = this.navigationPage1;
+            this.navigationPane1.Size = new System.Drawing.Size(1056, 498);
+            this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
+            this.navigationPane1.TabIndex = 6;
+            this.navigationPane1.Text = "navigationPane1";
             // 
-            // groupBox1
+            // navigationPage1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txbHanThe);
-            this.groupBox1.Controls.Add(this.txbTuoiTD);
-            this.groupBox1.Controls.Add(this.txbTuoiTT);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(50, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 133);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quy Định 1";
+            this.navigationPage1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.navigationPage1.Appearance.Options.UseBackColor = true;
+            this.navigationPage1.Caption = "Qui Định 1";
+            this.navigationPage1.Controls.Add(this.btnHuy1);
+            this.navigationPage1.Controls.Add(this.btnSua1);
+            this.navigationPage1.Controls.Add(this.labelControl3);
+            this.navigationPage1.Controls.Add(this.labelControl2);
+            this.navigationPage1.Controls.Add(this.labelControl1);
+            this.navigationPage1.Controls.Add(this.seHanThe);
+            this.navigationPage1.Controls.Add(this.seTuoiMax);
+            this.navigationPage1.Controls.Add(this.seTuoiMin);
+            this.navigationPage1.Name = "navigationPage1";
+            this.navigationPage1.Size = new System.Drawing.Size(333, 438);
             // 
-            // groupBox2
+            // btnHuy1
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txbSoSachMuonTD);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txbTienPhatTre);
-            this.groupBox2.Controls.Add(this.txbSoNgayMuonTD);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(364, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 144);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Quy Định 3";
+            this.btnHuy1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy1.ImageOptions.Image")));
+            this.btnHuy1.Location = new System.Drawing.Point(194, 213);
+            this.btnHuy1.Name = "btnHuy1";
+            this.btnHuy1.Size = new System.Drawing.Size(78, 29);
+            this.btnHuy1.TabIndex = 6;
+            this.btnHuy1.Text = "Hủy";
+            this.btnHuy1.Visible = false;
+            this.btnHuy1.Click += new System.EventHandler(this.btnHuy1_Click);
             // 
-            // groupBox3
+            // btnSua1
             // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txbSoLuongSachTD);
-            this.groupBox3.Controls.Add(this.txbKhoangCachXB);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(57, 151);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 102);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Quy Định 2";
+            this.btnSua1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua1.ImageOptions.Image")));
+            this.btnSua1.Location = new System.Drawing.Point(194, 213);
+            this.btnSua1.Name = "btnSua1";
+            this.btnSua1.Size = new System.Drawing.Size(78, 29);
+            this.btnSua1.TabIndex = 3;
+            this.btnSua1.Text = "Sửa";
+            this.btnSua1.Click += new System.EventHandler(this.btnSua1_Click);
             // 
-            // txbTuoiTT
+            // labelControl3
             // 
-            this.txbTuoiTT.Location = new System.Drawing.Point(139, 28);
-            this.txbTuoiTT.Name = "txbTuoiTT";
-            this.txbTuoiTT.Size = new System.Drawing.Size(122, 23);
-            this.txbTuoiTT.TabIndex = 0;
+            this.labelControl3.Location = new System.Drawing.Point(38, 174);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(85, 13);
+            this.labelControl3.TabIndex = 5;
+            this.labelControl3.Text = "Hạn Thẻ (Tháng):";
             // 
-            // txbTuoiTD
+            // labelControl2
             // 
-            this.txbTuoiTD.Location = new System.Drawing.Point(139, 57);
-            this.txbTuoiTD.Name = "txbTuoiTD";
-            this.txbTuoiTD.Size = new System.Drawing.Size(122, 23);
-            this.txbTuoiTD.TabIndex = 1;
+            this.labelControl2.Location = new System.Drawing.Point(38, 130);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(58, 13);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "Tuổi Tối Đa:";
             // 
-            // txbHanThe
+            // labelControl1
             // 
-            this.txbHanThe.Location = new System.Drawing.Point(139, 93);
-            this.txbHanThe.Name = "txbHanThe";
-            this.txbHanThe.Size = new System.Drawing.Size(122, 23);
-            this.txbHanThe.TabIndex = 2;
+            this.labelControl1.Location = new System.Drawing.Point(38, 85);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(70, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Tuổi Tối Thiểu:";
             // 
-            // label1
+            // seHanThe
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(32, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tuổi Tối Thiểu:";
+            this.seHanThe.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seHanThe.Location = new System.Drawing.Point(140, 171);
+            this.seHanThe.Name = "seHanThe";
+            this.seHanThe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seHanThe.Properties.ReadOnly = true;
+            this.seHanThe.Size = new System.Drawing.Size(132, 20);
+            this.seHanThe.TabIndex = 2;
+            this.seHanThe.EditValueChanged += new System.EventHandler(this.seHanThe_EditValueChanged);
             // 
-            // label2
+            // seTuoiMax
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(32, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tuổi Tối Đa:";
+            this.seTuoiMax.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seTuoiMax.Location = new System.Drawing.Point(140, 127);
+            this.seTuoiMax.Name = "seTuoiMax";
+            this.seTuoiMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seTuoiMax.Properties.ReadOnly = true;
+            this.seTuoiMax.Size = new System.Drawing.Size(132, 20);
+            this.seTuoiMax.TabIndex = 1;
+            this.seTuoiMax.EditValueChanged += new System.EventHandler(this.seTuoiMax_EditValueChanged);
             // 
-            // label3
+            // seTuoiMin
             // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(32, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 36);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Hạn Thẻ (Tháng):";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seTuoiMin.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seTuoiMin.Location = new System.Drawing.Point(140, 82);
+            this.seTuoiMin.Name = "seTuoiMin";
+            this.seTuoiMin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seTuoiMin.Properties.ReadOnly = true;
+            this.seTuoiMin.Size = new System.Drawing.Size(132, 20);
+            this.seTuoiMin.TabIndex = 0;
+            this.seTuoiMin.EditValueChanged += new System.EventHandler(this.seTuoiMin_EditValueChanged);
             // 
-            // txbSoLuongSachTD
+            // navigationPage2
             // 
-            this.txbSoLuongSachTD.Location = new System.Drawing.Point(132, 68);
-            this.txbSoLuongSachTD.Name = "txbSoLuongSachTD";
-            this.txbSoLuongSachTD.Size = new System.Drawing.Size(122, 23);
-            this.txbSoLuongSachTD.TabIndex = 3;
+            this.navigationPage2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.navigationPage2.Appearance.Options.UseBackColor = true;
+            this.navigationPage2.Caption = "Qui Định 2";
+            this.navigationPage2.Controls.Add(this.btnHuy2);
+            this.navigationPage2.Controls.Add(this.btnSua2);
+            this.navigationPage2.Controls.Add(this.labelcontrol);
+            this.navigationPage2.Controls.Add(this.labelControl4);
+            this.navigationPage2.Controls.Add(this.seTheLoaiMax);
+            this.navigationPage2.Controls.Add(this.seKhoangCachXB);
+            this.navigationPage2.Name = "navigationPage2";
+            this.navigationPage2.Size = new System.Drawing.Size(333, 438);
             // 
-            // txbKhoangCachXB
+            // btnHuy2
             // 
-            this.txbKhoangCachXB.Location = new System.Drawing.Point(132, 31);
-            this.txbKhoangCachXB.Name = "txbKhoangCachXB";
-            this.txbKhoangCachXB.Size = new System.Drawing.Size(122, 23);
-            this.txbKhoangCachXB.TabIndex = 2;
+            this.btnHuy2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy2.ImageOptions.Image")));
+            this.btnHuy2.Location = new System.Drawing.Point(224, 175);
+            this.btnHuy2.Name = "btnHuy2";
+            this.btnHuy2.Size = new System.Drawing.Size(78, 29);
+            this.btnHuy2.TabIndex = 7;
+            this.btnHuy2.Text = "Hủy";
+            this.btnHuy2.Visible = false;
+            this.btnHuy2.Click += new System.EventHandler(this.btnHuy2_Click);
             // 
-            // label4
+            // btnSua2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(25, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Khoảng Cách XB:";
+            this.btnSua2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua2.ImageOptions.Image")));
+            this.btnSua2.Location = new System.Drawing.Point(224, 175);
+            this.btnSua2.Name = "btnSua2";
+            this.btnSua2.Size = new System.Drawing.Size(78, 29);
+            this.btnSua2.TabIndex = 6;
+            this.btnSua2.Text = "Sửa";
+            this.btnSua2.Click += new System.EventHandler(this.btnSua2_Click);
             // 
-            // label5
+            // labelcontrol
             // 
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(25, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 36);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Số Lượng Sách Tối Đa:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelcontrol.Location = new System.Drawing.Point(27, 136);
+            this.labelcontrol.Name = "labelcontrol";
+            this.labelcontrol.Size = new System.Drawing.Size(114, 13);
+            this.labelcontrol.TabIndex = 5;
+            this.labelcontrol.Text = "Số lượng thể loại tối đa:";
             // 
-            // txbTienPhatTre
+            // labelControl4
             // 
-            this.txbTienPhatTre.Location = new System.Drawing.Point(132, 107);
-            this.txbTienPhatTre.Name = "txbTienPhatTre";
-            this.txbTienPhatTre.Size = new System.Drawing.Size(122, 23);
-            this.txbTienPhatTre.TabIndex = 8;
+            this.labelControl4.Location = new System.Drawing.Point(27, 90);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(137, 13);
+            this.labelControl4.TabIndex = 4;
+            this.labelControl4.Text = "Khoảng Cách Năm Xuất Bản:";
             // 
-            // textBox7
+            // seTheLoaiMax
             // 
-            this.textBox7.Location = new System.Drawing.Point(132, 67);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(122, 23);
-            this.textBox7.TabIndex = 7;
+            this.seTheLoaiMax.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seTheLoaiMax.Location = new System.Drawing.Point(170, 133);
+            this.seTheLoaiMax.Name = "seTheLoaiMax";
+            this.seTheLoaiMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seTheLoaiMax.Properties.ReadOnly = true;
+            this.seTheLoaiMax.Size = new System.Drawing.Size(132, 20);
+            this.seTheLoaiMax.TabIndex = 5;
+            this.seTheLoaiMax.EditValueChanged += new System.EventHandler(this.seTheLoaiMax_EditValueChanged);
             // 
-            // txbSoNgayMuonTD
+            // seKhoangCachXB
             // 
-            this.txbSoNgayMuonTD.Location = new System.Drawing.Point(132, 28);
-            this.txbSoNgayMuonTD.Name = "txbSoNgayMuonTD";
-            this.txbSoNgayMuonTD.Size = new System.Drawing.Size(122, 23);
-            this.txbSoNgayMuonTD.TabIndex = 6;
+            this.seKhoangCachXB.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seKhoangCachXB.Location = new System.Drawing.Point(170, 87);
+            this.seKhoangCachXB.Name = "seKhoangCachXB";
+            this.seKhoangCachXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seKhoangCachXB.Properties.ReadOnly = true;
+            this.seKhoangCachXB.Size = new System.Drawing.Size(132, 20);
+            this.seKhoangCachXB.TabIndex = 4;
+            this.seKhoangCachXB.EditValueChanged += new System.EventHandler(this.seKhoangCachXB_EditValueChanged);
             // 
-            // label6
+            // navigationPage3
             // 
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(35, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 39);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Số Ngày Mượn Tối Đa:";
+            this.navigationPage3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.navigationPage3.Appearance.Options.UseBackColor = true;
+            this.navigationPage3.Caption = "Qui Định 3";
+            this.navigationPage3.Controls.Add(this.btnHuy3);
+            this.navigationPage3.Controls.Add(this.labelcontrolTP);
+            this.navigationPage3.Controls.Add(this.labelControl7);
+            this.navigationPage3.Controls.Add(this.labelControl6);
+            this.navigationPage3.Controls.Add(this.btnSua3);
+            this.navigationPage3.Controls.Add(this.seTienPhat);
+            this.navigationPage3.Controls.Add(this.seSachMuonMax);
+            this.navigationPage3.Controls.Add(this.seNgayMuonMax);
+            this.navigationPage3.Name = "navigationPage3";
+            this.navigationPage3.Size = new System.Drawing.Size(972, 438);
             // 
-            // txbSoSachMuonTD
+            // btnHuy3
             // 
-            this.txbSoSachMuonTD.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.txbSoSachMuonTD.Location = new System.Drawing.Point(35, 64);
-            this.txbSoSachMuonTD.Name = "txbSoSachMuonTD";
-            this.txbSoSachMuonTD.Size = new System.Drawing.Size(91, 34);
-            this.txbSoSachMuonTD.TabIndex = 6;
-            this.txbSoSachMuonTD.Text = "Số Sách Mượn Tối Đa:";
+            this.btnHuy3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy3.ImageOptions.Image")));
+            this.btnHuy3.Location = new System.Drawing.Point(215, 220);
+            this.btnHuy3.Name = "btnHuy3";
+            this.btnHuy3.Size = new System.Drawing.Size(78, 29);
+            this.btnHuy3.TabIndex = 11;
+            this.btnHuy3.Text = "Hủy";
+            this.btnHuy3.Visible = false;
+            this.btnHuy3.Click += new System.EventHandler(this.btnHuy3_Click);
             // 
-            // label8
+            // labelcontrolTP
             // 
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(35, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 34);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Tiền Phạt Trễ Một Ngày:";
+            this.labelcontrolTP.Location = new System.Drawing.Point(22, 185);
+            this.labelcontrolTP.Name = "labelcontrolTP";
+            this.labelcontrolTP.Size = new System.Drawing.Size(131, 13);
+            this.labelcontrolTP.TabIndex = 10;
+            this.labelcontrolTP.Text = "Tiền phạt trả trễ một ngày:";
             // 
-            // btnThayDoi
+            // labelControl7
             // 
-            this.btnThayDoi.Activecolor = System.Drawing.Color.Blue;
-            this.btnThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThayDoi.BackColor = System.Drawing.Color.Purple;
-            this.btnThayDoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThayDoi.BorderRadius = 0;
-            this.btnThayDoi.ButtonText = "Thay Đổi";
-            this.btnThayDoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThayDoi.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThayDoi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThayDoi.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThayDoi.Iconimage = global::QLTV_GUI.Properties.Resources.shuffle;
-            this.btnThayDoi.Iconimage_right = null;
-            this.btnThayDoi.Iconimage_right_Selected = null;
-            this.btnThayDoi.Iconimage_Selected = null;
-            this.btnThayDoi.IconMarginLeft = 0;
-            this.btnThayDoi.IconMarginRight = 0;
-            this.btnThayDoi.IconRightVisible = true;
-            this.btnThayDoi.IconRightZoom = 0D;
-            this.btnThayDoi.IconVisible = true;
-            this.btnThayDoi.IconZoom = 60D;
-            this.btnThayDoi.IsTab = false;
-            this.btnThayDoi.Location = new System.Drawing.Point(373, 210);
-            this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Normalcolor = System.Drawing.Color.Purple;
-            this.btnThayDoi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnThayDoi.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThayDoi.selected = false;
-            this.btnThayDoi.Size = new System.Drawing.Size(117, 32);
-            this.btnThayDoi.TabIndex = 2;
-            this.btnThayDoi.Text = "Thay Đổi";
-            this.btnThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnThayDoi.Textcolor = System.Drawing.Color.White;
-            this.btnThayDoi.TextFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Location = new System.Drawing.Point(22, 141);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(101, 13);
+            this.labelControl7.TabIndex = 9;
+            this.labelControl7.Text = "Số sách mượn tối đa:";
             // 
-            // panel2
+            // labelControl6
             // 
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 269);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(680, 34);
-            this.panel2.TabIndex = 2;
+            this.labelControl6.Location = new System.Drawing.Point(22, 93);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(103, 13);
+            this.labelControl6.TabIndex = 8;
+            this.labelControl6.Text = "Số ngày mượn tối đa:";
             // 
-            // label9
+            // btnSua3
             // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(680, 34);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "CHI TIẾT QUY ĐỊNH";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSua3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua3.ImageOptions.Image")));
+            this.btnSua3.Location = new System.Drawing.Point(215, 220);
+            this.btnSua3.Name = "btnSua3";
+            this.btnSua3.Size = new System.Drawing.Size(78, 29);
+            this.btnSua3.TabIndex = 10;
+            this.btnSua3.Text = "Sửa";
+            this.btnSua3.Click += new System.EventHandler(this.btnSua3_Click);
+            // 
+            // seTienPhat
+            // 
+            this.seTienPhat.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seTienPhat.Location = new System.Drawing.Point(163, 182);
+            this.seTienPhat.Name = "seTienPhat";
+            this.seTienPhat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seTienPhat.Properties.DisplayFormat.FormatString = "#,#";
+            this.seTienPhat.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.seTienPhat.Properties.ReadOnly = true;
+            this.seTienPhat.Size = new System.Drawing.Size(132, 20);
+            this.seTienPhat.TabIndex = 9;
+            this.seTienPhat.EditValueChanged += new System.EventHandler(this.seTienPhat_EditValueChanged);
+            // 
+            // seSachMuonMax
+            // 
+            this.seSachMuonMax.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seSachMuonMax.Location = new System.Drawing.Point(163, 138);
+            this.seSachMuonMax.Name = "seSachMuonMax";
+            this.seSachMuonMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seSachMuonMax.Properties.ReadOnly = true;
+            this.seSachMuonMax.Size = new System.Drawing.Size(132, 20);
+            this.seSachMuonMax.TabIndex = 8;
+            this.seSachMuonMax.EditValueChanged += new System.EventHandler(this.seSachMuonMax_EditValueChanged);
+            // 
+            // seNgayMuonMax
+            // 
+            this.seNgayMuonMax.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seNgayMuonMax.Location = new System.Drawing.Point(163, 90);
+            this.seNgayMuonMax.Name = "seNgayMuonMax";
+            this.seNgayMuonMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seNgayMuonMax.Properties.ReadOnly = true;
+            this.seNgayMuonMax.Size = new System.Drawing.Size(132, 20);
+            this.seNgayMuonMax.TabIndex = 7;
+            this.seNgayMuonMax.EditValueChanged += new System.EventHandler(this.seNgayMuonMax_EditValueChanged);
+            // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar2});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnLuu});
+            this.barManager1.MainMenu = this.bar2;
+            this.barManager1.MaxItemId = 1;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Caption = "Lưu Thay Đổi";
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Id = 0;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.LargeImage")));
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1056, 24);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 522);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1056, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 498);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1056, 24);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 498);
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 303);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Location = new System.Drawing.Point(1056, 24);
+            this.gridControl1.MainView = this.layoutView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(680, 141);
-            this.gridControl1.TabIndex = 3;
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemSpinEdit1});
+            this.gridControl1.Size = new System.Drawing.Size(0, 498);
+            this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.layoutView1});
             // 
-            // gridView1
+            // layoutView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
+            this.colTuoiMin,
+            this.colTuoiMax,
+            this.colHanThe,
+            this.colKhoangCachXB,
+            this.colTheLoaiMax,
+            this.colNgayMuonMax,
+            this.colSachMuonMax,
+            this.colTienPhatTre});
+            this.layoutView1.GridControl = this.gridControl1;
+            this.layoutView1.Name = "layoutView1";
+            this.layoutView1.TemplateCard = this.layoutViewCard1;
+            // 
+            // colTuoiMin
+            // 
+            this.colTuoiMin.Caption = "Tuổi Tối Thiểu";
+            this.colTuoiMin.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colTuoiMin.FieldName = "TuoiToiThieu";
+            this.colTuoiMin.LayoutViewField = this.layoutViewField_colTuoiMin;
+            this.colTuoiMin.Name = "colTuoiMin";
+            this.colTuoiMin.OptionsColumn.AllowEdit = false;
+            // 
+            // repositoryItemSpinEdit1
+            // 
+            this.repositoryItemSpinEdit1.AutoHeight = false;
+            this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
+            // 
+            // layoutViewField_colTuoiMin
+            // 
+            this.layoutViewField_colTuoiMin.EditorPreferredWidth = 59;
+            this.layoutViewField_colTuoiMin.Location = new System.Drawing.Point(0, 0);
+            this.layoutViewField_colTuoiMin.Name = "layoutViewField_colTuoiMin";
+            this.layoutViewField_colTuoiMin.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colTuoiMin.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colTuoiMax
+            // 
+            this.colTuoiMax.Caption = "Tuổi Tối Đa";
+            this.colTuoiMax.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colTuoiMax.FieldName = "TuoiToiDa";
+            this.colTuoiMax.LayoutViewField = this.layoutViewField_colTuoiMax;
+            this.colTuoiMax.Name = "colTuoiMax";
+            this.colTuoiMax.OptionsColumn.AllowEdit = false;
+            this.colTuoiMax.Width = 67;
+            // 
+            // layoutViewField_colTuoiMax
+            // 
+            this.layoutViewField_colTuoiMax.EditorPreferredWidth = 59;
+            this.layoutViewField_colTuoiMax.Location = new System.Drawing.Point(0, 24);
+            this.layoutViewField_colTuoiMax.Name = "layoutViewField_colTuoiMax";
+            this.layoutViewField_colTuoiMax.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colTuoiMax.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colHanThe
+            // 
+            this.colHanThe.Caption = "Hạn Thẻ (Tháng)";
+            this.colHanThe.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colHanThe.FieldName = "ThoiHanThe";
+            this.colHanThe.LayoutViewField = this.layoutViewField_colHanThe;
+            this.colHanThe.Name = "colHanThe";
+            this.colHanThe.OptionsColumn.AllowEdit = false;
+            this.colHanThe.Width = 84;
+            // 
+            // layoutViewField_colHanThe
+            // 
+            this.layoutViewField_colHanThe.EditorPreferredWidth = 59;
+            this.layoutViewField_colHanThe.Location = new System.Drawing.Point(0, 48);
+            this.layoutViewField_colHanThe.Name = "layoutViewField_colHanThe";
+            this.layoutViewField_colHanThe.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colHanThe.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colKhoangCachXB
+            // 
+            this.colKhoangCachXB.Caption = "Khoảng Cách Năm Xuất Bản";
+            this.colKhoangCachXB.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colKhoangCachXB.FieldName = "KhoangCachXB";
+            this.colKhoangCachXB.LayoutViewField = this.layoutViewField_colKhoangCachXB;
+            this.colKhoangCachXB.Name = "colKhoangCachXB";
+            this.colKhoangCachXB.OptionsColumn.AllowEdit = false;
+            this.colKhoangCachXB.Width = 84;
+            // 
+            // layoutViewField_colKhoangCachXB
+            // 
+            this.layoutViewField_colKhoangCachXB.EditorPreferredWidth = 59;
+            this.layoutViewField_colKhoangCachXB.Location = new System.Drawing.Point(0, 72);
+            this.layoutViewField_colKhoangCachXB.Name = "layoutViewField_colKhoangCachXB";
+            this.layoutViewField_colKhoangCachXB.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colKhoangCachXB.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colTheLoaiMax
+            // 
+            this.colTheLoaiMax.Caption = "Số Lượng Thể Loại Tối Đa";
+            this.colTheLoaiMax.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colTheLoaiMax.FieldName = "SoLuongTheLoaiMax";
+            this.colTheLoaiMax.LayoutViewField = this.layoutViewField_colTheLoaiMax;
+            this.colTheLoaiMax.Name = "colTheLoaiMax";
+            this.colTheLoaiMax.OptionsColumn.AllowEdit = false;
+            this.colTheLoaiMax.Width = 88;
+            // 
+            // layoutViewField_colTheLoaiMax
+            // 
+            this.layoutViewField_colTheLoaiMax.EditorPreferredWidth = 59;
+            this.layoutViewField_colTheLoaiMax.Location = new System.Drawing.Point(0, 96);
+            this.layoutViewField_colTheLoaiMax.Name = "layoutViewField_colTheLoaiMax";
+            this.layoutViewField_colTheLoaiMax.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colTheLoaiMax.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colNgayMuonMax
+            // 
+            this.colNgayMuonMax.Caption = "Số Ngày Mượn Tối Đa";
+            this.colNgayMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colNgayMuonMax.FieldName = "SoNgayMuonMax";
+            this.colNgayMuonMax.LayoutViewField = this.layoutViewField_colNgayMuonMax;
+            this.colNgayMuonMax.Name = "colNgayMuonMax";
+            this.colNgayMuonMax.OptionsColumn.AllowEdit = false;
+            this.colNgayMuonMax.Width = 87;
+            // 
+            // layoutViewField_colNgayMuonMax
+            // 
+            this.layoutViewField_colNgayMuonMax.EditorPreferredWidth = 59;
+            this.layoutViewField_colNgayMuonMax.Location = new System.Drawing.Point(0, 120);
+            this.layoutViewField_colNgayMuonMax.Name = "layoutViewField_colNgayMuonMax";
+            this.layoutViewField_colNgayMuonMax.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colNgayMuonMax.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colSachMuonMax
+            // 
+            this.colSachMuonMax.Caption = "Số Sách Mượn Tối Đa";
+            this.colSachMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colSachMuonMax.FieldName = "SoSachMuonMax";
+            this.colSachMuonMax.LayoutViewField = this.layoutViewField_colSachMuonMax;
+            this.colSachMuonMax.Name = "colSachMuonMax";
+            this.colSachMuonMax.OptionsColumn.AllowEdit = false;
+            this.colSachMuonMax.Width = 87;
+            // 
+            // layoutViewField_colSachMuonMax
+            // 
+            this.layoutViewField_colSachMuonMax.EditorPreferredWidth = 59;
+            this.layoutViewField_colSachMuonMax.Location = new System.Drawing.Point(0, 144);
+            this.layoutViewField_colSachMuonMax.Name = "layoutViewField_colSachMuonMax";
+            this.layoutViewField_colSachMuonMax.Size = new System.Drawing.Size(203, 24);
+            this.layoutViewField_colSachMuonMax.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // colTienPhatTre
+            // 
+            this.colTienPhatTre.Caption = "Tiền Phạt Trả Trễ Một Ngày";
+            this.colTienPhatTre.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colTienPhatTre.DisplayFormat.FormatString = "#,#";
+            this.colTienPhatTre.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTienPhatTre.FieldName = "TPTraTreMotNgay";
+            this.colTienPhatTre.LayoutViewField = this.layoutViewField_colTienPhatTre;
+            this.colTienPhatTre.Name = "colTienPhatTre";
+            this.colTienPhatTre.OptionsColumn.AllowEdit = false;
+            this.colTienPhatTre.Width = 90;
+            // 
+            // layoutViewField_colTienPhatTre
+            // 
+            this.layoutViewField_colTienPhatTre.EditorPreferredWidth = 59;
+            this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 168);
+            this.layoutViewField_colTienPhatTre.Name = "layoutViewField_colTienPhatTre";
+            this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(203, 20);
+            this.layoutViewField_colTienPhatTre.TextSize = new System.Drawing.Size(137, 13);
+            // 
+            // layoutViewCard1
+            // 
+            this.layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.layoutViewCard1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutViewField_colTuoiMin,
+            this.layoutViewField_colTuoiMax,
+            this.layoutViewField_colHanThe,
+            this.layoutViewField_colKhoangCachXB,
+            this.layoutViewField_colTheLoaiMax,
+            this.layoutViewField_colNgayMuonMax,
+            this.layoutViewField_colSachMuonMax,
+            this.layoutViewField_colTienPhatTre});
+            this.layoutViewCard1.Name = "layoutViewCard1";
             // 
             // frmThayDoiQuiDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 444);
+            this.ClientSize = new System.Drawing.Size(1056, 522);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.navigationPane1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmThayDoiQuiDinh";
             this.Text = "Thay đổi quy định";
-            this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmThayDoiQuiDinh_FormClosed);
+            this.Load += new System.EventHandler(this.frmThayDoiQuiDinh_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
+            this.navigationPane1.ResumeLayout(false);
+            this.navigationPage1.ResumeLayout(false);
+            this.navigationPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seHanThe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seTuoiMax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seTuoiMin.Properties)).EndInit();
+            this.navigationPage2.ResumeLayout(false);
+            this.navigationPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seTheLoaiMax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seKhoangCachXB.Properties)).EndInit();
+            this.navigationPage3.ResumeLayout(false);
+            this.navigationPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seTienPhat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSachMuonMax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seNgayMuonMax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTuoiMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTuoiMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThayDoi;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbSoLuongSachTD;
-        private System.Windows.Forms.TextBox txbKhoangCachXB;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label txbSoSachMuonTD;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbTienPhatTre;
-        private System.Windows.Forms.TextBox txbSoNgayMuonTD;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbHanThe;
-        private System.Windows.Forms.TextBox txbTuoiTD;
-        private System.Windows.Forms.TextBox txbTuoiTT;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraBars.Navigation.NavigationPane navigationPane1;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
+        private DevExpress.XtraEditors.SpinEdit seTuoiMin;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraBars.BarButtonItem btnLuu;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton btnSua1;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SpinEdit seHanThe;
+        private DevExpress.XtraEditors.SpinEdit seTuoiMax;
+        private DevExpress.XtraEditors.SpinEdit seTheLoaiMax;
+        private DevExpress.XtraEditors.SpinEdit seKhoangCachXB;
+        private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colTuoiMin;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTuoiMin;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colTuoiMax;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTuoiMax;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colHanThe;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colHanThe;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colKhoangCachXB;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colKhoangCachXB;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colTheLoaiMax;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTheLoaiMax;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colNgayMuonMax;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colNgayMuonMax;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colSachMuonMax;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSachMuonMax;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colTienPhatTre;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colTienPhatTre;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
+        private DevExpress.XtraEditors.SimpleButton btnSua2;
+        private DevExpress.XtraEditors.LabelControl labelcontrol;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
+        private DevExpress.XtraEditors.LabelControl labelcontrolTP;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SimpleButton btnSua3;
+        private DevExpress.XtraEditors.SpinEdit seTienPhat;
+        private DevExpress.XtraEditors.SpinEdit seSachMuonMax;
+        private DevExpress.XtraEditors.SpinEdit seNgayMuonMax;
+        private DevExpress.XtraEditors.SimpleButton btnHuy1;
+        private DevExpress.XtraEditors.SimpleButton btnHuy2;
+        private DevExpress.XtraEditors.SimpleButton btnHuy3;
     }
 }

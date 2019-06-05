@@ -85,7 +85,7 @@ namespace QLTV_GUI.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Actions_list_add_user_icon {
             get {
-                object obj = ResourceManager.GetObject("Actions-list-add-user-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Actions_list_add_user_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +116,16 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap address_book_add_icon {
             get {
                 object obj = ResourceManager.GetObject("address-book-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adduser16 {
+            get {
+                object obj = ResourceManager.GetObject("adduser16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +166,16 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap bookshelf {
             get {
                 object obj = ResourceManager.GetObject("bookshelf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bookshelf16 {
+            get {
+                object obj = ResourceManager.GetObject("bookshelf16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +313,26 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gdpr {
+            get {
+                object obj = ResourceManager.GetObject("gdpr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gdpr__1_ {
+            get {
+                object obj = ResourceManager.GetObject("gdpr (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_attendance_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-attendance-48", resourceCulture);
@@ -373,6 +413,16 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap law {
+            get {
+                object obj = ResourceManager.GetObject("law", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man {
             get {
                 object obj = ResourceManager.GetObject("man", resourceCulture);
@@ -396,6 +446,16 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap medical_history {
             get {
                 object obj = ResourceManager.GetObject("medical-history", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_book {
+            get {
+                object obj = ResourceManager.GetObject("open-book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
