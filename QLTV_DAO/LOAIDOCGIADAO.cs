@@ -47,5 +47,32 @@ namespace QLTV_DAO
             }
             return Listldg;
         }
+        public void UpdateLoaiDocGia(string MaLDG, string TenLDG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                LOAIDOCGIA ldg = db.LOAIDOCGIAs.Find(MaLDG);
+                ldg.TenLoaiDocGia = TenLDG;
+                db.SaveChanges();
+            }
+        }
+        public void RemoveLoaiDocGia(string MaLDG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                LOAIDOCGIA ldg = db.LOAIDOCGIAs.Find(MaLDG);
+                db.LOAIDOCGIAs.Remove(ldg);
+                db.SaveChanges();
+            }
+        }
+        public void AddLoaiDocGia(string MaLDG, string TenLDG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                LOAIDOCGIA ldg = new LOAIDOCGIA() { MaLoaiDocGia = MaLDG, TenLoaiDocGia = TenLDG };
+                db.LOAIDOCGIAs.Add(ldg);
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -53,9 +53,13 @@
   <ItemGroup>
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+//<<<<<<< Khang-5-6
     <Compile Include="TACGIABUS.cs" />
     <Compile Include="THELOAIBUS.cs" />
     <Compile Include="TINHTRANGBUS.cs" />
+//=======
+    <Compile Include="THAMSOBUS.cs" />
+//>>>>>>> master
     <Compile Include="TTDOCGIABUS.cs" />
     <Compile Include="SACHBUS.cs" />
   </ItemGroup>

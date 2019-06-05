@@ -16,6 +16,7 @@ namespace QLTV_GUI
 {
     public partial class frmDocGia : DevExpress.XtraEditors.XtraForm
     {
+        #region Declare
         BindingSource ListBDDocGia = new BindingSource(); //tạo bindingsource để load dữ liệu gridcontrol lên textbox không bị đơ khi thay đổi gridcontrol
         int _index = 0;
         string keycolumn = "";
@@ -23,21 +24,23 @@ namespace QLTV_GUI
         {
             InitializeComponent();
         }
-
+        #endregion
+        #region Event_Load
         private void frmDocGia_Load(object sender, EventArgs e)
         {
-            LoadDocGiaInfo();
-            Binding_DocGia();
-            LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
             lo_btnLuu.ContentVisible = false;
             lo_btnHuy.ContentVisible = false;
             btnReset.Enabled = false;
+            LoadDocGiaInfo();
+            Binding_DocGia();
+            LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+            //Show_FindGrid();
             gridControl.Focus();
         }
+        #endregion
         #region Methods
         void LoadDocGiaInfo()
         {
-            gridControl.DataSource = null;
             List<TTDOCGIADTO> list = QLTV_BUS.TTDOCGIABUS.Instance.GetListDocGiaInfo();
             ListBDDocGia.DataSource = list.ToList();
             gridControl.DataSource = ListBDDocGia;
@@ -46,16 +49,16 @@ namespace QLTV_GUI
         {
             try
             {
-                txbMaDocGia.DataBindings.Add("Text", ListBDDocGia, "MaDocGia");
+                txbMaDocGia.DataBindings.Add("Text", ListBDDocGia, "MaDocGia", true, DataSourceUpdateMode.Never);
                 txbHoTen.DataBindings.Add("Text", ListBDDocGia, "HoTen", true, DataSourceUpdateMode.Never);
                 dateNgaySinh.DataBindings.Add("EditValue", ListBDDocGia, "NgaySinh", true, DataSourceUpdateMode.Never);
                 txbDiaChi.DataBindings.Add("Text", ListBDDocGia, "DiaChi",true, DataSourceUpdateMode.Never);
                 txbEmail.DataBindings.Add("Text", ListBDDocGia, "Email", true, DataSourceUpdateMode.Never);
-                txbUserName.DataBindings.Add("Text", ListBDDocGia, "IDUser");
+                txbUserName.DataBindings.Add("Text", ListBDDocGia, "IDUser",true, DataSourceUpdateMode.Never);
                 txbPassword.DataBindings.Add("Text", ListBDDocGia, "PasswordUser",true, DataSourceUpdateMode.Never);
                 gluedLoaiDocGia.DataBindings.Add("EditValue", ListBDDocGia, "MaLoaiDocGia", true, DataSourceUpdateMode.Never);
-                dateNgayLapThe.DataBindings.Add("EditValue", ListBDDocGia, "NgayLapThe", true, DataSourceUpdateMode.OnValidation);
-                dateNgayHetHan.DataBindings.Add("EditValue", ListBDDocGia, "NgayHetHan", true, DataSourceUpdateMode.OnPropertyChanged);
+                dateNgayLapThe.DataBindings.Add("EditValue", ListBDDocGia, "NgayLapThe", true, DataSourceUpdateMode.Never);
+                dateNgayHetHan.DataBindings.Add("EditValue", ListBDDocGia, "NgayHetHan", true, DataSourceUpdateMode.Never);
             }
             catch
             {
@@ -76,6 +79,7 @@ namespace QLTV_GUI
             //}
             gluedLoaiDocGia.Properties.ValueMember = "MaLoaiDocGia";
             gluedLoaiDocGia.Properties.DisplayMember = "TenLoaiDocGia";
+            //gluedLoaiDocGia.Text = gluedLoaiDocGia.EditValue.ToString();
         }
         void ReadOnly_SuaThongTin()
         {
@@ -103,23 +107,36 @@ namespace QLTV_GUI
             gluedLoaiDocGia.Properties.AllowFocused = true;
             btnSua.ItemAppearance.Normal.BackColor = Color.Silver;
         }
-        void Kiemtra_TatCa_Check()
+        void Uncheck_ck_TatCa()
         {
             if (ck_TatCa.Checked == true)
                 ck_TatCa.Checked = false;
         }
+        void FormatBD_TTDocGia()
+        {
+            txbHoTen.Text = bandedGridView.GetFocusedRowCellValue(colHoTen).ToString();
+            dateNgaySinh.EditValue = bandedGridView.GetFocusedRowCellValue(colNgaySinh);
+            txbDiaChi.Text = bandedGridView.GetFocusedRowCellValue(colDiaChi).ToString();
+            txbEmail.Text = bandedGridView.GetFocusedRowCellValue(colEmail).ToString();
+            txbPassword.Text = bandedGridView.GetFocusedRowCellValue(colPassword).ToString();
+            gluedLoaiDocGia.EditValue = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia);
+            txbMaDocGia.Text = bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString();
+            dateNgayLapThe.EditValue = bandedGridView.GetFocusedRowCellValue(colNgayLapThe);
+            dateNgayHetHan.EditValue = bandedGridView.GetFocusedRowCellValue(colNgayHetHan);
+            txbUserName.Text = bandedGridView.GetFocusedRowCellValue(colUsername).ToString();
+        }
         //Hiện thanh tìm kiếm trên grid
-        private void Show_FindGrid()
-        {
-            if (!bandedGridView.IsFindPanelVisible)
-                bandedGridView.ShowFindPanel();
-        }
-        //Ẩn Thanh tìm kiếm
-        private void Hide_FindGrid()
-        {
-            if (bandedGridView.IsFindPanelVisible)
-                bandedGridView.HideFindPanel();
-        }
+        //private void Show_FindGrid()
+        //{
+        //    if (!bandedGridView.IsFindPanelVisible)
+        //        bandedGridView.ShowFindPanel();
+        //}
+        ////Ẩn Thanh tìm kiếm
+        //private void Hide_FindGrid()
+        //{
+        //    if (bandedGridView.IsFindPanelVisible)
+        //        bandedGridView.HideFindPanel();
+        //}
         #endregion
         #region Event_CheckFind
         private void ck_TatCa_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -135,24 +152,24 @@ namespace QLTV_GUI
                 ck_NgayLapThe.Checked = false;
                 ck_NgaySinh.Checked = false;
                 ck_Username.Checked = false;
-                bandedGridView.OptionsFind.FindFilterColumns = "*";
-                Show_FindGrid();
+                //Show_FindGrid();
                 keycolumn = "*";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
+                ck_TatCa.Enabled = false;
             }
             else
             {
+                ck_TatCa.Enabled = true;
                 keycolumn = "";
-                Hide_FindGrid();
             }
         }
-
+        
         private void ck_MaDocGia_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (ck_MaDocGia.Checked == true)
             {
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "MaDocGia;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -170,8 +187,9 @@ namespace QLTV_GUI
                     ck_Username.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    //Hide_FindGrid();
+                    //keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -186,8 +204,8 @@ namespace QLTV_GUI
             if (ck_HoTen.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "HoTen;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -205,8 +223,7 @@ namespace QLTV_GUI
                     ck_Username.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -222,8 +239,8 @@ namespace QLTV_GUI
             if (ck_NgaySinh.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "NgaySinh;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -241,8 +258,7 @@ namespace QLTV_GUI
                     ck_Username.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -257,8 +273,8 @@ namespace QLTV_GUI
             if (ck_DiaChi.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "DiaChi;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -276,8 +292,7 @@ namespace QLTV_GUI
                     ck_Username.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -292,8 +307,8 @@ namespace QLTV_GUI
             if (ck_Email.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "Email;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -311,8 +326,7 @@ namespace QLTV_GUI
                     ck_Username.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -327,8 +341,8 @@ namespace QLTV_GUI
             if (ck_Username.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "IDUser;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -346,8 +360,7 @@ namespace QLTV_GUI
                     ck_Email.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -362,8 +375,8 @@ namespace QLTV_GUI
             if (ck_LoaiDocGia.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "MaLoaiDocGia;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -381,8 +394,7 @@ namespace QLTV_GUI
                     ck_Email.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -397,8 +409,8 @@ namespace QLTV_GUI
             if (ck_NgayLapThe.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "NgayLapThe;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -416,8 +428,7 @@ namespace QLTV_GUI
                     ck_Email.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -432,8 +443,8 @@ namespace QLTV_GUI
             if (ck_NgayHetHan.Checked == true)
             {
                 //gridView1.OptionsFind.FindFilterColumns = "dgfdgd";
-                Kiemtra_TatCa_Check();
-                Show_FindGrid();
+                Uncheck_ck_TatCa();
+                //Show_FindGrid();
                 keycolumn += "NgayHetHan;";
                 bandedGridView.OptionsFind.FindFilterColumns = keycolumn;
             }
@@ -451,8 +462,7 @@ namespace QLTV_GUI
                     ck_Email.Checked == false
                     )
                 {
-                    Hide_FindGrid();
-                    keycolumn = "";
+                    ck_TatCa.Checked = true;
                 }
                 else
                 {
@@ -471,41 +481,35 @@ namespace QLTV_GUI
         }
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            UnReadOnly_SuaThongTin();
-            gridControl.Focus();
-            LoadDataSourceLDG();
+            if (bandedGridView.RowCount > 0)
+            {
+                UnReadOnly_SuaThongTin();
+                gridControl.Focus();
+                LoadDataSourceLDG();
+            }
             
         }
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gridControl.Focus();
+            _index = 0;
+            gridControl.DataSource = null;
+            bandedGridView.FindFilterText = "";
             ReadOnly_SuaThongTin();
             LoadDocGiaInfo();
             LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
-            _index = 0;
+            bandedGridView.Focus();
+            //_index = 0;
         }
-        //private void bandedGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        //{
-        //    int a = bandedGridView.GetFocusedDataSourceRowIndex();
-        //    if (_index == a)
-        //    {
-        //        txbHoTen.Text = bandedGridView.GetFocusedRowCellValue(colHoTen).ToString();
-        //        dateNgaySinh.EditValue = bandedGridView.GetFocusedRowCellValue(colNgaySinh);
-        //        txbDiaChi.Text = bandedGridView.GetFocusedRowCellValue(colDiaChi).ToString();
-        //        txbEmail.Text = bandedGridView.GetFocusedRowCellValue(colEmail).ToString();
-        //        txbPassword.Text = bandedGridView.GetFocusedRowCellValue(colPassword).ToString();
-        //    }
-        //    else _index = a;
-
-        //    if (lo_btnHuy.ContentVisible == false)
-        //    {
-        //        LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
-        //    }
-        //    else
-        //    {
-        //        LoadDataSourceLDG();
-        //    }
-        //}
+        private void bandedGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int a = bandedGridView.GetFocusedDataSourceRowIndex();
+            if (_index == a && lo_btnHuy.ContentVisible == true)
+            {
+                FormatBD_TTDocGia();
+                //gluedLoaiDocGia.EditValue = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia);
+                //LoadDataSourceLDG();
+            }
+        }
         //private void bandGridview_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         //{
         //    Thread.Sleep(100);
@@ -538,12 +542,11 @@ namespace QLTV_GUI
         //}
         private void btnLuuLai_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có muốn lưu thông tin độc giả đã sửa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (XtraMessageBox.Show("Bạn có muốn lưu thông tin độc giả đã thay đổi không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string IdDG = bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString();
                 QLTV_BUS.DOCGIABUS.Instance.UpdateInfoDocGia(IdDG, txbHoTen.Text, txbDiaChi.Text, (DateTime)dateNgaySinh.EditValue, txbEmail.Text, gluedLoaiDocGia.EditValue.ToString());
                 QLTV_BUS.USERBUS.Instance.UpdateInfoUser(txbUserName.Text, txbPassword.Text);
-                ReadOnly_SuaThongTin();
                 btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
                 gridControl.Focus();
             }
@@ -554,11 +557,7 @@ namespace QLTV_GUI
             ReadOnly_SuaThongTin();
             gridControl.Focus();
             LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
-            txbHoTen.Text = bandedGridView.GetFocusedRowCellValue(colHoTen).ToString();
-            dateNgaySinh.EditValue = bandedGridView.GetFocusedRowCellValue(colNgaySinh);
-            txbEmail.Text = bandedGridView.GetFocusedRowCellValue(colEmail).ToString();
-            txbDiaChi.Text = bandedGridView.GetFocusedRowCellValue(colDiaChi).ToString();
-            txbPassword.Text = bandedGridView.GetFocusedRowCellValue(colPassword).ToString();
+            FormatBD_TTDocGia();
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -567,46 +566,65 @@ namespace QLTV_GUI
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gridControl.IsFocused == true)
+            if (bandedGridView.RowCount > 0)
             {
-                if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (gridControl.IsFocused == true)
                 {
-                    DOCGIABUS.Instance.RemoveInfoDocGia(bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString());
-                    USERBUS.Instance.RemoveInfoUser(bandedGridView.GetFocusedRowCellValue(colUsername).ToString());
-                    btnLamMoi_ItemClick(sender, e);
+                    if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        DOCGIABUS.Instance.RemoveInfoDocGia(bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString());
+                        USERBUS.Instance.RemoveInfoUser(bandedGridView.GetFocusedRowCellValue(colUsername).ToString());
+                        btnLamMoi_ItemClick(sender, e);
+                    }
+                    else gridControl.Focus();
                 }
-                else gridControl.Focus();
+                else
+                {
+                    XtraMessageBox.Show("Vui lòng chọn thông tin độc giả muốn xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                XtraMessageBox.Show("Vui lòng chọn thông tin độc giả muốn xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            else { }
 
         }
         #endregion
         #region Envent_Changed
         private void bandedGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            int a = bandedGridView.GetFocusedDataSourceRowIndex();
-            if (_index == a)
+            if (bandedGridView.RowCount > 0)
             {
-                txbHoTen.Text = bandedGridView.GetFocusedRowCellValue(colHoTen).ToString();
-                dateNgaySinh.EditValue = bandedGridView.GetFocusedRowCellValue(colNgaySinh);
-                txbDiaChi.Text = bandedGridView.GetFocusedRowCellValue(colDiaChi).ToString();
-                txbEmail.Text = bandedGridView.GetFocusedRowCellValue(colEmail).ToString();
-                txbPassword.Text = bandedGridView.GetFocusedRowCellValue(colPassword).ToString();
+                _index = bandedGridView.GetFocusedDataSourceRowIndex();
+                if (lo_btnHuy.ContentVisible == true)
+                {
+                    LoadDataSourceLDG();
+                }
+                else
+                {
+                    LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+                }
             }
-            else _index = a;
-
-            if (lo_btnHuy.ContentVisible == false)
+        }
+        private void bandedGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (bandedGridView.RowCount > 0)
             {
-                LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+                bandedGridView_FocusedRowChanged(sender, e as DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs);
+                FormatBD_TTDocGia();
             }
             else
             {
-                LoadDataSourceLDG();
+                txbMaDocGia.Text = "";
+                txbHoTen.Text = "";
+                txbDiaChi.Text = "";
+                txbEmail.Text = "";
+                txbPassword.Text = "";
+                txbUserName.Text = "";
+                dateNgaySinh.EditValue = null;
+                dateNgayLapThe.EditValue = null;
+                dateNgayHetHan.EditValue = null;
+                gluedLoaiDocGia.Properties.DataSource = null;
+                ReadOnly_SuaThongTin();
             }
         }
-        #endregion
+        #endregion 
     }
 }

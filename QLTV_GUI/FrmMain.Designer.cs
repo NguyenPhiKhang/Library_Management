@@ -48,6 +48,8 @@
             this.subitemAccount = new DevExpress.XtraBars.BarSubItem();
             this.btnTTaccount = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Hethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageAccount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageLogin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,6 +78,7 @@
             this.repositoryItemPictureEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -110,10 +113,13 @@
             this.btn_DangNhap,
             this.subitemAccount,
             this.btnTTaccount,
-            this.btnDangXuat});
+            this.btnDangXuat,
+            this.barSubItem1,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 44;
+            this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.barSubItem1);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tab_Hethong,
             this.tab_docgia,
@@ -129,8 +135,8 @@
             this.repositoryItemPictureEdit3,
             this.repositoryItemTextEdit1,
             this.repositoryItemHypertextLabel1});
-            this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(987, 162);
+            this.ribbonControl1.Size = new System.Drawing.Size(987, 146);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnDocGia
             // 
@@ -312,6 +318,22 @@
             this.btnDangXuat.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.exit;
             this.btnDangXuat.Name = "btnDangXuat";
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "barSubItem1";
+            this.barSubItem1.Id = 1;
+            this.barSubItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem1.ImageOptions.SvgImage")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Login";
+            this.barButtonItem1.Id = 2;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // tab_Hethong
             // 
             this.tab_Hethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -376,7 +398,7 @@
             this.rbpageTheLoai,
             this.rbpageAuthors});
             this.tab_dangnhap.ImageOptions.Alignment = DevExpress.Utils.HorzAlignment.Near;
-            this.tab_dangnhap.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.bookshelf;
+            this.tab_dangnhap.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.open_book;
             this.tab_dangnhap.Name = "tab_dangnhap";
             this.tab_dangnhap.Text = "Quản Lý Sách";
             // 
@@ -404,7 +426,7 @@
             this.rbpageBorrow,
             this.rbpageReturn,
             this.rbpagePunish});
-            this.tab_muontra.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_muontra.ImageOptions.Image")));
+            this.tab_muontra.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.law;
             this.tab_muontra.Name = "tab_muontra";
             this.tab_muontra.Text = "Quản Lí Mượn Trả";
             // 
@@ -451,7 +473,7 @@
             // 
             this.tab_quydinh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageChange});
-            this.tab_quydinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_quydinh.ImageOptions.Image")));
+            this.tab_quydinh.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.gdpr;
             this.tab_quydinh.Name = "tab_quydinh";
             this.tab_quydinh.Text = "Quy Định";
             // 
@@ -498,6 +520,13 @@
             // 
             this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
             // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 519);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(987, 31);
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
@@ -509,12 +538,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 550);
+            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "FrmMain";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Quản Lý Thư Viện";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -578,6 +609,9 @@
         private DevExpress.XtraBars.BarButtonItem btnTTaccount;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
 
