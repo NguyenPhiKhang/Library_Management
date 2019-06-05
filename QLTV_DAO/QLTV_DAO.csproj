@@ -49,12 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DOCGIADAO.cs" />
+    <Compile Include="TACGIADAO.cs" />
     <Compile Include="LOAIDOCGIADAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+//<<<<<<< Khang-5-6
+    <Compile Include="THELOAIDAO.cs" />
+    <Compile Include="TINHTRANGDAO.cs" />
+//=======
     <Compile Include="THAMSODAO.cs" />
+//>>>>>>> master
     <Compile Include="TTDOCGIADAO.cs" />
-    <Compile Include="USERDAO.cs" />
+    <Compile Include="SACHDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
