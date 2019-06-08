@@ -28,179 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-            this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ck_remember = new DevExpress.XtraEditors.CheckEdit();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pnPass = new System.Windows.Forms.Panel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnUser = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ck_remember.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // bunifuGradientPanel2
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(27, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 2);
-            this.label1.TabIndex = 1;
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel2.Controls.Add(this.panel1);
+            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Aqua;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(337, 379);
+            this.bunifuGradientPanel2.TabIndex = 1;
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(27, 271);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 2);
-            this.label2.TabIndex = 2;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::QLTV_GUI.Properties.Resources.img_311846;
+            this.pictureBox1.Location = new System.Drawing.Point(109, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // pictureEdit1
+            // panel1
             // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(98, 12);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(97, 75);
-            this.pictureEdit1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.bunifuThinButton21);
+            this.panel1.Controls.Add(this.ck_remember);
+            this.panel1.Controls.Add(this.panelControl2);
+            this.panel1.Controls.Add(this.panelControl1);
+            this.panel1.Location = new System.Drawing.Point(26, 65);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 293);
+            this.panel1.TabIndex = 0;
             // 
-            // btnLogin
+            // ck_remember
             // 
-            this.btnLogin.ActiveBorderThickness = 1;
-            this.btnLogin.ActiveCornerRadius = 20;
-            this.btnLogin.ActiveFillColor = System.Drawing.Color.Green;
-            this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
-            this.btnLogin.ActiveLineColor = System.Drawing.Color.Green;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
-            this.btnLogin.ButtonText = "SIGN IN";
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.IdleBorderThickness = 2;
-            this.btnLogin.IdleCornerRadius = 20;
-            this.btnLogin.IdleFillColor = System.Drawing.Color.White;
-            this.btnLogin.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.Location = new System.Drawing.Point(27, 212);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(237, 54);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ck_remember.Location = new System.Drawing.Point(15, 189);
+            this.ck_remember.Name = "ck_remember";
+            this.ck_remember.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ck_remember.Properties.Appearance.Options.UseFont = true;
+            this.ck_remember.Properties.Caption = "Remember me";
+            this.ck_remember.Size = new System.Drawing.Size(112, 20);
+            this.ck_remember.TabIndex = 6;
             // 
-            // pictureEdit3
+            // panelControl2
             // 
-            this.pictureEdit3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureEdit3.EditValue = global::QLTV_GUI.Properties.Resources.img_131108;
-            this.pictureEdit3.Location = new System.Drawing.Point(27, 167);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(36, 36);
-            this.pictureEdit3.TabIndex = 6;
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.txtPassword);
+            this.panelControl2.Controls.Add(this.pictureBox3);
+            this.panelControl2.Controls.Add(this.pnPass);
+            this.panelControl2.Location = new System.Drawing.Point(15, 143);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(256, 36);
+            this.panelControl2.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.HintText = "";
-            this.txtPassword.isPassword = true;
-            this.txtPassword.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPassword.LineThickness = 4;
-            this.txtPassword.Location = new System.Drawing.Point(65, 167);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.EditValue = "";
+            this.txtPassword.Location = new System.Drawing.Point(48, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(199, 36);
+            this.txtPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPassword.Properties.Appearance.Options.UseBackColor = true;
+            this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Properties.AutoHeight = false;
+            this.txtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtPassword.Properties.UseSystemPasswordChar = true;
+            this.txtPassword.Size = new System.Drawing.Size(200, 30);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "Password";
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // pictureEdit2
+            // pictureBox3
             // 
-            this.pictureEdit2.EditValue = global::QLTV_GUI.Properties.Resources.account_friend_human_man_member_person_profile_user_users_512;
-            this.pictureEdit2.Location = new System.Drawing.Point(27, 116);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(36, 36);
-            this.pictureEdit2.TabIndex = 5;
+            this.pictureBox3.Image = global::QLTV_GUI.Properties.Resources.img_131108;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pnPass
+            // 
+            this.pnPass.BackColor = System.Drawing.Color.Gray;
+            this.pnPass.Location = new System.Drawing.Point(39, 0);
+            this.pnPass.Name = "pnPass";
+            this.pnPass.Size = new System.Drawing.Size(3, 36);
+            this.pnPass.TabIndex = 1;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.txtUsername);
+            this.panelControl1.Controls.Add(this.pictureBox2);
+            this.panelControl1.Controls.Add(this.pnUser);
+            this.panelControl1.Location = new System.Drawing.Point(15, 86);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(256, 36);
+            this.panelControl1.TabIndex = 1;
             // 
             // txtUsername
             // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.HintText = "";
-            this.txtUsername.isPassword = false;
-            this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtUsername.LineThickness = 4;
-            this.txtUsername.Location = new System.Drawing.Point(65, 116);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(0);
+            this.txtUsername.EditValue = "";
+            this.txtUsername.Location = new System.Drawing.Point(48, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(199, 36);
-            this.txtUsername.TabIndex = 3;
-            this.txtUsername.Text = "Username";
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtUsername.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUsername.Properties.Appearance.Options.UseFont = true;
+            this.txtUsername.Properties.AutoHeight = false;
+            this.txtUsername.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtUsername.Size = new System.Drawing.Size(200, 30);
+            this.txtUsername.TabIndex = 2;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QLTV_GUI.Properties.Resources.user__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pnUser
+            // 
+            this.pnUser.BackColor = System.Drawing.Color.Gray;
+            this.pnUser.Location = new System.Drawing.Point(39, 0);
+            this.pnUser.Name = "pnUser";
+            this.pnUser.Size = new System.Drawing.Size(3, 36);
+            this.pnUser.TabIndex = 1;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.panelControl1;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 10;
+            this.bunifuElipse2.TargetControl = this.panelControl2;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Đăng Nhập";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 2;
+            this.bunifuThinButton21.IdleCornerRadius = 10;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(19, 222);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(252, 50);
+            this.bunifuThinButton21.TabIndex = 7;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 282);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.pictureEdit3);
-            this.Controls.Add(this.pictureEdit2);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureEdit1);
+            this.ClientSize = new System.Drawing.Size(337, 379);
+            this.Controls.Add(this.bunifuGradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ck_remember.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private System.Windows.Forms.Panel pnPass;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private System.Windows.Forms.Panel pnUser;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.CheckEdit ck_remember;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }

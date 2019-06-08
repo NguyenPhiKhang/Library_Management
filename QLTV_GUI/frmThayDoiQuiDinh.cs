@@ -83,7 +83,7 @@ namespace QLTV_GUI
         {
             gridControl1.DataSource = THAMSOBUS.Instance.GetDSQuiDinh().ToList();
             declare_editvalue_se();
-            gridControl1.Focus();
+            layoutView1.Focus();
         }
         #endregion
         #region Event_Closed
@@ -120,16 +120,16 @@ namespace QLTV_GUI
         }
         private void btnSua2_Click(object sender, EventArgs e)
         {
-            btnSua1.Visible = false;
-            btnHuy1.Visible = true;
+            btnSua2.Visible = false;
+            btnHuy2.Visible = true;
             seKhoangCachXB.ReadOnly = false;
             seTheLoaiMax.ReadOnly = false;
         }
 
         private void btnHuy2_Click(object sender, EventArgs e)
         {
-            btnSua1.Visible = true;
-            btnHuy1.Visible = false;
+            btnSua2.Visible = true;
+            btnHuy2.Visible = false;
             seKhoangCachXB.ReadOnly = true;
             seTheLoaiMax.ReadOnly = true;
             declare_editvalue_se();
@@ -137,16 +137,16 @@ namespace QLTV_GUI
 
         private void btnSua3_Click(object sender, EventArgs e)
         {
-            btnSua1.Visible = false;
-            btnHuy1.Visible = true;
+            btnSua3.Visible = false;
+            btnHuy3.Visible = true;
             seSachMuonMax.ReadOnly = false;
             seNgayMuonMax.ReadOnly = false;
             seTienPhat.ReadOnly = false;
         }
         private void btnHuy3_Click(object sender, EventArgs e)
         {
-            btnSua1.Visible = true;
-            btnHuy1.Visible = false;
+            btnSua3.Visible = true;
+            btnHuy3.Visible = false;
             seSachMuonMax.ReadOnly = true;
             seNgayMuonMax.ReadOnly = true;
             seTienPhat.ReadOnly = true;

@@ -60,6 +60,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
@@ -75,6 +76,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelpGUI\AutoIncreaseID.cs" />
+    <Compile Include="HelpGUI\ErrorProvider.cs" />
+    <Compile Include="HelpGUI\KiemTraDieuKien.cs" />
     <Compile Include="frmBCTKSachMuonTL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -454,6 +458,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gdpr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e7a5cf5c9e %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_311846.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_1311081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -124,9 +124,6 @@
   <data name="icons8-attendance-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-attendance-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="law" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\law.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,6 +148,9 @@
   <data name="address-book-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\address-book-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="adduser16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adduser16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Document-Write-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Document-Write-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,14 +160,20 @@
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ticket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contract (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contract (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_1311081" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_1311081.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img_311846" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_311846.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +190,9 @@
   <data name="delete-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="account_friend_human_man_member_person_profile_user_users-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_friend_human_man_member_person_profile_user_users-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -195,6 +204,9 @@
   </data>
   <data name="e7a5cf5c9e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\e7a5cf5c9e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reports-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reports-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,6 +241,9 @@
   <data name="gdpr (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gdpr (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="e7a5cf5c9e (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e7a5cf5c9e (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-borrow-book-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-borrow-book-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,11 +259,14 @@
   <data name="Books-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Books-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ticket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="contacts-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contacts-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Books-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Books-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gdpr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gdpr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookshelf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookshelf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,8 +274,8 @@
   <data name="Refresh-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="adduser16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adduser16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add-group-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add-group-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,16 +289,16 @@
   <data name="icons8-borrow-book-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-borrow-book-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reports-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reports-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-save-as-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-save-as-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reports-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reports-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Books-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Books-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gdpr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gdpr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lock (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

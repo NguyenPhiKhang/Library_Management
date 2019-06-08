@@ -608,10 +608,10 @@
         private DevExpress.XtraBars.BarSubItem subitemAccount;
         private DevExpress.XtraBars.BarButtonItem btnTTaccount;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

@@ -125,8 +125,7 @@
             this.navigationPage3});
             this.navigationPane1.RegularSize = new System.Drawing.Size(417, 498);
             this.navigationPane1.SelectedPage = this.navigationPage1;
-            this.navigationPane1.Size = new System.Drawing.Size(1056, 498);
-            this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
+            this.navigationPane1.Size = new System.Drawing.Size(417, 498);
             this.navigationPane1.TabIndex = 6;
             this.navigationPane1.Text = "navigationPane1";
             // 
@@ -504,13 +503,13 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(1056, 24);
+            this.gridControl1.Location = new System.Drawing.Point(417, 24);
             this.gridControl1.MainView = this.layoutView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(0, 498);
-            this.gridControl1.TabIndex = 11;
+            this.gridControl1.Size = new System.Drawing.Size(639, 498);
+            this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.layoutView1});
             // 

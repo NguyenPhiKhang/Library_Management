@@ -33,7 +33,10 @@ namespace QLTV_GUI
             btnReset.Enabled = false;
             LoadDocGiaInfo();
             Binding_DocGia();
-            LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+            if (bandedGridView.RowCount > 0)
+            {
+                LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+            }
             //Show_FindGrid();
             gridControl.Focus();
         }
@@ -496,7 +499,10 @@ namespace QLTV_GUI
             bandedGridView.FindFilterText = "";
             ReadOnly_SuaThongTin();
             LoadDocGiaInfo();
-            LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+            if (bandedGridView.RowCount > 0)
+            {
+                LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
+            }
             bandedGridView.Focus();
             //_index = 0;
         }
@@ -561,7 +567,7 @@ namespace QLTV_GUI
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txbPassword.Text = "1";
+            txbPassword.Text = "12345678";
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

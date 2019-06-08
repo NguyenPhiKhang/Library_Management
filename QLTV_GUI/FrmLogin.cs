@@ -16,10 +16,12 @@ namespace QLTV_GUI
         public FrmLogin()
         {
             InitializeComponent();
+            txtUsername.Focus();
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
+            pnUser.BackColor = Color.DodgerBlue;
             if(txtUsername.Text == "Username")
             {
                 txtUsername.Text = "";
@@ -29,6 +31,7 @@ namespace QLTV_GUI
 
         private void txtUsername_Leave(object sender, EventArgs e)
         {
+            pnUser.BackColor = Color.Gray;
             if (txtUsername.Text == "")
             {
                 txtUsername.Text = "Username";
@@ -38,6 +41,7 @@ namespace QLTV_GUI
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
+            pnPass.BackColor = Color.DodgerBlue;
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
@@ -47,6 +51,7 @@ namespace QLTV_GUI
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
+            pnPass.BackColor = Color.Gray;
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = "Password";
