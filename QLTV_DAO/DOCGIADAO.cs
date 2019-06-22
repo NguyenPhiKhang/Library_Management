@@ -44,6 +44,15 @@ namespace QLTV_DAO
                 db.SaveChanges();
             }
         }
+        public void UpdateTongNoDG(string MaDG, decimal TongNo)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                DOCGIA dg = db.DOCGIAs.Find(MaDG);
+                dg.TongNo = TongNo;
+                db.SaveChanges();
+            }
+        }
         public void RemoveInfoDocGia(string MaDG)
         {
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
@@ -53,7 +62,7 @@ namespace QLTV_DAO
                 db.SaveChanges();
             }
         }
-        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string idaccount, string sdt)
+        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string idaccount, string sdt/*, decimal TongNo=0*/)
         {
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
@@ -68,7 +77,8 @@ namespace QLTV_DAO
                     NgayLapThe = ngaylapthe,
                     NgayHetHan = ngayhethan,
                     IDAccount = idaccount,
-                    SDT = sdt
+                    SDT = sdt,
+                    //TongNo = TongNo
                 };
                 db.DOCGIAs.Add(dg);
                 db.SaveChanges();

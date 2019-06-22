@@ -26,7 +26,7 @@ namespace QLTV_DAO
             {
                 var data = ((from u in db.DOCGIAs
                            join n in db.ACCOUNTs on u.IDAccount equals n.IDAccount
-                           select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDAccount, n.PasswordAccount, u.SDT})).ToList();
+                           select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDAccount, n.PasswordAccount, u.SDT, u.TongNo})).ToList();
                 foreach (var item in data)
                 {
                     TTDOCGIADTO ttdg = new TTDOCGIADTO
@@ -41,7 +41,8 @@ namespace QLTV_DAO
                         MaLoaiDocGia = item.MaLoaiDocGia,
                         IDAccount = item.IDAccount,
                         PasswordAccount = item.PasswordAccount,
-                        SDT = item.SDT
+                        SDT = item.SDT,
+                        TongNo = item.TongNo
                     };
                     listDocGiaInfo.Add(ttdg);
                 }

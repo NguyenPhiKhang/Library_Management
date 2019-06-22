@@ -78,6 +78,7 @@
           <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="HanTra" Type="int" Nullable="false" />
+          <Property Name="TinhTrangMuon" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="DOCGIA">
           <Key>
@@ -93,6 +94,7 @@
           <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="SDT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TongNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
@@ -664,6 +666,7 @@
           <Property Name="MaPhieuMS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MaSach" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="HanTra" Type="Int32" Nullable="false" />
+          <Property Name="TinhTrangMuon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PHIEUMUONSACH" Relationship="QuanLyThuVienModel.FK_CTPHIEUMUON_PHIEUMUONSACH" FromRole="CTPHIEUMUON" ToRole="PHIEUMUONSACH" />
           <NavigationProperty Name="SACH" Relationship="QuanLyThuVienModel.FK_CTPHIEUMUON_SACH" FromRole="CTPHIEUMUON" ToRole="SACH" />
           <NavigationProperty Name="PHIEUTRASACH" Relationship="QuanLyThuVienModel.FK_PHIEUTRASACH_CTPHIEUMUON" FromRole="CTPHIEUMUON" ToRole="PHIEUTRASACH" />
@@ -682,6 +685,7 @@
           <Property Name="MaLoaiDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TongNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <NavigationProperty Name="ACCOUNT" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="DOCGIA" ToRole="ACCOUNT" />
           <NavigationProperty Name="LOAIDOCGIA" Relationship="QuanLyThuVienModel.FK_DOCGIA_LOAIDOCGIA" FromRole="DOCGIA" ToRole="LOAIDOCGIA" />
           <NavigationProperty Name="PHIEUMUONSACHes" Relationship="QuanLyThuVienModel.FK_PHIEUMUONSACH_DOCGIA" FromRole="DOCGIA" ToRole="PHIEUMUONSACH" />
@@ -1082,6 +1086,7 @@
           <EntitySetMapping Name="CTPHIEUMUONs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.CTPHIEUMUON">
               <MappingFragment StoreEntitySet="CTPHIEUMUON">
+                <ScalarProperty Name="TinhTrangMuon" ColumnName="TinhTrangMuon" />
                 <ScalarProperty Name="HanTra" ColumnName="HanTra" />
                 <ScalarProperty Name="MaSach" ColumnName="MaSach" />
                 <ScalarProperty Name="MaPhieuMS" ColumnName="MaPhieuMS" />
@@ -1091,6 +1096,7 @@
           <EntitySetMapping Name="DOCGIAs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.DOCGIA">
               <MappingFragment StoreEntitySet="DOCGIA">
+                <ScalarProperty Name="TongNo" ColumnName="TongNo" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
                 <ScalarProperty Name="MaLoaiDocGia" ColumnName="MaLoaiDocGia" />

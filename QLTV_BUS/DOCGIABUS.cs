@@ -26,13 +26,17 @@ namespace QLTV_BUS
         {
             QLTV_DAO.DOCGIADAO.Instance.UpdateInfoDocGia(MaDG, TenDG, DiaChi, NgaySinh, email, MaLDG, Ngayhethan, sdt);
         }
+        public void UpdateTongNoDG(string MaDG, decimal TongNo)
+        {
+            DOCGIADAO.Instance.UpdateTongNoDG(MaDG, TongNo);
+        }
         public void RemoveInfoDocGia(string MaDG)
         {
             DOCGIADAO.Instance.RemoveInfoDocGia(MaDG);
         }
-        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string iduser, string sdt)
+        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string iduser, string sdt/*, decimal TongNo=0*/)
         {
-            DOCGIADAO.Instance.AddInfoDocGia(MaDG, hoten, ngaysinh, email, diachi, MaLDG, ngaylapthe, ngayhethan, iduser, sdt);
+            DOCGIADAO.Instance.AddInfoDocGia(MaDG, hoten, ngaysinh, email, diachi, MaLDG, ngaylapthe, ngayhethan, iduser, sdt/*, TongNo*/);
         }
     }
 }

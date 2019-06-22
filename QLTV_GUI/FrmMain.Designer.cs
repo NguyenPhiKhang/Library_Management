@@ -426,7 +426,8 @@
             // 
             this.tab_docgia.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageReaders,
-            this.rbpageLoaiDocGia});
+            this.rbpageLoaiDocGia,
+            this.rbpagePhieuThu});
             this.tab_docgia.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_docgia.ImageOptions.Image")));
             this.tab_docgia.Name = "tab_docgia";
             this.tab_docgia.Text = " Quản Lý Độc Giả";
@@ -497,8 +498,7 @@
             // 
             this.tab_baocao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageSachTra,
-            this.rbpageSachMuon,
-            this.rbpagePhieuThu});
+            this.rbpageSachMuon});
             this.tab_baocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_baocao.ImageOptions.Image")));
             this.tab_baocao.Name = "tab_baocao";
             this.tab_baocao.Text = "Báo Cáo Thống Kê";

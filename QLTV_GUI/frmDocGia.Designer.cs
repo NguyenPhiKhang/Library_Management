@@ -53,6 +53,7 @@
             this.ck_NgaySinh = new DevExpress.XtraBars.BarCheckItem();
             this.ck_DiaChi = new DevExpress.XtraBars.BarCheckItem();
             this.ck_Email = new DevExpress.XtraBars.BarCheckItem();
+            this.ck_SDT = new DevExpress.XtraBars.BarCheckItem();
             this.ck_Username = new DevExpress.XtraBars.BarCheckItem();
             this.ck_LoaiDocGia = new DevExpress.XtraBars.BarCheckItem();
             this.ck_NgayLapThe = new DevExpress.XtraBars.BarCheckItem();
@@ -67,6 +68,7 @@
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txbTongNo = new DevExpress.XtraEditors.TextEdit();
             this.txbSDT = new DevExpress.XtraEditors.TextEdit();
             this.dateNgayHetHan = new DevExpress.XtraEditors.DateEdit();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
@@ -95,8 +97,6 @@
             this.lo_btnHuy = new DevExpress.XtraLayout.LayoutControlItem();
             this.lo_btnLuu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lo_btnReset = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -105,6 +105,7 @@
             this.lo_seGiaHan = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bandedGridView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -119,10 +120,10 @@
             this.colLoaiDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colNgayLapThe = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colNgayHetHan = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colTongNo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.ck_SDT = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -130,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTongNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).BeginInit();
@@ -156,8 +158,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnHuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnLuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnReset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -166,6 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lo_seGiaHan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
@@ -324,6 +325,13 @@
             this.ck_Email.Name = "ck_Email";
             this.ck_Email.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.ck_Email_CheckedChanged);
             // 
+            // ck_SDT
+            // 
+            this.ck_SDT.Caption = "Số Điện Thoại";
+            this.ck_SDT.Id = 39;
+            this.ck_SDT.Name = "ck_SDT";
+            this.ck_SDT.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.ck_SDT_ItemClick);
+            // 
             // ck_Username
             // 
             this.ck_Username.Caption = "Username";
@@ -415,6 +423,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txbTongNo);
             this.layoutControl1.Controls.Add(this.txbSDT);
             this.layoutControl1.Controls.Add(this.dateNgayHetHan);
             this.layoutControl1.Controls.Add(this.btnOK);
@@ -440,6 +449,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(1096, 164);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txbTongNo
+            // 
+            this.txbTongNo.Location = new System.Drawing.Point(795, 117);
+            this.txbTongNo.MenuManager = this.barManager1;
+            this.txbTongNo.Name = "txbTongNo";
+            this.txbTongNo.Properties.ReadOnly = true;
+            this.txbTongNo.Size = new System.Drawing.Size(147, 20);
+            this.txbTongNo.StyleController = this.layoutControl1;
+            this.txbTongNo.TabIndex = 25;
             // 
             // txbSDT
             // 
@@ -589,9 +608,9 @@
             // btnHuy
             // 
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(907, 117);
+            this.btnHuy.Location = new System.Drawing.Point(1017, 117);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(81, 22);
+            this.btnHuy.Size = new System.Drawing.Size(55, 22);
             this.btnHuy.StyleController = this.layoutControl1;
             this.btnHuy.TabIndex = 15;
             this.btnHuy.Text = "Hủy";
@@ -601,9 +620,9 @@
             // btnLuuLai
             // 
             this.btnLuuLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuLai.ImageOptions.Image")));
-            this.btnLuuLai.Location = new System.Drawing.Point(823, 117);
+            this.btnLuuLai.Location = new System.Drawing.Point(946, 117);
             this.btnLuuLai.Name = "btnLuuLai";
-            this.btnLuuLai.Size = new System.Drawing.Size(80, 22);
+            this.btnLuuLai.Size = new System.Drawing.Size(67, 22);
             this.btnLuuLai.StyleController = this.layoutControl1;
             this.btnLuuLai.TabIndex = 14;
             this.btnLuuLai.Text = "Lưu Lại";
@@ -714,8 +733,6 @@
             this.lo_btnHuy,
             this.lo_btnLuu,
             this.lo_btnReset,
-            this.emptySpaceItem2,
-            this.emptySpaceItem1,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem6,
@@ -723,7 +740,8 @@
             this.lo_btnOK,
             this.lo_seGiaHan,
             this.layoutControlItem7,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem9});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(1076, 144);
@@ -793,18 +811,18 @@
             // lo_btnHuy
             // 
             this.lo_btnHuy.Control = this.btnHuy;
-            this.lo_btnHuy.Location = new System.Drawing.Point(883, 74);
+            this.lo_btnHuy.Location = new System.Drawing.Point(993, 74);
             this.lo_btnHuy.Name = "lo_btnHuy";
-            this.lo_btnHuy.Size = new System.Drawing.Size(85, 27);
+            this.lo_btnHuy.Size = new System.Drawing.Size(59, 27);
             this.lo_btnHuy.TextSize = new System.Drawing.Size(0, 0);
             this.lo_btnHuy.TextVisible = false;
             // 
             // lo_btnLuu
             // 
             this.lo_btnLuu.Control = this.btnLuuLai;
-            this.lo_btnLuu.Location = new System.Drawing.Point(799, 74);
+            this.lo_btnLuu.Location = new System.Drawing.Point(922, 74);
             this.lo_btnLuu.Name = "lo_btnLuu";
-            this.lo_btnLuu.Size = new System.Drawing.Size(84, 27);
+            this.lo_btnLuu.Size = new System.Drawing.Size(71, 27);
             this.lo_btnLuu.TextSize = new System.Drawing.Size(0, 0);
             this.lo_btnLuu.TextVisible = false;
             // 
@@ -816,22 +834,6 @@
             this.lo_btnReset.Size = new System.Drawing.Size(60, 26);
             this.lo_btnReset.TextSize = new System.Drawing.Size(0, 0);
             this.lo_btnReset.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(968, 74);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(84, 27);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(697, 74);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(102, 27);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
@@ -909,6 +911,15 @@
             this.layoutControlItem8.Text = "Số Điện Thoại:";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(71, 13);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.txbTongNo;
+            this.layoutControlItem9.Location = new System.Drawing.Point(697, 74);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(225, 27);
+            this.layoutControlItem9.Text = "Tổng Nợ:";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(71, 13);
+            // 
             // bandedGridView
             // 
             this.bandedGridView.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -928,7 +939,8 @@
             this.colLoaiDocGia,
             this.colNgayLapThe,
             this.colNgayHetHan,
-            this.colSDT});
+            this.colSDT,
+            this.colTongNo});
             this.bandedGridView.CustomizationFormBounds = new System.Drawing.Rectangle(882, 448, 266, 208);
             this.bandedGridView.GridControl = this.gridControl;
             this.bandedGridView.Name = "bandedGridView";
@@ -964,6 +976,7 @@
             this.gridBand1.Columns.Add(this.colLoaiDocGia);
             this.gridBand1.Columns.Add(this.colNgayLapThe);
             this.gridBand1.Columns.Add(this.colNgayHetHan);
+            this.gridBand1.Columns.Add(this.colTongNo);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.OptionsBand.AllowHotTrack = false;
             this.gridBand1.OptionsBand.AllowMove = false;
@@ -972,7 +985,7 @@
             this.gridBand1.OptionsBand.FixedWidth = true;
             this.gridBand1.RowCount = 2;
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1078;
+            this.gridBand1.Width = 974;
             // 
             // colMaDocGia
             // 
@@ -1055,7 +1068,6 @@
             this.colUsername.FieldName = "IDAccount";
             this.colUsername.Name = "colUsername";
             this.colUsername.OptionsColumn.AllowEdit = false;
-            this.colUsername.Visible = true;
             this.colUsername.Width = 101;
             // 
             // colPassword
@@ -1067,7 +1079,6 @@
             this.colPassword.FieldName = "PasswordAccount";
             this.colPassword.Name = "colPassword";
             this.colPassword.OptionsColumn.AllowEdit = false;
-            this.colPassword.Visible = true;
             this.colPassword.Width = 78;
             // 
             // repositoryItemTextEdit3
@@ -1113,6 +1124,15 @@
             this.colNgayHetHan.Visible = true;
             this.colNgayHetHan.Width = 100;
             // 
+            // colTongNo
+            // 
+            this.colTongNo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTongNo.AppearanceHeader.Options.UseBackColor = true;
+            this.colTongNo.Caption = "Tổng Nợ";
+            this.colTongNo.FieldName = "TongNo";
+            this.colTongNo.Name = "colTongNo";
+            this.colTongNo.Visible = true;
+            // 
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1141,13 +1161,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // ck_SDT
-            // 
-            this.ck_SDT.Caption = "Số Điện Thoại";
-            this.ck_SDT.Id = 39;
-            this.ck_SDT.Name = "ck_SDT";
-            this.ck_SDT.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.ck_SDT_ItemClick);
-            // 
             // frmDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1169,6 +1182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txbTongNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).EndInit();
@@ -1195,8 +1209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnHuy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnLuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lo_btnReset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -1205,6 +1217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lo_seGiaHan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
@@ -1279,8 +1292,6 @@
         private DevExpress.XtraLayout.LayoutControlItem lo_btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnReset;
         private DevExpress.XtraLayout.LayoutControlItem lo_btnReset;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.LookUpEdit gluedLoaiDocGia;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
@@ -1299,8 +1310,11 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSDT;
         private DevExpress.XtraEditors.TextEdit txbSDT;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraBars.BarCheckItem ck_SDT;
+        private DevExpress.XtraEditors.TextEdit txbTongNo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTongNo;
         //=======
         //private DevExpress.XtraEditors.SimpleButton simpleHuy;
         // private DevExpress.XtraEditors.SimpleButton simpleLuu;

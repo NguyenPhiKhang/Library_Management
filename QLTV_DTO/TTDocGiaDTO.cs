@@ -19,5 +19,6 @@ namespace QLTV_DTO
         public string IDAccount { get; set; }
         public string PasswordAccount { get; set; }
         public string SDT { get; set; }
+        public decimal TongNo { get; set; }
     }
 }

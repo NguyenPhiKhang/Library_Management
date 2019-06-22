@@ -33,8 +33,8 @@ namespace QLTV_GUI
         #region Event_Load
         private void frmDocGia_Load(object sender, EventArgs e)
         {
-            lo_btnLuu.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
+            lo_btnLuu.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lo_btnReset.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             LoadDocGiaInfo();
             Binding_DocGia();
@@ -73,6 +73,7 @@ namespace QLTV_GUI
                 dateNgayLapThe.DataBindings.Add("EditValue", ListBDDocGia, "NgayLapThe", true, DataSourceUpdateMode.Never);
                 dateNgayHetHan.DataBindings.Add("EditValue", ListBDDocGia, "NgayHetHan", true, DataSourceUpdateMode.Never);
                 txbSDT.DataBindings.Add("Text", ListBDDocGia, "SDT", true, DataSourceUpdateMode.Never);
+                txbTongNo.DataBindings.Add("Text", ListBDDocGia, "TongNo", true, DataSourceUpdateMode.Never);
             }
             catch
             {
@@ -88,8 +89,8 @@ namespace QLTV_GUI
         }
         void ReadOnly_SuaThongTin()
         {
-            lo_btnLuu.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
+            lo_btnLuu.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lo_btnReset.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lo_btnGiaHan.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lo_btnOK.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -105,8 +106,8 @@ namespace QLTV_GUI
         }
         void UnReadOnly_SuaThongTin()
         {
-            lo_btnLuu.ContentVisible = true;
-            lo_btnHuy.ContentVisible = true;
+            lo_btnLuu.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             lo_btnReset.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             lo_btnGiaHan.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             txbEmail.ReadOnly = false;
@@ -135,6 +136,7 @@ namespace QLTV_GUI
             dateNgayHetHan.EditValue = bandedGridView.GetFocusedRowCellValue(colNgayHetHan);
             txbUserName.Text = bandedGridView.GetFocusedRowCellValue(colUsername).ToString();
             txbSDT.Text = bandedGridView.GetFocusedRowCellValue(colSDT).ToString();
+            txbTongNo.Text = bandedGridView.GetFocusedRowCellValue(colTongNo).ToString();
         }
         //lấy danh sách email 
         List<string> ListEmail()
@@ -460,7 +462,7 @@ namespace QLTV_GUI
         }
         private void bandedGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            if (lo_btnHuy.ContentVisible == true)
+            if (lo_btnHuy.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 FormatBD_TTDocGia();
                 dxErrorProvider1.SetError(txbEmail, null);
@@ -471,7 +473,7 @@ namespace QLTV_GUI
         //{
         //    Thread.Sleep(100);
         //    //int a = bandedGridView.GetFocusedDataSourceRowIndex();
-        //    if (lo_btnHuy.ContentVisible == false)
+        //    if (lo_btnHuy.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never)
         //    {
         //        LoadDataSourceLDG(bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString());
         //    }
@@ -487,7 +489,7 @@ namespace QLTV_GUI
         //    //else
         //    //{
         //    //    //gluedLoaiDocGia.Text = bandedGridView.GetFocusedRowCellValue(colLoaiDocGia).ToString();
-        //    //    //if (lo_btnHuy.ContentVisible == false)
+        //    //    //if (lo_btnHuy.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never)
         //    //    //{
         //    //    //    LoadDataSourceLDG(gluedLoaiDocGia.EditValue.ToString());
         //    //    //}
@@ -570,7 +572,7 @@ namespace QLTV_GUI
         {
             if (bandedGridView.RowCount > 0)
             {
-                if (lo_btnHuy.ContentVisible == true)
+                if (lo_btnHuy.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
                 {
                     LoadDataSourceLDG();
                     dxErrorProvider1.SetError(txbEmail, null);
@@ -597,6 +599,7 @@ namespace QLTV_GUI
                 txbPassword.Text = "";
                 txbUserName.Text = "";
                 txbSDT.Text = "";
+                txbTongNo.Text = "";
                 dateNgaySinh.EditValue = null;
                 dateNgayLapThe.EditValue = null;
                 dateNgayHetHan.EditValue = null;
@@ -611,7 +614,7 @@ namespace QLTV_GUI
         }
         private void txbHoTen_EditValueChanged(object sender, EventArgs e)
         {
-            if(lo_btnLuu.ContentVisible)
+            if(lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbHoTen, HelpGUI.KiemTraDieuKien.isTen(txbHoTen.Text.Trim()), "Tên độc giả không hợp lệ!");
             }
@@ -625,7 +628,7 @@ namespace QLTV_GUI
         {
             tuoimin = THAMSOBUS.Instance.GetDSQuiDinh()[0].TuoiToiThieu;
             tuoimax = THAMSOBUS.Instance.GetDSQuiDinh()[0].TuoiToiDa;
-            if (lo_btnLuu.ContentVisible)
+            if (lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, dateNgaySinh, HelpGUI.KiemTraDieuKien.Check_Tuoi(dateNgaySinh.EditValue), $"Ngày sinh không hợp lệ!\r\nTuổi phải từ {tuoimin} đến {tuoimax}");
             }
@@ -637,7 +640,7 @@ namespace QLTV_GUI
 
         private void txbDiaChi_EditValueChanged(object sender, EventArgs e)
         {
-            if (lo_btnLuu.ContentVisible)
+            if (lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbDiaChi, HelpGUI.KiemTraDieuKien.isDiaChi(txbDiaChi.Text.Trim()), "Địa chỉ không hợp lệ!");
             }
@@ -650,7 +653,7 @@ namespace QLTV_GUI
         private void txbEmail_EditValueChanged(object sender, EventArgs e)
         {
             ListEmail();
-            if (lo_btnLuu.ContentVisible)
+            if (lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 try
                 {
@@ -670,7 +673,7 @@ namespace QLTV_GUI
         private void txbSDT_EditValueChanged(object sender, EventArgs e)
         {
             ListSDT();
-            if (lo_btnLuu.ContentVisible)
+            if (lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
                 try
                 {
