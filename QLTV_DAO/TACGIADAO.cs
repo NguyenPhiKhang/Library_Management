@@ -13,7 +13,7 @@ namespace QLTV_DAO
 
         public static TACGIADAO Instance { get { if (instance == null) instance = new TACGIADAO(); return instance; }
             set => instance = value; }
-        private TACGIADAO() { }
+        public TACGIADAO() { }
         public List<TACGIA> GetTacGia(string MaLDG="")
         {
             List<TACGIA> Listltg = new List<TACGIA>();
@@ -44,6 +44,60 @@ namespace QLTV_DAO
                 }
                 return Listltg;
             }
+        }
+
+        public void UpdateInfoTacgia(string MaTG, string TenTG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                TACGIA tg = db.TACGIAs.Find(MaTG);
+                tg.MaTacGia = MaTG;
+                tg.TenTacGia = TenTG;
+                db.SaveChanges();
+            }
+        }
+
+        public void RemoveInfoTacgia(string MaTG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                TACGIA tg = db.TACGIAs.Find(MaTG);
+                db.TACGIAs.Remove(tg);
+                db.SaveChanges();
+            }
+        }
+
+        public void AddInfoTacgia(string MaTG, string TenTG)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                TACGIA tg = new TACGIA
+                {
+                    MaTacGia = MaTG,
+                    TenTacGia = TenTG
+
+                };
+                db.TACGIAs.Add(tg);
+                db.SaveChanges();
+            }
+        }
+
+        public List<TACGIA> GetListTacGia()
+        {
+            List<TACGIA> listTacgia = new List<TACGIA>();
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+
+                var listtg = db.TACGIAs.Select(p => p).ToList();
+                foreach (var item in listtg)
+                {
+                    TACGIA tg = new TACGIA();
+                    tg.MaTacGia = item.MaTacGia;
+                    tg.TenTacGia = item.TenTacGia;
+                    listTacgia.Add(tg);
+                }
+            }
+            return listTacgia;
         }
     }
 }

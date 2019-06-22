@@ -28,132 +28,231 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemTheLoai));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbTenTheLoai = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txbMaTheLoai = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.btnNhap = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel1.SuspendLayout();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txbMaTheLoai = new DevExpress.XtraEditors.TextEdit();
+            this.txbTenTheLoai = new DevExpress.XtraEditors.TextEdit();
+            this.btn_Huy = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Nhap = new DevExpress.XtraEditors.SimpleButton();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaTheLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTenTheLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // layoutControl1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txbTenTheLoai);
-            this.panel1.Controls.Add(this.txbMaTheLoai);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 125);
-            this.panel1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tên Thể Loại:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(14, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mã Thể Loại:";
-            // 
-            // txbTenTheLoai
-            // 
-            this.txbTenTheLoai.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txbTenTheLoai.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbTenTheLoai.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txbTenTheLoai.BorderThickness = 3;
-            this.txbTenTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbTenTheLoai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbTenTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbTenTheLoai.isPassword = false;
-            this.txbTenTheLoai.Location = new System.Drawing.Point(136, 68);
-            this.txbTenTheLoai.Margin = new System.Windows.Forms.Padding(4);
-            this.txbTenTheLoai.Name = "txbTenTheLoai";
-            this.txbTenTheLoai.Size = new System.Drawing.Size(235, 34);
-            this.txbTenTheLoai.TabIndex = 1;
-            this.txbTenTheLoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.layoutControl1.Controls.Add(this.txbMaTheLoai);
+            this.layoutControl1.Controls.Add(this.txbTenTheLoai);
+            this.layoutControl1.Controls.Add(this.btn_Huy);
+            this.layoutControl1.Controls.Add(this.btn_Nhap);
+            this.layoutControl1.Location = new System.Drawing.Point(3, -1);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(560, 0, 812, 500);
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(494, 197);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
             // 
             // txbMaTheLoai
             // 
-            this.txbMaTheLoai.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txbMaTheLoai.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbMaTheLoai.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txbMaTheLoai.BorderThickness = 3;
-            this.txbMaTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbMaTheLoai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbMaTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbMaTheLoai.isPassword = false;
-            this.txbMaTheLoai.Location = new System.Drawing.Point(136, 17);
-            this.txbMaTheLoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txbMaTheLoai.Location = new System.Drawing.Point(118, 53);
             this.txbMaTheLoai.Name = "txbMaTheLoai";
-            this.txbMaTheLoai.Size = new System.Drawing.Size(235, 34);
-            this.txbMaTheLoai.TabIndex = 0;
-            this.txbMaTheLoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbMaTheLoai.Size = new System.Drawing.Size(352, 22);
+            this.txbMaTheLoai.StyleController = this.layoutControl1;
+            this.txbMaTheLoai.TabIndex = 4;
             // 
-            // btnNhap
+            // txbTenTheLoai
             // 
-            this.btnNhap.ActiveBorderThickness = 1;
-            this.btnNhap.ActiveCornerRadius = 20;
-            this.btnNhap.ActiveFillColor = System.Drawing.Color.Blue;
-            this.btnNhap.ActiveForecolor = System.Drawing.Color.White;
-            this.btnNhap.ActiveLineColor = System.Drawing.Color.Blue;
-            this.btnNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.btnNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNhap.BackgroundImage")));
-            this.btnNhap.ButtonText = "Nhập";
-            this.btnNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhap.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhap.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnNhap.IdleBorderThickness = 1;
-            this.btnNhap.IdleCornerRadius = 20;
-            this.btnNhap.IdleFillColor = System.Drawing.Color.White;
-            this.btnNhap.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNhap.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNhap.Location = new System.Drawing.Point(140, 145);
-            this.btnNhap.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(109, 36);
-            this.btnNhap.TabIndex = 3;
-            this.btnNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txbTenTheLoai.Location = new System.Drawing.Point(118, 79);
+            this.txbTenTheLoai.Name = "txbTenTheLoai";
+            this.txbTenTheLoai.Properties.NullText = "[Nhập tên thể loại sách]";
+            this.txbTenTheLoai.Size = new System.Drawing.Size(352, 22);
+            this.txbTenTheLoai.StyleController = this.layoutControl1;
+            this.txbTenTheLoai.TabIndex = 5;
+            this.txbTenTheLoai.EditValueChanged += new System.EventHandler(this.txbTenTheLoai_EditValueChanged);
+            // 
+            // btn_Huy
+            // 
+            this.btn_Huy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Huy.ImageOptions.Image")));
+            this.btn_Huy.Location = new System.Drawing.Point(247, 117);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(68, 27);
+            this.btn_Huy.StyleController = this.layoutControl1;
+            this.btn_Huy.TabIndex = 9;
+            this.btn_Huy.Text = "Hủy";
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            // 
+            // btn_Nhap
+            // 
+            this.btn_Nhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Nhap.ImageOptions.Image")));
+            this.btn_Nhap.Location = new System.Drawing.Point(158, 117);
+            this.btn_Nhap.Name = "btn_Nhap";
+            this.btn_Nhap.Size = new System.Drawing.Size(68, 27);
+            this.btn_Nhap.StyleController = this.layoutControl1;
+            this.btn_Nhap.TabIndex = 10;
+            this.btn_Nhap.Text = "Nhập";
+            this.btn_Nhap.Click += new System.EventHandler(this.btn_Nhap_Click);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1,
+            this.layoutControlItem6,
+            this.emptySpaceItem1,
+            this.layoutControlItem5,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(494, 197);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.layoutControlGroup1.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(474, 105);
+            this.layoutControlGroup1.Text = "Thể Loại";
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txbMaTheLoai;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(450, 26);
+            this.layoutControlItem1.Text = "Mã Thể Loại :";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(91, 17);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.txbTenTheLoai;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(450, 26);
+            this.layoutControlItem2.Text = "Tên Thể Loại : ";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(91, 17);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btn_Nhap;
+            this.layoutControlItem6.Location = new System.Drawing.Point(146, 105);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(72, 72);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(218, 105);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(17, 72);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btn_Huy;
+            this.layoutControlItem5.Location = new System.Drawing.Point(235, 105);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(72, 72);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 105);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(146, 72);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(307, 105);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(167, 72);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // frmThemTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 185);
-            this.Controls.Add(this.btnNhap);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(504, 159);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmThemTheLoai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Thể Loại";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmThemTheLoai_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaTheLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTenTheLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuThinButton2 btnNhap;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbTenTheLoai;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbMaTheLoai;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraEditors.TextEdit txbMaTheLoai;
+        private DevExpress.XtraEditors.TextEdit txbTenTheLoai;
+        private DevExpress.XtraEditors.SimpleButton btn_Huy;
+        private DevExpress.XtraEditors.SimpleButton btn_Nhap;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

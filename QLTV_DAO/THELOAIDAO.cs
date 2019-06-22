@@ -15,7 +15,7 @@ namespace QLTV_DAO
             get { if (instance == null) instance = new THELOAIDAO(); return instance; }
 
             set => instance = value; }
-        private THELOAIDAO() { }
+        public THELOAIDAO() { }
         public List<THELOAI> GetTheLoai(string MaTL = "")
         {
             List<THELOAI> Listtl = new List<THELOAI>();
@@ -47,6 +47,59 @@ namespace QLTV_DAO
                 }
                 return Listtl;
             }
+        }
+
+        public void UpdateInfoTheloai(string MaTL, string TenTL)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                THELOAI tl = db.THELOAIs.Find(MaTL);
+                tl.MaTheLoai = MaTL;
+                tl.TenTheLoai = TenTL;
+                db.SaveChanges();
+            }
+        }
+
+        public void RemoveInfoTheloai(string MaTL)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                THELOAI tl = db.THELOAIs.Find(MaTL);
+                db.THELOAIs.Remove(tl);
+                db.SaveChanges();
+            }
+        }
+
+        public void AddInfoTheLoai(string MaTL, string TenTL)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                THELOAI tl = new THELOAI
+                {
+                    MaTheLoai = MaTL,
+                    TenTheLoai = TenTL
+                };
+                db.THELOAIs.Add(tl);
+                db.SaveChanges();
+            }
+        }
+
+        public List<THELOAI> GetListTheLoai()
+        {
+            List<THELOAI> listTheloai = new List<THELOAI>();
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+
+                var listtl = db.THELOAIs.Select(p => p).ToList();
+                foreach (var item in listtl)
+                {
+                    THELOAI tl = new THELOAI();
+                    tl.MaTheLoai = item.MaTheLoai;
+                    tl.TenTheLoai = item.TenTheLoai;
+                    listTheloai.Add(tl);
+                }
+            }
+            return listTheloai;
         }
     }
 }

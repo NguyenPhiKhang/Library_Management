@@ -53,9 +53,14 @@ namespace QLTV_GUI
         {
             LoadSachInfo();
             Binding_Sach();
-            LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
-            lo_btnLuuLai.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
+            if (bandedGridView1.RowCount > 0)
+            {
+                LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
+            }
+
+            lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
             Readonly();
             gridControl1.Focus();
         }
@@ -117,7 +122,7 @@ namespace QLTV_GUI
         private void bandedGridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int a = bandedGridView1.GetFocusedDataSourceRowIndex();
-            if (_index == a && lo_btnHuy.ContentVisible == true)
+            if (_index == a && lo_btnHuy.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
 
                 txbMaSach.Text = bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString();
@@ -134,6 +139,7 @@ namespace QLTV_GUI
 
         }
         #endregion
+        #region Event_Click
         private void btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmThemSach themsach = new frmThemSach();
@@ -151,11 +157,13 @@ namespace QLTV_GUI
        
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            lo_btnLuuLai.ContentVisible = true;
-            lo_btnHuy.ContentVisible = true;
-            UnReadonly();
-            LoadDataSourceLDG();
+        {if (bandedGridView1.RowCount > 0)
+            {
+                lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                UnReadonly();
+                LoadDataSourceLDG();
+            }
         }
 
         private void btn_LuuLai_Click(object sender, EventArgs e)
@@ -164,8 +172,8 @@ namespace QLTV_GUI
 
 
 
-            lo_btnLuuLai.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
+            lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
 
 
@@ -183,8 +191,8 @@ namespace QLTV_GUI
 
 
 
-            lo_btnLuuLai.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
+            lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
 
             Readonly();
@@ -193,6 +201,42 @@ namespace QLTV_GUI
             gridControl1.Focus();
             
         }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {if (bandedGridView1.RowCount > 0)
+            {
+                if (gridControl1.IsFocused == true)
+                {
+                    if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        QLTV_BUS.SACHBUS.Instance.RemoveInfoSach(bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString());
+                        btnLamMoi_ItemClick(sender, e);
+                    }
+                    else gridControl1.Focus();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Vui lòng chọn thông tin độc giả muốn xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadSachInfo();
+            gridControl1.Focus();
+            try
+            {
+                LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
+            }
+            catch { }
+            bandedGridView1.FindFilterText = "";
+            lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            Readonly();
+            gridControl1.Focus();
+        }
+        #endregion
         #region Check_Find
 
         private void ck_TatCa_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -543,42 +587,14 @@ namespace QLTV_GUI
         #endregion
 
 
-        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (gridControl1.IsFocused == true)
-            {
-                if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    QLTV_BUS.SACHBUS.Instance.RemoveInfoSach(bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString());
-                    btnLamMoi_ItemClick(sender, e);
-                }
-                else gridControl1.Focus();
-            }
-            else
-            {
-                XtraMessageBox.Show("Vui lòng chọn thông tin độc giả muốn xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadSachInfo();
-           
-            LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
-            bandedGridView1.FindFilterText = "";
-            lo_btnLuuLai.ContentVisible = false;
-            lo_btnHuy.ContentVisible = false;
-            Readonly();
-            gridControl1.Focus();
-        }
 
         private void bandedGridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (bandedGridView1.RowCount > 0)
             {
                 _index = bandedGridView1.GetFocusedDataSourceRowIndex();
-                if (lo_btnLuuLai.ContentVisible == false)
-                {
+                if (lo_btnLuuLai.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never)
+                { if(e !=null)
                     LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
                 }
                 else
@@ -592,16 +608,21 @@ namespace QLTV_GUI
         {
             if (bandedGridView1.RowCount > 0)
             {
-                bandedGridView1_FocusedRowChanged(sender, e as DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs);
-                txbMaSach.Text = bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString();
-                txbNhaSX.Text = bandedGridView1.GetFocusedRowCellValue(colNhaXuatBan).ToString();
-                txbTenSach.Text = bandedGridView1.GetFocusedRowCellValue(coltensach).ToString();
-                txbTriGia.EditValue = bandedGridView1.GetFocusedRowCellValue(colTriGia).ToString();
-                dateNamSX.EditValue = bandedGridView1.GetFocusedRowCellValue(colNamXuatBan).ToString();
-                dateNgayNhap.EditValue = bandedGridView1.GetFocusedRowCellValue(colNgayNhap).ToString();
-                glued_TacGia.EditValue = bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString();
-                glued_TheLoai.EditValue = bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString();
-                glued_TinhTrang.EditValue = bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString();
+                    bandedGridView1_FocusedRowChanged(sender, e as DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs);
+                try
+                {
+                    txbMaSach.Text = bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString();
+                    txbNhaSX.Text = bandedGridView1.GetFocusedRowCellValue(colNhaXuatBan).ToString();
+                    txbTenSach.Text = bandedGridView1.GetFocusedRowCellValue(coltensach).ToString();
+                    txbTriGia.EditValue = bandedGridView1.GetFocusedRowCellValue(colTriGia).ToString();
+                    dateNamSX.EditValue = bandedGridView1.GetFocusedRowCellValue(colNamXuatBan).ToString();
+                    dateNgayNhap.EditValue = bandedGridView1.GetFocusedRowCellValue(colNgayNhap).ToString();
+                    glued_TacGia.EditValue = bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString();
+                    glued_TheLoai.EditValue = bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString();
+                    glued_TinhTrang.EditValue = bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString();
+                }
+                catch { }
+
 
 
             }
@@ -620,6 +641,27 @@ namespace QLTV_GUI
 
                 Readonly();
             }
+        }
+
+        private void txbTenSach_EditValueChanged(object sender, EventArgs e)
+        {if(bandedGridView1.RowCount >0)
+            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenSach, HelpGUI.KiemTraDieuKien.isTen(txbTenSach.Text.Trim()), "Tên Sách không hợp lệ!");
+        }
+
+        private void txbNhaSX_EditValueChanged(object sender, EventArgs e)
+        {if(bandedGridView1.RowCount >0)
+            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbNhaSX, HelpGUI.KiemTraDieuKien.isDiaChi(txbNhaSX.Text.Trim()), "Tên NXB không hợp lệ!");
+        }
+
+        private void dateNamSX_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToInt32(dateNamSX.EditValue.ToString()) > DateTime.Now.Year)
+                    dxErrorProvider1.SetError(dateNamSX, "Năm Xuất Bản không hợp lệ !");
+                else dxErrorProvider1.SetError(dateNamSX, null);
+            }
+            catch { }
         }
     }
 
