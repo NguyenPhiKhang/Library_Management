@@ -15,7 +15,13 @@ namespace QLTV_DTO
     public partial class ADMIN
     {
         public string IDAdmin { get; set; }
-        public string PasswordAd { get; set; }
-        public string TenAdmin { get; set; }
+        public string IDAccount { get; set; }
+        public string NameAdmin { get; set; }
+        public System.DateTime Birthday { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
+        public string NumberPhone { get; set; }
+    
+        public virtual ACCOUNT ACCOUNT { get; set; }
     }
 }

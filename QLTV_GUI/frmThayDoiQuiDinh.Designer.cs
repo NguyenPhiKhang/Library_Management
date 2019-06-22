@@ -142,13 +142,14 @@
             this.navigationPage1.Controls.Add(this.seHanThe);
             this.navigationPage1.Controls.Add(this.seTuoiMax);
             this.navigationPage1.Controls.Add(this.seTuoiMin);
+            this.navigationPage1.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.number_1_icon;
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(333, 438);
+            this.navigationPage1.Size = new System.Drawing.Size(351, 438);
             // 
             // btnHuy1
             // 
             this.btnHuy1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy1.ImageOptions.Image")));
-            this.btnHuy1.Location = new System.Drawing.Point(194, 213);
+            this.btnHuy1.Location = new System.Drawing.Point(224, 225);
             this.btnHuy1.Name = "btnHuy1";
             this.btnHuy1.Size = new System.Drawing.Size(78, 29);
             this.btnHuy1.TabIndex = 6;
@@ -159,7 +160,7 @@
             // btnSua1
             // 
             this.btnSua1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua1.ImageOptions.Image")));
-            this.btnSua1.Location = new System.Drawing.Point(194, 213);
+            this.btnSua1.Location = new System.Drawing.Point(224, 225);
             this.btnSua1.Name = "btnSua1";
             this.btnSua1.Size = new System.Drawing.Size(78, 29);
             this.btnSua1.TabIndex = 3;
@@ -168,7 +169,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(38, 174);
+            this.labelControl3.Location = new System.Drawing.Point(27, 182);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(85, 13);
             this.labelControl3.TabIndex = 5;
@@ -176,7 +177,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(38, 130);
+            this.labelControl2.Location = new System.Drawing.Point(27, 136);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(58, 13);
             this.labelControl2.TabIndex = 4;
@@ -184,7 +185,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(38, 85);
+            this.labelControl1.Location = new System.Drawing.Point(27, 90);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(70, 13);
             this.labelControl1.TabIndex = 3;
@@ -197,7 +198,7 @@
             0,
             0,
             0});
-            this.seHanThe.Location = new System.Drawing.Point(140, 171);
+            this.seHanThe.Location = new System.Drawing.Point(170, 179);
             this.seHanThe.Name = "seHanThe";
             this.seHanThe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -213,7 +214,7 @@
             0,
             0,
             0});
-            this.seTuoiMax.Location = new System.Drawing.Point(140, 127);
+            this.seTuoiMax.Location = new System.Drawing.Point(170, 133);
             this.seTuoiMax.Name = "seTuoiMax";
             this.seTuoiMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -229,7 +230,7 @@
             0,
             0,
             0});
-            this.seTuoiMin.Location = new System.Drawing.Point(140, 82);
+            this.seTuoiMin.Location = new System.Drawing.Point(170, 87);
             this.seTuoiMin.Name = "seTuoiMin";
             this.seTuoiMin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -249,13 +250,14 @@
             this.navigationPage2.Controls.Add(this.labelControl4);
             this.navigationPage2.Controls.Add(this.seTheLoaiMax);
             this.navigationPage2.Controls.Add(this.seKhoangCachXB);
+            this.navigationPage2.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.number_2_icon;
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(333, 438);
+            this.navigationPage2.Size = new System.Drawing.Size(351, 438);
             // 
             // btnHuy2
             // 
             this.btnHuy2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy2.ImageOptions.Image")));
-            this.btnHuy2.Location = new System.Drawing.Point(224, 175);
+            this.btnHuy2.Location = new System.Drawing.Point(224, 179);
             this.btnHuy2.Name = "btnHuy2";
             this.btnHuy2.Size = new System.Drawing.Size(78, 29);
             this.btnHuy2.TabIndex = 7;
@@ -266,7 +268,7 @@
             // btnSua2
             // 
             this.btnSua2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua2.ImageOptions.Image")));
-            this.btnSua2.Location = new System.Drawing.Point(224, 175);
+            this.btnSua2.Location = new System.Drawing.Point(224, 179);
             this.btnSua2.Name = "btnSua2";
             this.btnSua2.Size = new System.Drawing.Size(78, 29);
             this.btnSua2.TabIndex = 6;
@@ -334,13 +336,14 @@
             this.navigationPage3.Controls.Add(this.seTienPhat);
             this.navigationPage3.Controls.Add(this.seSachMuonMax);
             this.navigationPage3.Controls.Add(this.seNgayMuonMax);
+            this.navigationPage3.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.number_3_icon;
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(972, 438);
+            this.navigationPage3.Size = new System.Drawing.Size(351, 438);
             // 
             // btnHuy3
             // 
             this.btnHuy3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy3.ImageOptions.Image")));
-            this.btnHuy3.Location = new System.Drawing.Point(215, 220);
+            this.btnHuy3.Location = new System.Drawing.Point(224, 225);
             this.btnHuy3.Name = "btnHuy3";
             this.btnHuy3.Size = new System.Drawing.Size(78, 29);
             this.btnHuy3.TabIndex = 11;
@@ -350,7 +353,7 @@
             // 
             // labelcontrolTP
             // 
-            this.labelcontrolTP.Location = new System.Drawing.Point(22, 185);
+            this.labelcontrolTP.Location = new System.Drawing.Point(27, 182);
             this.labelcontrolTP.Name = "labelcontrolTP";
             this.labelcontrolTP.Size = new System.Drawing.Size(131, 13);
             this.labelcontrolTP.TabIndex = 10;
@@ -358,7 +361,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(22, 141);
+            this.labelControl7.Location = new System.Drawing.Point(27, 136);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(101, 13);
             this.labelControl7.TabIndex = 9;
@@ -366,7 +369,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(22, 93);
+            this.labelControl6.Location = new System.Drawing.Point(27, 90);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(103, 13);
             this.labelControl6.TabIndex = 8;
@@ -375,7 +378,7 @@
             // btnSua3
             // 
             this.btnSua3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua3.ImageOptions.Image")));
-            this.btnSua3.Location = new System.Drawing.Point(215, 220);
+            this.btnSua3.Location = new System.Drawing.Point(224, 225);
             this.btnSua3.Name = "btnSua3";
             this.btnSua3.Size = new System.Drawing.Size(78, 29);
             this.btnSua3.TabIndex = 10;
@@ -389,7 +392,7 @@
             0,
             0,
             0});
-            this.seTienPhat.Location = new System.Drawing.Point(163, 182);
+            this.seTienPhat.Location = new System.Drawing.Point(170, 179);
             this.seTienPhat.Name = "seTienPhat";
             this.seTienPhat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -407,7 +410,7 @@
             0,
             0,
             0});
-            this.seSachMuonMax.Location = new System.Drawing.Point(163, 138);
+            this.seSachMuonMax.Location = new System.Drawing.Point(170, 133);
             this.seSachMuonMax.Name = "seSachMuonMax";
             this.seSachMuonMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -423,7 +426,7 @@
             0,
             0,
             0});
-            this.seNgayMuonMax.Location = new System.Drawing.Point(163, 90);
+            this.seNgayMuonMax.Location = new System.Drawing.Point(170, 87);
             this.seNgayMuonMax.Name = "seNgayMuonMax";
             this.seNgayMuonMax.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -515,6 +518,7 @@
             // 
             // layoutView1
             // 
+            this.layoutView1.CardMinSize = new System.Drawing.Size(500, 300);
             this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
             this.colTuoiMin,
             this.colTuoiMax,
@@ -526,10 +530,18 @@
             this.colTienPhatTre});
             this.layoutView1.GridControl = this.gridControl1;
             this.layoutView1.Name = "layoutView1";
+            this.layoutView1.OptionsView.ShowCardCaption = false;
+            this.layoutView1.OptionsView.ShowHeaderPanel = false;
+            this.layoutView1.OptionsView.ShowViewCaption = true;
             this.layoutView1.TemplateCard = this.layoutViewCard1;
+            this.layoutView1.ViewCaption = "Quy Định";
             // 
             // colTuoiMin
             // 
+            this.colTuoiMin.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTuoiMin.AppearanceCell.Options.UseFont = true;
+            this.colTuoiMin.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTuoiMin.AppearanceHeader.Options.UseFont = true;
             this.colTuoiMin.Caption = "Tuổi Tối Thiểu";
             this.colTuoiMin.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTuoiMin.FieldName = "TuoiToiThieu";
@@ -554,6 +566,10 @@
             // 
             // colTuoiMax
             // 
+            this.colTuoiMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTuoiMax.AppearanceCell.Options.UseFont = true;
+            this.colTuoiMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTuoiMax.AppearanceHeader.Options.UseFont = true;
             this.colTuoiMax.Caption = "Tuổi Tối Đa";
             this.colTuoiMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTuoiMax.FieldName = "TuoiToiDa";
@@ -572,6 +588,10 @@
             // 
             // colHanThe
             // 
+            this.colHanThe.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colHanThe.AppearanceCell.Options.UseFont = true;
+            this.colHanThe.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colHanThe.AppearanceHeader.Options.UseFont = true;
             this.colHanThe.Caption = "Hạn Thẻ (Tháng)";
             this.colHanThe.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colHanThe.FieldName = "ThoiHanThe";
@@ -590,6 +610,10 @@
             // 
             // colKhoangCachXB
             // 
+            this.colKhoangCachXB.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colKhoangCachXB.AppearanceCell.Options.UseFont = true;
+            this.colKhoangCachXB.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colKhoangCachXB.AppearanceHeader.Options.UseFont = true;
             this.colKhoangCachXB.Caption = "Khoảng Cách Năm Xuất Bản";
             this.colKhoangCachXB.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colKhoangCachXB.FieldName = "KhoangCachXB";
@@ -608,6 +632,10 @@
             // 
             // colTheLoaiMax
             // 
+            this.colTheLoaiMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTheLoaiMax.AppearanceCell.Options.UseFont = true;
+            this.colTheLoaiMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTheLoaiMax.AppearanceHeader.Options.UseFont = true;
             this.colTheLoaiMax.Caption = "Số Lượng Thể Loại Tối Đa";
             this.colTheLoaiMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTheLoaiMax.FieldName = "SoLuongTheLoaiMax";
@@ -626,6 +654,10 @@
             // 
             // colNgayMuonMax
             // 
+            this.colNgayMuonMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colNgayMuonMax.AppearanceCell.Options.UseFont = true;
+            this.colNgayMuonMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colNgayMuonMax.AppearanceHeader.Options.UseFont = true;
             this.colNgayMuonMax.Caption = "Số Ngày Mượn Tối Đa";
             this.colNgayMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colNgayMuonMax.FieldName = "SoNgayMuonMax";
@@ -644,6 +676,10 @@
             // 
             // colSachMuonMax
             // 
+            this.colSachMuonMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSachMuonMax.AppearanceCell.Options.UseFont = true;
+            this.colSachMuonMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSachMuonMax.AppearanceHeader.Options.UseFont = true;
             this.colSachMuonMax.Caption = "Số Sách Mượn Tối Đa";
             this.colSachMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colSachMuonMax.FieldName = "SoSachMuonMax";
@@ -662,6 +698,10 @@
             // 
             // colTienPhatTre
             // 
+            this.colTienPhatTre.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTienPhatTre.AppearanceCell.Options.UseFont = true;
+            this.colTienPhatTre.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colTienPhatTre.AppearanceHeader.Options.UseFont = true;
             this.colTienPhatTre.Caption = "Tiền Phạt Trả Trễ Một Ngày";
             this.colTienPhatTre.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTienPhatTre.DisplayFormat.FormatString = "#,#";
@@ -677,11 +717,12 @@
             this.layoutViewField_colTienPhatTre.EditorPreferredWidth = 59;
             this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 168);
             this.layoutViewField_colTienPhatTre.Name = "layoutViewField_colTienPhatTre";
-            this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(203, 20);
+            this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(203, 24);
             this.layoutViewField_colTienPhatTre.TextSize = new System.Drawing.Size(137, 13);
             // 
             // layoutViewCard1
             // 
+            this.layoutViewCard1.GroupBordersVisible = false;
             this.layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.layoutViewCard1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutViewField_colTuoiMin,

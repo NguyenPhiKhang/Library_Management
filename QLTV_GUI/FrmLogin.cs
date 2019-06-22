@@ -8,55 +8,108 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLTV_DTO;
+using QLTV_BUS;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace QLTV_GUI
 {
     public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
+        #region Declare
+        FrmMain y;
+        List<ACCOUNT> listaccount = new List<ACCOUNT>();
+        string iDUser = "";
+        public string IDUser { get => iDUser; set => iDUser = value; }
+
         public FrmLogin()
         {
             InitializeComponent();
-            txtUsername.Focus();
         }
-
+        #endregion
+        #region Event_Load
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+        }
+        #endregion
+        #region Event_Enter_Leave
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             pnUser.BackColor = Color.DodgerBlue;
-            if(txtUsername.Text == "Username")
+            if(txbUsername.Text == "Username")
             {
-                txtUsername.Text = "";
-                txtUsername.ForeColor = Color.Black;
+                txbUsername.Text = "";
+                txbUsername.ForeColor = Color.Black;
             }
         }
 
         private void txtUsername_Leave(object sender, EventArgs e)
         {
             pnUser.BackColor = Color.Gray;
-            if (txtUsername.Text == "")
+            if (txbUsername.Text == "")
             {
-                txtUsername.Text = "Username";
-                txtUsername.ForeColor = Color.DarkGray;
+                txbUsername.Text = "Username";
+                txbUsername.ForeColor = Color.DarkGray;
             }
         }
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
             pnPass.BackColor = Color.DodgerBlue;
-            if (txtPassword.Text == "Password")
+            if (txbPassword.Text == "Password")
             {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.Black;
+                txbPassword.Text = "";
+                txbPassword.ForeColor = Color.Black;
             }
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
             pnPass.BackColor = Color.Gray;
-            if (txtPassword.Text == "")
+            if (txbPassword.Text == "")
             {
-                txtPassword.Text = "Password";
-                txtPassword.ForeColor = Color.DarkGray;
+                txbPassword.Text = "Password";
+                txbPassword.ForeColor = Color.DarkGray;
             }
+        }
+        #endregion
+
+        private /*async*/ void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (listaccount.Count == 0)
+            {
+                IOverlaySplashScreenHandle handle = SplashScreenManager.ShowOverlayForm(pl_GiaoDien);
+                listaccount = /*await*/ ACCOUNTBUS.Instance.GetInfoAccount();
+                handle.Close();
+            }
+            for(int i=0;i<listaccount.Count;i++)
+            {
+                if(txbUsername.Text == listaccount[i].IDAccount && txbPassword.Text == listaccount[i].PasswordAccount)
+                {
+                    IDUser = listaccount[i].IDAccount;
+                    listaccount.Clear();
+                    txbUsername.Select();
+                    Hide();
+                    SplashScreenManager.ShowDefaultSplashScreen("Đang mở...", "Phần Mềm Quản Lý Thư Viện");
+                    Thread.Sleep(500);
+                    FrmMain frmMain = new FrmMain(this, IDUser);
+                    frmMain.Show();
+                    SplashScreenManager.CloseDefaultSplashScreen();
+                    return;
+                }
+            }
+            XtraMessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
+        }
+        private void txbUsername_EditValueChanged(object sender, EventArgs e)
+        {
+            //HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbUsername, HelpGUI.KiemTraDieuKien.isUsername(txbUsername.Text), "Username không hợp lệ!");
+        }
+
+        private void txbPassword_EditValueChanged(object sender, EventArgs e)
+        {
+            //HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbPassword, HelpGUI.KiemTraDieuKien.isPassword(txbPassword.Text), "Password không hợp lệ!");
         }
     }
 }

@@ -25,8 +25,8 @@ namespace QLTV_DAO
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
                 var data = ((from u in db.DOCGIAs
-                           join n in db.USERs on u.IDUser equals n.IDUser
-                           select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDUser, n.PasswordUser})).ToList();
+                           join n in db.ACCOUNTs on u.IDAccount equals n.IDAccount
+                           select new { u.MaDocGia, u.HoTen, u.NgaySinh, u.DiaChi, u.Email, u.NgayLapThe, u.NgayHetHan, u.MaLoaiDocGia, u.IDAccount, n.PasswordAccount, u.SDT})).ToList();
                 foreach (var item in data)
                 {
                     TTDOCGIADTO ttdg = new TTDOCGIADTO
@@ -39,8 +39,9 @@ namespace QLTV_DAO
                         NgayLapThe = item.NgayLapThe,
                         NgayHetHan = item.NgayHetHan,
                         MaLoaiDocGia = item.MaLoaiDocGia,
-                        IDUser = item.IDUser,
-                        PasswordUser = item.PasswordUser
+                        IDAccount = item.IDAccount,
+                        PasswordAccount = item.PasswordAccount,
+                        SDT = item.SDT
                     };
                     listDocGiaInfo.Add(ttdg);
                 }

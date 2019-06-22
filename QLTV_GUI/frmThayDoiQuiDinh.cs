@@ -54,17 +54,16 @@ namespace QLTV_GUI
                 btnLuu.Enabled = true;
             else btnLuu.Enabled = false;
         }
-        void LuuThongTin()
+        bool LuuThongTin()
         {
             if (XtraMessageBox.Show("Bạn có muốn lưu thay đổi?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
-                THAMSOBUS.Instance.UpdateQuiDinh((int)seTuoiMax.EditValue, (int)seTuoiMin.EditValue, (int)seHanThe.EditValue, (int)seKhoangCachXB.EditValue, (int)seTheLoaiMax.EditValue,
-                    (int)seNgayMuonMax.EditValue, (int)seSachMuonMax.EditValue, (int)seTienPhat.EditValue);
+                THAMSOBUS.Instance.UpdateQuiDinh(Convert.ToInt32(seTuoiMin.EditValue), Convert.ToInt32(seTuoiMax.EditValue), Convert.ToInt32(seHanThe.EditValue),
+                    Convert.ToInt32(seKhoangCachXB.EditValue), Convert.ToInt32(seTheLoaiMax.EditValue),
+                    Convert.ToInt32(seNgayMuonMax.EditValue), Convert.ToInt32(seSachMuonMax.EditValue), Convert.ToInt32(seTienPhat.EditValue));
+                return true;
             }
-            else
-            {
-                declare_editvalue_se();
-            }
+            return false;
         }
         void declare_editvalue_se()
         {
@@ -98,7 +97,16 @@ namespace QLTV_GUI
         #region Event_Click
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            LuuThongTin();
+            if (LuuThongTin())
+            {
+                XtraMessageBox.Show("Thay đổi đã lưu thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gridControl1.DataSource = THAMSOBUS.Instance.GetDSQuiDinh().ToList();
+                declare_editvalue_se();
+                layoutView1.Focus();
+                btnHuy1_Click(sender, e);
+                btnHuy2_Click(sender, e);
+                btnHuy3_Click(sender, e);
+            }
         }
         private void btnSua1_Click(object sender, EventArgs e)
         {

@@ -31,17 +31,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateThangBC = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTaoBC = new Bunifu.Framework.UI.BunifuFlatButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dateThangBC = new DevExpress.XtraEditors.DateEdit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThangBC.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThangBC.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,20 +78,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 35);
             this.panel1.TabIndex = 3;
-            // 
-            // dateThangBC
-            // 
-            this.dateThangBC.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateThangBC.BackColor = System.Drawing.Color.Silver;
-            this.dateThangBC.BorderRadius = 0;
-            this.dateThangBC.ForeColor = System.Drawing.Color.Black;
-            this.dateThangBC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateThangBC.FormatCustom = "MM/yyyy";
-            this.dateThangBC.Location = new System.Drawing.Point(74, 5);
-            this.dateThangBC.Name = "dateThangBC";
-            this.dateThangBC.Size = new System.Drawing.Size(176, 25);
-            this.dateThangBC.TabIndex = 1;
-            this.dateThangBC.Value = new System.DateTime(2019, 5, 12, 20, 32, 26, 344);
             // 
             // label2
             // 
@@ -165,6 +153,18 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // dateThangBC
+            // 
+            this.dateThangBC.EditValue = null;
+            this.dateThangBC.Location = new System.Drawing.Point(79, 7);
+            this.dateThangBC.Name = "dateThangBC";
+            this.dateThangBC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThangBC.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateThangBC.Size = new System.Drawing.Size(173, 20);
+            this.dateThangBC.TabIndex = 1;
+            // 
             // frmBCTKSachMuonTL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +182,8 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThangBC.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateThangBC.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,11 +193,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuDatepicker dateThangBC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnTaoBC;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.DateEdit dateThangBC;
     }
 }

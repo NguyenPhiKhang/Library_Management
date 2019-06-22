@@ -30,51 +30,51 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pl_GiaoDien = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ck_remember = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.txbPassword = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnPass = new System.Windows.Forms.Panel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txbUsername = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnUser = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuGradientPanel2.SuspendLayout();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.pl_GiaoDien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ck_remember.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuGradientPanel2
+            // pl_GiaoDien
             // 
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel2.Controls.Add(this.panel1);
-            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Aqua;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(337, 379);
-            this.bunifuGradientPanel2.TabIndex = 1;
+            this.pl_GiaoDien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pl_GiaoDien.BackgroundImage")));
+            this.pl_GiaoDien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pl_GiaoDien.Controls.Add(this.pictureBox1);
+            this.pl_GiaoDien.Controls.Add(this.panel1);
+            this.pl_GiaoDien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_GiaoDien.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pl_GiaoDien.GradientBottomRight = System.Drawing.Color.White;
+            this.pl_GiaoDien.GradientTopLeft = System.Drawing.Color.Aqua;
+            this.pl_GiaoDien.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pl_GiaoDien.Location = new System.Drawing.Point(0, 0);
+            this.pl_GiaoDien.Name = "pl_GiaoDien";
+            this.pl_GiaoDien.Quality = 10;
+            this.pl_GiaoDien.Size = new System.Drawing.Size(337, 379);
+            this.pl_GiaoDien.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -91,7 +91,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.bunifuThinButton21);
+            this.panel1.Controls.Add(this.btnDangNhap);
             this.panel1.Controls.Add(this.ck_remember);
             this.panel1.Controls.Add(this.panelControl2);
             this.panel1.Controls.Add(this.panelControl1);
@@ -115,7 +115,7 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.txtPassword);
+            this.panelControl2.Controls.Add(this.txbPassword);
             this.panelControl2.Controls.Add(this.pictureBox3);
             this.panelControl2.Controls.Add(this.pnPass);
             this.panelControl2.Location = new System.Drawing.Point(15, 143);
@@ -123,22 +123,23 @@
             this.panelControl2.Size = new System.Drawing.Size(256, 36);
             this.panelControl2.TabIndex = 4;
             // 
-            // txtPassword
+            // txbPassword
             // 
-            this.txtPassword.EditValue = "";
-            this.txtPassword.Location = new System.Drawing.Point(48, 3);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtPassword.Properties.Appearance.Options.UseBackColor = true;
-            this.txtPassword.Properties.Appearance.Options.UseFont = true;
-            this.txtPassword.Properties.AutoHeight = false;
-            this.txtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtPassword.Properties.UseSystemPasswordChar = true;
-            this.txtPassword.Size = new System.Drawing.Size(200, 30);
-            this.txtPassword.TabIndex = 4;
-            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
-            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txbPassword.EditValue = "";
+            this.txbPassword.Location = new System.Drawing.Point(48, 3);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txbPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txbPassword.Properties.Appearance.Options.UseBackColor = true;
+            this.txbPassword.Properties.Appearance.Options.UseFont = true;
+            this.txbPassword.Properties.AutoHeight = false;
+            this.txbPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txbPassword.Properties.UseSystemPasswordChar = true;
+            this.txbPassword.Size = new System.Drawing.Size(200, 30);
+            this.txbPassword.TabIndex = 4;
+            this.txbPassword.EditValueChanged += new System.EventHandler(this.txbPassword_EditValueChanged);
+            this.txbPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txbPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // pictureBox3
             // 
@@ -163,7 +164,7 @@
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.txtUsername);
+            this.panelControl1.Controls.Add(this.txbUsername);
             this.panelControl1.Controls.Add(this.pictureBox2);
             this.panelControl1.Controls.Add(this.pnUser);
             this.panelControl1.Location = new System.Drawing.Point(15, 86);
@@ -171,21 +172,22 @@
             this.panelControl1.Size = new System.Drawing.Size(256, 36);
             this.panelControl1.TabIndex = 1;
             // 
-            // txtUsername
+            // txbUsername
             // 
-            this.txtUsername.EditValue = "";
-            this.txtUsername.Location = new System.Drawing.Point(48, 3);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtUsername.Properties.Appearance.Options.UseBackColor = true;
-            this.txtUsername.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername.Properties.AutoHeight = false;
-            this.txtUsername.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtUsername.Size = new System.Drawing.Size(200, 30);
-            this.txtUsername.TabIndex = 2;
-            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+            this.txbUsername.EditValue = "";
+            this.txbUsername.Location = new System.Drawing.Point(48, 3);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txbUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txbUsername.Properties.Appearance.Options.UseBackColor = true;
+            this.txbUsername.Properties.Appearance.Options.UseFont = true;
+            this.txbUsername.Properties.AutoHeight = false;
+            this.txbUsername.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txbUsername.Size = new System.Drawing.Size(200, 30);
+            this.txbUsername.TabIndex = 2;
+            this.txbUsername.EditValueChanged += new System.EventHandler(this.txbUsername_EditValueChanged);
+            this.txbUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txbUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // pictureBox2
             // 
@@ -205,83 +207,73 @@
             this.pnUser.Size = new System.Drawing.Size(3, 36);
             this.pnUser.TabIndex = 1;
             // 
-            // bunifuElipse1
+            // btnDangNhap
             // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this.panelControl1;
+            this.btnDangNhap.Appearance.BackColor = System.Drawing.Color.Red;
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.btnDangNhap.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Appearance.Options.UseBackColor = true;
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.Appearance.Options.UseForeColor = true;
+            this.btnDangNhap.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDangNhap.AppearanceHovered.Options.UseForeColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(15, 228);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(256, 36);
+            this.btnDangNhap.TabIndex = 8;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // bunifuElipse2
+            // dxErrorProvider1
             // 
-            this.bunifuElipse2.ElipseRadius = 10;
-            this.bunifuElipse2.TargetControl = this.panelControl2;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Đăng Nhập";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 2;
-            this.bunifuThinButton21.IdleCornerRadius = 10;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(19, 222);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(252, 50);
-            this.bunifuThinButton21.TabIndex = 7;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 379);
-            this.Controls.Add(this.bunifuGradientPanel2);
+            this.Controls.Add(this.pl_GiaoDien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
-            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.pl_GiaoDien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ck_remember.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private Bunifu.Framework.UI.BunifuGradientPanel pl_GiaoDien;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private DevExpress.XtraEditors.TextEdit txbPassword;
         private System.Windows.Forms.Panel pnPass;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.TextEdit txbUsername;
         private System.Windows.Forms.Panel pnUser;
         private System.Windows.Forms.PictureBox pictureBox2;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.CheckEdit ck_remember;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private DevExpress.XtraEditors.SimpleButton btnDangNhap;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

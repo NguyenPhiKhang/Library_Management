@@ -44,7 +44,7 @@ namespace QLTV_DAO
         {
             using(QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
-                THAMSO tsqd = db.THAMSOes.First();
+                THAMSO tsqd = db.THAMSOes.Find(1);
                 tsqd.TuoiToiDa = TuoiMax;
                 tsqd.TuoiToiThieu = TuoiMin;
                 tsqd.ThoiHanThe = HanThe;

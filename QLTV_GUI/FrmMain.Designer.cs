@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnAbout = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.btnDocGia = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiDocGia = new DevExpress.XtraBars.BarButtonItem();
             this.btnSach = new DevExpress.XtraBars.BarButtonItem();
@@ -43,32 +49,33 @@
             this.btnTDQuyDinh = new DevExpress.XtraBars.BarButtonItem();
             this.btnTienPhat = new DevExpress.XtraBars.BarButtonItem();
             this.btnSkins = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.btnChiTietPM = new DevExpress.XtraBars.BarButtonItem();
             this.btn_DangNhap = new DevExpress.XtraBars.BarButtonItem();
             this.subitemAccount = new DevExpress.XtraBars.BarSubItem();
             this.btnTTaccount = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.bsitem_Account = new DevExpress.XtraBars.BarSubItem();
+            this.btnInfoAccount = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_bsitemLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Logout = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Hethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageAccount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbpageLogin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpageQLadmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageSkins = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbpageInforSoft = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_docgia = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageReaders = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageLoaiDocGia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.tab_dangnhap = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.tab_sach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageBooks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageTheLoai = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageAuthors = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_muontra = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageBorrow = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageReturn = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbpagePunish = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_baocao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageSachTra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageSachMuon = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpagePhieuThu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_quydinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageChange = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -80,7 +87,9 @@
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -93,7 +102,10 @@
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.ApplicationButtonImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonControl1.ApplicationButtonImageOptions.SvgImage")));
+            this.ribbonControl1.ApplicationButtonDropDownControl = this.popupMenu1;
+            toolTipItem1.Text = "File";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.ribbonControl1.ApplicationButtonSuperTip = superToolTip1;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -109,24 +121,29 @@
             this.btnTDQuyDinh,
             this.btnTienPhat,
             this.btnSkins,
-            this.btnChiTietPM,
             this.btn_DangNhap,
             this.subitemAccount,
             this.btnTTaccount,
             this.btnDangXuat,
-            this.barSubItem1,
-            this.barButtonItem1});
+            this.bsitem_Account,
+            this.btn_bsitemLogout,
+            this.barButtonItem2,
+            this.btnInfoAccount,
+            this.btnThoat,
+            this.btnAbout,
+            this.btn_Logout});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 3;
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.PageHeaderItemLinks.Add(this.barSubItem1);
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.bsitem_Account);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tab_Hethong,
             this.tab_docgia,
-            this.tab_dangnhap,
+            this.tab_sach,
             this.tab_muontra,
             this.tab_baocao,
             this.tab_quydinh});
+            this.ribbonControl1.QuickToolbarItemLinks.Add(this.btn_Logout);
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemImageEdit1,
@@ -137,6 +154,31 @@
             this.repositoryItemHypertextLabel1});
             this.ribbonControl1.Size = new System.Drawing.Size(987, 146);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.btnAbout);
+            this.popupMenu1.ItemLinks.Add(this.btnThoat);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl1;
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Caption = "Về chúng tôi";
+            this.btnAbout.Id = 7;
+            this.btnAbout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.ImageOptions.Image")));
+            this.btnAbout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAbout.ImageOptions.LargeImage")));
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAbout_ItemClick);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Caption = "Thoát";
+            this.btnThoat.Id = 6;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // btnDocGia
             // 
@@ -268,17 +310,6 @@
             this.btnSkins.Id = 30;
             this.btnSkins.Name = "btnSkins";
             // 
-            // btnChiTietPM
-            // 
-            this.btnChiTietPM.Caption = "Về chúng tôi";
-            this.btnChiTietPM.Id = 31;
-            this.btnChiTietPM.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTietPM.ImageOptions.Image")));
-            this.btnChiTietPM.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnChiTietPM.ImageOptions.LargeImage")));
-            this.btnChiTietPM.Name = "btnChiTietPM";
-            this.btnChiTietPM.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnChiTietPM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChiTietPM_ItemClick);
-            // 
             // btn_DangNhap
             // 
             this.btn_DangNhap.Caption = "Đăng Nhập";
@@ -288,17 +319,16 @@
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btn_DangNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DangNhap_ItemClick);
             // 
             // subitemAccount
             // 
             this.subitemAccount.Caption = "Name";
             this.subitemAccount.Id = 41;
             this.subitemAccount.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.user__1_;
-            this.subitemAccount.LargeWidth = 80;
+            this.subitemAccount.LargeWidth = 100;
             this.subitemAccount.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTTaccount, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDangXuat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTTaccount, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDangXuat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.subitemAccount.Name = "subitemAccount";
             this.subitemAccount.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -310,6 +340,7 @@
             this.btnTTaccount.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.curriculum;
             this.btnTTaccount.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTTaccount.ImageOptions.LargeImage")));
             this.btnTTaccount.Name = "btnTTaccount";
+            this.btnTTaccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTTaccount_ItemClick);
             // 
             // btnDangXuat
             // 
@@ -317,58 +348,79 @@
             this.btnDangXuat.Id = 43;
             this.btnDangXuat.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.exit;
             this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
-            // barSubItem1
+            // bsitem_Account
             // 
-            this.barSubItem1.Caption = "barSubItem1";
-            this.barSubItem1.Id = 1;
-            this.barSubItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem1.ImageOptions.SvgImage")));
-            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
-            this.barSubItem1.Name = "barSubItem1";
+            this.bsitem_Account.Id = 1;
+            this.bsitem_Account.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bsitem_Account.ImageOptions.Image")));
+            this.bsitem_Account.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bsitem_Account.ImageOptions.LargeImage")));
+            this.bsitem_Account.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnInfoAccount, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_bsitemLogout, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bsitem_Account.Name = "bsitem_Account";
             // 
-            // barButtonItem1
+            // btnInfoAccount
             // 
-            this.barButtonItem1.Caption = "Login";
-            this.barButtonItem1.Id = 2;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnInfoAccount.Caption = "Thông tin tài khoản";
+            this.btnInfoAccount.Id = 4;
+            this.btnInfoAccount.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Apps_user_info_icon;
+            this.btnInfoAccount.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInfoAccount.ImageOptions.LargeImage")));
+            this.btnInfoAccount.Name = "btnInfoAccount";
+            // 
+            // btn_bsitemLogout
+            // 
+            this.btn_bsitemLogout.Caption = "Logout";
+            this.btn_bsitemLogout.Id = 2;
+            this.btn_bsitemLogout.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Apps_session_logout_icon;
+            this.btn_bsitemLogout.Name = "btn_bsitemLogout";
+            this.btn_bsitemLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_bsitemLogout_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Quản lí Admin";
+            this.barButtonItem2.Id = 3;
+            this.barButtonItem2.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.admin_icon;
+            this.barButtonItem2.LargeWidth = 80;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Caption = "Đăng Xuất";
+            this.btn_Logout.Id = 9;
+            this.btn_Logout.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.logout_1185563;
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Logout_ItemClick);
             // 
             // tab_Hethong
             // 
             this.tab_Hethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageAccount,
-            this.rbpageLogin,
-            this.rbpageSkins,
-            this.rbpageInforSoft});
-            this.tab_Hethong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_Hethong.ImageOptions.Image")));
+            this.rbpageQLadmin,
+            this.rbpageSkins});
+            this.tab_Hethong.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.configuration;
             this.tab_Hethong.Name = "tab_Hethong";
-            this.tab_Hethong.Text = "Hệ Thống";
+            this.tab_Hethong.Text = " Hệ Thống";
             // 
             // rbpageAccount
             // 
             this.rbpageAccount.ItemLinks.Add(this.subitemAccount);
             this.rbpageAccount.Name = "rbpageAccount";
             this.rbpageAccount.Text = "Account";
-            this.rbpageAccount.Visible = false;
             // 
-            // rbpageLogin
+            // rbpageQLadmin
             // 
-            this.rbpageLogin.ItemLinks.Add(this.btn_DangNhap);
-            this.rbpageLogin.Name = "rbpageLogin";
-            this.rbpageLogin.Text = "Login";
+            this.rbpageQLadmin.ItemLinks.Add(this.barButtonItem2);
+            this.rbpageQLadmin.Name = "rbpageQLadmin";
+            this.rbpageQLadmin.Text = "Admin Manager";
             // 
             // rbpageSkins
             // 
             this.rbpageSkins.ItemLinks.Add(this.btnSkins);
             this.rbpageSkins.Name = "rbpageSkins";
             this.rbpageSkins.Text = "Skins";
-            // 
-            // rbpageInforSoft
-            // 
-            this.rbpageInforSoft.ItemLinks.Add(this.btnChiTietPM);
-            this.rbpageInforSoft.Name = "rbpageInforSoft";
-            this.rbpageInforSoft.Text = "Information Software";
             // 
             // tab_docgia
             // 
@@ -377,7 +429,7 @@
             this.rbpageLoaiDocGia});
             this.tab_docgia.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_docgia.ImageOptions.Image")));
             this.tab_docgia.Name = "tab_docgia";
-            this.tab_docgia.Text = "Quản Lý Độc Giả";
+            this.tab_docgia.Text = " Quản Lý Độc Giả";
             // 
             // rbpageReaders
             // 
@@ -391,16 +443,16 @@
             this.rbpageLoaiDocGia.Name = "rbpageLoaiDocGia";
             this.rbpageLoaiDocGia.Text = "Categories";
             // 
-            // tab_dangnhap
+            // tab_sach
             // 
-            this.tab_dangnhap.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.tab_sach.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageBooks,
             this.rbpageTheLoai,
             this.rbpageAuthors});
-            this.tab_dangnhap.ImageOptions.Alignment = DevExpress.Utils.HorzAlignment.Near;
-            this.tab_dangnhap.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.open_book;
-            this.tab_dangnhap.Name = "tab_dangnhap";
-            this.tab_dangnhap.Text = "Quản Lý Sách";
+            this.tab_sach.ImageOptions.Alignment = DevExpress.Utils.HorzAlignment.Near;
+            this.tab_sach.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.open_book;
+            this.tab_sach.Name = "tab_sach";
+            this.tab_sach.Text = " Quản Lý Sách";
             // 
             // rbpageBooks
             // 
@@ -424,11 +476,10 @@
             // 
             this.tab_muontra.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageBorrow,
-            this.rbpageReturn,
-            this.rbpagePunish});
+            this.rbpageReturn});
             this.tab_muontra.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.law;
             this.tab_muontra.Name = "tab_muontra";
-            this.tab_muontra.Text = "Quản Lí Mượn Trả";
+            this.tab_muontra.Text = " Quản Lí Mượn Trả";
             // 
             // rbpageBorrow
             // 
@@ -442,17 +493,12 @@
             this.rbpageReturn.Name = "rbpageReturn";
             this.rbpageReturn.Text = "Return";
             // 
-            // rbpagePunish
-            // 
-            this.rbpagePunish.ItemLinks.Add(this.btnTienPhat);
-            this.rbpagePunish.Name = "rbpagePunish";
-            this.rbpagePunish.Text = "Punish";
-            // 
             // tab_baocao
             // 
             this.tab_baocao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageSachTra,
-            this.rbpageSachMuon});
+            this.rbpageSachMuon,
+            this.rbpagePhieuThu});
             this.tab_baocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_baocao.ImageOptions.Image")));
             this.tab_baocao.Name = "tab_baocao";
             this.tab_baocao.Text = "Báo Cáo Thống Kê";
@@ -469,13 +515,19 @@
             this.rbpageSachMuon.Name = "rbpageSachMuon";
             this.rbpageSachMuon.Text = "Theo thể loại";
             // 
+            // rbpagePhieuThu
+            // 
+            this.rbpagePhieuThu.ItemLinks.Add(this.btnTienPhat);
+            this.rbpagePhieuThu.Name = "rbpagePhieuThu";
+            this.rbpagePhieuThu.Text = "Phiếu thu";
+            // 
             // tab_quydinh
             // 
             this.tab_quydinh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpageChange});
             this.tab_quydinh.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.gdpr;
             this.tab_quydinh.Name = "tab_quydinh";
-            this.tab_quydinh.Text = "Quy Định";
+            this.tab_quydinh.Text = " Quy Định";
             // 
             // rbpageChange
             // 
@@ -532,6 +584,11 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // workspaceManager1
+            // 
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition1;
+            // 
             // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -547,7 +604,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Quản Lý Thư Viện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
@@ -576,42 +636,47 @@
         private DevExpress.XtraBars.BarButtonItem btnTienPhat;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit3;
-        private DevExpress.XtraBars.Ribbon.RibbonPage tab_docgia;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageReaders;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageLoaiDocGia;
-        private DevExpress.XtraBars.Ribbon.RibbonPage tab_dangnhap;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageBooks;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageTheLoai;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageAuthors;
-        private DevExpress.XtraBars.Ribbon.RibbonPage tab_muontra;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageBorrow;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageReturn;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpagePunish;
-        private DevExpress.XtraBars.Ribbon.RibbonPage tab_baocao;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageSachTra;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageSachMuon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage tab_quydinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageChange;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
         private DevExpress.XtraBars.Ribbon.RibbonPage tab_Hethong;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageLogin;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageSkins;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem btnSkins;
-        private DevExpress.XtraBars.BarButtonItem btnChiTietPM;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageInforSoft;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageAccount;
         private DevExpress.XtraBars.BarButtonItem btn_DangNhap;
         private DevExpress.XtraBars.BarSubItem subitemAccount;
         private DevExpress.XtraBars.BarButtonItem btnTTaccount;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarSubItem bsitem_Account;
+        private DevExpress.XtraBars.BarButtonItem btn_bsitemLogout;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpagePhieuThu;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageQLadmin;
+        private DevExpress.XtraBars.BarButtonItem btnInfoAccount;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem btnThoat;
+        private DevExpress.XtraBars.BarButtonItem btnAbout;
+        private DevExpress.Utils.WorkspaceManager workspaceManager1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage tab_docgia;
+        private DevExpress.XtraBars.Ribbon.RibbonPage tab_sach;
+        private DevExpress.XtraBars.Ribbon.RibbonPage tab_muontra;
+        private DevExpress.XtraBars.Ribbon.RibbonPage tab_baocao;
+        private DevExpress.XtraBars.Ribbon.RibbonPage tab_quydinh;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageAccount;
+        private DevExpress.XtraBars.BarButtonItem btn_Logout;
     }
 }
 

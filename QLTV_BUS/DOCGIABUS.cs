@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLTV_DAO;
+using QLTV_DTO;
 
 namespace QLTV_BUS
 {
@@ -16,18 +17,22 @@ namespace QLTV_BUS
             get { if (instance == null) instance = new DOCGIABUS(); return instance; }
             set => instance = value;
         }
-        private DOCGIABUS(): base() { }
-        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG)
+        private DOCGIABUS() { }
+        public List<DOCGIA> GetInfoDocGia(string idaccount = "")
         {
-            QLTV_DAO.DOCGIADAO.Instance.UpdateInfoDocGia(MaDG, TenDG, DiaChi, NgaySinh, email, MaLDG);
+            return DOCGIADAO.Instance.GetInforDocGia(idaccount);
+        }
+        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt)
+        {
+            QLTV_DAO.DOCGIADAO.Instance.UpdateInfoDocGia(MaDG, TenDG, DiaChi, NgaySinh, email, MaLDG, Ngayhethan, sdt);
         }
         public void RemoveInfoDocGia(string MaDG)
         {
             DOCGIADAO.Instance.RemoveInfoDocGia(MaDG);
         }
-        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string iduser)
+        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string iduser, string sdt)
         {
-            DOCGIADAO.Instance.AddInfoDocGia(MaDG, hoten, ngaysinh, email, diachi, MaLDG, ngaylapthe, ngayhethan, iduser);
+            DOCGIADAO.Instance.AddInfoDocGia(MaDG, hoten, ngaysinh, email, diachi, MaLDG, ngaylapthe, ngayhethan, iduser, sdt);
         }
     }
 }

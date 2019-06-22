@@ -16,7 +16,20 @@ namespace QLTV_DAO
             set => instance = value;
         }
         public DOCGIADAO() { }
-        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG)
+        public List<DOCGIA> GetInforDocGia(string idaccount = "" )
+        {
+            List<DOCGIA> listDocGia = new List<DOCGIA>();
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                List<DOCGIA> list = new List<DOCGIA>();
+                if (idaccount == "")
+                    list = db.DOCGIAs.ToList();
+                else list = db.DOCGIAs.Where(p => p.IDAccount == idaccount).Select(p => p).ToList();
+                listDocGia = list;
+            }
+            return listDocGia;
+        }
+        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt)
         {
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
@@ -26,6 +39,8 @@ namespace QLTV_DAO
                 dg.NgaySinh = NgaySinh;
                 dg.Email = email;
                 dg.MaLoaiDocGia = MaLDG;
+                dg.NgayHetHan = Ngayhethan;
+                dg.SDT = sdt;
                 db.SaveChanges();
             }
         }
@@ -38,7 +53,7 @@ namespace QLTV_DAO
                 db.SaveChanges();
             }
         }
-        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string iduser)
+        public void AddInfoDocGia(string MaDG, string hoten, DateTime ngaysinh, string email, string diachi, string MaLDG, DateTime ngaylapthe, DateTime ngayhethan, string idaccount, string sdt)
         {
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
@@ -52,7 +67,8 @@ namespace QLTV_DAO
                     MaLoaiDocGia = MaLDG,
                     NgayLapThe = ngaylapthe,
                     NgayHetHan = ngayhethan,
-                    IDUser = iduser
+                    IDAccount = idaccount,
+                    SDT = sdt
                 };
                 db.DOCGIAs.Add(dg);
                 db.SaveChanges();

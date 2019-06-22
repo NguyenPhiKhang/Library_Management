@@ -25,22 +25,24 @@ namespace QLTV_DTO
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<ADMIN> ADMINs { get; set; }
         public virtual DbSet<BCTKMUONSACH> BCTKMUONSACHes { get; set; }
         public virtual DbSet<BCTKTRATRE> BCTKTRATREs { get; set; }
+        public virtual DbSet<CHITIETPHANQUYEN> CHITIETPHANQUYENs { get; set; }
         public virtual DbSet<CTBCTKMUONSACH> CTBCTKMUONSACHes { get; set; }
         public virtual DbSet<CTBCTKTRATRE> CTBCTKTRATREs { get; set; }
         public virtual DbSet<CTPHIEUMUON> CTPHIEUMUONs { get; set; }
         public virtual DbSet<DOCGIA> DOCGIAs { get; set; }
         public virtual DbSet<LOAIDOCGIA> LOAIDOCGIAs { get; set; }
+        public virtual DbSet<PERMISSION> PERMISSIONs { get; set; }
         public virtual DbSet<PHIEUMUONSACH> PHIEUMUONSACHes { get; set; }
         public virtual DbSet<PHIEUTHUTIENPHAT> PHIEUTHUTIENPHATs { get; set; }
         public virtual DbSet<PHIEUTRASACH> PHIEUTRASACHes { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
+        public virtual DbSet<THAMSO> THAMSOes { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
         public virtual DbSet<TINHTRANG> TINHTRANGs { get; set; }
-        public virtual DbSet<USER> USERs { get; set; }
-        public virtual DbSet<THAMSO> THAMSOes { get; set; }
     }
 }

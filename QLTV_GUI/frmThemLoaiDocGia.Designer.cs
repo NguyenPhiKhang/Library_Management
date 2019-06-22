@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemLoaiDocGia));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txbTenLoaiDocGia = new DevExpress.XtraEditors.TextEdit();
@@ -38,6 +39,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnNhap = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbTenLoaiDocGia.Properties)).BeginInit();
@@ -46,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -65,14 +68,17 @@
             // 
             this.txbTenLoaiDocGia.Location = new System.Drawing.Point(111, 69);
             this.txbTenLoaiDocGia.Name = "txbTenLoaiDocGia";
+            this.txbTenLoaiDocGia.Properties.NullText = "Nhập tên loại độc giả...";
             this.txbTenLoaiDocGia.Size = new System.Drawing.Size(266, 20);
             this.txbTenLoaiDocGia.StyleController = this.layoutControl1;
             this.txbTenLoaiDocGia.TabIndex = 5;
+            this.txbTenLoaiDocGia.EditValueChanged += new System.EventHandler(this.txbTenLoaiDocGia_EditValueChanged);
             // 
             // txbMaLoaiDocGia
             // 
             this.txbMaLoaiDocGia.Location = new System.Drawing.Point(111, 45);
             this.txbMaLoaiDocGia.Name = "txbMaLoaiDocGia";
+            this.txbMaLoaiDocGia.Properties.ReadOnly = true;
             this.txbMaLoaiDocGia.Size = new System.Drawing.Size(266, 20);
             this.txbMaLoaiDocGia.StyleController = this.layoutControl1;
             this.txbMaLoaiDocGia.TabIndex = 4;
@@ -142,6 +148,10 @@
             this.btnHuy.Text = "HỦY";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
             // frmThemLoaiDocGia
             // 
             this.AcceptButton = this.btnNhap;
@@ -157,6 +167,7 @@
             this.Name = "frmThemLoaiDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Loại Độc Giả";
+            this.Load += new System.EventHandler(this.frmThemLoaiDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txbTenLoaiDocGia.Properties)).EndInit();
@@ -165,6 +176,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +192,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.SimpleButton btnNhap;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

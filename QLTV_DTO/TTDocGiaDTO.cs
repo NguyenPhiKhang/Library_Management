@@ -16,7 +16,8 @@ namespace QLTV_DTO
         public System.DateTime NgayLapThe { get; set; }
         public System.DateTime NgayHetHan { get; set; }
         public string MaLoaiDocGia { get; set; }
-        public string IDUser { get; set; }
-        public string PasswordUser { get; set; }
+        public string IDAccount { get; set; }
+        public string PasswordAccount { get; set; }
+        public string SDT { get; set; }
     }
 }

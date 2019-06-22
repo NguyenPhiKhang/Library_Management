@@ -49,8 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMINBUS.cs" />
+    <Compile Include="CHITIETPHANQUYENBUS.cs" />
     <Compile Include="DOCGIABUS.cs" />
     <Compile Include="LOAIDOCGIABUS.cs" />
+    <Compile Include="PERMISSIONBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SACHBUS.cs" />
     <Compile Include="TACGIABUS.cs" />
@@ -58,7 +61,7 @@
     <Compile Include="THELOAIBUS.cs" />
     <Compile Include="TINHTRANGBUS.cs" />
     <Compile Include="TTDOCGIABUS.cs" />
-    <Compile Include="USERBUS.cs" />
+    <Compile Include="ACCOUNTBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_DAO\QLTV_DAO.csproj">
@@ -71,7 +74,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

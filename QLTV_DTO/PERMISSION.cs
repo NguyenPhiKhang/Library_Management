@@ -12,18 +12,20 @@ namespace QLTV_DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class PERMISSION
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USER()
+        public PERMISSION()
         {
-            this.DOCGIAs = new HashSet<DOCGIA>();
+            this.CHITIETPHANQUYENs = new HashSet<CHITIETPHANQUYEN>();
         }
     
-        public string IDUser { get; set; }
-        public string PasswordUser { get; set; }
+        public string IDPer { get; set; }
+        public string NamePer { get; set; }
+        public string CodeAction { get; set; }
+        public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DOCGIA> DOCGIAs { get; set; }
+        public virtual ICollection<CHITIETPHANQUYEN> CHITIETPHANQUYENs { get; set; }
     }
 }

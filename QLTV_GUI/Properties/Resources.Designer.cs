@@ -63,6 +63,16 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _292_2924736_logout_icon_png_blue {
+            get {
+                object obj = ResourceManager.GetObject("292-2924736_logout-icon-png-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);
@@ -143,9 +153,39 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin_icon {
+            get {
+                object obj = ResourceManager.GetObject("admin-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_edit_icon {
             get {
                 object obj = ResourceManager.GetObject("App-edit-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Apps_session_logout_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-session-logout-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Apps_user_info_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-user-info-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +276,16 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap close_icon_white {
             get {
                 object obj = ResourceManager.GetObject("close-icon-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap configuration {
+            get {
+                object obj = ResourceManager.GetObject("configuration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,6 +523,16 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_1185563 {
+            get {
+                object obj = ResourceManager.GetObject("logout_1185563", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man {
             get {
                 object obj = ResourceManager.GetObject("man", resourceCulture);
@@ -496,6 +556,36 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap medical_history {
             get {
                 object obj = ResourceManager.GetObject("medical-history", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_1_icon {
+            get {
+                object obj = ResourceManager.GetObject("number-1-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_2_icon {
+            get {
+                object obj = ResourceManager.GetObject("number-2-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_3_icon {
+            get {
+                object obj = ResourceManager.GetObject("number-3-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

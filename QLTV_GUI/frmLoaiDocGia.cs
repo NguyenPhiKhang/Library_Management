@@ -152,11 +152,20 @@ namespace QLTV_GUI
 
         private void btnLuuLai_Click(object sender, EventArgs e)
         {
-            if(XtraMessageBox.Show("Bạn có muốn lưu lại thông tin loại độc giả đã thay đổi không?","Thông Báo",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (!dxErrorProvider1.HasErrors)
             {
-                LOAIDOCGIABUS.Instance.UpdateLoaiDocGia(txbMaLoaiDocGia.Text, txbTenLoaiDocGia.Text);
-                btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
-                bandedGridView1.Focus();
+                if (XtraMessageBox.Show("Bạn có muốn lưu lại thông tin loại độc giả đã thay đổi không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    LOAIDOCGIABUS.Instance.UpdateLoaiDocGia(txbMaLoaiDocGia.Text, txbTenLoaiDocGia.Text);
+                    XtraMessageBox.Show("Thay đổi đã lưu thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
+                    bandedGridView1.Focus();
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("Tên loại độc giả không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbTenLoaiDocGia.Focus();
             }
         }
 
@@ -173,6 +182,31 @@ namespace QLTV_GUI
                 txbTenLoaiDocGia.Text = bandedGridView1.GetFocusedRowCellValue(colTenLoaiDocGia).ToString();
             }
         }
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (bandedGridView1.RowCount > 0)
+            {
+                if (gridControl1.IsFocused)
+                {
+                    try
+                    {   if (XtraMessageBox.Show("Bạn có muốn xóa thông tin loại độc giả đã chọn không?", "Thông Báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            LOAIDOCGIABUS.Instance.RemoveLoaiDocGia(bandedGridView1.GetFocusedRowCellValue(colMaLoaiDocGia).ToString());
+                            btnLamMoi_ItemClick(sender, e);
+                        }
+                        else bandedGridView1.Focus();
+                    }
+                    catch
+                    {
+                        XtraMessageBox.Show("Không thể xóa loại độc giả này!\r\nVì...","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("Vui lòng chọn loại chọn độc giả muốn xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
         #endregion
         #region Event_Changed
         private void bandedGridView1_ColumnFilterChanged(object sender, EventArgs e)
@@ -186,8 +220,22 @@ namespace QLTV_GUI
             {
                 txbMaLoaiDocGia.Text = "";
                 txbTenLoaiDocGia.Text = "";
+                ReadOnly_LDG();
+                dxErrorProvider1.SetError(txbTenLoaiDocGia, null);
+            }
+        }
+        private void txbTenLoaiDocGia_EditValueChanged(object sender, EventArgs e)
+        {
+            if (btnLuuLai.Enabled)
+            {
+                HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenLoaiDocGia, HelpGUI.KiemTraDieuKien.isTen(txbTenLoaiDocGia.Text), "Tên loại độc giả không hợp lệ!");
+            }
+            else
+            {
+                dxErrorProvider1.SetError(txbTenLoaiDocGia, null);
             }
         }
         #endregion
+        
     }
 }

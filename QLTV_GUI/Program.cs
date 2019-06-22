@@ -4,6 +4,8 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace QLTV_GUI
 {
@@ -17,9 +19,8 @@ namespace QLTV_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             BonusSkins.Register();
-            Application.Run(new FrmMain());
+            Application.Run(new FrmLogin());
         }
     }
 }

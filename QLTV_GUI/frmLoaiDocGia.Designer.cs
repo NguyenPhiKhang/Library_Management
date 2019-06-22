@@ -57,10 +57,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaLoaiDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTenLoaiDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bar1 = new DevExpress.XtraBars.Bar();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -74,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -138,6 +140,7 @@
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -259,6 +262,7 @@
             this.txbTenLoaiDocGia.Size = new System.Drawing.Size(209, 20);
             this.txbTenLoaiDocGia.StyleController = this.layoutControl1;
             this.txbTenLoaiDocGia.TabIndex = 5;
+            this.txbTenLoaiDocGia.EditValueChanged += new System.EventHandler(this.txbTenLoaiDocGia_EditValueChanged);
             // 
             // txbMaLoaiDocGia
             // 
@@ -355,8 +359,10 @@
             this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colMaLoaiDocGia,
             this.colTenLoaiDocGia});
+            this.bandedGridView1.CustomizationFormBounds = new System.Drawing.Rectangle(529, 357, 266, 208);
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
+            this.bandedGridView1.OptionsCustomization.AllowGroup = false;
             this.bandedGridView1.OptionsFind.AlwaysVisible = true;
             this.bandedGridView1.OptionsFind.FindNullPrompt = "Nhập nội dung tìm kiếm...";
             this.bandedGridView1.OptionsFind.ShowCloseButton = false;
@@ -364,24 +370,6 @@
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             this.bandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView1_RowClick);
             this.bandedGridView1.ColumnFilterChanged += new System.EventHandler(this.bandedGridView1_ColumnFilterChanged);
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "Danh Sách Loại Độc Giả";
-            this.gridBand1.Columns.Add(this.colMaLoaiDocGia);
-            this.gridBand1.Columns.Add(this.colTenLoaiDocGia);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.OptionsBand.AllowMove = false;
-            this.gridBand1.OptionsBand.AllowPress = false;
-            this.gridBand1.OptionsBand.AllowSize = false;
-            this.gridBand1.OptionsBand.FixedWidth = true;
-            this.gridBand1.RowCount = 2;
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 150;
             // 
             // colMaLoaiDocGia
             // 
@@ -411,6 +399,28 @@
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.Text = "Custom 3";
             // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand1.Caption = "Danh Sách Loại Độc Giả";
+            this.gridBand1.Columns.Add(this.colMaLoaiDocGia);
+            this.gridBand1.Columns.Add(this.colTenLoaiDocGia);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.OptionsBand.AllowMove = false;
+            this.gridBand1.OptionsBand.AllowPress = false;
+            this.gridBand1.OptionsBand.AllowSize = false;
+            this.gridBand1.OptionsBand.FixedWidth = true;
+            this.gridBand1.RowCount = 2;
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 150;
+            // 
             // frmLoaiDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +448,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,6 +486,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
     }
 }

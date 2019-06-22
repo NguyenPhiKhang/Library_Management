@@ -4,33 +4,38 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cd480e9ba4bc45e4980fc4eb70855ed2" Name="Diagram1" ZoomLevel="75">
-        <EntityTypeShape EntityType="QuanLyThuVienModel.ADMIN" Width="1.5" PointX="0.75" PointY="7.125" />
+      <Diagram DiagramId="87cfb962f44a4771a170409cbd4d2c9d" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="QuanLyThuVienModel.ACCOUNT" Width="1.5" PointX="1.5" PointY="9.5" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.ADMIN" Width="1.5" PointX="3.75" PointY="15" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKMUONSACH" Width="1.5" PointX="0.75" PointY="0.875" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKTRATRE" Width="1.5" PointX="10.5" PointY="0.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CHITIETPHANQUYEN" Width="1.5" PointX="6.75" PointY="7.5" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKMUONSACH" Width="1.5" PointX="3" PointY="3.625" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKTRATRE" Width="1.5" PointX="12.75" PointY="3.625" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="8.25" PointY="3.625" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.DOCGIA" Width="1.5" PointX="3.75" PointY="10" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.LOAIDOCGIA" Width="1.5" PointX="1.5" PointY="9.75" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.DOCGIA" Width="1.5" PointX="3.75" PointY="9.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.LOAIDOCGIA" Width="1.5" PointX="1.5" PointY="12.375" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PERMISSION" Width="1.5" PointX="4.5" PointY="18.5" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUONSACH" Width="1.5" PointX="6" PointY="10.75" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTHUTIENPHAT" Width="1.5" PointX="6" PointY="13.625" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTRASACH" Width="1.5" PointX="10.5" PointY="3.5" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="6" PointY="3" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.TACGIA" Width="1.5" PointX="3.75" PointY="7.125" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THAMSO" Width="1.5" PointX="8.75" PointY="7.125" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.THELOAI" Width="1.5" PointX="0.75" PointY="3.875" />
         <EntityTypeShape EntityType="QuanLyThuVienModel.TINHTRANG" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.USER" Width="1.5" PointX="1.5" PointY="12.125" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.THAMSO" Width="2.875" PointX="9.25" PointY="7.125" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK_ADMIN_ACCOUNT" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_ACCOUNT" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK_DOCGIA_USER" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTBCTKMUONSACH_BCTKMUONSACH" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTBCTKTRATRE_BCTKTRATRE" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_PERMISSION" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTBCTKMUONSACH_THELOAI" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTBCTKTRATRE_PHIEUTRASACH" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTPHIEUMUON_PHIEUMUONSACH" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CTPHIEUMUON_SACH" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_PHIEUTRASACH_CTPHIEUMUON" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_DOCGIA_LOAIDOCGIA" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK_DOCGIA_USER" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_PHIEUMUONSACH_DOCGIA" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_PHIEUTHUTIENPHAT_DOCGIA" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_SACH_TACGIA" />

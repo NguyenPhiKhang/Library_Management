@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADMIN.Designer.cs">
+      <DependentUpon>frmADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTTCaNhan.Designer.cs">
+      <DependentUpon>frmTTCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpGUI\AutoIncreaseID.cs" />
     <Compile Include="HelpGUI\ErrorProvider.cs" />
     <Compile Include="HelpGUI\KiemTraDieuKien.cs" />
@@ -201,6 +213,9 @@
     <Compile Include="frmThemLoaiDocGia.Designer.cs">
       <DependentUpon>frmThemLoaiDocGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmADMIN.resx">
+      <DependentUpon>frmADMIN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBCTKSachMuonTL.resx">
       <DependentUpon>frmBCTKSachMuonTL.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,6 +497,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-session-logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-user-info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\292-2924736_logout-icon-png-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_1185563.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

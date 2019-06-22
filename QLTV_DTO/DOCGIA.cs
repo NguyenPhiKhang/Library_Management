@@ -29,10 +29,11 @@ namespace QLTV_DTO
         public System.DateTime NgayLapThe { get; set; }
         public System.DateTime NgayHetHan { get; set; }
         public string MaLoaiDocGia { get; set; }
-        public string IDUser { get; set; }
+        public string IDAccount { get; set; }
+        public string SDT { get; set; }
     
+        public virtual ACCOUNT ACCOUNT { get; set; }
         public virtual LOAIDOCGIA LOAIDOCGIA { get; set; }
-        public virtual USER USER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUMUONSACH> PHIEUMUONSACHes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

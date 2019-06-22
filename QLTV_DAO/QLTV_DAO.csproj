@@ -49,8 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMINDAO.cs" />
+    <Compile Include="CHITIETPHANQUYENDAO.cs" />
     <Compile Include="DOCGIADAO.cs" />
     <Compile Include="LOAIDOCGIADAO.cs" />
+    <Compile Include="PERMISSIONDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SACHDAO.cs" />
     <Compile Include="TACGIADAO.cs" />
@@ -58,7 +61,7 @@
     <Compile Include="THELOAIDAO.cs" />
     <Compile Include="TINHTRANGDAO.cs" />
     <Compile Include="TTDOCGIADAO.cs" />
-    <Compile Include="USERDAO.cs" />
+    <Compile Include="ACCOUNTDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

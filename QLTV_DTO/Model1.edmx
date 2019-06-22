@@ -5,13 +5,25 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="QuanLyThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="IDAccount" />
+          </Key>
+          <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordAccount" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TypeOfAccount" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="ADMIN">
           <Key>
             <PropertyRef Name="IDAdmin" />
           </Key>
           <Property Name="IDAdmin" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PasswordAd" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="TenAdmin" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NameAdmin" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Birthday" Type="datetime" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberPhone" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="BCTKMUONSACH">
           <Key>
@@ -27,6 +39,15 @@
           </Key>
           <Property Name="MaBCTKTraTre" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Ngay" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHITIETPHANQUYEN">
+          <Key>
+            <PropertyRef Name="IDAccount" />
+            <PropertyRef Name="IDPer" />
+          </Key>
+          <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDPer" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="suspended" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="CTBCTKMUONSACH">
           <Key>
@@ -66,11 +87,12 @@
           <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NgaySinh" Type="date" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
-          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NgayLapThe" Type="date" Nullable="false" />
           <Property Name="NgayHetHan" Type="date" Nullable="false" />
           <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="IDUser" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
@@ -78,6 +100,15 @@
           </Key>
           <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenLoaiDocGia" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERMISSION">
+          <Key>
+            <PropertyRef Name="IDPer" />
+          </Key>
+          <Property Name="IDPer" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NamePer" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CodeAction" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="PHIEUMUONSACH">
           <Key>
@@ -130,19 +161,11 @@
           <Property Name="MaTacGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenTacGia" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="THAMSO">
           <Key>
-            <PropertyRef Name="TuoiToiDa" />
-            <PropertyRef Name="TuoiToiThieu" />
-            <PropertyRef Name="ThoiHanThe" />
-            <PropertyRef Name="KhoangCachXB" />
-            <PropertyRef Name="SoNgayMuonMax" />
-            <PropertyRef Name="SoSachMuonMax" />
-            <PropertyRef Name="TPTraTreMotNgay" />
-            <PropertyRef Name="SoLuongTheLoaiMax" />
+            <PropertyRef Name="MaThamSo" />
           </Key>
+          <Property Name="MaThamSo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TuoiToiDa" Type="int" Nullable="false" />
           <Property Name="TuoiToiThieu" Type="int" Nullable="false" />
           <Property Name="ThoiHanThe" Type="int" Nullable="false" />
@@ -166,13 +189,42 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="MaTinhTrang" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TenTinhTrang" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <EntityType Name="USER">
-          <Key>
-            <PropertyRef Name="IDUser" />
-          </Key>
-          <Property Name="IDUser" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PasswordUser" Type="varchar" MaxLength="100" Nullable="false" />
-        </EntityType>
+        <Association Name="FK_ADMIN_ACCOUNT">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
+            </Principal>
+            <Dependent Role="ADMIN">
+              <PropertyRef Name="IDAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETPHANQUYEN_ACCOUNT">
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+          <End Role="CHITIETPHANQUYEN" Type="Self.CHITIETPHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
+            </Principal>
+            <Dependent Role="CHITIETPHANQUYEN">
+              <PropertyRef Name="IDAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETPHANQUYEN_PERMISSION">
+          <End Role="PERMISSION" Type="Self.PERMISSION" Multiplicity="1" />
+          <End Role="CHITIETPHANQUYEN" Type="Self.CHITIETPHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERMISSION">
+              <PropertyRef Name="IDPer" />
+            </Principal>
+            <Dependent Role="CHITIETPHANQUYEN">
+              <PropertyRef Name="IDPer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CTBCTKMUONSACH_BCTKMUONSACH">
           <End Role="BCTKMUONSACH" Type="Self.BCTKMUONSACH" Multiplicity="1" />
           <End Role="CTBCTKMUONSACH" Type="Self.CTBCTKMUONSACH" Multiplicity="*" />
@@ -260,14 +312,14 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DOCGIA_USER">
-          <End Role="USER" Type="Self.USER" Multiplicity="1" />
+          <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
           <End Role="DOCGIA" Type="Self.DOCGIA" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="USER">
-              <PropertyRef Name="IDUser" />
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
             </Principal>
             <Dependent Role="DOCGIA">
-              <PropertyRef Name="IDUser" />
+              <PropertyRef Name="IDAccount" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -346,34 +398,37 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QuanLyThuVienModelStoreContainer">
+          <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BCTKMUONSACH" EntityType="Self.BCTKMUONSACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BCTKTRATRE" EntityType="Self.BCTKTRATRE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHITIETPHANQUYEN" EntityType="Self.CHITIETPHANQUYEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTBCTKMUONSACH" EntityType="Self.CTBCTKMUONSACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTBCTKTRATRE" EntityType="Self.CTBCTKTRATRE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTPHIEUMUON" EntityType="Self.CTPHIEUMUON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAIDOCGIA" EntityType="Self.LOAIDOCGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERMISSION" EntityType="Self.PERMISSION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUMUONSACH" EntityType="Self.PHIEUMUONSACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTHUTIENPHAT" EntityType="Self.PHIEUTHUTIENPHAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTRASACH" EntityType="Self.PHIEUTRASACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [THAMSO].[TuoiToiDa] AS [TuoiToiDa], 
-    [THAMSO].[TuoiToiThieu] AS [TuoiToiThieu], 
-    [THAMSO].[ThoiHanThe] AS [ThoiHanThe], 
-    [THAMSO].[KhoangCachXB] AS [KhoangCachXB], 
-    [THAMSO].[SoNgayMuonMax] AS [SoNgayMuonMax], 
-    [THAMSO].[SoSachMuonMax] AS [SoSachMuonMax], 
-    [THAMSO].[TPTraTreMotNgay] AS [TPTraTreMotNgay], 
-    [THAMSO].[SoLuongTheLoaiMax] AS [SoLuongTheLoaiMax]
-    FROM [dbo].[THAMSO] AS [THAMSO]</DefiningQuery>
-          </EntitySet>
+          <AssociationSet Name="FK_ADMIN_ACCOUNT" Association="Self.FK_ADMIN_ACCOUNT">
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+            <End Role="ADMIN" EntitySet="ADMIN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETPHANQUYEN_ACCOUNT" Association="Self.FK_CHITIETPHANQUYEN_ACCOUNT">
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+            <End Role="CHITIETPHANQUYEN" EntitySet="CHITIETPHANQUYEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETPHANQUYEN_PERMISSION" Association="Self.FK_CHITIETPHANQUYEN_PERMISSION">
+            <End Role="PERMISSION" EntitySet="PERMISSION" />
+            <End Role="CHITIETPHANQUYEN" EntitySet="CHITIETPHANQUYEN" />
+          </AssociationSet>
           <AssociationSet Name="FK_CTBCTKMUONSACH_BCTKMUONSACH" Association="Self.FK_CTBCTKMUONSACH_BCTKMUONSACH">
             <End Role="BCTKMUONSACH" EntitySet="BCTKMUONSACH" />
             <End Role="CTBCTKMUONSACH" EntitySet="CTBCTKMUONSACH" />
@@ -403,7 +458,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
           <AssociationSet Name="FK_DOCGIA_USER" Association="Self.FK_DOCGIA_USER">
-            <End Role="USER" EntitySet="USER" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
             <End Role="DOCGIA" EntitySet="DOCGIA" />
           </AssociationSet>
           <AssociationSet Name="FK_PHIEUMUONSACH_DOCGIA" Association="Self.FK_PHIEUMUONSACH_DOCGIA">
@@ -436,23 +491,37 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QuanLyThuVienEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACCOUNTs" EntityType="QuanLyThuVienModel.ACCOUNT" />
           <EntitySet Name="ADMINs" EntityType="QuanLyThuVienModel.ADMIN" />
           <EntitySet Name="BCTKMUONSACHes" EntityType="QuanLyThuVienModel.BCTKMUONSACH" />
           <EntitySet Name="BCTKTRATREs" EntityType="QuanLyThuVienModel.BCTKTRATRE" />
+          <EntitySet Name="CHITIETPHANQUYENs" EntityType="QuanLyThuVienModel.CHITIETPHANQUYEN" />
           <EntitySet Name="CTBCTKMUONSACHes" EntityType="QuanLyThuVienModel.CTBCTKMUONSACH" />
           <EntitySet Name="CTBCTKTRATREs" EntityType="QuanLyThuVienModel.CTBCTKTRATRE" />
           <EntitySet Name="CTPHIEUMUONs" EntityType="QuanLyThuVienModel.CTPHIEUMUON" />
           <EntitySet Name="DOCGIAs" EntityType="QuanLyThuVienModel.DOCGIA" />
           <EntitySet Name="LOAIDOCGIAs" EntityType="QuanLyThuVienModel.LOAIDOCGIA" />
+          <EntitySet Name="PERMISSIONs" EntityType="QuanLyThuVienModel.PERMISSION" />
           <EntitySet Name="PHIEUMUONSACHes" EntityType="QuanLyThuVienModel.PHIEUMUONSACH" />
           <EntitySet Name="PHIEUTHUTIENPHATs" EntityType="QuanLyThuVienModel.PHIEUTHUTIENPHAT" />
           <EntitySet Name="PHIEUTRASACHes" EntityType="QuanLyThuVienModel.PHIEUTRASACH" />
           <EntitySet Name="SACHes" EntityType="QuanLyThuVienModel.SACH" />
           <EntitySet Name="TACGIAs" EntityType="QuanLyThuVienModel.TACGIA" />
+          <EntitySet Name="THAMSOes" EntityType="QuanLyThuVienModel.THAMSO" />
           <EntitySet Name="THELOAIs" EntityType="QuanLyThuVienModel.THELOAI" />
           <EntitySet Name="TINHTRANGs" EntityType="QuanLyThuVienModel.TINHTRANG" />
-          <EntitySet Name="USERs" EntityType="QuanLyThuVienModel.USER" />
-          <EntitySet Name="THAMSOes" EntityType="QuanLyThuVienModel.THAMSO" />
+          <AssociationSet Name="FK_ADMIN_ACCOUNT" Association="QuanLyThuVienModel.FK_ADMIN_ACCOUNT">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="ADMIN" EntitySet="ADMINs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETPHANQUYEN_ACCOUNT" Association="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_ACCOUNT">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="CHITIETPHANQUYEN" EntitySet="CHITIETPHANQUYENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCGIA_USER" Association="QuanLyThuVienModel.FK_DOCGIA_USER">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="DOCGIA" EntitySet="DOCGIAs" />
+          </AssociationSet>
           <AssociationSet Name="FK_CTBCTKMUONSACH_BCTKMUONSACH" Association="QuanLyThuVienModel.FK_CTBCTKMUONSACH_BCTKMUONSACH">
             <End Role="BCTKMUONSACH" EntitySet="BCTKMUONSACHes" />
             <End Role="CTBCTKMUONSACH" EntitySet="CTBCTKMUONSACHes" />
@@ -460,6 +529,10 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <AssociationSet Name="FK_CTBCTKTRATRE_BCTKTRATRE" Association="QuanLyThuVienModel.FK_CTBCTKTRATRE_BCTKTRATRE">
             <End Role="BCTKTRATRE" EntitySet="BCTKTRATREs" />
             <End Role="CTBCTKTRATRE" EntitySet="CTBCTKTRATREs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETPHANQUYEN_PERMISSION" Association="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_PERMISSION">
+            <End Role="PERMISSION" EntitySet="PERMISSIONs" />
+            <End Role="CHITIETPHANQUYEN" EntitySet="CHITIETPHANQUYENs" />
           </AssociationSet>
           <AssociationSet Name="FK_CTBCTKMUONSACH_THELOAI" Association="QuanLyThuVienModel.FK_CTBCTKMUONSACH_THELOAI">
             <End Role="THELOAI" EntitySet="THELOAIs" />
@@ -485,10 +558,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <End Role="LOAIDOCGIA" EntitySet="LOAIDOCGIAs" />
             <End Role="DOCGIA" EntitySet="DOCGIAs" />
           </AssociationSet>
-          <AssociationSet Name="FK_DOCGIA_USER" Association="QuanLyThuVienModel.FK_DOCGIA_USER">
-            <End Role="USER" EntitySet="USERs" />
-            <End Role="DOCGIA" EntitySet="DOCGIAs" />
-          </AssociationSet>
           <AssociationSet Name="FK_PHIEUMUONSACH_DOCGIA" Association="QuanLyThuVienModel.FK_PHIEUMUONSACH_DOCGIA">
             <End Role="DOCGIA" EntitySet="DOCGIAs" />
             <End Role="PHIEUMUONSACH" EntitySet="PHIEUMUONSACHes" />
@@ -510,13 +579,29 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <End Role="SACH" EntitySet="SACHes" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ACCOUNT">
+          <Key>
+            <PropertyRef Name="IDAccount" />
+          </Key>
+          <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PasswordAccount" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TypeOfAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ADMINs" Relationship="QuanLyThuVienModel.FK_ADMIN_ACCOUNT" FromRole="ACCOUNT" ToRole="ADMIN" />
+          <NavigationProperty Name="CHITIETPHANQUYENs" Relationship="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_ACCOUNT" FromRole="ACCOUNT" ToRole="CHITIETPHANQUYEN" />
+          <NavigationProperty Name="DOCGIAs" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="ACCOUNT" ToRole="DOCGIA" />
+        </EntityType>
         <EntityType Name="ADMIN">
           <Key>
             <PropertyRef Name="IDAdmin" />
           </Key>
           <Property Name="IDAdmin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PasswordAd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TenAdmin" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NameAdmin" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NumberPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ACCOUNT" Relationship="QuanLyThuVienModel.FK_ADMIN_ACCOUNT" FromRole="ADMIN" ToRole="ACCOUNT" />
         </EntityType>
         <EntityType Name="BCTKMUONSACH">
           <Key>
@@ -534,6 +619,17 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="MaBCTKTraTre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="CTBCTKTRATREs" Relationship="QuanLyThuVienModel.FK_CTBCTKTRATRE_BCTKTRATRE" FromRole="BCTKTRATRE" ToRole="CTBCTKTRATRE" />
+        </EntityType>
+        <EntityType Name="CHITIETPHANQUYEN">
+          <Key>
+            <PropertyRef Name="IDAccount" />
+            <PropertyRef Name="IDPer" />
+          </Key>
+          <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDPer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="suspended" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ACCOUNT" Relationship="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_ACCOUNT" FromRole="CHITIETPHANQUYEN" ToRole="ACCOUNT" />
+          <NavigationProperty Name="PERMISSION" Relationship="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_PERMISSION" FromRole="CHITIETPHANQUYEN" ToRole="PERMISSION" />
         </EntityType>
         <EntityType Name="CTBCTKMUONSACH">
           <Key>
@@ -580,13 +676,14 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="HoTen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NgayLapThe" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="MaLoaiDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IDUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SDT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ACCOUNT" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="DOCGIA" ToRole="ACCOUNT" />
           <NavigationProperty Name="LOAIDOCGIA" Relationship="QuanLyThuVienModel.FK_DOCGIA_LOAIDOCGIA" FromRole="DOCGIA" ToRole="LOAIDOCGIA" />
-          <NavigationProperty Name="USER" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="DOCGIA" ToRole="USER" />
           <NavigationProperty Name="PHIEUMUONSACHes" Relationship="QuanLyThuVienModel.FK_PHIEUMUONSACH_DOCGIA" FromRole="DOCGIA" ToRole="PHIEUMUONSACH" />
           <NavigationProperty Name="PHIEUTHUTIENPHATs" Relationship="QuanLyThuVienModel.FK_PHIEUTHUTIENPHAT_DOCGIA" FromRole="DOCGIA" ToRole="PHIEUTHUTIENPHAT" />
         </EntityType>
@@ -597,6 +694,16 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="MaLoaiDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TenLoaiDocGia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DOCGIAs" Relationship="QuanLyThuVienModel.FK_DOCGIA_LOAIDOCGIA" FromRole="LOAIDOCGIA" ToRole="DOCGIA" />
+        </EntityType>
+        <EntityType Name="PERMISSION">
+          <Key>
+            <PropertyRef Name="IDPer" />
+          </Key>
+          <Property Name="IDPer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NamePer" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CodeAction" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHITIETPHANQUYENs" Relationship="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_PERMISSION" FromRole="PERMISSION" ToRole="CHITIETPHANQUYEN" />
         </EntityType>
         <EntityType Name="PHIEUMUONSACH">
           <Key>
@@ -659,6 +766,20 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TenTacGia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SACHes" Relationship="QuanLyThuVienModel.FK_SACH_TACGIA" FromRole="TACGIA" ToRole="SACH" />
         </EntityType>
+        <EntityType Name="THAMSO">
+          <Key>
+            <PropertyRef Name="MaThamSo" />
+          </Key>
+          <Property Name="MaThamSo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TuoiToiDa" Type="Int32" Nullable="false" />
+          <Property Name="TuoiToiThieu" Type="Int32" Nullable="false" />
+          <Property Name="ThoiHanThe" Type="Int32" Nullable="false" />
+          <Property Name="KhoangCachXB" Type="Int32" Nullable="false" />
+          <Property Name="SoNgayMuonMax" Type="Int32" Nullable="false" />
+          <Property Name="SoSachMuonMax" Type="Int32" Nullable="false" />
+          <Property Name="TPTraTreMotNgay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="SoLuongTheLoaiMax" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="THELOAI">
           <Key>
             <PropertyRef Name="MaTheLoai" />
@@ -676,34 +797,42 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TenTinhTrang" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SACHes" Relationship="QuanLyThuVienModel.FK_SACH_TINHTRANG" FromRole="TINHTRANG" ToRole="SACH" />
         </EntityType>
-        <EntityType Name="USER">
-          <Key>
-            <PropertyRef Name="IDUser" />
-          </Key>
-          <Property Name="IDUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PasswordUser" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="DOCGIAs" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="USER" ToRole="DOCGIA" />
-        </EntityType>
-        <EntityType Name="THAMSO">
-          <Key>
-            <PropertyRef Name="TuoiToiDa" />
-            <PropertyRef Name="TuoiToiThieu" />
-            <PropertyRef Name="ThoiHanThe" />
-            <PropertyRef Name="KhoangCachXB" />
-            <PropertyRef Name="SoNgayMuonMax" />
-            <PropertyRef Name="SoSachMuonMax" />
-            <PropertyRef Name="TPTraTreMotNgay" />
-            <PropertyRef Name="SoLuongTheLoaiMax" />
-          </Key>
-          <Property Name="TuoiToiDa" Type="Int32" Nullable="false" />
-          <Property Name="TuoiToiThieu" Type="Int32" Nullable="false" />
-          <Property Name="ThoiHanThe" Type="Int32" Nullable="false" />
-          <Property Name="KhoangCachXB" Type="Int32" Nullable="false" />
-          <Property Name="SoNgayMuonMax" Type="Int32" Nullable="false" />
-          <Property Name="SoSachMuonMax" Type="Int32" Nullable="false" />
-          <Property Name="TPTraTreMotNgay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="SoLuongTheLoaiMax" Type="Int32" Nullable="false" />
-        </EntityType>
+        <Association Name="FK_ADMIN_ACCOUNT">
+          <End Type="QuanLyThuVienModel.ACCOUNT" Role="ACCOUNT" Multiplicity="1" />
+          <End Type="QuanLyThuVienModel.ADMIN" Role="ADMIN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
+            </Principal>
+            <Dependent Role="ADMIN">
+              <PropertyRef Name="IDAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETPHANQUYEN_ACCOUNT">
+          <End Type="QuanLyThuVienModel.ACCOUNT" Role="ACCOUNT" Multiplicity="1" />
+          <End Type="QuanLyThuVienModel.CHITIETPHANQUYEN" Role="CHITIETPHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
+            </Principal>
+            <Dependent Role="CHITIETPHANQUYEN">
+              <PropertyRef Name="IDAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCGIA_USER">
+          <End Type="QuanLyThuVienModel.ACCOUNT" Role="ACCOUNT" Multiplicity="1" />
+          <End Type="QuanLyThuVienModel.DOCGIA" Role="DOCGIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="IDAccount" />
+            </Principal>
+            <Dependent Role="DOCGIA">
+              <PropertyRef Name="IDAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CTBCTKMUONSACH_BCTKMUONSACH">
           <End Type="QuanLyThuVienModel.BCTKMUONSACH" Role="BCTKMUONSACH" Multiplicity="1" />
           <End Type="QuanLyThuVienModel.CTBCTKMUONSACH" Role="CTBCTKMUONSACH" Multiplicity="*" />
@@ -725,6 +854,18 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             </Principal>
             <Dependent Role="CTBCTKTRATRE">
               <PropertyRef Name="MaBCTKTraTre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHITIETPHANQUYEN_PERMISSION">
+          <End Type="QuanLyThuVienModel.PERMISSION" Role="PERMISSION" Multiplicity="1" />
+          <End Type="QuanLyThuVienModel.CHITIETPHANQUYEN" Role="CHITIETPHANQUYEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERMISSION">
+              <PropertyRef Name="IDPer" />
+            </Principal>
+            <Dependent Role="CHITIETPHANQUYEN">
+              <PropertyRef Name="IDPer" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -804,18 +945,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DOCGIA_USER">
-          <End Type="QuanLyThuVienModel.USER" Role="USER" Multiplicity="1" />
-          <End Type="QuanLyThuVienModel.DOCGIA" Role="DOCGIA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USER">
-              <PropertyRef Name="IDUser" />
-            </Principal>
-            <Dependent Role="DOCGIA">
-              <PropertyRef Name="IDUser" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PHIEUMUONSACH_DOCGIA">
           <End Type="QuanLyThuVienModel.DOCGIA" Role="DOCGIA" Multiplicity="1" />
           <End Type="QuanLyThuVienModel.PHIEUMUONSACH" Role="PHIEUMUONSACH" Multiplicity="*" />
@@ -876,17 +1005,30 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QuanLyThuVienModelStoreContainer" CdmEntityContainer="QuanLyThuVienEntities">
+          <EntitySetMapping Name="ACCOUNTs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.ACCOUNT">
+              <MappingFragment StoreEntitySet="ACCOUNT">
+                <ScalarProperty Name="TypeOfAccount" ColumnName="TypeOfAccount" />
+                <ScalarProperty Name="PasswordAccount" ColumnName="PasswordAccount" />
+                <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ADMINs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.ADMIN">
               <MappingFragment StoreEntitySet="ADMIN">
-                <ScalarProperty Name="TenAdmin" ColumnName="TenAdmin" />
-                <ScalarProperty Name="PasswordAd" ColumnName="PasswordAd" />
+                <ScalarProperty Name="NumberPhone" ColumnName="NumberPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="NameAdmin" ColumnName="NameAdmin" />
+                <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
                 <ScalarProperty Name="IDAdmin" ColumnName="IDAdmin" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -905,6 +1047,15 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               <MappingFragment StoreEntitySet="BCTKTRATRE">
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
                 <ScalarProperty Name="MaBCTKTraTre" ColumnName="MaBCTKTraTre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETPHANQUYENs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.CHITIETPHANQUYEN">
+              <MappingFragment StoreEntitySet="CHITIETPHANQUYEN">
+                <ScalarProperty Name="suspended" ColumnName="suspended" />
+                <ScalarProperty Name="IDPer" ColumnName="IDPer" />
+                <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -940,7 +1091,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <EntitySetMapping Name="DOCGIAs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.DOCGIA">
               <MappingFragment StoreEntitySet="DOCGIA">
-                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
                 <ScalarProperty Name="MaLoaiDocGia" ColumnName="MaLoaiDocGia" />
                 <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
                 <ScalarProperty Name="NgayLapThe" ColumnName="NgayLapThe" />
@@ -957,6 +1109,16 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               <MappingFragment StoreEntitySet="LOAIDOCGIA">
                 <ScalarProperty Name="TenLoaiDocGia" ColumnName="TenLoaiDocGia" />
                 <ScalarProperty Name="MaLoaiDocGia" ColumnName="MaLoaiDocGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERMISSIONs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.PERMISSION">
+              <MappingFragment StoreEntitySet="PERMISSION">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CodeAction" ColumnName="CodeAction" />
+                <ScalarProperty Name="NamePer" ColumnName="NamePer" />
+                <ScalarProperty Name="IDPer" ColumnName="IDPer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1015,6 +1177,21 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="THAMSOes">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
+              <MappingFragment StoreEntitySet="THAMSO">
+                <ScalarProperty Name="SoLuongTheLoaiMax" ColumnName="SoLuongTheLoaiMax" />
+                <ScalarProperty Name="TPTraTreMotNgay" ColumnName="TPTraTreMotNgay" />
+                <ScalarProperty Name="SoSachMuonMax" ColumnName="SoSachMuonMax" />
+                <ScalarProperty Name="SoNgayMuonMax" ColumnName="SoNgayMuonMax" />
+                <ScalarProperty Name="KhoangCachXB" ColumnName="KhoangCachXB" />
+                <ScalarProperty Name="ThoiHanThe" ColumnName="ThoiHanThe" />
+                <ScalarProperty Name="TuoiToiThieu" ColumnName="TuoiToiThieu" />
+                <ScalarProperty Name="TuoiToiDa" ColumnName="TuoiToiDa" />
+                <ScalarProperty Name="MaThamSo" ColumnName="MaThamSo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="THELOAIs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.THELOAI">
               <MappingFragment StoreEntitySet="THELOAI">
@@ -1028,28 +1205,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               <MappingFragment StoreEntitySet="TINHTRANG">
                 <ScalarProperty Name="TenTinhTrang" ColumnName="TenTinhTrang" />
                 <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="USERs">
-            <EntityTypeMapping TypeName="QuanLyThuVienModel.USER">
-              <MappingFragment StoreEntitySet="USER">
-                <ScalarProperty Name="PasswordUser" ColumnName="PasswordUser" />
-                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="THAMSOes">
-            <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
-              <MappingFragment StoreEntitySet="THAMSO">
-                <ScalarProperty Name="SoLuongTheLoaiMax" ColumnName="SoLuongTheLoaiMax" />
-                <ScalarProperty Name="TPTraTreMotNgay" ColumnName="TPTraTreMotNgay" />
-                <ScalarProperty Name="SoSachMuonMax" ColumnName="SoSachMuonMax" />
-                <ScalarProperty Name="SoNgayMuonMax" ColumnName="SoNgayMuonMax" />
-                <ScalarProperty Name="KhoangCachXB" ColumnName="KhoangCachXB" />
-                <ScalarProperty Name="ThoiHanThe" ColumnName="ThoiHanThe" />
-                <ScalarProperty Name="TuoiToiThieu" ColumnName="TuoiToiThieu" />
-                <ScalarProperty Name="TuoiToiDa" ColumnName="TuoiToiDa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

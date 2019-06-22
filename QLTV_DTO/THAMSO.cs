@@ -14,6 +14,7 @@ namespace QLTV_DTO
     
     public partial class THAMSO
     {
+        public int MaThamSo { get; set; }
         public int TuoiToiDa { get; set; }
         public int TuoiToiThieu { get; set; }
         public int ThoiHanThe { get; set; }

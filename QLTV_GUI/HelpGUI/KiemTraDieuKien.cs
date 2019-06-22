@@ -38,7 +38,7 @@ namespace QLTV_GUI.HelpGUI
         {
             inputTen = inputTen ?? string.Empty;
             string strRegex = @"^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
-            @"ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+            @"ẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
             @"ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(inputTen))
@@ -73,9 +73,9 @@ namespace QLTV_GUI.HelpGUI
         public static bool isDiaChi(string inputDiaChi)
         {
             inputDiaChi = inputDiaChi ?? string.Empty;
-            string strRegex = @"^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
-            @"ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
-            @"ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s-]+$";
+            string strRegex = @"^[a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+            @"ẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệếỉịọỏốồổỗộớờởỡợ" +
+            @"ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s/.-]+$";
             Regex re = new Regex(strRegex);
             if (re.IsMatch(inputDiaChi))
                 return true;
@@ -99,6 +99,31 @@ namespace QLTV_GUI.HelpGUI
                     return true;
             }
             return false;
+        }
+        //Chỉ cho phép nhập số
+        public static void NhapSo(KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            //if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //{
+            //    e.Handled = true;
+            //}
+        }
+        //kiểm tra đúng dạng số điện thoại hay không
+        public static bool isNumPhone(string inputSDT)
+        {
+            inputSDT = inputSDT ?? string.Empty;
+            string strRegex = @"^\d{9,11}$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(inputSDT))
+                return true;
+            else
+                return false;
         }
     }
 }
