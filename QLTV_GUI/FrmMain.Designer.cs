@@ -65,6 +65,7 @@
             this.tab_docgia = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageReaders = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageLoaiDocGia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpagePhieuThu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_sach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageBooks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageTheLoai = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -75,7 +76,6 @@
             this.tab_baocao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageSachTra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageSachMuon = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbpagePhieuThu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_quydinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageChange = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -303,6 +303,7 @@
             this.btnTienPhat.Name = "btnTienPhat";
             this.btnTienPhat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnTienPhat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTienPhat_ItemClick);
             // 
             // btnSkins
             // 
@@ -370,7 +371,7 @@
             // 
             // btn_bsitemLogout
             // 
-            this.btn_bsitemLogout.Caption = "Logout";
+            this.btn_bsitemLogout.Caption = "Đăng Xuất";
             this.btn_bsitemLogout.Id = 2;
             this.btn_bsitemLogout.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Apps_session_logout_icon;
             this.btn_bsitemLogout.Name = "btn_bsitemLogout";
@@ -444,6 +445,12 @@
             this.rbpageLoaiDocGia.Name = "rbpageLoaiDocGia";
             this.rbpageLoaiDocGia.Text = "Categories";
             // 
+            // rbpagePhieuThu
+            // 
+            this.rbpagePhieuThu.ItemLinks.Add(this.btnTienPhat);
+            this.rbpagePhieuThu.Name = "rbpagePhieuThu";
+            this.rbpagePhieuThu.Text = "Phiếu thu";
+            // 
             // tab_sach
             // 
             this.tab_sach.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -514,12 +521,6 @@
             this.rbpageSachMuon.ItemLinks.Add(this.btnBCSachMuon);
             this.rbpageSachMuon.Name = "rbpageSachMuon";
             this.rbpageSachMuon.Text = "Theo thể loại";
-            // 
-            // rbpagePhieuThu
-            // 
-            this.rbpagePhieuThu.ItemLinks.Add(this.btnTienPhat);
-            this.rbpagePhieuThu.Name = "rbpagePhieuThu";
-            this.rbpagePhieuThu.Text = "Phiếu thu";
             // 
             // tab_quydinh
             // 

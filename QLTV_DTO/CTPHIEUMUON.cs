@@ -16,7 +16,7 @@ namespace QLTV_DTO
     {
         public string MaPhieuMS { get; set; }
         public string MaSach { get; set; }
-        public int HanTra { get; set; }
+        public System.DateTime HanTra { get; set; }
         public string TinhTrangMuon { get; set; }
     
         public virtual PHIEUMUONSACH PHIEUMUONSACH { get; set; }

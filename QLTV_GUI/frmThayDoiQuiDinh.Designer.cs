@@ -76,10 +76,10 @@
             this.layoutViewField_colKhoangCachXB = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colTheLoaiMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTheLoaiMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.colNgayMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.layoutViewField_colNgayMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colSachMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colSachMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colNgayMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_colNgayMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colTienPhatTre = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTienPhatTre = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
@@ -105,8 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             this.SuspendLayout();
@@ -518,15 +518,15 @@
             // 
             // layoutView1
             // 
-            this.layoutView1.CardMinSize = new System.Drawing.Size(500, 300);
+            this.layoutView1.CardMinSize = new System.Drawing.Size(600, 300);
             this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
             this.colTuoiMin,
             this.colTuoiMax,
             this.colHanThe,
             this.colKhoangCachXB,
             this.colTheLoaiMax,
-            this.colNgayMuonMax,
             this.colSachMuonMax,
+            this.colNgayMuonMax,
             this.colTienPhatTre});
             this.layoutView1.GridControl = this.gridControl1;
             this.layoutView1.Name = "layoutView1";
@@ -542,7 +542,7 @@
             this.colTuoiMin.AppearanceCell.Options.UseFont = true;
             this.colTuoiMin.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colTuoiMin.AppearanceHeader.Options.UseFont = true;
-            this.colTuoiMin.Caption = "Tuổi Tối Thiểu";
+            this.colTuoiMin.Caption = "Tuổi tối thiểu";
             this.colTuoiMin.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTuoiMin.FieldName = "TuoiToiThieu";
             this.colTuoiMin.LayoutViewField = this.layoutViewField_colTuoiMin;
@@ -561,8 +561,8 @@
             this.layoutViewField_colTuoiMin.EditorPreferredWidth = 59;
             this.layoutViewField_colTuoiMin.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colTuoiMin.Name = "layoutViewField_colTuoiMin";
-            this.layoutViewField_colTuoiMin.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colTuoiMin.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colTuoiMin.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colTuoiMin.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colTuoiMax
             // 
@@ -570,7 +570,7 @@
             this.colTuoiMax.AppearanceCell.Options.UseFont = true;
             this.colTuoiMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colTuoiMax.AppearanceHeader.Options.UseFont = true;
-            this.colTuoiMax.Caption = "Tuổi Tối Đa";
+            this.colTuoiMax.Caption = "Tuổi tối đa";
             this.colTuoiMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTuoiMax.FieldName = "TuoiToiDa";
             this.colTuoiMax.LayoutViewField = this.layoutViewField_colTuoiMax;
@@ -583,8 +583,8 @@
             this.layoutViewField_colTuoiMax.EditorPreferredWidth = 59;
             this.layoutViewField_colTuoiMax.Location = new System.Drawing.Point(0, 24);
             this.layoutViewField_colTuoiMax.Name = "layoutViewField_colTuoiMax";
-            this.layoutViewField_colTuoiMax.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colTuoiMax.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colTuoiMax.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colTuoiMax.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colHanThe
             // 
@@ -592,7 +592,7 @@
             this.colHanThe.AppearanceCell.Options.UseFont = true;
             this.colHanThe.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colHanThe.AppearanceHeader.Options.UseFont = true;
-            this.colHanThe.Caption = "Hạn Thẻ (Tháng)";
+            this.colHanThe.Caption = "Hạn thẻ (tháng)";
             this.colHanThe.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colHanThe.FieldName = "ThoiHanThe";
             this.colHanThe.LayoutViewField = this.layoutViewField_colHanThe;
@@ -605,8 +605,8 @@
             this.layoutViewField_colHanThe.EditorPreferredWidth = 59;
             this.layoutViewField_colHanThe.Location = new System.Drawing.Point(0, 48);
             this.layoutViewField_colHanThe.Name = "layoutViewField_colHanThe";
-            this.layoutViewField_colHanThe.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colHanThe.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colHanThe.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colHanThe.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colKhoangCachXB
             // 
@@ -614,7 +614,7 @@
             this.colKhoangCachXB.AppearanceCell.Options.UseFont = true;
             this.colKhoangCachXB.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colKhoangCachXB.AppearanceHeader.Options.UseFont = true;
-            this.colKhoangCachXB.Caption = "Khoảng Cách Năm Xuất Bản";
+            this.colKhoangCachXB.Caption = "Khoảng cách năm xuất bản";
             this.colKhoangCachXB.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colKhoangCachXB.FieldName = "KhoangCachXB";
             this.colKhoangCachXB.LayoutViewField = this.layoutViewField_colKhoangCachXB;
@@ -627,8 +627,8 @@
             this.layoutViewField_colKhoangCachXB.EditorPreferredWidth = 59;
             this.layoutViewField_colKhoangCachXB.Location = new System.Drawing.Point(0, 72);
             this.layoutViewField_colKhoangCachXB.Name = "layoutViewField_colKhoangCachXB";
-            this.layoutViewField_colKhoangCachXB.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colKhoangCachXB.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colKhoangCachXB.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colKhoangCachXB.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colTheLoaiMax
             // 
@@ -636,7 +636,7 @@
             this.colTheLoaiMax.AppearanceCell.Options.UseFont = true;
             this.colTheLoaiMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colTheLoaiMax.AppearanceHeader.Options.UseFont = true;
-            this.colTheLoaiMax.Caption = "Số Lượng Thể Loại Tối Đa";
+            this.colTheLoaiMax.Caption = "Số lượng thể loại tối đa";
             this.colTheLoaiMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTheLoaiMax.FieldName = "SoLuongTheLoaiMax";
             this.colTheLoaiMax.LayoutViewField = this.layoutViewField_colTheLoaiMax;
@@ -649,8 +649,31 @@
             this.layoutViewField_colTheLoaiMax.EditorPreferredWidth = 59;
             this.layoutViewField_colTheLoaiMax.Location = new System.Drawing.Point(0, 96);
             this.layoutViewField_colTheLoaiMax.Name = "layoutViewField_colTheLoaiMax";
-            this.layoutViewField_colTheLoaiMax.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colTheLoaiMax.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colTheLoaiMax.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colTheLoaiMax.TextSize = new System.Drawing.Size(183, 13);
+            // 
+            // colSachMuonMax
+            // 
+            this.colSachMuonMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSachMuonMax.AppearanceCell.Options.UseFont = true;
+            this.colSachMuonMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSachMuonMax.AppearanceHeader.Options.UseFont = true;
+            this.colSachMuonMax.Caption = "Số sách mượn tối đa / số ngày";
+            this.colSachMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colSachMuonMax.FieldName = "SoSachMuonMax";
+            this.colSachMuonMax.LayoutViewField = this.layoutViewField_colSachMuonMax;
+            this.colSachMuonMax.Name = "colSachMuonMax";
+            this.colSachMuonMax.OptionsColumn.AllowEdit = false;
+            this.colSachMuonMax.Width = 87;
+            // 
+            // layoutViewField_colSachMuonMax
+            // 
+            this.layoutViewField_colSachMuonMax.EditorPreferredWidth = 59;
+            this.layoutViewField_colSachMuonMax.Location = new System.Drawing.Point(0, 140);
+            this.layoutViewField_colSachMuonMax.Name = "layoutViewField_colSachMuonMax";
+            this.layoutViewField_colSachMuonMax.OptionsToolTip.ToolTip = "Số sách mượn tối đa trong số ngày quy định";
+            this.layoutViewField_colSachMuonMax.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colSachMuonMax.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colNgayMuonMax
             // 
@@ -658,7 +681,7 @@
             this.colNgayMuonMax.AppearanceCell.Options.UseFont = true;
             this.colNgayMuonMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colNgayMuonMax.AppearanceHeader.Options.UseFont = true;
-            this.colNgayMuonMax.Caption = "Số Ngày Mượn Tối Đa";
+            this.colNgayMuonMax.Caption = "Số ngày quy định số sách được mượn";
             this.colNgayMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colNgayMuonMax.FieldName = "SoNgayMuonMax";
             this.colNgayMuonMax.LayoutViewField = this.layoutViewField_colNgayMuonMax;
@@ -671,30 +694,9 @@
             this.layoutViewField_colNgayMuonMax.EditorPreferredWidth = 59;
             this.layoutViewField_colNgayMuonMax.Location = new System.Drawing.Point(0, 120);
             this.layoutViewField_colNgayMuonMax.Name = "layoutViewField_colNgayMuonMax";
-            this.layoutViewField_colNgayMuonMax.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colNgayMuonMax.TextSize = new System.Drawing.Size(137, 13);
-            // 
-            // colSachMuonMax
-            // 
-            this.colSachMuonMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.colSachMuonMax.AppearanceCell.Options.UseFont = true;
-            this.colSachMuonMax.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.colSachMuonMax.AppearanceHeader.Options.UseFont = true;
-            this.colSachMuonMax.Caption = "Số Sách Mượn Tối Đa";
-            this.colSachMuonMax.ColumnEdit = this.repositoryItemSpinEdit1;
-            this.colSachMuonMax.FieldName = "SoSachMuonMax";
-            this.colSachMuonMax.LayoutViewField = this.layoutViewField_colSachMuonMax;
-            this.colSachMuonMax.Name = "colSachMuonMax";
-            this.colSachMuonMax.OptionsColumn.AllowEdit = false;
-            this.colSachMuonMax.Width = 87;
-            // 
-            // layoutViewField_colSachMuonMax
-            // 
-            this.layoutViewField_colSachMuonMax.EditorPreferredWidth = 59;
-            this.layoutViewField_colSachMuonMax.Location = new System.Drawing.Point(0, 144);
-            this.layoutViewField_colSachMuonMax.Name = "layoutViewField_colSachMuonMax";
-            this.layoutViewField_colSachMuonMax.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colSachMuonMax.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colNgayMuonMax.OptionsToolTip.ToolTip = "Số ngày quy định số sách mượn tối đa";
+            this.layoutViewField_colNgayMuonMax.Size = new System.Drawing.Size(249, 20);
+            this.layoutViewField_colNgayMuonMax.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colTienPhatTre
             // 
@@ -702,7 +704,7 @@
             this.colTienPhatTre.AppearanceCell.Options.UseFont = true;
             this.colTienPhatTre.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
             this.colTienPhatTre.AppearanceHeader.Options.UseFont = true;
-            this.colTienPhatTre.Caption = "Tiền Phạt Trả Trễ Một Ngày";
+            this.colTienPhatTre.Caption = "Tiền phạt trả trễ một ngày";
             this.colTienPhatTre.ColumnEdit = this.repositoryItemSpinEdit1;
             this.colTienPhatTre.DisplayFormat.FormatString = "#,#";
             this.colTienPhatTre.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -715,10 +717,10 @@
             // layoutViewField_colTienPhatTre
             // 
             this.layoutViewField_colTienPhatTre.EditorPreferredWidth = 59;
-            this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 168);
+            this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 164);
             this.layoutViewField_colTienPhatTre.Name = "layoutViewField_colTienPhatTre";
-            this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(203, 24);
-            this.layoutViewField_colTienPhatTre.TextSize = new System.Drawing.Size(137, 13);
+            this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(249, 24);
+            this.layoutViewField_colTienPhatTre.TextSize = new System.Drawing.Size(183, 13);
             // 
             // layoutViewCard1
             // 
@@ -775,8 +777,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             this.ResumeLayout(false);

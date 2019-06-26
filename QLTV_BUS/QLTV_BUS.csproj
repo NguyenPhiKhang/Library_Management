@@ -50,10 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADMINBUS.cs" />
+    <Compile Include="BCTKMUONSACHBUS.cs" />
     <Compile Include="CHITIETPHANQUYENBUS.cs" />
+    <Compile Include="CHITIETPHIEUMUONBUS.cs" />
+    <Compile Include="CHITIETPHIEUTRABUS.cs" />
+    <Compile Include="CHITIETSACHBUS.cs" />
+    <Compile Include="CTBCTKMUONSACHBUS.cs" />
+    <Compile Include="CTPHIEUMUONBUS.cs" />
     <Compile Include="DOCGIABUS.cs" />
+    <Compile Include="DSPHIEUPHATBUS.cs" />
     <Compile Include="LOAIDOCGIABUS.cs" />
     <Compile Include="PERMISSIONBUS.cs" />
+    <Compile Include="PHIEUMUONSACHBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SACHBUS.cs" />
     <Compile Include="TACGIABUS.cs" />

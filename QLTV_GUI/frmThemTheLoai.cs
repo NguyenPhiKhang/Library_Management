@@ -17,6 +17,7 @@ namespace QLTV_GUI
 {
     public partial class frmThemTheLoai : DevExpress.XtraEditors.XtraForm
     {
+        int SoTLmax;
         string IdLast;
         List<THELOAI> listinfoTG = THELOAIBUS.Instance.GetListTheLoai().ToList();
         public frmThemTheLoai()
@@ -60,6 +61,7 @@ namespace QLTV_GUI
             }
             catch { IdLast = ""; }
             txbMaTheLoai.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("TL", IdLast, 6);
+            
 
         }
 
@@ -84,6 +86,12 @@ namespace QLTV_GUI
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txbMaTheLoai_EditValueChanged(object sender, EventArgs e)
+        {
+            
+            //HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1,txbMaTheLoai,HelpGUI.KiemTraDieuKien.isUsername(txbTenTheLoai),)
         }
     }
 }

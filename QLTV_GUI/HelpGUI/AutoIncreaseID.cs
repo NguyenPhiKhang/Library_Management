@@ -22,7 +22,7 @@ namespace QLTV_GUI.HelpGUI
                 for(int i = 0; i < TotalnumberOfId; i++) { MaxId += "9"; }
                 if (maso < Convert.ToInt32(MaxId))
                 {
-                    for (int n = 10; maso >= n; flag++, n *= 10) { }
+                    for (int n = 10; maso >= n-1; flag++, n *= 10) { }
                     for (int i = 0; i < TotalnumberOfId - flag - 1; i++) { Id_New += "0"; }
                 }
                 Id_New += maso + 1;

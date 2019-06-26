@@ -66,6 +66,9 @@
     <Compile Include="CHITIETPHANQUYEN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CHITIETPHIEUMUONDTO.cs" />
+    <Compile Include="CHITIETPHIEUTRADTO.cs" />
+    <Compile Include="CHITIETSACHDTO.cs" />
     <Compile Include="CTBCTKMUONSACH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

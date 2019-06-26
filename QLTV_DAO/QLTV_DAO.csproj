@@ -50,10 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADMINDAO.cs" />
+    <Compile Include="BCTKMUONSACHDAO.cs" />
     <Compile Include="CHITIETPHANQUYENDAO.cs" />
+    <Compile Include="CHITIETPHIEUMUONDAO.cs" />
+    <Compile Include="CHITIETPHIEUTRADAO.cs" />
+    <Compile Include="CHITIETSACHDAO.cs" />
+    <Compile Include="CTBCTKMUONSACHDAO.cs" />
+    <Compile Include="CTPHIEUMUONDAO.cs" />
     <Compile Include="DOCGIADAO.cs" />
+    <Compile Include="DSPHIEUPHATDAO.cs" />
     <Compile Include="LOAIDOCGIADAO.cs" />
     <Compile Include="PERMISSIONDAO.cs" />
+    <Compile Include="PHIEUMUONSACHDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SACHDAO.cs" />
     <Compile Include="TACGIADAO.cs" />

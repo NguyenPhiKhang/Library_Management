@@ -63,7 +63,7 @@ namespace QLTV_GUI
             {
                 IdLast = "";
             }
-            txb_MaSach.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("S", IdLast, 6);
+            txb_MaSach.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("MS", IdLast, 4);
         }
         bool CheckNull ()
         {

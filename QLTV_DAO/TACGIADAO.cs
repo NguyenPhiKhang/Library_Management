@@ -29,7 +29,7 @@ namespace QLTV_DAO
                 }
                 return Listltg;
             }
-            else;
+            else
             {
                 using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
                 {

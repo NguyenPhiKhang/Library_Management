@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocGia));
-            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -419,7 +419,7 @@
             // workspaceManager1
             // 
             this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition1;
+            this.workspaceManager1.TransitionType = pushTransition2;
             // 
             // layoutControl1
             // 
@@ -533,9 +533,9 @@
             0});
             this.seGiaHan.Size = new System.Drawing.Size(50, 20);
             this.seGiaHan.StyleController = this.layoutControl1;
-            toolTipItem1.Text = "Số tháng muốn gia hạn";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.seGiaHan.SuperTip = superToolTip1;
+            toolTipItem3.Text = "Số tháng muốn gia hạn";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.seGiaHan.SuperTip = superToolTip3;
             this.seGiaHan.TabIndex = 21;
             // 
             // btnGiaHan
@@ -545,9 +545,9 @@
             this.btnGiaHan.Name = "btnGiaHan";
             this.btnGiaHan.Size = new System.Drawing.Size(45, 22);
             this.btnGiaHan.StyleController = this.layoutControl1;
-            toolTipItem2.Text = "Gia hạn độc giả";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnGiaHan.SuperTip = superToolTip2;
+            toolTipItem1.Text = "Gia hạn độc giả";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnGiaHan.SuperTip = superToolTip1;
             this.btnGiaHan.TabIndex = 12;
             this.btnGiaHan.Text = "Gia hạn";
             this.btnGiaHan.Click += new System.EventHandler(this.btnGiaHan_Click);
@@ -560,9 +560,9 @@
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
             this.dateNgaySinh.Properties.AllowFocused = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgaySinh.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
@@ -1136,6 +1136,14 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gridControl.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridControl.EmbeddedNavigator.TextStringFormat = "{0} / {1}";
             this.gridControl.Location = new System.Drawing.Point(0, 188);
             this.gridControl.MainView = this.bandedGridView;
             this.gridControl.MenuManager = this.barManager1;
@@ -1145,6 +1153,7 @@
             this.gridControl.Size = new System.Drawing.Size(1096, 320);
             this.gridControl.TabIndex = 4;
             this.gridControl.Tag = "";
+            this.gridControl.UseEmbeddedNavigator = true;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView});
             // 

@@ -17,8 +17,9 @@ namespace QLTV_DTO
         public string MaPhieuThuTP { get; set; }
         public string MaDocGia { get; set; }
         public decimal TongNo { get; set; }
-        public Nullable<decimal> SoTienThu { get; set; }
+        public decimal SoTienThu { get; set; }
         public decimal ConLai { get; set; }
+        public System.DateTime NgayThu { get; set; }
     
         public virtual DOCGIA DOCGIA { get; set; }
     }

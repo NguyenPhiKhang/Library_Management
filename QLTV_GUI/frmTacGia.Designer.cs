@@ -374,7 +374,15 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.EmbeddedNavigator.TextStringFormat = "{0} / {1}";
             this.gridControl1.Location = new System.Drawing.Point(0, 176);
             this.gridControl1.MainView = this.bandedGridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -382,6 +390,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1360, 390);
             this.gridControl1.TabIndex = 5;
+            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
             // 
@@ -395,7 +404,12 @@
             this.bandedGridView1.DetailHeight = 431;
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
+            this.bandedGridView1.OptionsFind.AlwaysVisible = true;
+            this.bandedGridView1.OptionsFind.FindNullPrompt = "Nhập nội dung tìm kiếm...";
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
+            this.bandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView1_RowClick);
+            this.bandedGridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.bandedGridView1_FocusedRowChanged);
+            this.bandedGridView1.ColumnFilterChanged += new System.EventHandler(this.bandedGridView1_ColumnFilterChanged);
             // 
             // gridBand1
             // 
@@ -414,19 +428,39 @@
             // 
             // colMaTacGia
             // 
+            this.colMaTacGia.AppearanceCell.Options.UseBackColor = true;
+            this.colMaTacGia.AppearanceCell.Options.UseBorderColor = true;
+            this.colMaTacGia.AppearanceCell.Options.UseTextOptions = true;
+            this.colMaTacGia.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colMaTacGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colMaTacGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaTacGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaTacGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMaTacGia.Caption = "Mã Tác Giả";
             this.colMaTacGia.FieldName = "MaTacGia";
             this.colMaTacGia.MinWidth = 25;
             this.colMaTacGia.Name = "colMaTacGia";
+            this.colMaTacGia.OptionsColumn.AllowFocus = false;
+            this.colMaTacGia.OptionsColumn.ReadOnly = true;
             this.colMaTacGia.Visible = true;
             this.colMaTacGia.Width = 94;
             // 
             // colTenTacGia
             // 
+            this.colTenTacGia.AppearanceCell.Options.UseBackColor = true;
+            this.colTenTacGia.AppearanceCell.Options.UseBorderColor = true;
+            this.colTenTacGia.AppearanceCell.Options.UseTextOptions = true;
+            this.colTenTacGia.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colTenTacGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTenTacGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colTenTacGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenTacGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenTacGia.Caption = "Tên Tác Giả";
             this.colTenTacGia.FieldName = "TenTacGia";
             this.colTenTacGia.MinWidth = 25;
             this.colTenTacGia.Name = "colTenTacGia";
+            this.colTenTacGia.OptionsColumn.AllowFocus = false;
+            this.colTenTacGia.OptionsColumn.ReadOnly = true;
             this.colTenTacGia.Visible = true;
             this.colTenTacGia.Width = 94;
             // 

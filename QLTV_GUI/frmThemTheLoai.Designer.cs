@@ -82,6 +82,7 @@
             this.txbMaTheLoai.Size = new System.Drawing.Size(352, 22);
             this.txbMaTheLoai.StyleController = this.layoutControl1;
             this.txbMaTheLoai.TabIndex = 4;
+            this.txbMaTheLoai.EditValueChanged += new System.EventHandler(this.txbMaTheLoai_EditValueChanged);
             // 
             // txbTenTheLoai
             // 

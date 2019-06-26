@@ -33,6 +33,7 @@
             this.pl_GiaoDien = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.ck_remember = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txbPassword = new DevExpress.XtraEditors.TextEdit();
@@ -42,7 +43,6 @@
             this.txbUsername = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnUser = new System.Windows.Forms.Panel();
-            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.pl_GiaoDien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,6 +100,25 @@
             this.panel1.Size = new System.Drawing.Size(285, 293);
             this.panel1.TabIndex = 0;
             // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Appearance.BackColor = System.Drawing.Color.Red;
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.btnDangNhap.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Appearance.Options.UseBackColor = true;
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.Appearance.Options.UseForeColor = true;
+            this.btnDangNhap.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDangNhap.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDangNhap.AppearanceHovered.Options.UseForeColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(15, 228);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(256, 36);
+            this.btnDangNhap.TabIndex = 8;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
             // ck_remember
             // 
             this.ck_remember.Location = new System.Drawing.Point(15, 189);
@@ -125,7 +144,7 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.EditValue = "";
+            this.txbPassword.EditValue = "admin@123";
             this.txbPassword.Location = new System.Drawing.Point(48, 3);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -174,7 +193,7 @@
             // 
             // txbUsername
             // 
-            this.txbUsername.EditValue = "";
+            this.txbUsername.EditValue = "admin";
             this.txbUsername.Location = new System.Drawing.Point(48, 3);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -206,25 +225,6 @@
             this.pnUser.Name = "pnUser";
             this.pnUser.Size = new System.Drawing.Size(3, 36);
             this.pnUser.TabIndex = 1;
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Appearance.BackColor = System.Drawing.Color.Red;
-            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.btnDangNhap.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Appearance.Options.UseBackColor = true;
-            this.btnDangNhap.Appearance.Options.UseFont = true;
-            this.btnDangNhap.Appearance.Options.UseForeColor = true;
-            this.btnDangNhap.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnDangNhap.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnDangNhap.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDangNhap.AppearanceHovered.Options.UseForeColor = true;
-            this.btnDangNhap.Location = new System.Drawing.Point(15, 228);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(256, 36);
-            this.btnDangNhap.TabIndex = 8;
-            this.btnDangNhap.Text = "Đăng Nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // dxErrorProvider1
             // 

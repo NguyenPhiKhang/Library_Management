@@ -49,7 +49,7 @@ namespace QLTV_DAO
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
                 DOCGIA dg = db.DOCGIAs.Find(MaDG);
-                dg.TongNo = TongNo;
+                dg.TongNo += TongNo;
                 db.SaveChanges();
             }
         }

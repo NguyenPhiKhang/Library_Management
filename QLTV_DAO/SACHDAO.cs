@@ -43,10 +43,6 @@ namespace QLTV_DAO
                     listSachInfo.Add(tts);
                 }
             }
-
-
-
-
             return listSachInfo;
         }
         public void UpdateInfoSach(string MaS, string TenS, string MaTL, int NamXB, string NhaXB, string MaTG, int TriGia, string MaTT)
@@ -64,8 +60,15 @@ namespace QLTV_DAO
                 s.MaTinhTrang = MaTT;
                 db.SaveChanges();
             }
-
-
+        }
+        public void UpdateTinhtrangSach(string masach, string matinhtrang)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                var sach = db.SACHes.Find(masach);
+                sach.MaTinhTrang = matinhtrang;
+                db.SaveChanges();
+            }
         }
         public void AddInfoSach(string MaS, string TenS, string MaTL, int NamXB, string NhaXB, string MaTG, int TriGia, string MaTT)
         {

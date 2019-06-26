@@ -77,8 +77,8 @@
           </Key>
           <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="HanTra" Type="int" Nullable="false" />
-          <Property Name="TinhTrangMuon" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="HanTra" Type="datetime" Nullable="false" />
+          <Property Name="TinhTrangMuon" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="DOCGIA">
           <Key>
@@ -127,8 +127,9 @@
           <Property Name="MaPhieuThuTP" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MaDocGia" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TongNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="SoTienThu" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SoTienThu" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="ConLai" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NgayThu" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="PHIEUTRASACH">
           <Key>
@@ -138,9 +139,10 @@
           <Property Name="MaPhieuMS" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MaSach" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NgayTra" Type="date" Nullable="false" />
-          <Property Name="TienPhatKiNay" Type="decimal" Precision="18" Scale="0" />
           <Property Name="SoNgayMuon" Type="int" Nullable="false" />
-          <Property Name="TienPhat" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TienPhat" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TinhTrangTraSach" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="SACH">
           <Key>
@@ -665,8 +667,8 @@
           </Key>
           <Property Name="MaPhieuMS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MaSach" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="HanTra" Type="Int32" Nullable="false" />
-          <Property Name="TinhTrangMuon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HanTra" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TinhTrangMuon" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PHIEUMUONSACH" Relationship="QuanLyThuVienModel.FK_CTPHIEUMUON_PHIEUMUONSACH" FromRole="CTPHIEUMUON" ToRole="PHIEUMUONSACH" />
           <NavigationProperty Name="SACH" Relationship="QuanLyThuVienModel.FK_CTPHIEUMUON_SACH" FromRole="CTPHIEUMUON" ToRole="SACH" />
           <NavigationProperty Name="PHIEUTRASACH" Relationship="QuanLyThuVienModel.FK_PHIEUTRASACH_CTPHIEUMUON" FromRole="CTPHIEUMUON" ToRole="PHIEUTRASACH" />
@@ -726,8 +728,9 @@
           <Property Name="MaPhieuThuTP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MaDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TongNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="SoTienThu" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SoTienThu" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="ConLai" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="NgayThu" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="DOCGIA" Relationship="QuanLyThuVienModel.FK_PHIEUTHUTIENPHAT_DOCGIA" FromRole="PHIEUTHUTIENPHAT" ToRole="DOCGIA" />
         </EntityType>
         <EntityType Name="PHIEUTRASACH">
@@ -738,9 +741,10 @@
           <Property Name="MaPhieuMS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MaSach" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NgayTra" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="TienPhatKiNay" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="SoNgayMuon" Type="Int32" Nullable="false" />
-          <Property Name="TienPhat" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TienPhat" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="TinhTrangTraSach" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CTBCTKTRATREs" Relationship="QuanLyThuVienModel.FK_CTBCTKTRATRE_PHIEUTRASACH" FromRole="PHIEUTRASACH" ToRole="CTBCTKTRATRE" />
           <NavigationProperty Name="CTPHIEUMUON" Relationship="QuanLyThuVienModel.FK_PHIEUTRASACH_CTPHIEUMUON" FromRole="PHIEUTRASACH" ToRole="CTPHIEUMUON" />
         </EntityType>
@@ -1140,6 +1144,7 @@
           <EntitySetMapping Name="PHIEUTHUTIENPHATs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.PHIEUTHUTIENPHAT">
               <MappingFragment StoreEntitySet="PHIEUTHUTIENPHAT">
+                <ScalarProperty Name="NgayThu" ColumnName="NgayThu" />
                 <ScalarProperty Name="ConLai" ColumnName="ConLai" />
                 <ScalarProperty Name="SoTienThu" ColumnName="SoTienThu" />
                 <ScalarProperty Name="TongNo" ColumnName="TongNo" />
@@ -1151,9 +1156,10 @@
           <EntitySetMapping Name="PHIEUTRASACHes">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.PHIEUTRASACH">
               <MappingFragment StoreEntitySet="PHIEUTRASACH">
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="TinhTrangTraSach" ColumnName="TinhTrangTraSach" />
                 <ScalarProperty Name="TienPhat" ColumnName="TienPhat" />
                 <ScalarProperty Name="SoNgayMuon" ColumnName="SoNgayMuon" />
-                <ScalarProperty Name="TienPhatKiNay" ColumnName="TienPhatKiNay" />
                 <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
                 <ScalarProperty Name="MaSach" ColumnName="MaSach" />
                 <ScalarProperty Name="MaPhieuMS" ColumnName="MaPhieuMS" />

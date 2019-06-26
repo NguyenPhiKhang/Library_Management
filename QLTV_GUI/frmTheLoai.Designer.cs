@@ -267,6 +267,7 @@
             this.txbTenTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbTenTheLoai.MenuManager = this.barManager1;
             this.txbTenTheLoai.Name = "txbTenTheLoai";
+            this.txbTenTheLoai.Properties.AllowFocused = false;
             this.txbTenTheLoai.Properties.ReadOnly = true;
             this.txbTenTheLoai.Size = new System.Drawing.Size(459, 22);
             this.txbTenTheLoai.StyleController = this.layoutControl1;
@@ -386,7 +387,15 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.EmbeddedNavigator.TextStringFormat = "{0} / {1}";
             this.gridControl1.Location = new System.Drawing.Point(0, 180);
             this.gridControl1.MainView = this.bandedGridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -394,6 +403,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1166, 385);
             this.gridControl1.TabIndex = 5;
+            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
             // 
@@ -407,7 +417,13 @@
             this.bandedGridView1.DetailHeight = 431;
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
+            this.bandedGridView1.OptionsBehavior.ReadOnly = true;
+            this.bandedGridView1.OptionsFind.AlwaysVisible = true;
+            this.bandedGridView1.OptionsFind.FindNullPrompt = "Nhập nội dung tìm kiếm...";
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
+            this.bandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView1_RowClick);
+            this.bandedGridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.bandedGridView1_FocusedRowChanged);
+            this.bandedGridView1.ColumnFilterChanged += new System.EventHandler(this.bandedGridView1_ColumnFilterChanged);
             // 
             // gridBand1
             // 
@@ -426,20 +442,38 @@
             // 
             // colMaTheLoai
             // 
+            this.colMaTheLoai.AppearanceCell.Options.UseBackColor = true;
+            this.colMaTheLoai.AppearanceCell.Options.UseBorderColor = true;
+            this.colMaTheLoai.AppearanceCell.Options.UseTextOptions = true;
+            this.colMaTheLoai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colMaTheLoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colMaTheLoai.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaTheLoai.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaTheLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMaTheLoai.Caption = "Mã Thể Loại";
             this.colMaTheLoai.FieldName = "MaTheLoai";
             this.colMaTheLoai.MinWidth = 25;
             this.colMaTheLoai.Name = "colMaTheLoai";
+            this.colMaTheLoai.OptionsColumn.AllowFocus = false;
             this.colMaTheLoai.OptionsColumn.ReadOnly = true;
             this.colMaTheLoai.Visible = true;
             this.colMaTheLoai.Width = 94;
             // 
             // colTenTheLoai
             // 
+            this.colTenTheLoai.AppearanceCell.Options.UseBackColor = true;
+            this.colTenTheLoai.AppearanceCell.Options.UseBorderColor = true;
+            this.colTenTheLoai.AppearanceCell.Options.UseTextOptions = true;
+            this.colTenTheLoai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colTenTheLoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTenTheLoai.AppearanceHeader.Options.UseBackColor = true;
+            this.colTenTheLoai.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenTheLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenTheLoai.Caption = "Tên Thể Loại";
             this.colTenTheLoai.FieldName = "TenTheLoai";
             this.colTenTheLoai.MinWidth = 25;
             this.colTenTheLoai.Name = "colTenTheLoai";
+            this.colTenTheLoai.OptionsColumn.AllowFocus = false;
             this.colTenTheLoai.OptionsColumn.ReadOnly = true;
             this.colTenTheLoai.Visible = true;
             this.colTenTheLoai.Width = 94;

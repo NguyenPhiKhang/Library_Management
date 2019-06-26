@@ -23,9 +23,10 @@ namespace QLTV_DTO
         public string MaPhieuMS { get; set; }
         public string MaSach { get; set; }
         public System.DateTime NgayTra { get; set; }
-        public Nullable<decimal> TienPhatKiNay { get; set; }
         public int SoNgayMuon { get; set; }
-        public Nullable<decimal> TienPhat { get; set; }
+        public decimal TienPhat { get; set; }
+        public string TinhTrangTraSach { get; set; }
+        public string GhiChu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTBCTKTRATRE> CTBCTKTRATREs { get; set; }

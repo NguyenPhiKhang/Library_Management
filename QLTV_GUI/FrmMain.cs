@@ -207,6 +207,22 @@ namespace QLTV_GUI
                 SplashScreenManager.CloseDefaultSplashScreen();
             }
         }
+        private void btnTienPhat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmDSPhieuPhat));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                SplashScreenManager.ShowDefaultWaitForm();
+                frmDSPhieuPhat f = new frmDSPhieuPhat
+                {
+                    MdiParent = this
+                };
+                f.Show();
+                SplashScreenManager.CloseDefaultSplashScreen();
+            }
+        }
         #endregion
         #region Event_Click
         #endregion
