@@ -539,9 +539,13 @@ namespace QLTV_GUI
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        DOCGIABUS.Instance.RemoveInfoDocGia(bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString());
-                        ACCOUNTBUS.Instance.RemoveInfoAccount(bandedGridView.GetFocusedRowCellValue(colUsername).ToString());
-                        btnLamMoi_ItemClick(sender, e);
+                        try
+                        {
+                            DOCGIABUS.Instance.RemoveInfoDocGia(bandedGridView.GetFocusedRowCellValue(colMaDocGia).ToString());
+                            ACCOUNTBUS.Instance.RemoveInfoAccount(bandedGridView.GetFocusedRowCellValue(colUsername).ToString());
+                            btnLamMoi_ItemClick(sender, e);
+                        }
+                        catch { XtraMessageBox.Show("Không thể xóa độc giả này", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     }
                     else gridControl.Focus();
                 }

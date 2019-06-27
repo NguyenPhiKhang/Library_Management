@@ -16,9 +16,7 @@ namespace QLTV_GUI
 {
     public partial class frmDSPhieuPhat : DevExpress.XtraEditors.XtraForm
     {
-        int _index = 0;
         string IdLast;
-        int flag = 0;
         List<DOCGIA> listtnDG = new List<DOCGIA>();
         BindingSource listTongNoDG = new BindingSource();
         void LoadTongNoDG ()

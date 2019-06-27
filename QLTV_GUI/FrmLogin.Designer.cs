@@ -144,7 +144,7 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.EditValue = "admin@123";
+            this.txbPassword.EditValue = "";
             this.txbPassword.Location = new System.Drawing.Point(48, 3);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -193,7 +193,7 @@
             // 
             // txbUsername
             // 
-            this.txbUsername.EditValue = "admin";
+            this.txbUsername.EditValue = "";
             this.txbUsername.Location = new System.Drawing.Point(48, 3);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Properties.Appearance.BackColor = System.Drawing.Color.White;

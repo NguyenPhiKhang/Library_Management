@@ -57,11 +57,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaLoaiDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTenLoaiDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -371,38 +371,6 @@
             this.bandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.bandedGridView1_RowClick);
             this.bandedGridView1.ColumnFilterChanged += new System.EventHandler(this.bandedGridView1_ColumnFilterChanged);
             // 
-            // colMaLoaiDocGia
-            // 
-            this.colMaLoaiDocGia.AppearanceHeader.BackColor = System.Drawing.Color.Olive;
-            this.colMaLoaiDocGia.AppearanceHeader.Options.UseBackColor = true;
-            this.colMaLoaiDocGia.Caption = "Mã Loại Độc Giả";
-            this.colMaLoaiDocGia.FieldName = "MaLoaiDocGia";
-            this.colMaLoaiDocGia.Name = "colMaLoaiDocGia";
-            this.colMaLoaiDocGia.OptionsColumn.AllowEdit = false;
-            this.colMaLoaiDocGia.Visible = true;
-            // 
-            // colTenLoaiDocGia
-            // 
-            this.colTenLoaiDocGia.AppearanceHeader.BackColor = System.Drawing.Color.Olive;
-            this.colTenLoaiDocGia.AppearanceHeader.Options.UseBackColor = true;
-            this.colTenLoaiDocGia.Caption = "Tên Loại Độc Giả";
-            this.colTenLoaiDocGia.FieldName = "TenLoaiDocGia";
-            this.colTenLoaiDocGia.Name = "colTenLoaiDocGia";
-            this.colTenLoaiDocGia.OptionsColumn.AllowEdit = false;
-            this.colTenLoaiDocGia.Visible = true;
-            // 
-            // bar1
-            // 
-            this.bar1.BarName = "Custom 3";
-            this.bar1.DockCol = 0;
-            this.bar1.DockRow = 1;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.Text = "Custom 3";
-            // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
             // gridBand1
             // 
             this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
@@ -420,6 +388,46 @@
             this.gridBand1.RowCount = 2;
             this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 150;
+            // 
+            // colMaLoaiDocGia
+            // 
+            this.colMaLoaiDocGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colMaLoaiDocGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colMaLoaiDocGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaLoaiDocGia.AppearanceHeader.Options.UseFont = true;
+            this.colMaLoaiDocGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaLoaiDocGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMaLoaiDocGia.Caption = "Mã Loại Độc Giả";
+            this.colMaLoaiDocGia.FieldName = "MaLoaiDocGia";
+            this.colMaLoaiDocGia.Name = "colMaLoaiDocGia";
+            this.colMaLoaiDocGia.OptionsColumn.AllowEdit = false;
+            this.colMaLoaiDocGia.Visible = true;
+            // 
+            // colTenLoaiDocGia
+            // 
+            this.colTenLoaiDocGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTenLoaiDocGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTenLoaiDocGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colTenLoaiDocGia.AppearanceHeader.Options.UseFont = true;
+            this.colTenLoaiDocGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenLoaiDocGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTenLoaiDocGia.Caption = "Tên Loại Độc Giả";
+            this.colTenLoaiDocGia.FieldName = "TenLoaiDocGia";
+            this.colTenLoaiDocGia.Name = "colTenLoaiDocGia";
+            this.colTenLoaiDocGia.OptionsColumn.AllowEdit = false;
+            this.colTenLoaiDocGia.Visible = true;
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Custom 3";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 1;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Custom 3";
+            // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // frmLoaiDocGia
             // 

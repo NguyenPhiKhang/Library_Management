@@ -198,7 +198,7 @@ namespace QLTV_GUI
                     }
                     catch
                     {
-                        XtraMessageBox.Show("Không thể xóa loại độc giả này!\r\nVì...","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("Không thể xóa loại độc giả này!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

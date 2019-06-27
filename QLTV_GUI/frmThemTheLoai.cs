@@ -17,7 +17,6 @@ namespace QLTV_GUI
 {
     public partial class frmThemTheLoai : DevExpress.XtraEditors.XtraForm
     {
-        int SoTLmax;
         string IdLast;
         List<THELOAI> listinfoTG = THELOAIBUS.Instance.GetListTheLoai().ToList();
         public frmThemTheLoai()

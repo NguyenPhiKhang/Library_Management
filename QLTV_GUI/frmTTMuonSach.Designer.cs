@@ -41,7 +41,6 @@
             this.colTacGiaDS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colNgayMuon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colMaDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTenDocGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -73,7 +72,6 @@
             this.txbTenDocGia = new DevExpress.XtraEditors.TextEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaSach = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTenSach = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTheLoai = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -90,6 +88,8 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView2)).BeginInit();
@@ -262,24 +262,6 @@
             this.bandedGridView2.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.bandedGridView2_MasterRowGetChildList);
             this.bandedGridView2.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.bandedGridView2_MasterRowGetRelationName);
             this.bandedGridView2.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.bandedGridView2_MasterRowGetRelationCount);
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            this.gridBand2.AppearanceHeader.Options.UseFont = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "Chi Tiết Danh Sách Độc Giả Mượn Sách";
-            this.gridBand2.Columns.Add(this.colNgayMuon);
-            this.gridBand2.Columns.Add(this.colMaDocGia);
-            this.gridBand2.Columns.Add(this.colTenDocGia);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.OptionsBand.AllowMove = false;
-            this.gridBand2.OptionsBand.AllowPress = false;
-            this.gridBand2.OptionsBand.AllowSize = false;
-            this.gridBand2.RowCount = 2;
-            this.gridBand2.VisibleIndex = 0;
-            this.gridBand2.Width = 166;
             // 
             // colNgayMuon
             // 
@@ -589,6 +571,10 @@
             // 
             // bandedGridView1
             // 
+            this.bandedGridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bandedGridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.bandedGridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bandedGridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1});
             this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
@@ -601,27 +587,14 @@
             this.bandedGridView1.Name = "bandedGridView1";
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "Sách độc giả mượn";
-            this.gridBand1.Columns.Add(this.colMaSach);
-            this.gridBand1.Columns.Add(this.colTenSach);
-            this.gridBand1.Columns.Add(this.colTheLoai);
-            this.gridBand1.Columns.Add(this.colTacGia);
-            this.gridBand1.Columns.Add(this.colTinhTrangMuon);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.OptionsBand.AllowMove = false;
-            this.gridBand1.OptionsBand.AllowPress = false;
-            this.gridBand1.OptionsBand.AllowSize = false;
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 375;
-            // 
             // colMaSach
             // 
+            this.colMaSach.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colMaSach.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colMaSach.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaSach.AppearanceHeader.Options.UseFont = true;
+            this.colMaSach.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaSach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMaSach.Caption = "Mã Sách";
             this.colMaSach.FieldName = "MaSach";
             this.colMaSach.Name = "colMaSach";
@@ -630,6 +603,12 @@
             // 
             // colTenSach
             // 
+            this.colTenSach.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTenSach.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTenSach.AppearanceHeader.Options.UseBackColor = true;
+            this.colTenSach.AppearanceHeader.Options.UseFont = true;
+            this.colTenSach.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenSach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenSach.Caption = "Tên Sách";
             this.colTenSach.FieldName = "TenSach";
             this.colTenSach.Name = "colTenSach";
@@ -638,6 +617,12 @@
             // 
             // colTheLoai
             // 
+            this.colTheLoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTheLoai.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTheLoai.AppearanceHeader.Options.UseBackColor = true;
+            this.colTheLoai.AppearanceHeader.Options.UseFont = true;
+            this.colTheLoai.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTheLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTheLoai.Caption = "Thể Loại";
             this.colTheLoai.FieldName = "TenTheLoai";
             this.colTheLoai.Name = "colTheLoai";
@@ -646,6 +631,12 @@
             // 
             // colTacGia
             // 
+            this.colTacGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTacGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTacGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colTacGia.AppearanceHeader.Options.UseFont = true;
+            this.colTacGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTacGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTacGia.Caption = "Tác Giả";
             this.colTacGia.FieldName = "TenTacGia";
             this.colTacGia.Name = "colTacGia";
@@ -654,6 +645,12 @@
             // 
             // colTinhTrangMuon
             // 
+            this.colTinhTrangMuon.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTinhTrangMuon.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTinhTrangMuon.AppearanceHeader.Options.UseBackColor = true;
+            this.colTinhTrangMuon.AppearanceHeader.Options.UseFont = true;
+            this.colTinhTrangMuon.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTinhTrangMuon.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTinhTrangMuon.Caption = "Tình Trạng Mượn";
             this.colTinhTrangMuon.FieldName = "TinhTrangMuon";
             this.colTinhTrangMuon.Name = "colTinhTrangMuon";
@@ -763,6 +760,47 @@
             this.layoutControlItem5.Text = "Mã phiếu mượn...";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 13);
             // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridBand1.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand1.Caption = "Sách độc giả mượn";
+            this.gridBand1.Columns.Add(this.colMaSach);
+            this.gridBand1.Columns.Add(this.colTenSach);
+            this.gridBand1.Columns.Add(this.colTheLoai);
+            this.gridBand1.Columns.Add(this.colTacGia);
+            this.gridBand1.Columns.Add(this.colTinhTrangMuon);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.OptionsBand.AllowMove = false;
+            this.gridBand1.OptionsBand.AllowPress = false;
+            this.gridBand1.OptionsBand.AllowSize = false;
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 375;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.PaleGreen;
+            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseFont = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.Caption = "Chi Tiết Danh Sách Độc Giả Mượn Sách";
+            this.gridBand2.Columns.Add(this.colNgayMuon);
+            this.gridBand2.Columns.Add(this.colMaDocGia);
+            this.gridBand2.Columns.Add(this.colTenDocGia);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.OptionsBand.AllowMove = false;
+            this.gridBand2.OptionsBand.AllowPress = false;
+            this.gridBand2.OptionsBand.AllowSize = false;
+            this.gridBand2.RowCount = 2;
+            this.gridBand2.VisibleIndex = 0;
+            this.gridBand2.Width = 166;
+            // 
             // frmTTMuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -839,7 +877,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTinhTrangMuon;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
@@ -863,6 +900,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMaPhieu;
         private DevExpress.XtraGrid.Columns.GridColumn colMaDG;
         private DevExpress.XtraGrid.Columns.GridColumn colTen;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

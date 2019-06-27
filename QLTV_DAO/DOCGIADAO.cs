@@ -29,7 +29,7 @@ namespace QLTV_DAO
             }
             return listDocGia;
         }
-        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt)
+        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt, string gioithieu="")
         {
             using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
@@ -41,6 +41,8 @@ namespace QLTV_DAO
                 dg.MaLoaiDocGia = MaLDG;
                 dg.NgayHetHan = Ngayhethan;
                 dg.SDT = sdt;
+                if (!string.IsNullOrEmpty(gioithieu))
+                    dg.GioiThieu = gioithieu;
                 db.SaveChanges();
             }
         }

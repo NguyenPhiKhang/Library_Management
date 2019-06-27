@@ -51,11 +51,13 @@
   <ItemGroup>
     <Compile Include="ADMINBUS.cs" />
     <Compile Include="BCTKMUONSACHBUS.cs" />
+    <Compile Include="BCTKTRATREBUS.cs" />
     <Compile Include="CHITIETPHANQUYENBUS.cs" />
     <Compile Include="CHITIETPHIEUMUONBUS.cs" />
     <Compile Include="CHITIETPHIEUTRABUS.cs" />
     <Compile Include="CHITIETSACHBUS.cs" />
     <Compile Include="CTBCTKMUONSACHBUS.cs" />
+    <Compile Include="CTBCTKTRATREBUS.cs" />
     <Compile Include="CTPHIEUMUONBUS.cs" />
     <Compile Include="DOCGIABUS.cs" />
     <Compile Include="DSPHIEUPHATBUS.cs" />

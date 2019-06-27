@@ -208,9 +208,17 @@ namespace QLTV_GUI
                 if (gridControl1.IsFocused == true)
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xóa thông tin độc giả đã chọn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    {
-                        QLTV_BUS.SACHBUS.Instance.RemoveInfoSach(bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString());
-                        btnLamMoi_ItemClick(sender, e);
+                    {  try
+                        {
+                            QLTV_BUS.SACHBUS.Instance.RemoveInfoSach(bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString());
+                            btnLamMoi_ItemClick(sender, e);
+                        }
+                        catch
+                        {
+                            XtraMessageBox.Show("Không thể xóa Sách vì vẫn còn sử dụng trong các phiếu mượn, trả.");
+                        }
+                        
+                        
                     }
                     else gridControl1.Focus();
                 }
@@ -585,22 +593,27 @@ namespace QLTV_GUI
             }
         }
         #endregion
-
-
-
+        #region Event_Changed
         private void bandedGridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (bandedGridView1.RowCount > 0)
             {
                 _index = bandedGridView1.GetFocusedDataSourceRowIndex();
                 if (lo_btnLuuLai.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never)
-                { if(e !=null)
-                    LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
+                {
+                    if (e != null)
+                        LoadDataSourceLDG(bandedGridView1.GetFocusedRowCellValue(colMatheloai).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTacGia).ToString(), bandedGridView1.GetFocusedRowCellValue(colMaTinhTrang).ToString());
                 }
                 else
                 {
                     LoadDataSourceLDG();
                 }
+            }
+            else
+            {
+                Readonly();
+                lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             }
         }
 
@@ -608,7 +621,7 @@ namespace QLTV_GUI
         {
             if (bandedGridView1.RowCount > 0)
             {
-                    bandedGridView1_FocusedRowChanged(sender, e as DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs);
+                bandedGridView1_FocusedRowChanged(sender, e as DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs);
                 try
                 {
                     txbMaSach.Text = bandedGridView1.GetFocusedRowCellValue(colMaSach).ToString();
@@ -644,25 +657,28 @@ namespace QLTV_GUI
         }
 
         private void txbTenSach_EditValueChanged(object sender, EventArgs e)
-        {if(bandedGridView1.RowCount >0)
-            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenSach, HelpGUI.KiemTraDieuKien.isTen(txbTenSach.Text.Trim()), "Tên Sách không hợp lệ!");
+        {
+            if (bandedGridView1.RowCount > 0)
+                HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenSach, HelpGUI.KiemTraDieuKien.isTen(txbTenSach.Text.Trim()), "Tên Sách không hợp lệ!");
         }
-
         private void txbNhaSX_EditValueChanged(object sender, EventArgs e)
-        {if(bandedGridView1.RowCount >0)
-            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbNhaSX, HelpGUI.KiemTraDieuKien.isDiaChi(txbNhaSX.Text.Trim()), "Tên NXB không hợp lệ!");
+        {
+            if (bandedGridView1.RowCount > 0)
+                HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbNhaSX, HelpGUI.KiemTraDieuKien.isDiaChi(txbNhaSX.Text.Trim()), "Tên NXB không hợp lệ!");
         }
 
         private void dateNamSX_EditValueChanged(object sender, EventArgs e)
         {
-            try
+            dxErrorProvider1.SetIconAlignment(dateNamSX, ErrorIconAlignment.BottomRight);
+            if (bandedGridView1.RowCount > 0)
             {
                 if (Convert.ToInt32(dateNamSX.EditValue.ToString()) > DateTime.Now.Year)
                     dxErrorProvider1.SetError(dateNamSX, "Năm Xuất Bản không hợp lệ !");
+                else if (Convert.ToInt32(dateNamSX.EditValue.ToString()) < DateTime.Now.Year - THAMSOBUS.Instance.GetDSQuiDinh()[0].KhoangCachXB)
+                    dxErrorProvider1.SetError(dateNamSX, "Sai Quy Định Chỉ nhận sách xuất bản trong vòng " + THAMSOBUS.Instance.GetDSQuiDinh()[0].KhoangCachXB + " năm.");
                 else dxErrorProvider1.SetError(dateNamSX, null);
             }
-            catch { }
         }
+        #endregion
     }
-
 }

@@ -33,14 +33,15 @@ namespace QLTV_DAO
                         SoLuongTheLoaiMax = item.SoLuongTheLoaiMax,
                         SoNgayMuonMax = item.SoNgayMuonMax,
                         SoSachMuonMax= item.SoSachMuonMax,
-                        TPTraTreMotNgay = item.TPTraTreMotNgay
+                        TPTraTreMotNgay = item.TPTraTreMotNgay,
+                        SoLuongTacGia = item.SoLuongTacGia
                     };
                     listqd.Add(ts);
                 }
             }
             return listqd;
         }
-        public void UpdateQuiDinh(int TuoiMin, int TuoiMax, int HanThe, int KhoangCachXB, int SLTheLoai, int SoNgayMuon, int SoSachMuon, int TienPhat)
+        public void UpdateQuiDinh(int TuoiMin, int TuoiMax, int HanThe, int KhoangCachXB, int SLTheLoai, int SoNgayMuon, int SoSachMuon, int TienPhat, int SLtacgia)
         {
             using(QuanLyThuVienEntities db = new QuanLyThuVienEntities())
             {
@@ -53,6 +54,7 @@ namespace QLTV_DAO
                 tsqd.SoNgayMuonMax = SoNgayMuon;
                 tsqd.SoSachMuonMax = SoSachMuon;
                 tsqd.TPTraTreMotNgay = TienPhat;
+                tsqd.SoLuongTacGia = SLtacgia;
                 db.SaveChanges();
             }
         }

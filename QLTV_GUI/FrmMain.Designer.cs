@@ -56,7 +56,7 @@
             this.bsitem_Account = new DevExpress.XtraBars.BarSubItem();
             this.btnInfoAccount = new DevExpress.XtraBars.BarButtonItem();
             this.btn_bsitemLogout = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnQuanLiAdmin = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Logout = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Hethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageAccount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -127,7 +127,7 @@
             this.btnDangXuat,
             this.bsitem_Account,
             this.btn_bsitemLogout,
-            this.barButtonItem2,
+            this.btnQuanLiAdmin,
             this.btnInfoAccount,
             this.btnThoat,
             this.btnAbout,
@@ -377,15 +377,16 @@
             this.btn_bsitemLogout.Name = "btn_bsitemLogout";
             this.btn_bsitemLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_bsitemLogout_ItemClick);
             // 
-            // barButtonItem2
+            // btnQuanLiAdmin
             // 
-            this.barButtonItem2.Caption = "Quản lí Admin";
-            this.barButtonItem2.Id = 3;
-            this.barButtonItem2.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.admin_icon;
-            this.barButtonItem2.LargeWidth = 80;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnQuanLiAdmin.Caption = "Quản lí Admin";
+            this.btnQuanLiAdmin.Id = 3;
+            this.btnQuanLiAdmin.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.admin_icon;
+            this.btnQuanLiAdmin.LargeWidth = 80;
+            this.btnQuanLiAdmin.Name = "btnQuanLiAdmin";
+            this.btnQuanLiAdmin.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnQuanLiAdmin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQuanLiAdmin_ItemClick);
             // 
             // btn_Logout
             // 
@@ -413,7 +414,7 @@
             // 
             // rbpageQLadmin
             // 
-            this.rbpageQLadmin.ItemLinks.Add(this.barButtonItem2);
+            this.rbpageQLadmin.ItemLinks.Add(this.btnQuanLiAdmin);
             this.rbpageQLadmin.Name = "rbpageQLadmin";
             this.rbpageQLadmin.Text = "Admin Manager";
             // 
@@ -605,6 +606,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Quản Lý Thư Viện";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -664,7 +666,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_bsitemLogout;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpagePhieuThu;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnQuanLiAdmin;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageQLadmin;
         private DevExpress.XtraBars.BarButtonItem btnInfoAccount;
         private DevExpress.XtraBars.PopupMenu popupMenu1;

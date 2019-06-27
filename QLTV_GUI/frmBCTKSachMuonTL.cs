@@ -39,7 +39,8 @@ namespace QLTV_GUI
         #region Event_Load
         private void frmBCTKSachMuonTL_Load(object sender, EventArgs e)
         {
-            var list = Enumerable.Range(1930, DateTime.Now.Year - 1930 + 1).ToList();
+            cbbNam.Properties.Items.Clear();
+            var list = Enumerable.Range(2000, DateTime.Now.Year - 2000 + 1).ToList();
             cbbNam.Properties.Items.AddRange(list);
             listpm = CHITIETPHIEUMUONBUS.Instance.GetListPhieuMuon();
             try

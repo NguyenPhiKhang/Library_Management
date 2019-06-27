@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLTV_BUS;
 
 namespace QLTV_GUI
 {
@@ -72,7 +73,8 @@ namespace QLTV_GUI
             return false;
         }
         private void btn_Nhap_Click(object sender, EventArgs e)
-        {if (CheckNull())
+        {
+            if (CheckNull())
             { MessageBox.Show("Thông Tin nhập vào không thể để trống.");}
             else
             {
@@ -141,9 +143,12 @@ namespace QLTV_GUI
 
         private void dateNamXuatBan_EditValueChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(dateNamXuatBan.EditValue.ToString()) > DateTime.Now.Year)
-                dxErrorProvider1.SetError(dateNamXuatBan, "Năm Xuất Bản không hợp lệ !");
-            else dxErrorProvider1.SetError(dateNamXuatBan, null);
+            dxErrorProvider1.SetIconAlignment(dateNamXuatBan, ErrorIconAlignment.BottomRight);
+                if (Convert.ToInt32(dateNamXuatBan.EditValue.ToString()) > DateTime.Now.Year)
+                    dxErrorProvider1.SetError(dateNamXuatBan, "Năm Xuất Bản không hợp lệ !");
+                else if (Convert.ToInt32(dateNamXuatBan.EditValue.ToString()) < DateTime.Now.Year - THAMSOBUS.Instance.GetDSQuiDinh()[0].KhoangCachXB)
+                    dxErrorProvider1.SetError(dateNamXuatBan, "Sai Quy Định Chỉ nhận sách xuất bản trong vòng " + THAMSOBUS.Instance.GetDSQuiDinh()[0].KhoangCachXB + " năm.");
+                else dxErrorProvider1.SetError(dateNamXuatBan, null);
         }
     }
 }

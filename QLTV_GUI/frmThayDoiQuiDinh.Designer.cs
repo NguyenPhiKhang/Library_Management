@@ -83,6 +83,10 @@
             this.colTienPhatTre = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTienPhatTre = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            this.colSoLuongTG = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_layoutViewColumn1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.se_SLtacgia = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage1.SuspendLayout();
@@ -109,6 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // navigationPane1
@@ -244,6 +250,8 @@
             this.navigationPage2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.navigationPage2.Appearance.Options.UseBackColor = true;
             this.navigationPage2.Caption = "Qui Định 2";
+            this.navigationPage2.Controls.Add(this.labelControl5);
+            this.navigationPage2.Controls.Add(this.se_SLtacgia);
             this.navigationPage2.Controls.Add(this.btnHuy2);
             this.navigationPage2.Controls.Add(this.btnSua2);
             this.navigationPage2.Controls.Add(this.labelcontrol);
@@ -257,7 +265,7 @@
             // btnHuy2
             // 
             this.btnHuy2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy2.ImageOptions.Image")));
-            this.btnHuy2.Location = new System.Drawing.Point(224, 179);
+            this.btnHuy2.Location = new System.Drawing.Point(224, 225);
             this.btnHuy2.Name = "btnHuy2";
             this.btnHuy2.Size = new System.Drawing.Size(78, 29);
             this.btnHuy2.TabIndex = 7;
@@ -268,7 +276,7 @@
             // btnSua2
             // 
             this.btnSua2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua2.ImageOptions.Image")));
-            this.btnSua2.Location = new System.Drawing.Point(224, 179);
+            this.btnSua2.Location = new System.Drawing.Point(224, 225);
             this.btnSua2.Name = "btnSua2";
             this.btnSua2.Size = new System.Drawing.Size(78, 29);
             this.btnSua2.TabIndex = 6;
@@ -525,6 +533,7 @@
             this.colHanThe,
             this.colKhoangCachXB,
             this.colTheLoaiMax,
+            this.colSoLuongTG,
             this.colSachMuonMax,
             this.colNgayMuonMax,
             this.colTienPhatTre});
@@ -669,7 +678,7 @@
             // layoutViewField_colSachMuonMax
             // 
             this.layoutViewField_colSachMuonMax.EditorPreferredWidth = 59;
-            this.layoutViewField_colSachMuonMax.Location = new System.Drawing.Point(0, 140);
+            this.layoutViewField_colSachMuonMax.Location = new System.Drawing.Point(0, 144);
             this.layoutViewField_colSachMuonMax.Name = "layoutViewField_colSachMuonMax";
             this.layoutViewField_colSachMuonMax.OptionsToolTip.ToolTip = "Số sách mượn tối đa trong số ngày quy định";
             this.layoutViewField_colSachMuonMax.Size = new System.Drawing.Size(249, 24);
@@ -695,7 +704,7 @@
             this.layoutViewField_colNgayMuonMax.Location = new System.Drawing.Point(0, 120);
             this.layoutViewField_colNgayMuonMax.Name = "layoutViewField_colNgayMuonMax";
             this.layoutViewField_colNgayMuonMax.OptionsToolTip.ToolTip = "Số ngày quy định số sách mượn tối đa";
-            this.layoutViewField_colNgayMuonMax.Size = new System.Drawing.Size(249, 20);
+            this.layoutViewField_colNgayMuonMax.Size = new System.Drawing.Size(249, 24);
             this.layoutViewField_colNgayMuonMax.TextSize = new System.Drawing.Size(183, 13);
             // 
             // colTienPhatTre
@@ -717,7 +726,7 @@
             // layoutViewField_colTienPhatTre
             // 
             this.layoutViewField_colTienPhatTre.EditorPreferredWidth = 59;
-            this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 164);
+            this.layoutViewField_colTienPhatTre.Location = new System.Drawing.Point(0, 168);
             this.layoutViewField_colTienPhatTre.Name = "layoutViewField_colTienPhatTre";
             this.layoutViewField_colTienPhatTre.Size = new System.Drawing.Size(249, 24);
             this.layoutViewField_colTienPhatTre.TextSize = new System.Drawing.Size(183, 13);
@@ -734,8 +743,52 @@
             this.layoutViewField_colTheLoaiMax,
             this.layoutViewField_colNgayMuonMax,
             this.layoutViewField_colSachMuonMax,
-            this.layoutViewField_colTienPhatTre});
+            this.layoutViewField_colTienPhatTre,
+            this.layoutViewField_layoutViewColumn1});
             this.layoutViewCard1.Name = "layoutViewCard1";
+            // 
+            // colSoLuongTG
+            // 
+            this.colSoLuongTG.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSoLuongTG.AppearanceCell.Options.UseFont = true;
+            this.colSoLuongTG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSoLuongTG.AppearanceHeader.Options.UseFont = true;
+            this.colSoLuongTG.Caption = "Số lượng tác giả tối đa";
+            this.colSoLuongTG.FieldName = "SoLuongTacGia";
+            this.colSoLuongTG.LayoutViewField = this.layoutViewField_layoutViewColumn1;
+            this.colSoLuongTG.Name = "colSoLuongTG";
+            // 
+            // layoutViewField_layoutViewColumn1
+            // 
+            this.layoutViewField_layoutViewColumn1.EditorPreferredWidth = 10;
+            this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 192);
+            this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
+            this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(249, 20);
+            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(183, 13);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(27, 182);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(111, 13);
+            this.labelControl5.TabIndex = 8;
+            this.labelControl5.Text = "Số lượng tác giả tối đa:";
+            // 
+            // se_SLtacgia
+            // 
+            this.se_SLtacgia.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.se_SLtacgia.Location = new System.Drawing.Point(170, 179);
+            this.se_SLtacgia.Name = "se_SLtacgia";
+            this.se_SLtacgia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.se_SLtacgia.Properties.ReadOnly = true;
+            this.se_SLtacgia.Size = new System.Drawing.Size(132, 20);
+            this.se_SLtacgia.TabIndex = 9;
+            this.se_SLtacgia.EditValueChanged += new System.EventHandler(this.se_SLtacgia_EditValueChanged);
             // 
             // frmThayDoiQuiDinh
             // 
@@ -781,6 +834,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -841,5 +896,9 @@
         private DevExpress.XtraEditors.SimpleButton btnHuy1;
         private DevExpress.XtraEditors.SimpleButton btnHuy2;
         private DevExpress.XtraEditors.SimpleButton btnHuy3;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn colSoLuongTG;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.SpinEdit se_SLtacgia;
     }
 }

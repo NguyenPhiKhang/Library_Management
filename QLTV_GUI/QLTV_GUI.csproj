@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.BonusSkins.v18.2" />
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -58,6 +59,7 @@
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -92,6 +94,12 @@
     </Compile>
     <Compile Include="frmADMIN.Designer.cs">
       <DependentUpon>frmADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTTCaNhan.cs">
       <SubType>Form</SubType>
@@ -230,6 +238,12 @@
     <Compile Include="frmThemLoaiDocGia.Designer.cs">
       <DependentUpon>frmThemLoaiDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportBCTKTraTre.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportBCTKTraTre.Designer.cs">
+      <DependentUpon>ReportBCTKTraTre.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportMuonTL.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -244,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBCTKTraTre.resx">
       <DependentUpon>frmBCTKTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChiTietPM.resx">
       <DependentUpon>frmChiTietPM.cs</DependentUpon>
@@ -293,6 +310,9 @@
     <EmbeddedResource Include="frmThemTraSach.resx">
       <DependentUpon>frmThemTraSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTTCaNhan.resx">
+      <DependentUpon>frmTTCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTTMuonSach.resx">
       <DependentUpon>frmTTMuonSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +333,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportBCTKTraTre.resx">
+      <DependentUpon>ReportBCTKTraTre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportMuonTL.resx">
       <DependentUpon>ReportMuonTL.cs</DependentUpon>
     </EmbeddedResource>
@@ -553,6 +576,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\configuration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake_white_192x192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address-icon-white-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-mail-icon-png-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fone-white-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID-Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\259-2594155_dollar-money-symbol-images-dollar-sign-png-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2594155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-payment-icon-5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

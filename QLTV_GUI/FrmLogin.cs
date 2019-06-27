@@ -18,7 +18,6 @@ namespace QLTV_GUI
     public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
         #region Declare
-        FrmMain y;
         List<ACCOUNT> listaccount = new List<ACCOUNT>();
         string iDUser = "";
         public string IDUser { get => iDUser; set => iDUser = value; }
@@ -28,9 +27,44 @@ namespace QLTV_GUI
             InitializeComponent();
         }
         #endregion
+        #region Methods
+        private void ReadSettings()
+        {
+            if (Properties.Settings.Default.remember == "true")
+            {
+                txbUsername.Text = Properties.Settings.Default.user;
+                txbPassword.Text = Properties.Settings.Default.pass;
+                ck_remember.Checked = true;
+            }
+            else
+            {
+                txbUsername.Text = "";
+                txbPassword.Text = "";
+                ck_remember.Checked = false;
+            }
+        }
+        private void SaveSettings()
+        {
+            if (ck_remember.Checked)
+            {
+                Properties.Settings.Default.user = txbUsername.Text;
+                Properties.Settings.Default.pass = txbPassword.Text;
+                Properties.Settings.Default.remember = "true";
+            }
+            else
+            {
+                Properties.Settings.Default.user = "";
+                Properties.Settings.Default.pass = "";
+                Properties.Settings.Default.remember = "false";
+            }
+            Properties.Settings.Default.Save();
+        }
+        #endregion
         #region Event_Load
+
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            ReadSettings();
         }
         #endregion
         #region Event_Enter_Leave
@@ -77,6 +111,7 @@ namespace QLTV_GUI
 
         private /*async*/ void btnDangNhap_Click(object sender, EventArgs e)
         {
+            SaveSettings();
             if (listaccount.Count == 0)
             {
                 IOverlaySplashScreenHandle handle = SplashScreenManager.ShowOverlayForm(pl_GiaoDien);

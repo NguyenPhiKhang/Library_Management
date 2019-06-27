@@ -392,6 +392,10 @@
             // 
             // gridView2
             // 
+            this.gridView2.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMaSach,
             this.colTenSach,
@@ -405,8 +409,12 @@
             // 
             // colMaSach
             // 
+            this.colMaSach.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colMaSach.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colMaSach.AppearanceHeader.Options.UseBackColor = true;
             this.colMaSach.AppearanceHeader.Options.UseFont = true;
+            this.colMaSach.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaSach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMaSach.Caption = "Mã Sách";
             this.colMaSach.FieldName = "MaSach";
             this.colMaSach.Name = "colMaSach";
@@ -415,8 +423,12 @@
             // 
             // colTenSach
             // 
+            this.colTenSach.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colTenSach.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTenSach.AppearanceHeader.Options.UseBackColor = true;
             this.colTenSach.AppearanceHeader.Options.UseFont = true;
+            this.colTenSach.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenSach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenSach.Caption = "Tên Sách";
             this.colTenSach.FieldName = "TenSach";
             this.colTenSach.Name = "colTenSach";
@@ -425,8 +437,12 @@
             // 
             // colTheLoai
             // 
+            this.colTheLoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colTheLoai.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTheLoai.AppearanceHeader.Options.UseBackColor = true;
             this.colTheLoai.AppearanceHeader.Options.UseFont = true;
+            this.colTheLoai.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTheLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTheLoai.Caption = "Thể Loại";
             this.colTheLoai.FieldName = "TenTheLoai";
             this.colTheLoai.Name = "colTheLoai";
@@ -435,8 +451,12 @@
             // 
             // colTacGia
             // 
+            this.colTacGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colTacGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTacGia.AppearanceHeader.Options.UseBackColor = true;
             this.colTacGia.AppearanceHeader.Options.UseFont = true;
+            this.colTacGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTacGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTacGia.Caption = "Tác Giả";
             this.colTacGia.FieldName = "TenTacGia";
             this.colTacGia.Name = "colTacGia";

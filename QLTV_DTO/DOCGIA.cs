@@ -32,6 +32,7 @@ namespace QLTV_DTO
         public string IDAccount { get; set; }
         public string SDT { get; set; }
         public decimal TongNo { get; set; }
+        public string GioiThieu { get; set; }
     
         public virtual ACCOUNT ACCOUNT { get; set; }
         public virtual LOAIDOCGIA LOAIDOCGIA { get; set; }

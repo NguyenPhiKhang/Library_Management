@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocGia));
-            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -419,7 +419,7 @@
             // workspaceManager1
             // 
             this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition2;
+            this.workspaceManager1.TransitionType = pushTransition1;
             // 
             // layoutControl1
             // 
@@ -533,9 +533,9 @@
             0});
             this.seGiaHan.Size = new System.Drawing.Size(50, 20);
             this.seGiaHan.StyleController = this.layoutControl1;
-            toolTipItem3.Text = "Số tháng muốn gia hạn";
-            superToolTip3.Items.Add(toolTipItem3);
-            this.seGiaHan.SuperTip = superToolTip3;
+            toolTipItem1.Text = "Số tháng muốn gia hạn";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.seGiaHan.SuperTip = superToolTip1;
             this.seGiaHan.TabIndex = 21;
             // 
             // btnGiaHan
@@ -545,9 +545,9 @@
             this.btnGiaHan.Name = "btnGiaHan";
             this.btnGiaHan.Size = new System.Drawing.Size(45, 22);
             this.btnGiaHan.StyleController = this.layoutControl1;
-            toolTipItem1.Text = "Gia hạn độc giả";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnGiaHan.SuperTip = superToolTip1;
+            toolTipItem2.Text = "Gia hạn độc giả";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnGiaHan.SuperTip = superToolTip2;
             this.btnGiaHan.TabIndex = 12;
             this.btnGiaHan.Text = "Gia hạn";
             this.btnGiaHan.Click += new System.EventHandler(this.btnGiaHan_Click);
@@ -560,9 +560,9 @@
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
             this.dateNgaySinh.Properties.AllowFocused = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgaySinh.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
@@ -995,7 +995,11 @@
             this.colMaDocGia.AppearanceCell.Options.UseBackColor = true;
             this.colMaDocGia.AppearanceCell.Options.UseBorderColor = true;
             this.colMaDocGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colMaDocGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colMaDocGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaDocGia.AppearanceHeader.Options.UseFont = true;
+            this.colMaDocGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaDocGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colMaDocGia.Caption = "Mã Độc Giả";
             this.colMaDocGia.FieldName = "MaDocGia";
             this.colMaDocGia.Name = "colMaDocGia";
@@ -1006,7 +1010,11 @@
             // colHoTen
             // 
             this.colHoTen.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colHoTen.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colHoTen.AppearanceHeader.Options.UseBackColor = true;
+            this.colHoTen.AppearanceHeader.Options.UseFont = true;
+            this.colHoTen.AppearanceHeader.Options.UseTextOptions = true;
+            this.colHoTen.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHoTen.Caption = "Họ Tên";
             this.colHoTen.FieldName = "HoTen";
             this.colHoTen.Name = "colHoTen";
@@ -1017,7 +1025,11 @@
             // colNgaySinh
             // 
             this.colNgaySinh.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colNgaySinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colNgaySinh.AppearanceHeader.Options.UseBackColor = true;
+            this.colNgaySinh.AppearanceHeader.Options.UseFont = true;
+            this.colNgaySinh.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNgaySinh.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgaySinh.Caption = "Ngày Sinh";
             this.colNgaySinh.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.colNgaySinh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1030,7 +1042,11 @@
             // colDiaChi
             // 
             this.colDiaChi.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colDiaChi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colDiaChi.AppearanceHeader.Options.UseBackColor = true;
+            this.colDiaChi.AppearanceHeader.Options.UseFont = true;
+            this.colDiaChi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDiaChi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDiaChi.Caption = "Địa Chỉ";
             this.colDiaChi.FieldName = "DiaChi";
             this.colDiaChi.Name = "colDiaChi";
@@ -1041,7 +1057,11 @@
             // colEmail
             // 
             this.colEmail.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colEmail.AppearanceHeader.Options.UseBackColor = true;
+            this.colEmail.AppearanceHeader.Options.UseFont = true;
+            this.colEmail.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmail.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEmail.Caption = "Email";
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
@@ -1052,7 +1072,11 @@
             // colSDT
             // 
             this.colSDT.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colSDT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colSDT.AppearanceHeader.Options.UseBackColor = true;
+            this.colSDT.AppearanceHeader.Options.UseFont = true;
+            this.colSDT.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSDT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSDT.Caption = "Số Điện Thoại";
             this.colSDT.FieldName = "SDT";
             this.colSDT.Name = "colSDT";
@@ -1063,7 +1087,11 @@
             // colUsername
             // 
             this.colUsername.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colUsername.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colUsername.AppearanceHeader.Options.UseBackColor = true;
+            this.colUsername.AppearanceHeader.Options.UseFont = true;
+            this.colUsername.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUsername.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUsername.Caption = "Username";
             this.colUsername.FieldName = "IDAccount";
             this.colUsername.Name = "colUsername";
@@ -1073,7 +1101,11 @@
             // colPassword
             // 
             this.colPassword.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colPassword.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colPassword.AppearanceHeader.Options.UseBackColor = true;
+            this.colPassword.AppearanceHeader.Options.UseFont = true;
+            this.colPassword.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPassword.Caption = "Password";
             this.colPassword.ColumnEdit = this.repositoryItemTextEdit3;
             this.colPassword.FieldName = "PasswordAccount";
@@ -1090,7 +1122,11 @@
             // colLoaiDocGia
             // 
             this.colLoaiDocGia.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colLoaiDocGia.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colLoaiDocGia.AppearanceHeader.Options.UseBackColor = true;
+            this.colLoaiDocGia.AppearanceHeader.Options.UseFont = true;
+            this.colLoaiDocGia.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLoaiDocGia.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colLoaiDocGia.Caption = "Loại Độc Giả";
             this.colLoaiDocGia.FieldName = "MaLoaiDocGia";
             this.colLoaiDocGia.Name = "colLoaiDocGia";
@@ -1101,7 +1137,11 @@
             // colNgayLapThe
             // 
             this.colNgayLapThe.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colNgayLapThe.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colNgayLapThe.AppearanceHeader.Options.UseBackColor = true;
+            this.colNgayLapThe.AppearanceHeader.Options.UseFont = true;
+            this.colNgayLapThe.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNgayLapThe.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgayLapThe.Caption = "Ngày Lập Thẻ";
             this.colNgayLapThe.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.colNgayLapThe.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1114,7 +1154,11 @@
             // colNgayHetHan
             // 
             this.colNgayHetHan.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colNgayHetHan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colNgayHetHan.AppearanceHeader.Options.UseBackColor = true;
+            this.colNgayHetHan.AppearanceHeader.Options.UseFont = true;
+            this.colNgayHetHan.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNgayHetHan.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgayHetHan.Caption = "Ngày Hết Hạn";
             this.colNgayHetHan.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.colNgayHetHan.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1127,7 +1171,11 @@
             // colTongNo
             // 
             this.colTongNo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.colTongNo.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.colTongNo.AppearanceHeader.Options.UseBackColor = true;
+            this.colTongNo.AppearanceHeader.Options.UseFont = true;
+            this.colTongNo.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTongNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTongNo.Caption = "Tổng Nợ";
             this.colTongNo.FieldName = "TongNo";
             this.colTongNo.Name = "colTongNo";

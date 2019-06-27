@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraSplashScreen;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
 using QLTV_BUS;
 using QLTV_DTO;
 using System;
@@ -20,6 +21,8 @@ namespace QLTV_GUI
         FrmLogin frmLogin;
         List<string> listper = new List<string>();
         int flag = 0;
+        DevExpress.Utils.ToolTipItem toolTipItem = new DevExpress.Utils.ToolTipItem();
+        DevExpress.Utils.SuperToolTip superToolTip = new DevExpress.Utils.SuperToolTip();
         public FrmMain()
         {
             InitializeComponent();
@@ -40,6 +43,84 @@ namespace QLTV_GUI
                     return f;
             }
             return null;
+        }
+        void ShowNameAccount()
+        {
+            if (account.TypeOfAccount == "USER")
+                subitemAccount.Caption = DOCGIABUS.Instance.GetInfoDocGia(account.IDAccount).ToList()[0].HoTen.ToString();
+            else subitemAccount.Caption = ADMINBUS.Instance.GetInfoAdmin(account.IDAccount).ToList()[0].NameAdmin.ToString();
+            toolTipItem.Text = subitemAccount.Caption;
+            superToolTip.Items.Add(toolTipItem);
+            this.bsitem_Account.SuperTip = superToolTip;
+        }
+        void VisibleTab()
+        {
+            rbpageQLadmin.Visible = false;
+            tab_docgia.Visible = false;
+            tab_sach.Visible = false;
+            tab_muontra.Visible = false;
+            tab_baocao.Visible = false;
+            tab_quydinh.Visible = false;
+        }
+        void ShowTab()
+        {
+            rbpageQLadmin.Visible = true;
+            tab_docgia.Visible = true;
+            tab_sach.Visible = true;
+            tab_muontra.Visible = true;
+            tab_baocao.Visible = true;
+            tab_quydinh.Visible = true;
+        }
+        void KiemTraPermisson()
+        {
+            account = ACCOUNTBUS.Instance.GetInfoAccount(idaccount).ToList()[0];
+            ShowNameAccount();
+            List<string> list = new List<string>();
+            list = CHITIETPHANQUYENBUS.Instance.GetListPerOfAccount(idaccount).ToList();
+            foreach (var item in list)
+            {
+                listper.Add(PERMISSIONBUS.Instance.GetInfoPermission(item)[0].CodeAction.ToString());
+            }
+            VisibleTab();
+            foreach (var item in listper)
+            {
+                switch (item)
+                {
+                    case "DG":
+                        VisibleTab();
+                        return;
+                    case "QL":
+                        ShowTab();
+                        return;
+                    case "QLDG":
+                        tab_docgia.Visible = true;
+                        break;
+                    case "QLS":
+                        tab_sach.Visible = true;
+                        break;
+                    case "QLMT":
+                        tab_baocao.Visible = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        void DangXuat()
+        {
+            flag = 1;
+            //for (int i = xtraTabbedMdiManager1.Pages.Count - 1; i >= 0; i--)
+            //{
+            //    xtraTabbedMdiManager1.Pages[i].MdiChild.Close();
+            //}
+            Close();
+            frmLogin.Visible = true;
+        }
+        #endregion
+        #region Event_Load
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            KiemTraPermisson();
         }
         #endregion
         #region Event_Click_MDIChildren
@@ -223,79 +304,28 @@ namespace QLTV_GUI
                 SplashScreenManager.CloseDefaultSplashScreen();
             }
         }
-        #endregion
-        #region Event_Click
-        #endregion
-        DevExpress.Utils.ToolTipItem toolTipItem = new DevExpress.Utils.ToolTipItem();
-        DevExpress.Utils.SuperToolTip superToolTip = new DevExpress.Utils.SuperToolTip();
-        void ShowNameAccount()
+        private void btnTTaccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (account.TypeOfAccount == "USER")
-                subitemAccount.Caption = DOCGIABUS.Instance.GetInfoDocGia(account.IDAccount).ToList()[0].HoTen.ToString();
-            else subitemAccount.Caption = ADMINBUS.Instance.GetInfoAdmin(account.IDAccount).ToList()[0].NameAdmin.ToString();
-            toolTipItem.Text = subitemAccount.Caption;
-            superToolTip.Items.Add(toolTipItem);
-            this.bsitem_Account.SuperTip = superToolTip;
-        }
-        void VisibleTab()
-        {
-            rbpageQLadmin.Visible = false;
-            tab_docgia.Visible = false;
-            tab_sach.Visible = false;
-            tab_muontra.Visible = false;
-            tab_baocao.Visible = false;
-            tab_quydinh.Visible = false;
-        }
-        void ShowTab()
-        {
-            rbpageQLadmin.Visible = true;
-            tab_docgia.Visible = true;
-            tab_sach.Visible = true;
-            tab_muontra.Visible = true;
-            tab_baocao.Visible = true;
-            tab_quydinh.Visible = true;
-        }
-        void KiemTraPermisson()
-        {
-            account = ACCOUNTBUS.Instance.GetInfoAccount(idaccount).ToList()[0];
-            ShowNameAccount();
-            List<string> list = new List<string>();
-            list = CHITIETPHANQUYENBUS.Instance.GetListPerOfAccount(idaccount).ToList();
-            foreach (var item in list)
             {
-                listper.Add(PERMISSIONBUS.Instance.GetInfoPermission(item)[0].CodeAction.ToString());
-            }
-            VisibleTab();
-            foreach (var item in listper)
-            {
-                switch(item)
+                Form frm = this.KiemTraTonTai(typeof(frmTTCaNhan));
+                if (frm != null)
+                    frm.Activate();
+                else
                 {
-                    case "DG":
-                        VisibleTab();
-                        return;
-                    case "QL":
-                        ShowTab();
-                        return;
-                    case "QLDG":
-                        tab_docgia.Visible = true;
-                        break;
-                    case "QLS":
-                        tab_sach.Visible = true;
-                        break;
-                    case "QLMT":
-                        tab_baocao.Visible = true;
-                        break;
-                    default:
-                        break;
+                    SplashScreenManager.ShowDefaultWaitForm();
+                    frmTTCaNhan f = new frmTTCaNhan(account.IDAccount)
+                    {
+                        MdiParent = this
+                    };
+                    f.Show();
+                    SplashScreenManager.CloseDefaultSplashScreen();
                 }
             }
+            else XtraMessageBox.Show("Chưa có dữ liệu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            KiemTraPermisson();
-        }
-
+        #endregion
+        #region Event_Click
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Application.Exit();
@@ -306,33 +336,10 @@ namespace QLTV_GUI
             frmChiTietPM ctpm = new frmChiTietPM();
             ctpm.ShowDialog();
         }
-
-        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (flag == 0)
-                Application.Exit();
-        }
-
-        private void btnTTaccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-        }
-
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DangXuat();
         }
-        void DangXuat()
-        {
-            flag = 1;
-            //for (int i = xtraTabbedMdiManager1.Pages.Count - 1; i >= 0; i--)
-            //{
-            //    xtraTabbedMdiManager1.Pages[i].MdiChild.Close();
-            //}
-            Close();
-            frmLogin.Visible = true;
-        }
-
         private void btn_bsitemLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DangXuat();
@@ -342,5 +349,18 @@ namespace QLTV_GUI
         {
             DangXuat();
         }
+
+        private void btnQuanLiAdmin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show("Chưa có dữ liệu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+        #region Event_Closing
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag == 0)
+                Application.Exit();
+        }
+        #endregion
     }
 }

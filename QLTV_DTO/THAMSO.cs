@@ -23,5 +23,6 @@ namespace QLTV_DTO
         public int SoSachMuonMax { get; set; }
         public decimal TPTraTreMotNgay { get; set; }
         public int SoLuongTheLoaiMax { get; set; }
+        public int SoLuongTacGia { get; set; }
     }
 }

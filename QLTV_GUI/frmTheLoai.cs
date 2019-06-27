@@ -18,7 +18,6 @@ namespace QLTV_GUI
     public partial class frmTheLoai : DevExpress.XtraEditors.XtraForm
     {
         BindingSource listbdtheloai = new BindingSource();
-        int _index = 0;
         int SoTLmax;
         string keycolumn = "";
 

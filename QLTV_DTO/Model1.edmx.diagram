@@ -5,25 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="87cfb962f44a4771a170409cbd4d2c9d" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="QuanLyThuVienModel.ACCOUNT" Width="1.5" PointX="1.5" PointY="15.625" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.ADMIN" Width="1.5" PointX="3.75" PointY="15.5" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKMUONSACH" Width="1.5" PointX="3.75" PointY="8" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKTRATRE" Width="1.5" PointX="7.5" PointY="11" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.CHITIETPHANQUYEN" Width="1.5" PointX="3.75" PointY="18.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKMUONSACH" Width="1.5" PointX="6" PointY="3.875" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKTRATRE" Width="1.5" PointX="9.75" PointY="7.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="5.25" PointY="0.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.DOCGIA" Width="1.5" PointX="0.75" PointY="11" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.LOAIDOCGIA" Width="1.5" PointX="1.5" PointY="18.625" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PERMISSION" Width="1.5" PointX="1.5" PointY="25.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUONSACH" Width="1.5" PointX="3" PointY="11.875" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTHUTIENPHAT" Width="1.5" PointX="3" PointY="21.75" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTRASACH" Width="1.5" PointX="7.5" PointY="7.375" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="3" PointY="3.125" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.TACGIA" Width="1.5" PointX="0.75" PointY="7.25" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.THAMSO" Width="1.5" PointX="8.75" PointY="1.375" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.THELOAI" Width="1.5" PointX="0.75" PointY="4" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.TINHTRANG" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.ACCOUNT" Width="1.5" PointX="1.5" PointY="11.75" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.ADMIN" Width="1.5" PointX="3.75" PointY="15.375" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKMUONSACH" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.BCTKTRATRE" Width="1.5" PointX="10.5" PointY="0.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CHITIETPHANQUYEN" Width="1.5" PointX="6.75" PointY="7.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKMUONSACH" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CTBCTKTRATRE" Width="1.5" PointX="12.75" PointY="3.625" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="8.25" PointY="3.5" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.DOCGIA" Width="1.5" PointX="3.75" PointY="9.625" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.LOAIDOCGIA" Width="1.5" PointX="1.5" PointY="9.5" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PERMISSION" Width="1.5" PointX="4.5" PointY="18.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUONSACH" Width="1.5" PointX="6" PointY="10.75" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTHUTIENPHAT" Width="1.5" PointX="6" PointY="13.5" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTRASACH" Width="1.5" PointX="10.5" PointY="3.375" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="6" PointY="3" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.TACGIA" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THAMSO" Width="1.5" PointX="8.75" PointY="7.125" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THELOAI" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.TINHTRANG" Width="1.5" PointX="3.75" PointY="7.125" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_ADMIN_ACCOUNT" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_CHITIETPHANQUYEN_ACCOUNT" />
         <AssociationConnector Association="QuanLyThuVienModel.FK_DOCGIA_USER" />

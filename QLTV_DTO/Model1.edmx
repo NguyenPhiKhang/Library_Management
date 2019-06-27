@@ -95,6 +95,7 @@
           <Property Name="IDAccount" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="SDT" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TongNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="GioiThieu" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="LOAIDOCGIA">
           <Key>
@@ -178,6 +179,7 @@
           <Property Name="SoSachMuonMax" Type="int" Nullable="false" />
           <Property Name="TPTraTreMotNgay" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="SoLuongTheLoaiMax" Type="int" Nullable="false" />
+          <Property Name="SoLuongTacGia" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="THELOAI">
           <Key>
@@ -688,6 +690,7 @@
           <Property Name="IDAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TongNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="GioiThieu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ACCOUNT" Relationship="QuanLyThuVienModel.FK_DOCGIA_USER" FromRole="DOCGIA" ToRole="ACCOUNT" />
           <NavigationProperty Name="LOAIDOCGIA" Relationship="QuanLyThuVienModel.FK_DOCGIA_LOAIDOCGIA" FromRole="DOCGIA" ToRole="LOAIDOCGIA" />
           <NavigationProperty Name="PHIEUMUONSACHes" Relationship="QuanLyThuVienModel.FK_PHIEUMUONSACH_DOCGIA" FromRole="DOCGIA" ToRole="PHIEUMUONSACH" />
@@ -787,6 +790,7 @@
           <Property Name="SoSachMuonMax" Type="Int32" Nullable="false" />
           <Property Name="TPTraTreMotNgay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="SoLuongTheLoaiMax" Type="Int32" Nullable="false" />
+          <Property Name="SoLuongTacGia" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="THELOAI">
           <Key>
@@ -1100,6 +1104,7 @@
           <EntitySetMapping Name="DOCGIAs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.DOCGIA">
               <MappingFragment StoreEntitySet="DOCGIA">
+                <ScalarProperty Name="GioiThieu" ColumnName="GioiThieu" />
                 <ScalarProperty Name="TongNo" ColumnName="TongNo" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="IDAccount" ColumnName="IDAccount" />
@@ -1192,6 +1197,7 @@
           <EntitySetMapping Name="THAMSOes">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
               <MappingFragment StoreEntitySet="THAMSO">
+                <ScalarProperty Name="SoLuongTacGia" ColumnName="SoLuongTacGia" />
                 <ScalarProperty Name="SoLuongTheLoaiMax" ColumnName="SoLuongTheLoaiMax" />
                 <ScalarProperty Name="TPTraTreMotNgay" ColumnName="TPTraTreMotNgay" />
                 <ScalarProperty Name="SoSachMuonMax" ColumnName="SoSachMuonMax" />

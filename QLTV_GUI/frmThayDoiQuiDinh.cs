@@ -41,7 +41,8 @@ namespace QLTV_GUI
                 Convert.ToInt32(seTheLoaiMax.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colTheLoaiMax)) &&
                 Convert.ToInt32(seNgayMuonMax.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colNgayMuonMax)) &&
                 Convert.ToInt32(seSachMuonMax.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colSachMuonMax)) &&
-                Convert.ToInt32(seTienPhat.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colTienPhatTre))
+                Convert.ToInt32(seTienPhat.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colTienPhatTre))&&
+                Convert.ToInt32(se_SLtacgia.EditValue) == Convert.ToInt32(layoutView1.GetFocusedRowCellValue(colSoLuongTG))
                 )
             {
                 return false;
@@ -60,7 +61,7 @@ namespace QLTV_GUI
             {
                 THAMSOBUS.Instance.UpdateQuiDinh(Convert.ToInt32(seTuoiMin.EditValue), Convert.ToInt32(seTuoiMax.EditValue), Convert.ToInt32(seHanThe.EditValue),
                     Convert.ToInt32(seKhoangCachXB.EditValue), Convert.ToInt32(seTheLoaiMax.EditValue),
-                    Convert.ToInt32(seNgayMuonMax.EditValue), Convert.ToInt32(seSachMuonMax.EditValue), Convert.ToInt32(seTienPhat.EditValue));
+                    Convert.ToInt32(seNgayMuonMax.EditValue), Convert.ToInt32(seSachMuonMax.EditValue), Convert.ToInt32(seTienPhat.EditValue), Convert.ToInt32(se_SLtacgia.EditValue));
                 return true;
             }
             return false;
@@ -75,6 +76,7 @@ namespace QLTV_GUI
             seNgayMuonMax.EditValue = layoutView1.GetFocusedRowCellValue(colNgayMuonMax);
             seSachMuonMax.EditValue = layoutView1.GetFocusedRowCellValue(colSachMuonMax);
             seTienPhat.EditValue = layoutView1.GetFocusedRowCellValue(colTienPhatTre);
+            se_SLtacgia.EditValue = layoutView1.GetFocusedRowCellValue(colSoLuongTG);
         }
         #endregion
         #region Event_Load
@@ -130,6 +132,7 @@ namespace QLTV_GUI
         {
             btnSua2.Visible = false;
             btnHuy2.Visible = true;
+            se_SLtacgia.ReadOnly = false;
             seKhoangCachXB.ReadOnly = false;
             seTheLoaiMax.ReadOnly = false;
         }
@@ -138,6 +141,7 @@ namespace QLTV_GUI
         {
             btnSua2.Visible = true;
             btnHuy2.Visible = false;
+            se_SLtacgia.ReadOnly = true;
             seKhoangCachXB.ReadOnly = true;
             seTheLoaiMax.ReadOnly = true;
             declare_editvalue_se();
@@ -198,6 +202,10 @@ namespace QLTV_GUI
         }
 
         private void seSachMuonMax_EditValueChanged(object sender, EventArgs e)
+        {
+            check_btnLuu();
+        }
+        private void se_SLtacgia_EditValueChanged(object sender, EventArgs e)
         {
             check_btnLuu();
         }

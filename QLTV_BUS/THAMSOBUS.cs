@@ -21,9 +21,9 @@ namespace QLTV_BUS
         {
             return THAMSODAO.Instance.GetDSQuiDinh();
         }
-        public void UpdateQuiDinh(int TuoiMin, int TuoiMax, int HanThe, int KhoangCachXB, int SLTheLoai, int SoNgayMuon, int SoSachMuon, int TienPhat)
+        public void UpdateQuiDinh(int TuoiMin, int TuoiMax, int HanThe, int KhoangCachXB, int SLTheLoai, int SoNgayMuon, int SoSachMuon, int TienPhat, int SLtacgia)
         {
-            THAMSODAO.Instance.UpdateQuiDinh(TuoiMin, TuoiMax, HanThe, KhoangCachXB, SLTheLoai, SoNgayMuon, SoSachMuon, TienPhat);
+            THAMSODAO.Instance.UpdateQuiDinh(TuoiMin, TuoiMax, HanThe, KhoangCachXB, SLTheLoai, SoNgayMuon, SoSachMuon, TienPhat, SLtacgia);
         }
     }
 }

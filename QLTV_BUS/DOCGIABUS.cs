@@ -22,9 +22,9 @@ namespace QLTV_BUS
         {
             return DOCGIADAO.Instance.GetInforDocGia(idaccount);
         }
-        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt)
+        public void UpdateInfoDocGia(string MaDG, string TenDG, string DiaChi, DateTime NgaySinh,string email, string MaLDG, DateTime Ngayhethan, string sdt, string gioithieu="")
         {
-            QLTV_DAO.DOCGIADAO.Instance.UpdateInfoDocGia(MaDG, TenDG, DiaChi, NgaySinh, email, MaLDG, Ngayhethan, sdt);
+            QLTV_DAO.DOCGIADAO.Instance.UpdateInfoDocGia(MaDG, TenDG, DiaChi, NgaySinh, email, MaLDG, Ngayhethan, sdt, gioithieu);
         }
         public void UpdateTongNoDG(string MaDG, decimal TongNo)
         {

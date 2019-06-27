@@ -274,6 +274,10 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTenTheLoai,
             this.colSoLuotMuon,
@@ -287,7 +291,9 @@
             // 
             // colTenTheLoai
             // 
+            this.colTenTheLoai.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colTenTheLoai.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTenTheLoai.AppearanceHeader.Options.UseBackColor = true;
             this.colTenTheLoai.AppearanceHeader.Options.UseFont = true;
             this.colTenTheLoai.AppearanceHeader.Options.UseTextOptions = true;
             this.colTenTheLoai.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -299,7 +305,9 @@
             // 
             // colSoLuotMuon
             // 
+            this.colSoLuotMuon.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colSoLuotMuon.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colSoLuotMuon.AppearanceHeader.Options.UseBackColor = true;
             this.colSoLuotMuon.AppearanceHeader.Options.UseFont = true;
             this.colSoLuotMuon.AppearanceHeader.Options.UseTextOptions = true;
             this.colSoLuotMuon.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -311,7 +319,9 @@
             // 
             // colTiLe
             // 
+            this.colTiLe.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.colTiLe.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTiLe.AppearanceHeader.Options.UseBackColor = true;
             this.colTiLe.AppearanceHeader.Options.UseFont = true;
             this.colTiLe.AppearanceHeader.Options.UseTextOptions = true;
             this.colTiLe.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -319,7 +329,7 @@
             this.colTiLe.FieldName = "TiLe";
             this.colTiLe.Name = "colTiLe";
             this.colTiLe.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuotMuon", "Tổng số lượt mượn: {0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuotMuon", "Tổng số lượt mượn:         {0}")});
             this.colTiLe.Visible = true;
             this.colTiLe.VisibleIndex = 2;
             // 
