@@ -27,7 +27,7 @@ namespace QLTV_GUI
         {
             InitializeComponent();
         }
-        public FrmMain(FrmLogin frmlogin, string iduser):this()
+        public FrmMain(FrmLogin frmlogin, string iduser) : this()
         {
             idaccount = iduser;
             frmLogin = frmlogin;
@@ -99,7 +99,7 @@ namespace QLTV_GUI
                         tab_sach.Visible = true;
                         break;
                     case "QLMT":
-                        tab_baocao.Visible = true;
+                        tab_muontra.Visible = true;
                         break;
                     default:
                         break;
@@ -305,6 +305,26 @@ namespace QLTV_GUI
             }
         }
         private void btnTTaccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (account.TypeOfAccount == "USER")
+            {
+                Form frm = this.KiemTraTonTai(typeof(frmTTCaNhan));
+                if (frm != null)
+                    frm.Activate();
+                else
+                {
+                    SplashScreenManager.ShowDefaultWaitForm();
+                    frmTTCaNhan f = new frmTTCaNhan(account.IDAccount)
+                    {
+                        MdiParent = this
+                    };
+                    f.Show();
+                    SplashScreenManager.CloseDefaultSplashScreen();
+                }
+            }
+            else XtraMessageBox.Show("Chưa có dữ liệu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void btnInfoAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (account.TypeOfAccount == "USER")
             {

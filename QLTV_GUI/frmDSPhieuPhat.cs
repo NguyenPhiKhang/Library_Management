@@ -41,13 +41,9 @@ namespace QLTV_GUI
             glued_DocGia.Properties.DataSource = listtnDG;
             glued_DocGia.Properties.ValueMember = "MaDocGia";
             glued_DocGia.Properties.DisplayMember = "HoTen";
-
             txb_TongNo.ReadOnly = true;
             txb_ConLai.ReadOnly = true;
             btn_OK.Enabled = false;
-           
-
-            
         }
 
         private void frmDSPhieuPhat_Load(object sender, EventArgs e)
@@ -69,8 +65,23 @@ namespace QLTV_GUI
 
         void LoadDSPP()
         {
+            layoutControl1.Visible = false;
+            btnThem.Enabled = true;
             List <PHIEUTHUTIENPHAT> list = QLTV_BUS.DSPHIEUPHATBUS.Instance.GetDSPhieuPhat();
             gridControl1.DataSource = list.ToList();
+            try
+            {
+                PHIEUTHUTIENPHAT pttp = DSPHIEUPHATBUS.Instance.GetDSPhieuPhat()[DSPHIEUPHATBUS.Instance.GetDSPhieuPhat().Count - 1];
+                IdLast = pttp.MaPhieuThuTP;
+            }
+            catch { IdLast = ""; }
+            txb_MaPhieuThu.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("PT", IdLast, 6);
+            glued_DocGia.Properties.DataSource = null;
+            glued_DocGia.EditValue = null;
+            btn_OK.Enabled = false;
+            txb_ConLai.EditValue = null;
+            txb_TongNo.EditValue = null;
+            txb_SoTienThu.EditValue = 500;
         }
 
         private void btn_OK_Click(object sender, EventArgs e)
@@ -80,14 +91,12 @@ namespace QLTV_GUI
             {
                 if (XtraMessageBox.Show("Bạn có chắc chắn thêm phiếu thu không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    
-                    QLTV_BUS.DSPHIEUPHATBUS.Instance.AddPhieuPhat(txb_MaPhieuThu.Text, glued_DocGia.EditValue.ToString(), Convert.ToDecimal(txb_TongNo.EditValue), Convert.ToDecimal(txb_SoTienThu.EditValue),(DateTime)dateNgayThu.EditValue, Convert.ToDecimal(txb_ConLai.EditValue));
+
+                    QLTV_BUS.DSPHIEUPHATBUS.Instance.AddPhieuPhat(txb_MaPhieuThu.Text, glued_DocGia.EditValue.ToString(), Convert.ToDecimal(txb_TongNo.EditValue), Convert.ToDecimal(txb_SoTienThu.EditValue), (DateTime)dateNgayThu.EditValue, Convert.ToDecimal(txb_ConLai.EditValue));
                     XtraMessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    QLTV_BUS.DOCGIABUS.Instance.UpdateTongNoDG(glued_DocGia.EditValue.ToString(), -Convert.ToDecimal(txb_SoTienThu.EditValue));
                     btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
                     gridControl1.Focus();
-                    QLTV_BUS.DOCGIABUS.Instance.UpdateTongNoDG(glued_DocGia.EditValue.ToString(), -Convert.ToDecimal(txb_SoTienThu.EditValue));
-                    layoutControl1.Visible = false;
-                    btnThem.Enabled = true;
                 }
             }
             else
@@ -96,8 +105,7 @@ namespace QLTV_GUI
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            layoutControl1.Visible = false;
-            btnThem.Enabled = true;
+            LoadDSPP();
         }
 
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -155,7 +163,10 @@ namespace QLTV_GUI
 
         private void glued_DocGia_EditValueChanged(object sender, EventArgs e)
         {
-            txb_TongNo.EditValue = listtnDG.Where(x => x.MaDocGia == glued_DocGia.EditValue.ToString()).Select(x => x.TongNo).ToList()[0];
+            if (glued_DocGia.EditValue != null)
+            {
+                txb_TongNo.EditValue = listtnDG.Where(x => x.MaDocGia == glued_DocGia.EditValue.ToString()).Select(x => x.TongNo).ToList()[0];
+            }
 
             //QLTV_BUS.DOCGIABUS.Instance.UpdateTongNoDG(glued_DocGia.EditValue.ToString(), Convert.ToDecimal(txb_TongNo));
         }

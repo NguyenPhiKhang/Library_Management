@@ -41,6 +41,8 @@
             this.seTuoiMax = new DevExpress.XtraEditors.SpinEdit();
             this.seTuoiMin = new DevExpress.XtraEditors.SpinEdit();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.se_SLtacgia = new DevExpress.XtraEditors.SpinEdit();
             this.btnHuy2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelcontrol = new DevExpress.XtraEditors.LabelControl();
@@ -76,6 +78,8 @@
             this.layoutViewField_colKhoangCachXB = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colTheLoaiMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTheLoaiMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.colSoLuongTG = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_layoutViewColumn1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colSachMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colSachMuonMax = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.colNgayMuonMax = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
@@ -83,10 +87,6 @@
             this.colTienPhatTre = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_colTienPhatTre = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
-            this.colSoLuongTG = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.layoutViewField_layoutViewColumn1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.se_SLtacgia = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage1.SuspendLayout();
@@ -94,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seTuoiMax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seTuoiMin.Properties)).BeginInit();
             this.navigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seTheLoaiMax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seKhoangCachXB.Properties)).BeginInit();
             this.navigationPage3.SuspendLayout();
@@ -109,12 +110,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // navigationPane1
@@ -261,6 +261,30 @@
             this.navigationPage2.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.number_2_icon;
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(351, 438);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(27, 182);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(111, 13);
+            this.labelControl5.TabIndex = 8;
+            this.labelControl5.Text = "Số lượng tác giả tối đa:";
+            // 
+            // se_SLtacgia
+            // 
+            this.se_SLtacgia.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.se_SLtacgia.Location = new System.Drawing.Point(170, 179);
+            this.se_SLtacgia.Name = "se_SLtacgia";
+            this.se_SLtacgia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.se_SLtacgia.Properties.ReadOnly = true;
+            this.se_SLtacgia.Size = new System.Drawing.Size(132, 20);
+            this.se_SLtacgia.TabIndex = 9;
+            this.se_SLtacgia.EditValueChanged += new System.EventHandler(this.se_SLtacgia_EditValueChanged);
             // 
             // btnHuy2
             // 
@@ -661,6 +685,25 @@
             this.layoutViewField_colTheLoaiMax.Size = new System.Drawing.Size(249, 24);
             this.layoutViewField_colTheLoaiMax.TextSize = new System.Drawing.Size(183, 13);
             // 
+            // colSoLuongTG
+            // 
+            this.colSoLuongTG.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSoLuongTG.AppearanceCell.Options.UseFont = true;
+            this.colSoLuongTG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.colSoLuongTG.AppearanceHeader.Options.UseFont = true;
+            this.colSoLuongTG.Caption = "Số lượng tác giả tối đa";
+            this.colSoLuongTG.FieldName = "SoLuongTacGia";
+            this.colSoLuongTG.LayoutViewField = this.layoutViewField_layoutViewColumn1;
+            this.colSoLuongTG.Name = "colSoLuongTG";
+            // 
+            // layoutViewField_layoutViewColumn1
+            // 
+            this.layoutViewField_layoutViewColumn1.EditorPreferredWidth = 10;
+            this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 192);
+            this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
+            this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(249, 20);
+            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(183, 13);
+            // 
             // colSachMuonMax
             // 
             this.colSachMuonMax.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -747,49 +790,6 @@
             this.layoutViewField_layoutViewColumn1});
             this.layoutViewCard1.Name = "layoutViewCard1";
             // 
-            // colSoLuongTG
-            // 
-            this.colSoLuongTG.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.colSoLuongTG.AppearanceCell.Options.UseFont = true;
-            this.colSoLuongTG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.colSoLuongTG.AppearanceHeader.Options.UseFont = true;
-            this.colSoLuongTG.Caption = "Số lượng tác giả tối đa";
-            this.colSoLuongTG.FieldName = "SoLuongTacGia";
-            this.colSoLuongTG.LayoutViewField = this.layoutViewField_layoutViewColumn1;
-            this.colSoLuongTG.Name = "colSoLuongTG";
-            // 
-            // layoutViewField_layoutViewColumn1
-            // 
-            this.layoutViewField_layoutViewColumn1.EditorPreferredWidth = 10;
-            this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 192);
-            this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
-            this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(249, 20);
-            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(183, 13);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(27, 182);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(111, 13);
-            this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "Số lượng tác giả tối đa:";
-            // 
-            // se_SLtacgia
-            // 
-            this.se_SLtacgia.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.se_SLtacgia.Location = new System.Drawing.Point(170, 179);
-            this.se_SLtacgia.Name = "se_SLtacgia";
-            this.se_SLtacgia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.se_SLtacgia.Properties.ReadOnly = true;
-            this.se_SLtacgia.Size = new System.Drawing.Size(132, 20);
-            this.se_SLtacgia.TabIndex = 9;
-            this.se_SLtacgia.EditValueChanged += new System.EventHandler(this.se_SLtacgia_EditValueChanged);
-            // 
             // frmThayDoiQuiDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -814,6 +814,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seTuoiMin.Properties)).EndInit();
             this.navigationPage2.ResumeLayout(false);
             this.navigationPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seTheLoaiMax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seKhoangCachXB.Properties)).EndInit();
             this.navigationPage3.ResumeLayout(false);
@@ -830,12 +831,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colHanThe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colKhoangCachXB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTheLoaiMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colSachMuonMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colNgayMuonMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colTienPhatTre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.se_SLtacgia.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

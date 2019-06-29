@@ -69,6 +69,7 @@ namespace QLTV_GUI
                     DOCGIABUS.Instance.AddInfoDocGia(
                         txbMaDocGia.Text, txbHoTen.Text, (DateTime)dateNgaySinh.EditValue, txbEmail.Text, txbDiaChi.Text, luedLoaiDocGia.EditValue.ToString(),
                         (DateTime)dateNgayLapThe.EditValue, (DateTime)dateNgayHetHan.EditValue, txbUsername.Text, txbSDT.Text);
+                    CHITIETPHANQUYENBUS.Instance.AddCTPhanQuyen(txbUsername.Text, "IP001", true);
                     this.Close();
                 }
             }

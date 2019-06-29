@@ -64,7 +64,7 @@ namespace QLTV_GUI
             {
                 IdLast = "";
             }
-            txb_MaSach.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("MS", IdLast, 4);
+            txb_MaSach.Text = HelpGUI.AutoIncreaseID.Load_AutoIncreaseID("S", IdLast, 6);
         }
         bool CheckNull ()
         {
@@ -133,7 +133,7 @@ namespace QLTV_GUI
 
         private void txb_TenSach_EditValueChanged(object sender, EventArgs e)
         {
-            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txb_TenSach, HelpGUI.KiemTraDieuKien.isTen(txb_TenSach.Text.Trim()), "Tên sách không hợp lệ!");
+            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txb_TenSach, HelpGUI.KiemTraDieuKien.isTenSach(txb_TenSach.Text.Trim()), "Tên sách không hợp lệ!");
         }
 
         private void txb_NhaXuatBan_EditValueChanged(object sender, EventArgs e)

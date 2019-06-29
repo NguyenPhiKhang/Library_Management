@@ -43,6 +43,8 @@ namespace QLTV_GUI
             try
             {
                 listpmchuatra = listpm.Where(x =>( x.TinhTrangMuon == "Còn hạn" || x.TinhTrangMuon == "Quá hạn") && x.MaDocGia == glued_MaDocGia.EditValue.ToString()).Select(x => x).ToList();
+                listtra.Clear();
+                gridControl2.DataSource = null;
                 gridControl1.DataSource = null;
                 gridControl1.DataSource = listpmchuatra;
                 txb_TenDocGia.EditValue = listpm.Where(x => x.MaDocGia == glued_MaDocGia.EditValue.ToString()).Select(x => x.HoTen).Distinct().ToList()[0];
@@ -71,12 +73,11 @@ namespace QLTV_GUI
 
                 list1 = new List<CHITIETPHIEUTRADTO>();
                
-                var list2 = listtra.Select(x => new { x.MaPhieuMS, NgayTra = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day),SoNgayMuon=0, TienPhat = 0, TinhTrangTraSach = "Bình thường", x.MaSach, x.TenSach, x.HanTra,x.MaTinhTrang,x.TinhTrangMuon,x.MaDocGia , x.HoTen, x.NgayMuon, GhiChu = GhiChu }).ToList();
+                var list2 = listtra.Select(x => new { x.MaPhieuMS, NgayTra = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day),SoNgayMuon=0, TienPhat = 0, TinhTrangTraSach = "Bình thường", x.MaSach, x.TenSach, x.HanTra,x.MaTinhTrang,x.TinhTrangMuon,x.MaDocGia , x.HoTen, x.NgayMuon, GhiChu = "" }).ToList();
                 foreach (var item in list2)
                 {
                     TienPhat = 0;GhiChu = "";
                     TimeSpan interval_SoNgayTre = DateTime.Now.Subtract(item.HanTra);
-
                     if (interval_SoNgayTre.Days > 0)
                     {
                         GhiChu += "Quá Hạn " + interval_SoNgayTre.Days + " Ngày";
@@ -89,7 +90,7 @@ namespace QLTV_GUI
                         MaPhieuMS = item.MaPhieuMS,
                         NgayTra = item.NgayTra,
                         SoNgayMuon = DateTime.Now.Subtract(item.NgayMuon).Days,
-                        TienPhat = item.TienPhat,
+                        TienPhat = TienPhat,
                         TinhTrangTraSach = item.TinhTrangTraSach,
                         MaSach = item.MaSach,
                         TenSach = item.TenSach,
@@ -99,7 +100,7 @@ namespace QLTV_GUI
                         MaDocGia = item.MaDocGia,
                         HoTen = item.HoTen,
                         NgayMuon = item.NgayMuon,
-                        GhiChu = item.GhiChu
+                        GhiChu = GhiChu
                     };
                     list1.Add(ct);
                 }
@@ -244,6 +245,11 @@ namespace QLTV_GUI
                     else bandedGridView1.SetFocusedRowCellValue(col_grid2_TienPhat, 0);
                 }
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

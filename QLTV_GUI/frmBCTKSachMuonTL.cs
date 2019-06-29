@@ -69,7 +69,7 @@ namespace QLTV_GUI
             }
         }
         private void gridView1_RowCountChanged(object sender, EventArgs e)
-        {
+        {           
             if (gridView1.RowCount > 0)
                 lo_btnTaoBaoCao.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             else lo_btnTaoBaoCao.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;

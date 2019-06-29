@@ -595,6 +595,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgayNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayNhap.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayNhap.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayNhap.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayNhap.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayNhap.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNgayNhap.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateNgayNhap.Properties.ReadOnly = true;
             this.dateNgayNhap.Size = new System.Drawing.Size(225, 20);
             this.dateNgayNhap.StyleController = this.layoutControl1;
@@ -947,6 +953,8 @@
             this.colNgayNhap.AppearanceHeader.Options.UseTextOptions = true;
             this.colNgayNhap.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgayNhap.Caption = "Ngày Nhập";
+            this.colNgayNhap.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colNgayNhap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNgayNhap.FieldName = "NgayNhap";
             this.colNgayNhap.MinWidth = 21;
             this.colNgayNhap.Name = "colNgayNhap";

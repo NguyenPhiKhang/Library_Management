@@ -74,8 +74,8 @@
             this.rbpageBorrow = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageReturn = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_baocao = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rbpageSachTra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageSachMuon = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpageSachTra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_quydinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageChange = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -88,6 +88,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -152,7 +153,7 @@
             this.repositoryItemPictureEdit3,
             this.repositoryItemTextEdit1,
             this.repositoryItemHypertextLabel1});
-            this.ribbonControl1.Size = new System.Drawing.Size(987, 146);
+            this.ribbonControl1.Size = new System.Drawing.Size(989, 149);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // popupMenu1
@@ -368,6 +369,7 @@
             this.btnInfoAccount.ImageOptions.Image = global::QLTV_GUI.Properties.Resources.Apps_user_info_icon;
             this.btnInfoAccount.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInfoAccount.ImageOptions.LargeImage")));
             this.btnInfoAccount.Name = "btnInfoAccount";
+            this.btnInfoAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInfoAccount_ItemClick);
             // 
             // btn_bsitemLogout
             // 
@@ -505,23 +507,23 @@
             // tab_baocao
             // 
             this.tab_baocao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rbpageSachTra,
-            this.rbpageSachMuon});
+            this.rbpageSachMuon,
+            this.rbpageSachTra});
             this.tab_baocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("tab_baocao.ImageOptions.Image")));
             this.tab_baocao.Name = "tab_baocao";
             this.tab_baocao.Text = "Báo Cáo Thống Kê";
-            // 
-            // rbpageSachTra
-            // 
-            this.rbpageSachTra.ItemLinks.Add(this.btnBCSachTra);
-            this.rbpageSachTra.Name = "rbpageSachTra";
-            this.rbpageSachTra.Text = "Trả Trễ";
             // 
             // rbpageSachMuon
             // 
             this.rbpageSachMuon.ItemLinks.Add(this.btnBCSachMuon);
             this.rbpageSachMuon.Name = "rbpageSachMuon";
             this.rbpageSachMuon.Text = "Theo thể loại";
+            // 
+            // rbpageSachTra
+            // 
+            this.rbpageSachTra.ItemLinks.Add(this.btnBCSachTra);
+            this.rbpageSachTra.Name = "rbpageSachTra";
+            this.rbpageSachTra.Text = "Trả Trễ";
             // 
             // tab_quydinh
             // 
@@ -576,10 +578,10 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 519);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 527);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(987, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(989, 23);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -591,12 +593,16 @@
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
+            // 
             // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 550);
+            this.ClientSize = new System.Drawing.Size(989, 550);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -680,6 +686,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage tab_quydinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageAccount;
         private DevExpress.XtraBars.BarButtonItem btn_Logout;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
 

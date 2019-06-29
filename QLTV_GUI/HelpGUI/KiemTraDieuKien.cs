@@ -46,6 +46,19 @@ namespace QLTV_GUI.HelpGUI
             else
                 return false;
         }
+        //Kiểm tra họ tên có hợp lệ hay không?
+        public static bool isTenSach(string inputTen)
+        {
+            inputTen = inputTen ?? string.Empty;
+            string strRegex = @"^[a-z0-9A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+            @"ẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềếểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+            @"ụủứừỬỮỰỲỴÝỶỸửữ[]ựỳỵỷỹ\s;,&-:()./]+$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(inputTen))
+                return true;
+            else
+                return false;
+        }
         //Kiểm tra password có hợp lệ hay không?
         public static bool isPassword(string inputPassword)
         {

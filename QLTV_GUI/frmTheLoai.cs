@@ -264,7 +264,7 @@ namespace QLTV_GUI
         {
             if (lo_btnLuu.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always)
             {
-                HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenTheLoai, HelpGUI.KiemTraDieuKien.isTen(txbTenTheLoai.Text.Trim()), "Tên không hợp lệ!");
+                //HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenTheLoai, HelpGUI.KiemTraDieuKien.isTenSach(txbTenTheLoai.Text.Trim()), "Tên không hợp lệ!");
             }
             else
             {

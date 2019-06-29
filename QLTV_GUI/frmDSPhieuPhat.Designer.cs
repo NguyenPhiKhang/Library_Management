@@ -168,21 +168,21 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1179, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1181, 28);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 614);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 618);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1179, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1181, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 590);
             // 
@@ -190,7 +190,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1179, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1181, 28);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 590);
             // 
@@ -228,11 +228,11 @@
             this.layoutControl1.Controls.Add(this.dateNgayThu);
             this.layoutControl1.Controls.Add(this.txb_TongNo);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 28);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(52, 206, 812, 475);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1179, 236);
+            this.layoutControl1.Size = new System.Drawing.Size(1181, 236);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             this.layoutControl1.Visible = false;
@@ -243,7 +243,7 @@
             this.pictureBox2.Image = global::QLTV_GUI.Properties.Resources.cash_payment_icon_5;
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(384, 212);
+            this.pictureBox2.Size = new System.Drawing.Size(385, 212);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
@@ -252,9 +252,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pictureBox1.Image = global::QLTV_GUI.Properties.Resources.clipart2594155;
-            this.pictureBox1.Location = new System.Drawing.Point(766, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(767, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 212);
+            this.pictureBox1.Size = new System.Drawing.Size(402, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -266,7 +266,7 @@
             0,
             0,
             0});
-            this.txb_SoTienThu.Location = new System.Drawing.Point(483, 115);
+            this.txb_SoTienThu.Location = new System.Drawing.Point(484, 116);
             this.txb_SoTienThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_SoTienThu.MenuManager = this.barManager1;
             this.txb_SoTienThu.Name = "txb_SoTienThu";
@@ -298,7 +298,7 @@
             // 
             // txb_ConLai
             // 
-            this.txb_ConLai.Location = new System.Drawing.Point(483, 163);
+            this.txb_ConLai.Location = new System.Drawing.Point(484, 164);
             this.txb_ConLai.Name = "txb_ConLai";
             this.txb_ConLai.Properties.AllowFocused = false;
             this.txb_ConLai.Properties.Appearance.Options.UseTextOptions = true;
@@ -311,7 +311,7 @@
             // btn_Huy
             // 
             this.btn_Huy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Huy.ImageOptions.Image")));
-            this.btn_Huy.Location = new System.Drawing.Point(613, 189);
+            this.btn_Huy.Location = new System.Drawing.Point(614, 190);
             this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(87, 22);
@@ -324,7 +324,7 @@
             // 
             this.btn_OK.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
             this.btn_OK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_OK.ImageOptions.Image")));
-            this.btn_OK.Location = new System.Drawing.Point(490, 189);
+            this.btn_OK.Location = new System.Drawing.Point(491, 190);
             this.btn_OK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(97, 22);
@@ -337,7 +337,7 @@
             // txb_MaPhieuThu
             // 
             this.txb_MaPhieuThu.EditValue = "";
-            this.txb_MaPhieuThu.Location = new System.Drawing.Point(483, 43);
+            this.txb_MaPhieuThu.Location = new System.Drawing.Point(484, 44);
             this.txb_MaPhieuThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_MaPhieuThu.MenuManager = this.barManager1;
             this.txb_MaPhieuThu.Name = "txb_MaPhieuThu";
@@ -350,7 +350,7 @@
             // 
             // glued_DocGia
             // 
-            this.glued_DocGia.Location = new System.Drawing.Point(483, 67);
+            this.glued_DocGia.Location = new System.Drawing.Point(484, 68);
             this.glued_DocGia.MenuManager = this.barManager1;
             this.glued_DocGia.Name = "glued_DocGia";
             this.glued_DocGia.Properties.Appearance.Options.UseTextOptions = true;
@@ -360,7 +360,7 @@
             this.glued_DocGia.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HoTen", "Tên Độc Giả"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaDocGia", "Mã Độc Giả")});
-            this.glued_DocGia.Properties.NullText = "";
+            this.glued_DocGia.Properties.NullText = "Chọn độc giả đang nợ...";
             this.glued_DocGia.Size = new System.Drawing.Size(267, 20);
             this.glued_DocGia.StyleController = this.layoutControl1;
             this.glued_DocGia.TabIndex = 4;
@@ -368,7 +368,7 @@
             // 
             // btn_Indu
             // 
-            this.btn_Indu.Location = new System.Drawing.Point(706, 163);
+            this.btn_Indu.Location = new System.Drawing.Point(707, 164);
             this.btn_Indu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Indu.Name = "btn_Indu";
             this.btn_Indu.Size = new System.Drawing.Size(44, 22);
@@ -379,7 +379,7 @@
             // 
             // dateNgayThu
             // 
-            this.dateNgayThu.Location = new System.Drawing.Point(483, 139);
+            this.dateNgayThu.Location = new System.Drawing.Point(484, 140);
             this.dateNgayThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateNgayThu.MenuManager = this.barManager1;
             this.dateNgayThu.Name = "dateNgayThu";
@@ -389,8 +389,10 @@
             this.dateNgayThu.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.dateNgayThu.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateNgayThu.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.dateNgayThu.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateNgayThu.Properties.Mask.EditMask = "\"\"";
+            this.dateNgayThu.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayThu.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNgayThu.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            this.dateNgayThu.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateNgayThu.Properties.ReadOnly = true;
             this.dateNgayThu.Size = new System.Drawing.Size(267, 20);
             this.dateNgayThu.StyleController = this.layoutControl1;
@@ -400,7 +402,7 @@
             // 
             this.txb_TongNo.EditValue = "";
             this.dxErrorProvider1.SetIconAlignment(this.txb_TongNo, System.Windows.Forms.ErrorIconAlignment.TopLeft);
-            this.txb_TongNo.Location = new System.Drawing.Point(483, 91);
+            this.txb_TongNo.Location = new System.Drawing.Point(484, 92);
             this.txb_TongNo.MenuManager = this.barManager1;
             this.txb_TongNo.Name = "txb_TongNo";
             this.txb_TongNo.Properties.AllowFocused = false;
@@ -425,7 +427,7 @@
             this.layoutControlItem6,
             this.layoutControlItem8});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1179, 236);
+            this.Root.Size = new System.Drawing.Size(1181, 236);
             this.Root.TextVisible = false;
             // 
             // lo_PhieuThu
@@ -449,7 +451,7 @@
             this.emptySpaceItem2,
             this.lo_btnIndu,
             this.emptySpaceItem3});
-            this.lo_PhieuThu.Location = new System.Drawing.Point(388, 0);
+            this.lo_PhieuThu.Location = new System.Drawing.Point(389, 0);
             this.lo_PhieuThu.Name = "lo_PhieuThu";
             this.lo_PhieuThu.Size = new System.Drawing.Size(366, 216);
             this.lo_PhieuThu.Text = "Phiếu Thu Tiền Phạt";
@@ -518,7 +520,7 @@
             this.lo_btnOK.Control = this.btn_OK;
             this.lo_btnOK.Location = new System.Drawing.Point(78, 146);
             this.lo_btnOK.Name = "lo_btnOK";
-            this.lo_btnOK.Size = new System.Drawing.Size(101, 27);
+            this.lo_btnOK.Size = new System.Drawing.Size(101, 26);
             this.lo_btnOK.TextSize = new System.Drawing.Size(0, 0);
             this.lo_btnOK.TextVisible = false;
             // 
@@ -527,7 +529,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(179, 146);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(22, 27);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(22, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lo_btnHuy
@@ -537,7 +539,7 @@
             this.lo_btnHuy.Control = this.btn_Huy;
             this.lo_btnHuy.Location = new System.Drawing.Point(201, 146);
             this.lo_btnHuy.Name = "lo_btnHuy";
-            this.lo_btnHuy.Size = new System.Drawing.Size(91, 27);
+            this.lo_btnHuy.Size = new System.Drawing.Size(91, 26);
             this.lo_btnHuy.TextSize = new System.Drawing.Size(0, 0);
             this.lo_btnHuy.TextVisible = false;
             // 
@@ -546,7 +548,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 146);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(78, 27);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(78, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lo_btnIndu
@@ -564,15 +566,15 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(292, 146);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(50, 27);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(50, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.pictureBox1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(754, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(755, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(405, 216);
+            this.layoutControlItem6.Size = new System.Drawing.Size(406, 216);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -581,7 +583,7 @@
             this.layoutControlItem8.Control = this.pictureBox2;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(388, 216);
+            this.layoutControlItem8.Size = new System.Drawing.Size(389, 216);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -596,11 +598,11 @@
             this.gridControl1.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
             this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridControl1.EmbeddedNavigator.TextStringFormat = "{0} / {1}";
-            this.gridControl1.Location = new System.Drawing.Point(0, 260);
+            this.gridControl1.Location = new System.Drawing.Point(0, 264);
             this.gridControl1.MainView = this.bandedGridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1179, 354);
+            this.gridControl1.Size = new System.Drawing.Size(1181, 354);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -608,6 +610,10 @@
             // 
             // bandedGridView1
             // 
+            this.bandedGridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bandedGridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.bandedGridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bandedGridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1});
             this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
@@ -657,7 +663,7 @@
             this.colMaPhieuThu.FieldName = "MaPhieuThuTP";
             this.colMaPhieuThu.MinWidth = 21;
             this.colMaPhieuThu.Name = "colMaPhieuThu";
-            this.colMaPhieuThu.OptionsColumn.AllowFocus = false;
+            this.colMaPhieuThu.OptionsColumn.AllowEdit = false;
             this.colMaPhieuThu.OptionsColumn.ReadOnly = true;
             this.colMaPhieuThu.Visible = true;
             this.colMaPhieuThu.Width = 81;
@@ -678,7 +684,7 @@
             this.colHoTenDG.FieldName = "MaDocGia";
             this.colHoTenDG.MinWidth = 21;
             this.colHoTenDG.Name = "colHoTenDG";
-            this.colHoTenDG.OptionsColumn.AllowFocus = false;
+            this.colHoTenDG.OptionsColumn.AllowEdit = false;
             this.colHoTenDG.OptionsColumn.ReadOnly = true;
             this.colHoTenDG.Visible = true;
             this.colHoTenDG.Width = 81;
@@ -699,7 +705,7 @@
             this.colTongNo.FieldName = "TongNo";
             this.colTongNo.MinWidth = 21;
             this.colTongNo.Name = "colTongNo";
-            this.colTongNo.OptionsColumn.AllowFocus = false;
+            this.colTongNo.OptionsColumn.AllowEdit = false;
             this.colTongNo.OptionsColumn.ReadOnly = true;
             this.colTongNo.Visible = true;
             this.colTongNo.Width = 81;
@@ -720,7 +726,7 @@
             this.colSoTienThu.FieldName = "SoTienThu";
             this.colSoTienThu.MinWidth = 21;
             this.colSoTienThu.Name = "colSoTienThu";
-            this.colSoTienThu.OptionsColumn.AllowFocus = false;
+            this.colSoTienThu.OptionsColumn.AllowEdit = false;
             this.colSoTienThu.OptionsColumn.ReadOnly = true;
             this.colSoTienThu.Visible = true;
             this.colSoTienThu.Width = 81;
@@ -738,10 +744,12 @@
             this.colNgayThu.AppearanceHeader.Options.UseTextOptions = true;
             this.colNgayThu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgayThu.Caption = "Ngày Thu";
+            this.colNgayThu.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colNgayThu.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNgayThu.FieldName = "NgayThu";
             this.colNgayThu.MinWidth = 21;
             this.colNgayThu.Name = "colNgayThu";
-            this.colNgayThu.OptionsColumn.AllowFocus = false;
+            this.colNgayThu.OptionsColumn.AllowEdit = false;
             this.colNgayThu.OptionsColumn.ReadOnly = true;
             this.colNgayThu.Visible = true;
             this.colNgayThu.Width = 81;
@@ -762,7 +770,7 @@
             this.colConLai.FieldName = "ConLai";
             this.colConLai.MinWidth = 21;
             this.colConLai.Name = "colConLai";
-            this.colConLai.OptionsColumn.AllowFocus = false;
+            this.colConLai.OptionsColumn.AllowEdit = false;
             this.colConLai.OptionsColumn.ReadOnly = true;
             this.colConLai.Visible = true;
             this.colConLai.Width = 81;
@@ -775,7 +783,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 614);
+            this.ClientSize = new System.Drawing.Size(1181, 618);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);

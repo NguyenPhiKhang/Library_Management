@@ -36,10 +36,28 @@ namespace QLTV_GUI
                 CTBCTKTRATREBUS.Instance.AddCTBCTKTraTre(item.MaBCTKTraTre, item.MaPhieuMS, item.MaSach, item.SoNgayTraTre);
             }
         }
+        string doingay(string x)
+        {
+            string ngay = "";
+            string[] a = x.Split('/');
+            string temp;
+            temp = a[0];
+            a[0] = a[1];
+            a[1] = temp;
+            ngay = a[0] + "/" + a[1] + "/" + a[2];
+            return ngay;
+        }
+        string Thaydoingay(string x)
+        {
+            string ngay = "";
+            string[] a = x.Split(' ');
+            ngay = doingay(a[0]);
+            return ngay;
+        }
         void Load_DataSource()
         {
             var a = listpt.Where(x => x.GhiChu != null && DateTime.Compare(Convert.ToDateTime(x.NgayTra), Convert.ToDateTime(cbbNgayBC.EditValue)) == 0)
-            .Select(x => new { MaBCTKTraTre = MaPhieuBC, x.MaPhieuMS, x.MaSach, x.TenSach, x.NgayMuon, x.NgayTra, x.HanTra, SoNgayTraTre = (Convert.ToDateTime(x.NgayTra) - Convert.ToDateTime(x.HanTra)).Days }).ToList();
+            .Select(x => new { MaBCTKTraTre = MaPhieuBC, x.MaPhieuMS, x.MaSach, x.TenSach, NgayMuon = Thaydoingay(x.NgayMuon.ToString()), NgayTra = Thaydoingay(x.NgayTra.ToString()), x.HanTra, SoNgayTraTre = (Convert.ToDateTime(x.NgayTra) - Convert.ToDateTime(x.HanTra)).Days }).ToList();
             gridControl1.DataSource = a;
         }
         #endregion
@@ -79,6 +97,12 @@ namespace QLTV_GUI
             {
                 Load_DataSource();
             }
+        }
+        private void gridView1_RowCountChanged(object sender, EventArgs e)
+        {
+            if (gridView1.RowCount > 0)
+                lo_btnTaoBaoCao.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            else lo_btnTaoBaoCao.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
         #endregion
     }

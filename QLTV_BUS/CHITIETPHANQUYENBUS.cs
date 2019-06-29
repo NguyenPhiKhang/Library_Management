@@ -20,5 +20,9 @@ namespace QLTV_BUS
         {
             return CHITIETPHANQUYENDAO.Instance.GetListPerOfAccount(idAccount);
         }
+        public void AddCTPhanQuyen(string idAccount, string idper, bool suspended)
+        {
+            CHITIETPHANQUYENDAO.Instance.AddCTPhanQuyen(idAccount, idper, suspended);
+        }
     }
 }

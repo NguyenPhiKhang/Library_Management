@@ -168,29 +168,22 @@ namespace QLTV_GUI
 
         private void btn_LuuLai_Click(object sender, EventArgs e)
         {
-            QLTV_BUS.SACHBUS.Instance.UpdateInfoSach(txbMaSach.Text, txbTenSach.Text, glued_TheLoai.EditValue.ToString(), (int)Convert.ToInt32(dateNamSX.EditValue), txbNhaSX.Text, glued_TacGia.EditValue.ToString(), (int)Convert.ToInt32(txbTriGia.EditValue), glued_TinhTrang.EditValue.ToString());
-
-
-
-            lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-
-
-
-            Readonly();
-            btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
-            gridControl1.Focus();
-
+            if (!dxErrorProvider1.HasErrors)
+            {
+                if (XtraMessageBox.Show("Ban có muốn lưu chỉnh sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    QLTV_BUS.SACHBUS.Instance.UpdateInfoSach(txbMaSach.Text, txbTenSach.Text, glued_TheLoai.EditValue.ToString(), (int)Convert.ToInt32(dateNamSX.EditValue), txbNhaSX.Text, glued_TacGia.EditValue.ToString(), (int)Convert.ToInt32(txbTriGia.EditValue), glued_TinhTrang.EditValue.ToString());
+                    lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                    lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+                    Readonly();
+                    btnLamMoi_ItemClick(sender, e as DevExpress.XtraBars.ItemClickEventArgs);
+                    gridControl1.Focus();
+                }
+            }
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-
-
-            //Xử lý
-
-
-
             lo_btnLuuLai.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             lo_btnHuy.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 
@@ -231,6 +224,7 @@ namespace QLTV_GUI
 
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            gridControl1.DataSource = null;
             LoadSachInfo();
             gridControl1.Focus();
             try
@@ -653,13 +647,17 @@ namespace QLTV_GUI
                 glued_TinhTrang.Properties.DataSource = null;
 
                 Readonly();
+                dxErrorProvider1.SetError(txbTenSach, null);
+                dxErrorProvider1.SetError(txbNhaSX, null);
+                dxErrorProvider1.SetError(dateNamSX, null);
+                dxErrorProvider1.SetError(txbTriGia, null);
             }
         }
 
         private void txbTenSach_EditValueChanged(object sender, EventArgs e)
         {
-            if (bandedGridView1.RowCount > 0)
-                HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenSach, HelpGUI.KiemTraDieuKien.isTen(txbTenSach.Text.Trim()), "Tên Sách không hợp lệ!");
+            //if (bandedGridView1.RowCount > 0)
+                //HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenSach, HelpGUI.KiemTraDieuKien.isTenSach(txbTenSach.Text.Trim()), "Tên Sách không hợp lệ!");
         }
         private void txbNhaSX_EditValueChanged(object sender, EventArgs e)
         {

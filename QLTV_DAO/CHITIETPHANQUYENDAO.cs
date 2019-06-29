@@ -25,5 +25,15 @@ namespace QLTV_DAO
             }
             return listPer;
         }
+        public void AddCTPhanQuyen(string idAccount, string idper, bool suspended)
+        {
+            using (QuanLyThuVienEntities db = new QuanLyThuVienEntities())
+            {
+                CHITIETPHANQUYEN ct = new CHITIETPHANQUYEN();
+                ct.IDAccount = idAccount;
+                ct.IDPer = idper;
+                ct.suspended = suspended;
+            }
+        }
     }
 }

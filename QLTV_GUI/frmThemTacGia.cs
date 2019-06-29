@@ -65,7 +65,7 @@ namespace QLTV_GUI
 
         private void txbTenTacGia_EditValueChanged(object sender, EventArgs e)
         {
-            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenTacGia, HelpGUI.KiemTraDieuKien.isTen(txbTenTacGia.Text.Trim()), "Không hợp lệ!");
+            HelpGUI.ErrorProvider.Event_ErrorProvider(dxErrorProvider1, txbTenTacGia, HelpGUI.KiemTraDieuKien.isTenSach(txbTenTacGia.Text.Trim()), "Không hợp lệ!");
         }
     }
 }

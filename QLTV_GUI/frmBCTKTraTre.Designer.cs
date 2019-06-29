@@ -198,6 +198,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowCountChanged += new System.EventHandler(this.gridView1_RowCountChanged);
             // 
             // colMaSach
             // 
@@ -253,6 +254,7 @@
             this.colSoNgayTT.AppearanceHeader.Options.UseTextOptions = true;
             this.colSoNgayTT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSoNgayTT.Caption = "Số Ngày Trả Trễ";
+            this.colSoNgayTT.FieldName = "SoNgayTraTre";
             this.colSoNgayTT.Name = "colSoNgayTT";
             this.colSoNgayTT.OptionsColumn.AllowEdit = false;
             this.colSoNgayTT.Visible = true;

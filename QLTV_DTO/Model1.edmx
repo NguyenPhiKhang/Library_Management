@@ -85,10 +85,10 @@
             <PropertyRef Name="MaDocGia" />
           </Key>
           <Property Name="MaDocGia" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="NgaySinh" Type="date" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
-          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="NgayLapThe" Type="date" Nullable="false" />
           <Property Name="NgayHetHan" Type="date" Nullable="false" />
           <Property Name="MaLoaiDocGia" Type="varchar" MaxLength="50" Nullable="false" />
@@ -680,10 +680,10 @@
             <PropertyRef Name="MaDocGia" />
           </Key>
           <Property Name="MaDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="NgayLapThe" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="MaLoaiDocGia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
