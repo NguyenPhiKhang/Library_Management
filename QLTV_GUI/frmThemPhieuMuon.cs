@@ -132,21 +132,26 @@ namespace QLTV_GUI
         {
             if(!dxErrorProvider1.HasErrors&&txbTenDocGia.EditValue!=null&&gridView2.RowCount>0)
             {
-                if(XtraMessageBox.Show("Bạn đồng ý cho mượn sách", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk)==DialogResult.Yes)
+                if (Convert.ToInt32(seHanTra.EditValue) == 0)
+                { XtraMessageBox.Show("Vui lòng chọn hạn trả!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+                else
                 {
-                    int songaymuonmax = THAMSOBUS.Instance.GetDSQuiDinh().ToList()[0].SoNgayMuonMax;
-                    int sosachmuonmax = THAMSOBUS.Instance.GetDSQuiDinh().ToList()[0].SoSachMuonMax;
-                    if (KiemTraSoSachMuon(songaymuonmax, sosachmuonmax))
+                    if (XtraMessageBox.Show("Bạn đồng ý cho mượn sách", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
                     {
-                        PHIEUMUONSACHBUS.Instance.AddPhieuMuon(txbMaPhieu.EditValue.ToString(), glued_MaDocGia.EditValue.ToString(), Convert.ToDateTime(txbNgayMuon.EditValue));
-                        LuuCTPHieuMuon();
-                        this.Close();
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show($"Bạn mượn tổng cộng {sosachmuontrongngay} sách trong {songaymuonmax} ngày\n\rKhông thỏa qui định: có {sosachmuonmax} sách mượn tối đa trong {songaymuonmax} ngày!",
-                            "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        gridControl1.Focus();
+                        int songaymuonmax = THAMSOBUS.Instance.GetDSQuiDinh().ToList()[0].SoNgayMuonMax;
+                        int sosachmuonmax = THAMSOBUS.Instance.GetDSQuiDinh().ToList()[0].SoSachMuonMax;
+                        if (KiemTraSoSachMuon(songaymuonmax, sosachmuonmax))
+                        {
+                            PHIEUMUONSACHBUS.Instance.AddPhieuMuon(txbMaPhieu.EditValue.ToString(), glued_MaDocGia.EditValue.ToString(), Convert.ToDateTime(txbNgayMuon.EditValue));
+                            LuuCTPHieuMuon();
+                            this.Close();
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show($"Bạn mượn tổng cộng {sosachmuontrongngay} sách trong {songaymuonmax} ngày\n\rKhông thỏa qui định: có {sosachmuonmax} sách mượn tối đa trong {songaymuonmax} ngày!",
+                                "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            gridControl1.Focus();
+                        }
                     }
                 }
             }

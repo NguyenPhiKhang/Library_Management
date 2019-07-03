@@ -132,7 +132,7 @@
             // seHanTra
             // 
             this.seHanTra.EditValue = new decimal(new int[] {
-            1,
+            0,
             0,
             0,
             0});
@@ -146,11 +146,6 @@
             this.seHanTra.Properties.Mask.EditMask = "N00";
             this.seHanTra.Properties.MaxValue = new decimal(new int[] {
             12,
-            0,
-            0,
-            0});
-            this.seHanTra.Properties.MinValue = new decimal(new int[] {
-            1,
             0,
             0,
             0});

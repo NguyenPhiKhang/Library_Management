@@ -32,11 +32,14 @@
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnAbout = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.btnDocGia = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiDocGia = new DevExpress.XtraBars.BarButtonItem();
             this.btnSach = new DevExpress.XtraBars.BarButtonItem();
@@ -58,6 +61,8 @@
             this.btn_bsitemLogout = new DevExpress.XtraBars.BarButtonItem();
             this.btnQuanLiAdmin = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Logout = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.tab_Hethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpageAccount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpageQLadmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -88,7 +93,6 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -107,9 +111,11 @@
             toolTipItem1.Text = "File";
             superToolTip1.Items.Add(toolTipItem1);
             this.ribbonControl1.ApplicationButtonSuperTip = superToolTip1;
+            this.ribbonControl1.ApplicationButtonText = "File";
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.btnDocGia,
             this.btnLoaiDocGia,
             this.btnSach,
@@ -132,9 +138,12 @@
             this.btnInfoAccount,
             this.btnThoat,
             this.btnAbout,
-            this.btn_Logout});
+            this.btn_Logout,
+            this.skinDropDownButtonItem1,
+            this.skinPaletteDropDownButtonItem1,
+            this.skinBarSubItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.bsitem_Account);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -160,6 +169,7 @@
             // 
             this.popupMenu1.ItemLinks.Add(this.btnAbout);
             this.popupMenu1.ItemLinks.Add(this.btnThoat);
+            this.popupMenu1.ItemLinks.Add(this.skinBarSubItem1);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl1;
             // 
@@ -180,6 +190,13 @@
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
+            // 
+            // skinBarSubItem1
+            // 
+            this.skinBarSubItem1.AllowSerializeChildren = DevExpress.Utils.DefaultBoolean.False;
+            this.skinBarSubItem1.Caption = "skinBarSubItem1";
+            this.skinBarSubItem1.Id = 12;
+            this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
             // btnDocGia
             // 
@@ -398,6 +415,20 @@
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Logout_ItemClick);
             // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 10;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            toolTipItem2.Text = "Giao diện";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.skinDropDownButtonItem1.SuperTip = superToolTip2;
+            // 
+            // skinPaletteDropDownButtonItem1
+            // 
+            this.skinPaletteDropDownButtonItem1.Enabled = false;
+            this.skinPaletteDropDownButtonItem1.Id = 11;
+            this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
+            // 
             // tab_Hethong
             // 
             this.tab_Hethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -452,7 +483,7 @@
             // 
             this.rbpagePhieuThu.ItemLinks.Add(this.btnTienPhat);
             this.rbpagePhieuThu.Name = "rbpagePhieuThu";
-            this.rbpagePhieuThu.Text = "Phiếu thu";
+            this.rbpagePhieuThu.Text = "Punish";
             // 
             // tab_sach
             // 
@@ -585,6 +616,8 @@
             // 
             // xtraTabbedMdiManager1
             // 
+            this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.xtraTabbedMdiManager1.BorderStylePage = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
@@ -592,10 +625,6 @@
             // 
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
             // 
             // FrmMain
             // 
@@ -686,7 +715,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage tab_quydinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpageAccount;
         private DevExpress.XtraBars.BarButtonItem btn_Logout;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
     }
 }
 

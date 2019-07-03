@@ -44,6 +44,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnUser = new System.Windows.Forms.Panel();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pl_GiaoDien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,7 +74,7 @@
             this.pl_GiaoDien.Location = new System.Drawing.Point(0, 0);
             this.pl_GiaoDien.Name = "pl_GiaoDien";
             this.pl_GiaoDien.Quality = 10;
-            this.pl_GiaoDien.Size = new System.Drawing.Size(337, 379);
+            this.pl_GiaoDien.Size = new System.Drawing.Size(339, 383);
             this.pl_GiaoDien.TabIndex = 1;
             // 
             // pictureBox1
@@ -108,10 +109,6 @@
             this.btnDangNhap.Appearance.Options.UseBackColor = true;
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.Appearance.Options.UseForeColor = true;
-            this.btnDangNhap.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnDangNhap.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnDangNhap.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDangNhap.AppearanceHovered.Options.UseForeColor = true;
             this.btnDangNhap.Location = new System.Drawing.Point(15, 228);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(256, 36);
@@ -230,18 +227,22 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 379);
+            this.ClientSize = new System.Drawing.Size(339, 383);
             this.Controls.Add(this.pl_GiaoDien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOGIN";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.pl_GiaoDien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -275,5 +276,6 @@
         private DevExpress.XtraEditors.CheckEdit ck_remember;
         private DevExpress.XtraEditors.SimpleButton btnDangNhap;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
